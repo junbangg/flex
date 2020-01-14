@@ -13,7 +13,8 @@ struct CircleImage: View {
     
     var body: some View {
         image
-            .frame(width:250.0,height:250.0)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 10)
@@ -22,6 +23,6 @@ struct CircleImage: View {
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        CircleImage(image : Image("sacai2"))
+        CircleImage(image : Image("sacai"))
     }
 }
