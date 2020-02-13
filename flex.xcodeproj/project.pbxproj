@@ -3,26 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
-		369A169D23CD6B2500C0AB15 /* flex.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 369A169B23CD6B2500C0AB15 /* flex.xcdatamodeld */; };
 		369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169E23CD6B2500C0AB15 /* ContentView.swift */; };
 		369A16A123CD6B2A00C0AB15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 369A16A023CD6B2A00C0AB15 /* Assets.xcassets */; };
 		369A16A423CD6B2A00C0AB15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 369A16A323CD6B2A00C0AB15 /* Preview Assets.xcassets */; };
 		369A16A723CD6B2A00C0AB15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369A16A523CD6B2A00C0AB15 /* LaunchScreen.storyboard */; };
 		369A16B223CD6D5400C0AB15 /* ItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A16B123CD6D5400C0AB15 /* ItemDetails.swift */; };
 		369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A16B323CD6EE100C0AB15 /* CircleImage.swift */; };
+		369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A16B523CD916300C0AB15 /* BackgroundImage.swift */; };
+		369A16DA23D1687000C0AB15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 369A16B923D08EA500C0AB15 /* GoogleService-Info.plist */; };
+		369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A16DC23D1DC8E00C0AB15 /* SignUpViewController.swift */; };
+		369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */; };
+		36D1924823F1A2B20078ED6B /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924723F1A2B20078ED6B /* Logo.swift */; };
+		36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924D23F295970078ED6B /* RegisterViewController.swift */; };
+		6BC01F3161F442B9EE810431 /* Pods_flex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397C82D52D0FB9BB9FC4C7E1 /* Pods_flex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369A169923CD6B2500C0AB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		369A169C23CD6B2500C0AB15 /* flex.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = flex.xcdatamodel; sourceTree = "<group>"; };
 		369A169E23CD6B2500C0AB15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		369A16A023CD6B2A00C0AB15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		369A16A323CD6B2A00C0AB15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -30,6 +35,15 @@
 		369A16A823CD6B2A00C0AB15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		369A16B123CD6D5400C0AB15 /* ItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetails.swift; sourceTree = "<group>"; };
 		369A16B323CD6EE100C0AB15 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		369A16B523CD916300C0AB15 /* BackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImage.swift; sourceTree = "<group>"; };
+		369A16B923D08EA500C0AB15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		369A16DC23D1DC8E00C0AB15 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		36D1924723F1A2B20078ED6B /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
+		36D1924D23F295970078ED6B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		397C82D52D0FB9BB9FC4C7E1 /* Pods_flex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51C285D1B4B837560E73D702 /* Pods-flex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flex.release.xcconfig"; path = "Target Support Files/Pods-flex/Pods-flex.release.xcconfig"; sourceTree = "<group>"; };
+		7AC609F3F689CDFAD2B8B7C1 /* Pods-flex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flex.debug.xcconfig"; path = "Target Support Files/Pods-flex/Pods-flex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC01F3161F442B9EE810431 /* Pods_flex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +63,8 @@
 			children = (
 				369A169623CD6B2500C0AB15 /* flex */,
 				369A169523CD6B2500C0AB15 /* Products */,
+				5E176A0058349FA706E07D41 /* Pods */,
+				6B8C5DCF270861153C2010FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,13 +79,18 @@
 		369A169623CD6B2500C0AB15 /* flex */ = {
 			isa = PBXGroup;
 			children = (
+				369A16DB23D1DC5E00C0AB15 /* VIew Controllers */,
+				369A169723CD6B2500C0AB15 /* AppDelegate.swift */,
+				369A169923CD6B2500C0AB15 /* SceneDelegate.swift */,
+				369A169E23CD6B2500C0AB15 /* ContentView.swift */,
+				369A16B123CD6D5400C0AB15 /* ItemDetails.swift */,
 				369A16AE23CD6C2800C0AB15 /* Model */,
 				369A16AF23CD6C3E00C0AB15 /* Supporting Views */,
 				369A16B023CD6C5300C0AB15 /* Resources */,
 				369A16A023CD6B2A00C0AB15 /* Assets.xcassets */,
 				369A16A523CD6B2A00C0AB15 /* LaunchScreen.storyboard */,
 				369A16A823CD6B2A00C0AB15 /* Info.plist */,
-				369A169B23CD6B2500C0AB15 /* flex.xcdatamodeld */,
+				369A16B923D08EA500C0AB15 /* GoogleService-Info.plist */,
 				369A16A223CD6B2A00C0AB15 /* Preview Content */,
 			);
 			path = flex;
@@ -85,10 +107,6 @@
 		369A16AE23CD6C2800C0AB15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				369A169723CD6B2500C0AB15 /* AppDelegate.swift */,
-				369A169923CD6B2500C0AB15 /* SceneDelegate.swift */,
-				369A169E23CD6B2500C0AB15 /* ContentView.swift */,
-				369A16B123CD6D5400C0AB15 /* ItemDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				369A16B323CD6EE100C0AB15 /* CircleImage.swift */,
+				369A16B523CD916300C0AB15 /* BackgroundImage.swift */,
+				36D1924723F1A2B20078ED6B /* Logo.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -108,6 +128,33 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		369A16DB23D1DC5E00C0AB15 /* VIew Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				369A16DC23D1DC8E00C0AB15 /* SignUpViewController.swift */,
+				369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */,
+				36D1924D23F295970078ED6B /* RegisterViewController.swift */,
+			);
+			path = "VIew Controllers";
+			sourceTree = "<group>";
+		};
+		5E176A0058349FA706E07D41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AC609F3F689CDFAD2B8B7C1 /* Pods-flex.debug.xcconfig */,
+				51C285D1B4B837560E73D702 /* Pods-flex.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6B8C5DCF270861153C2010FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				397C82D52D0FB9BB9FC4C7E1 /* Pods_flex.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 369A16AB23CD6B2A00C0AB15 /* Build configuration list for PBXNativeTarget "flex" */;
 			buildPhases = (
+				D24340E8B6A34871058F2F6C /* [CP] Check Pods Manifest.lock */,
 				369A169023CD6B2500C0AB15 /* Sources */,
 				369A169123CD6B2500C0AB15 /* Frameworks */,
 				369A169223CD6B2500C0AB15 /* Resources */,
+				920F9049779F555F37ED5228 /* [CP] Embed Pods Frameworks */,
+				6325B89755388CFAFAABF2C1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				369A16A723CD6B2A00C0AB15 /* LaunchScreen.storyboard in Resources */,
+				369A16DA23D1687000C0AB15 /* GoogleService-Info.plist in Resources */,
 				369A16A423CD6B2A00C0AB15 /* Preview Assets.xcassets in Resources */,
 				369A16A123CD6B2A00C0AB15 /* Assets.xcassets in Resources */,
 			);
@@ -174,16 +225,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6325B89755388CFAFAABF2C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flex/Pods-flex-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flex/Pods-flex-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-flex/Pods-flex-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		920F9049779F555F37ED5228 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flex/Pods-flex-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-flex/Pods-flex-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-flex/Pods-flex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D24340E8B6A34871058F2F6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-flex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		369A169023CD6B2500C0AB15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				369A169D23CD6B2500C0AB15 /* flex.xcdatamodeld in Sources */,
 				369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */,
+				36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */,
+				369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */,
 				369A16B223CD6D5400C0AB15 /* ItemDetails.swift in Sources */,
 				369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */,
+				36D1924823F1A2B20078ED6B /* Logo.swift in Sources */,
+				369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */,
 				369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */,
+				369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */,
 				369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +432,7 @@
 		};
 		369A16AC23CD6B2A00C0AB15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AC609F3F689CDFAD2B8B7C1 /* Pods-flex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +453,7 @@
 		};
 		369A16AD23CD6B2A00C0AB15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C285D1B4B837560E73D702 /* Pods-flex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,19 +494,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		369A169B23CD6B2500C0AB15 /* flex.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				369A169C23CD6B2500C0AB15 /* flex.xcdatamodel */,
-			);
-			currentVersion = 369A169C23CD6B2500C0AB15 /* flex.xcdatamodel */;
-			path = flex.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 369A168C23CD6B2500C0AB15 /* Project object */;
 }
