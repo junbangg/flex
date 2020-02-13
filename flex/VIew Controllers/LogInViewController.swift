@@ -21,7 +21,7 @@ struct LogInViewController: View {
                 TextField("User ID", text: $username)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Password", text: $password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             .padding(.horizontal, 50.0)
             
@@ -31,11 +31,11 @@ struct LogInViewController: View {
                         .font(.body)
                         .fontWeight(.semibold)
                         .foregroundColor(Color.red)
-                    .overlay(
-                        Capsule(style: .continuous)
-                            .size(width:80, height:35)
-                            .stroke(Color.red, lineWidth : 2.5)
-                            .offset(x:-18, y:-7)
+                        .overlay(
+                            Capsule(style: .continuous)
+                                .size(width:80, height:35)
+                                .stroke(Color.red, lineWidth : 2.5)
+                                .offset(x:-18, y:-7)
                     )
                 }
                 .padding(.leading, 10.0)
@@ -45,11 +45,11 @@ struct LogInViewController: View {
                         .font(.body)
                         .fontWeight(.semibold)
                         .foregroundColor(Color.gray)
-                    .overlay(
-                        Capsule(style: .continuous)
-                            .size(width:80, height:35)
-                            .stroke(Color.gray, lineWidth : 2.5)
-                            .offset(x:-10, y:-7)
+                        .overlay(
+                            Capsule(style: .continuous)
+                                .size(width:80, height:35)
+                                .stroke(Color.gray, lineWidth : 2.5)
+                                .offset(x:-10, y:-7)
                     )
                 }
                 .padding(.leading, 50)
