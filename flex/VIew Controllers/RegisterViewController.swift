@@ -11,9 +11,7 @@
 //.onTapGesture { window.endEditing(true)}
 
 // TODO: Change the return button to blue Done button
-// TODO: Navigation View from Login Screen -> this view]
-// TODO: Password validation
-// TODO: password matching
+// TODO: Navigation View from Login Screen -> this view
 // TOOD: Highlight textfields red or green after input
 // TODO: Link up to Firestore
 
@@ -32,7 +30,9 @@ struct RegisterViewController: View {
     @State private var age : String = ""
     @State private var gender : String = ""
     @State private var birthdate = Date()
-    @State private var invalidEmail : Bool = false
+    @State private var alertInvalidEmail : Bool = false
+    @State private var alertInvalidPassword : Bool = false
+    @State private var alertPasswordsNotMatch : Bool = false
     var genders : [String] = ["M", "F"]
     
     //email validation
@@ -56,6 +56,11 @@ struct RegisterViewController: View {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
         return passwordTest.evaluate(with: testStr)
     }
+    //password checking
+    func matchPasswords(first:String?, second:String?) -> Bool {
+        return first == second
+    }
+    
     
     var body: some View {
         KeyboardHost{
@@ -72,12 +77,11 @@ struct RegisterViewController: View {
                         Section {
                             TextField("email@domain.com", text: $email) {
                                 if self.isValidEmail(email: self.email) == false{
-                                    self.invalidEmail = true
+                                    self.alertInvalidEmail = true
                                 }
                             }
-                            .alert(isPresented: $invalidEmail) {
-                            Alert(title: Text("Invalid Email"), message: Text("Please check your email address"))
-                                
+                            .alert(isPresented: $alertInvalidEmail) {
+                                Alert(title: Text("Invalid Email"), message: Text("Please check your email address"))
                                 
 //                                if self.isValidEmail(email: self.lastname){
 //                                    //add alert to user
@@ -91,10 +95,24 @@ struct RegisterViewController: View {
                             }
                         }
                         Section {
-                            SecureField("Password", text: $password)
+                            SecureField("Password", text: $password) {
+                                if self.isValidPassword(testStr: self.password) == false{
+                                    self.alertInvalidPassword = true
+                                }
+                            }
+                            .alert(isPresented: $alertInvalidPassword) {
+                                Alert(title: Text("Invalid Password"), message: Text("Please include uppercase letters and numbers in you password"))
+                            }
                         }
                         Section {
-                            SecureField("Check Password", text: $passwordcheck)
+                            SecureField("Check Password", text: $passwordcheck) {
+                                if self.matchPasswords(first: self.password, second: self.passwordcheck) == false{
+                                    self.alertPasswordsNotMatch = true
+                                }
+                            }.alert(isPresented: $alertPasswordsNotMatch) {
+                                Alert(title: Text("Passwords do not match"), message: Text("Please check your password"))
+                            }
+                            
                         }
                         Section {
                             TextField("Username", text: $username)
@@ -109,6 +127,7 @@ struct RegisterViewController: View {
                                     Text(string)
                             }
                         }
+                            //check if all data is valid and add to database as a user
                     }
                 }
             }
