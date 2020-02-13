@@ -11,7 +11,6 @@
 //.onTapGesture { window.endEditing(true)}
 
 // TODO: Change the return button to blue Done button
-// TODO: Navigation View from Login Screen -> this view
 // TOOD: Highlight textfields red or green after input
 // TODO: Link up to Firestore
 
@@ -48,7 +47,7 @@ struct RegisterViewController: View {
     //password validation
     func isValidPassword(testStr:String?) -> Bool {
         guard testStr != nil else { return false }
-
+        
         // at least one uppercase,
         // at least one digit
         // at least one lowercase
@@ -83,14 +82,14 @@ struct RegisterViewController: View {
                             .alert(isPresented: $alertInvalidEmail) {
                                 Alert(title: Text("Invalid Email"), message: Text("Please check your email address"))
                                 
-//                                if self.isValidEmail(email: self.lastname){
-//                                    //add alert to user
-//                                    //highlight the textfields accordingly
-//                                    print("Correct Email Format")
-//
-//                                }else {
-//                                    print("Wrong email format")
-//                                }
+                                //                                if self.isValidEmail(email: self.lastname){
+                                //                                    //add alert to user
+                                //                                    //highlight the textfields accordingly
+                                //                                    print("Correct Email Format")
+                                //
+                                //                                }else {
+                                //                                    print("Wrong email format")
+                                //                                }
                                 
                             }
                         }
@@ -125,57 +124,16 @@ struct RegisterViewController: View {
                             Picker(selection: $gender, label: Text("Gender")) {
                                 ForEach(genders, id : \.self) { (string:String) in
                                     Text(string)
+                                }
                             }
-                        }
                             //check if all data is valid and add to database as a user
+                        }
                     }
                 }
-            }
-        }.gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
+            }.gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
         }
     }
 }
-//View for moving keyboard
-//struct KeyboardHost<Content: View>: View {
-//    let view: Content
-//
-//    @State private var keyboardHeight: CGFloat = 0
-//
-//    private let showPublisher = NotificationCenter.Publisher.init(
-//        center: .default,
-//        name: UIResponder.keyboardWillShowNotification
-//    ).map { (notification) -> CGFloat in
-//        if let rect = notification.userInfo?["UIKeyboardFrameEndUserInfoKey"] as? CGRect {
-//            return rect.size.height
-//        } else {
-//            return 0
-//        }
-//    }
-//
-//    private let hidePublisher = NotificationCenter.Publisher.init(
-//        center: .default,
-//        name: UIResponder.keyboardWillHideNotification
-//    ).map {_ -> CGFloat in 0}
-//
-//    // Like HStack or VStack, the only parameter is the view that this view should layout.
-//    // (It takes one view rather than the multiple views that Stacks can take)
-//    init(@ViewBuilder content: () -> Content) {
-//        view = content()
-//    }
-//
-//    var body: some View {
-//        VStack {
-//            view
-//            Rectangle()
-//                .frame(height: keyboardHeight)
-//                .animation(.default)
-//                .foregroundColor(.clear)
-//            }.onReceive(showPublisher.merge(with: hidePublisher)) { (height) in
-//            self.keyboardHeight = height
-//        }
-//    }
-//}
-
 
 struct RegisterViewController_Previews: PreviewProvider {
     static var previews: some View {
