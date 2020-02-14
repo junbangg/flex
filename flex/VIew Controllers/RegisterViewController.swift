@@ -52,6 +52,27 @@ struct RegisterViewController: View {
     @State private var selection : Int? = nil
     var genders : [String] = ["M", "F"]
     
+    //form validation
+    func validateFields() -> Bool? {
+        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        password.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        passwordcheck.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        username.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            gender.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        let cleanedPassword = passwordcheck.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if isValidPassword(testStr: cleanedPassword) == false {
+            return false
+        }
+        
+        
+        return true
+        
+    }
     //email validation
     func isValidEmail(email:String?) -> Bool {
         
@@ -70,7 +91,12 @@ struct RegisterViewController: View {
         // at least one digit
         // at least one lowercase
         // 8 characters total
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+        
+//        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+        
+        //special character version
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        
         return passwordTest.evaluate(with: testStr)
     }
     //password checking
