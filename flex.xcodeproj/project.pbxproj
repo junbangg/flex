@@ -22,6 +22,8 @@
 		36D1924823F1A2B20078ED6B /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924723F1A2B20078ED6B /* Logo.swift */; };
 		36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924D23F295970078ED6B /* RegisterViewController.swift */; };
 		36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924F23F573510078ED6B /* KeyboardHost.swift */; };
+		36D1925423F68C1A0078ED6B /* FirebaseReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1925323F68C1A0078ED6B /* FirebaseReferenceManager.swift */; };
+		36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1925523F696710078ED6B /* FirebaseKeys.swift */; };
 		6BC01F3161F442B9EE810431 /* Pods_flex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397C82D52D0FB9BB9FC4C7E1 /* Pods_flex.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		36D1924723F1A2B20078ED6B /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		36D1924D23F295970078ED6B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		36D1924F23F573510078ED6B /* KeyboardHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHost.swift; sourceTree = "<group>"; };
+		36D1925323F68C1A0078ED6B /* FirebaseReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReferenceManager.swift; sourceTree = "<group>"; };
+		36D1925523F696710078ED6B /* FirebaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKeys.swift; sourceTree = "<group>"; };
 		397C82D52D0FB9BB9FC4C7E1 /* Pods_flex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C285D1B4B837560E73D702 /* Pods-flex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flex.release.xcconfig"; path = "Target Support Files/Pods-flex/Pods-flex.release.xcconfig"; sourceTree = "<group>"; };
 		7AC609F3F689CDFAD2B8B7C1 /* Pods-flex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flex.debug.xcconfig"; path = "Target Support Files/Pods-flex/Pods-flex.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		369A16AE23CD6C2800C0AB15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				36D1925323F68C1A0078ED6B /* FirebaseReferenceManager.swift */,
+				36D1925523F696710078ED6B /* FirebaseKeys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,7 +302,9 @@
 				36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */,
 				369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */,
 				369A16B223CD6D5400C0AB15 /* ItemDetails.swift in Sources */,
+				36D1925423F68C1A0078ED6B /* FirebaseReferenceManager.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
+				36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */,
 				369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */,
 				36D1924823F1A2B20078ED6B /* Logo.swift in Sources */,
 				369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */,

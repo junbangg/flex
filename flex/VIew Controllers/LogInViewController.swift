@@ -93,6 +93,8 @@ struct LogInViewController: View {
             .padding(.bottom, 200)
             
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
         
     }
 }
