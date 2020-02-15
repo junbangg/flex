@@ -44,64 +44,47 @@ struct RegisterViewController: View {
     @State private var age : String = ""
     @State private var gender : String = ""
     @State private var birthdate = Date()
-    @State private var alertInvalidEmail : Bool = false
-    @State private var alertInvalidPassword : Bool = false
-    @State private var alertPasswordsNotMatch : Bool = false
-    @State private var testingBoolean : Bool = false
+    @State private var validEmail : Bool = false
+    @State private var invalidEmail : Bool = false
+    @State private var validPassword : Bool = false
+    @State private var invalidPassword : Bool = false
+    @State private var passwordsMatch : Bool = false
+    @State private var passwordsNotMatch : Bool = false
     
+    //    @State private var testingBoolean : Bool = false
     @State private var selection : Int? = nil
     var genders : [String] = ["M", "F"]
     
     //form validation
-    func validateFields() -> Bool? {
-        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        email.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        password.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        passwordcheck.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        username.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            gender.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+    func validateFields() -> Bool {
+        
+        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return false
         }
+        if firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        }
+        if email.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        if password.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        if passwordcheck.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        if username.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        if gender.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        
         let cleanedPassword = passwordcheck.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        if isValidPassword(testStr: cleanedPassword) == false {
+        if Utilities.isValidPassword(cleanedPassword) == false {
             return false
         }
-        
-        
         return true
-        
-    }
-    //email validation
-    func isValidEmail(email:String?) -> Bool {
-        
-        guard email != nil else { return false }
-        
-        let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        
-        let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
-        return pred.evaluate(with: email)
-    }
-    //password validation
-    func isValidPassword(testStr:String?) -> Bool {
-        guard testStr != nil else { return false }
-        
-        // at least one uppercase,
-        // at least one digit
-        // at least one lowercase
-        // 8 characters total
-        
-//        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
-        
-        //special character version
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
-        
-        return passwordTest.evaluate(with: testStr)
-    }
-    //password checking
-    func matchPasswords(first:String?, second:String?) -> Bool {
-        return first == second
     }
     
     var body: some View {
@@ -113,55 +96,63 @@ struct RegisterViewController: View {
                         Form {
                             Section {
                                 TextField("Last Name", text: $lastname)
+                                    .border(Utilities.isBlank(self.lastname) ? Color.clear : Color.blue)
                             }
                             Section {
                                 TextField("First Name", text: $firstname)
+                                    .border(Utilities.isBlank(self.firstname) ? Color.clear : Color.blue)
                             }
                             Section {
                                 TextField("email@domain.com", text: $email) {
-                                    if self.isValidEmail(email: self.email) == false{
-                                        self.alertInvalidEmail = true
+                                    if Utilities.isValidEmail(self.email) == false{
+                                        self.invalidEmail = true
+                                    }else {
+                                        self.validEmail = true
                                     }
                                 }
-                                .alert(isPresented: $alertInvalidEmail) {
+                                .border(invalidEmail ? Color.red : Color.clear)
+                                .border(validEmail ? Color.blue : Color.clear)
+                                .alert(isPresented: $invalidEmail) {
                                     Alert(title: Text("Invalid Email"), message: Text("Please check your email address"))
-                                    //                                if self.isValidEmail(email: self.lastname){
-                                    //                                    //add alert to user
-                                    //                                    //highlight the textfields accordingly
-                                    //                                    print("Correct Email Format")
-                                    //
-                                    //                                }else {
-                                    //                                    print("Wrong email format")
-                                    //                                }
                                 }
                             }
                             Section {
                                 SecureField("Password", text: $password) {
-                                    if self.isValidPassword(testStr: self.password) == false{
-                                        self.alertInvalidPassword = true
-                                    }
-                                        //temporary testing condition
-                                    else {
-                                        self.testingBoolean = true
+                                    if Utilities.isValidPassword(self.password) == false{
+                                        self.invalidPassword = true
+                                    }else {
+                                        self.validPassword = true
                                     }
                                 }
-                                .alert(isPresented: $alertInvalidPassword) {
-                                    Alert(title: Text("Invalid Password"), message: Text("Please include uppercase letters and numbers in you password"))
+                                .border(invalidPassword ? Color.red : Color.clear)
+                                .border(validPassword ? Color.blue : Color.clear)
+                                .textContentType(.oneTimeCode)
+                                .alert(isPresented: $invalidPassword) {
+                                    Alert(title: Text("Invalid Password"), message: Text("Please make sure your password is at least 8 characters, contains a special character and a number"))
                                 }
                             }
                             Section {
                                 SecureField("Check Password", text: $passwordcheck) {
-                                    if self.matchPasswords(first: self.password, second: self.passwordcheck) == false{
-                                        self.alertPasswordsNotMatch = true
+                                    if Utilities.matchPasswords(self.password, self.passwordcheck) == false{
+                                        self.passwordsNotMatch = true
+                                    }else {
+                                        self.passwordsMatch = true
                                     }
-                                }.alert(isPresented: $alertPasswordsNotMatch) {
+                                }
+                                .border(passwordsNotMatch ? Color.red : Color.clear)
+                                .border(passwordsMatch ? Color.blue : Color.clear)
+                                .textContentType(.oneTimeCode)
+                                .alert(isPresented: $passwordsNotMatch) {
                                     Alert(title: Text("Passwords do not match"), message: Text("Please check your password"))
                                 }
                             }
                             Section {
                                 TextField("Username", text: $username)
+                                    .border(Utilities.isBlank(self.username) ? Color.clear : Color.blue)
                             }
-                            Section { DatePicker(selection:$birthdate,displayedComponents: .date, label: { Text("Birthdate") })
+                            Section {
+                                DatePicker(selection:$birthdate,displayedComponents: .date, label: 
+                                    { Text("Birthdate") })
                             }
                             // FIX: Not able to press gender again after picking a gender once
                             Section {
@@ -182,21 +173,31 @@ struct RegisterViewController: View {
                 //sign up button
                 //used conditional inside HStack to show sign up button only when validation is completed
                 HStack {
-                    if testingBoolean{
-                    NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
-                        EmptyView()
-                        Button(action: {
-                            print("Testing")
-                            self.selection = 1
-                        }) {
-                            HStack(alignment: .center) {
-                                Spacer()
-                                Text("Sign Up").foregroundColor(Color.white).bold()
-                                Spacer()
-                            }
-                        }.padding().background(Color.blue).cornerRadius(4.0)
-                    }
-                    .padding(.horizontal, 10.0)
+                    if self.validateFields(){
+                        NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
+                            EmptyView()
+                            Button(action: {
+                                //call validateFields() again and if returns true
+                                //add to database
+                                //navigate to home screen
+                                //if returns false
+                                //call an alert
+                                print("Testing")
+                                if self.validateFields() {
+                                    self.selection = 1
+                                }else {
+                                    print("error")
+                                }
+                                
+                            }) {
+                                HStack(alignment: .center) {
+                                    Spacer()
+                                    Text("Sign Up").foregroundColor(Color.white).bold()
+                                    Spacer()
+                                }
+                            }.padding().background(Color.blue).cornerRadius(4.0)
+                        }
+                        .padding(.horizontal, 10.0)
                     }
                 }
             }

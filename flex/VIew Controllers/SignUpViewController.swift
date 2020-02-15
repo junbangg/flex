@@ -7,6 +7,9 @@
 //
 
 import SwiftUI
+import UIKit
+import AnimatedField
+
 
 struct SignUpViewController: View {
     
@@ -27,6 +30,7 @@ struct SignUpViewController: View {
 //        formatter.dateStyle = .long
 //        return formatter
 //    }
+    
     //function for making keyboard disappear
     func endEditing() {
         //UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -49,6 +53,7 @@ struct SignUpViewController: View {
 //    }
     
     var body: some View {
+        
         
         VStack(alignment: .center, spacing : 10.0) {
             //will change the logo
@@ -78,10 +83,10 @@ struct SignUpViewController: View {
             Text("Gender")
                 .padding(.bottom, 10.0)
             
-            Button(action: {Picker(selection: self.$gender, label: Text("Gender")) {
-                Text("M").tag(1)
-                Text("F").tag(2)
-                }}) {
+//            Button(action: {Picker(selection: self.$gender, label: Text("Gender")) {
+//                Text("M").tag(1)
+//                Text("F").tag(2)
+//                }}) {
             Text("M/F")
                 .foregroundColor(Color.gray)
                 .overlay(
@@ -142,9 +147,6 @@ struct SignUpViewController: View {
             
         }
         
-        
-    }
-
 
 struct SignUpViewController_Previews: PreviewProvider {
     static var previews: some View {

@@ -15,6 +15,7 @@ pod 'FirebaseUI/Google'
 pod 'FirebaseUI/Facebook'
 pod 'FirebaseUI/Phone'
 pod 'KeyboardAvoider', '~> 1.0'
+pod 'AnimatedField'
 
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
