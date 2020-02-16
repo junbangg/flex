@@ -51,6 +51,8 @@ struct RegisterViewController: View {
     @State private var passwordsMatch : Bool = false
     @State private var passwordsNotMatch : Bool = false
     
+    @State private var validationIncomplete : Bool = false
+    
     //    @State private var testingBoolean : Bool = false
     @State private var selection : Int? = nil
     var genders : [String] = ["M", "F"]
@@ -84,6 +86,7 @@ struct RegisterViewController: View {
         if Utilities.isValidPassword(cleanedPassword) == false {
             return false
         }
+        
         return true
     }
     
@@ -178,8 +181,11 @@ struct RegisterViewController: View {
                                     //call an alert
                                     print("Testing")
                                     if self.validateFields() {
+                                        self.validationIncomplete = false
                                         self.selection = 1
                                     }else {
+                                        self.validationIncomplete = true
+                                        //maybe add an alert here
                                         print("error")
                                     }
                                     
@@ -193,6 +199,10 @@ struct RegisterViewController: View {
                                     .background(self.validateFields()
                                         ? Color.blue : Color.gray)
                                     .cornerRadius(4.0)
+                                    .alert(isPresented: $validationIncomplete) {
+                                        Alert(title: Text("Incomplete form"), message: Text("Please fill in all fields"))
+                                }
+                                
                             }
                             .padding(.horizontal, 10.0)
                             //                    }
@@ -215,4 +225,3 @@ struct RegisterViewController_Previews: PreviewProvider {
         RegisterViewController()
     }
 }
-
