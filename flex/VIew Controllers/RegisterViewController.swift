@@ -166,40 +166,45 @@ struct RegisterViewController: View {
                             //need to add function that will take the user to home page
                             //add new data to the database
                         }
+                        HStack {
+                            //                    if self.validateFields(){
+                            NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
+                                EmptyView()
+                                Button(action: {
+                                    //call validateFields() again and if returns true
+                                    //add to database
+                                    //navigate to home screen
+                                    //if returns false
+                                    //call an alert
+                                    print("Testing")
+                                    if self.validateFields() {
+                                        self.selection = 1
+                                    }else {
+                                        print("error")
+                                    }
+                                    
+                                }) {
+                                    HStack(alignment: .center) {
+                                        Spacer()
+                                        Text("Sign Up").foregroundColor(Color.white).bold()
+                                        Spacer()
+                                    }
+                                }.padding()
+                                    .background(self.validateFields()
+                                        ? Color.blue : Color.gray)
+                                    .cornerRadius(4.0)
+                            }
+                            .padding(.horizontal, 10.0)
+                            //                    }
+                        }
+                        
+                        
                     }
                 }.gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
                 //sign up button
                 //used conditional inside HStack to show sign up button only when validation is completed
-                HStack {
-                    if self.validateFields(){
-                        NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
-                            EmptyView()
-                            Button(action: {
-                                //call validateFields() again and if returns true
-                                //add to database
-                                //navigate to home screen
-                                //if returns false
-                                //call an alert
-                                print("Testing")
-                                if self.validateFields() {
-                                    self.selection = 1
-                                }else {
-                                    print("error")
-                                }
-                                
-                            }) {
-                                HStack(alignment: .center) {
-                                    Spacer()
-                                    Text("Sign Up").foregroundColor(Color.white).bold()
-                                    Spacer()
-                                }
-                            }.padding().background(Color.blue).cornerRadius(4.0)
-                        }
-                        .padding(.horizontal, 10.0)
-                    }
-                }
             }
         }
     }
