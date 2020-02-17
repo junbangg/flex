@@ -96,6 +96,8 @@ struct SignUpViewController: View {
                         .offset(x:-10, y:-7)
                 )
             }
+        
+
             
 //            NavigationView {
 //                Form {

@@ -176,10 +176,7 @@ struct RegisterViewController: View {
                             NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
                                 EmptyView()
                                 Button(action: {
-                                    //add to database
                                     //navigate to home screen
-                                    
-                                    
                                     if self.validateFields() {
                                         //add to database
                                         Auth.auth().createUser(withEmail: self.email, password: self.passwordcheck) { (result, err) in
@@ -201,7 +198,6 @@ struct RegisterViewController: View {
                                                        print("Error saving user data")
                                                     }
                                                 }
-                                                
                                                 // Transition to the home screen
                                             }
                                             
@@ -234,6 +230,7 @@ struct RegisterViewController: View {
                             .padding(.horizontal, 10.0)
                             //                    }
                         }
+                        
                         
                         
                     }

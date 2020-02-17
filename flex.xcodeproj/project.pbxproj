@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		366C444923FA826B0057267E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444823FA826B0057267E /* RatingView.swift */; };
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
 		369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169E23CD6B2500C0AB15 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		366C444823FA826B0057267E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369A169923CD6B2500C0AB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				369A169E23CD6B2500C0AB15 /* ContentView.swift */,
 				36D1926423F7AE5C0078ED6B /* Utilities.swift */,
 				369A16B123CD6D5400C0AB15 /* ItemDetails.swift */,
+				366C444823FA826B0057267E /* RatingView.swift */,
 				369A16AE23CD6C2800C0AB15 /* Model */,
 				369A16AF23CD6C3E00C0AB15 /* Supporting Views */,
 				369A16B023CD6C5300C0AB15 /* Resources */,
@@ -304,6 +307,7 @@
 				369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */,
 				36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */,
 				36D1926523F7AE5C0078ED6B /* Utilities.swift in Sources */,
+				366C444923FA826B0057267E /* RatingView.swift in Sources */,
 				369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */,
 				369A16B223CD6D5400C0AB15 /* ItemDetails.swift in Sources */,
 				36D1925423F68C1A0078ED6B /* FirebaseReferenceManager.swift in Sources */,
