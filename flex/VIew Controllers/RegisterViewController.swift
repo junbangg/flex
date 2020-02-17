@@ -32,6 +32,8 @@
 import SwiftUI
 //import KeyboardAvoider
 import Foundation
+import FirebaseAuth
+import Firebase
 
 struct RegisterViewController: View {
     
@@ -174,18 +176,43 @@ struct RegisterViewController: View {
                             NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
                                 EmptyView()
                                 Button(action: {
-                                    //call validateFields() again and if returns true
                                     //add to database
                                     //navigate to home screen
-                                    //if returns false
-                                    //call an alert
-                                    print("Testing")
+                                    
+                                    
                                     if self.validateFields() {
+                                        //add to database
+                                        Auth.auth().createUser(withEmail: self.email, password: self.passwordcheck) { (result, err) in
+                                            
+                                            // Check for errors
+                                            if err != nil {
+                                                
+                                                // There was an error creating the user
+                                                print("Error while creating user")
+                                            }
+                                            else {
+                                                // User was created successfully, now store the first name and last name
+                                                let db = Firestore.firestore()
+                                                
+                                                db.collection("users").addDocument(data: ["First Name" : self.firstname, "Last Name" : self.lastname, "Username" : self.username, "Gender" : self.gender,"Birthdate" : self.birthdate, "uid": result!.user.uid]) { (error) in
+                                                    
+                                                    if error != nil {
+                                                        // Show error message
+                                                       print("Error saving user data")
+                                                    }
+                                                }
+                                                
+                                                // Transition to the home screen
+                                            }
+                                            
+                                        }
+                                        //disable validation alert
                                         self.validationIncomplete = false
+                                        //change tag for navigation to home screen
                                         self.selection = 1
                                     }else {
+                                        //enable validation alert
                                         self.validationIncomplete = true
-                                        //maybe add an alert here
                                         print("error")
                                     }
                                     
@@ -200,7 +227,7 @@ struct RegisterViewController: View {
                                         ? Color.blue : Color.gray)
                                     .cornerRadius(4.0)
                                     .alert(isPresented: $validationIncomplete) {
-                                        Alert(title: Text("Incomplete form"), message: Text("Please fill in all fields"))
+                                        Alert(title: Text("Incomplete form"), message: Text("Please check if all fields are correctly filled"))
                                 }
                                 
                             }
