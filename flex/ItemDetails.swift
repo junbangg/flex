@@ -5,6 +5,13 @@
 //  Created by Jun suk Bang on 2020/01/14.
 //  Copyright © 2020 Jun Bang. All rights reserved.
 //
+
+/*
+ Issues:
+ 
+ -Need to decide on 5 perfectly balanced rating criteria
+ -figure out how to add button that will lead to the detailed review page
+ */
 import SwiftUI
 
 struct ItemDetails: View {
@@ -18,9 +25,13 @@ struct ItemDetails: View {
     @State private var headTurning : Int = 0
     
     func compute() -> String{
-        let mean : Double
-        mean = Double((sizeRating + comfortRating + designRating + qualityRating + mixAndmatch + headTurning) / 6)
-        return String(mean)
+        var sum = 0
+        var mean : Float
+        let denominator = 6
+        
+        sum = sizeRating + comfortRating + designRating + qualityRating + mixAndmatch + headTurning
+        mean = (Float(sum) / Float(denominator))
+        return String(round(mean*10)/10)
     }
     
     var body: some View {
