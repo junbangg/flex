@@ -10,7 +10,7 @@
  -Need to change this view so that the star ratings are fixed and can only be edited by the user
  -Create an editing version of this view
  -Need to decide on 5 perfectly balanced rating criteria
- -figure out how to add button that will lead to the detailed review page
+ -figure out how to add button that will lead to the detailed review page(maybe swipe for detailed review)
  */
 import SwiftUI
 
@@ -85,8 +85,6 @@ struct ItemDetails: View {
                     Spacer()
                     VStack {
                         Text("Design")
-                        //                        .font(.headline)
-                        //                        .multilineTextAlignment(.center)
                         RatingView(rating: $designRating)
                     }
                     Spacer()
@@ -95,8 +93,6 @@ struct ItemDetails: View {
                     Spacer()
                     VStack {
                         Text("Quality")
-                        //                        .font(.headline)
-                        //                        .multilineTextAlignment(.center)
                         RatingView(rating: $qualityRating)
                     }
                     Spacer()
@@ -105,8 +101,6 @@ struct ItemDetails: View {
                     Spacer()
                     VStack {
                         Text("Mix n Match")
-                        //                        .font(.headline)
-                        //                        .multilineTextAlignment(.center)
                         RatingView(rating: $mixAndmatch)
                     }
                     Spacer()
@@ -115,8 +109,6 @@ struct ItemDetails: View {
                     Spacer()
                     VStack {
                         Text("Headturning")
-                        //                        .font(.headline)
-                        //                        .multilineTextAlignment(.center)
                         RatingView(rating: $headTurning)
                     }
                     Spacer()

@@ -7,32 +7,34 @@
 //
 
 import SwiftUI
+import WaterfallGrid
 
 struct MyPageViewController: View {
+
+    @State private var username : String = "olaf"
+    @State private var fullname : String = "방준석"
+    @State private var rank : String = "Bishop"
+    
+
     var body: some View {
         VStack {
+            CircleImage(image: Image("testProfile") )
+            Text("aldsfjalksdjflkajdslfj")
+                .font(.title)
+                .padding()
             HStack {
-                CircleImage(image: Image("testProfile") )
-                        .offset(x: -50, y: 0)
-//                    .padding(.bottom, -130)
-                VStack {
-                    Text("olafo0o")
-                        .font(.title)
-//                    Text("Fasion Enthusiast, Ice Cream Lover")
-                }
+                Text("Rank")
+                Spacer()
+                Text("1,234 Votes")
+                Spacer()
+                Text("Followed by 2433")
             }
+            Divider()
+            TimelineView()
             
-            
-//            Spacer()
-//                Text("Fasion Passion")
-//                    .font(.headline)
-//                    .multilineTextAlignment(.center)
-            
-//            .padding()
-            //            Spacer()
-            
-            Spacer()
         }
+        
+        
     }
 }
 
