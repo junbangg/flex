@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct TimelineView: View {
+    @State private var selection : Int? = nil
     
     let previews:[Preview] = [
         Preview(id: 0, imageUrl: "1"),
@@ -22,32 +23,42 @@ struct TimelineView: View {
     ]
     
     var body: some View {
+//        NavigationView {
             ScrollView{
                 VStack {
-                    
                     ForEach(previews, id: \.id) { preview in
                         HStack {
                             LineView(previewArray: [preview])
                                 .padding()
-                            VStack {
-                                Text("Nike x Sacai")
-                                    .font(.title)
-                                Text("LDV Waffle")
-                                    .font(.headline)
+                            NavigationLink(destination: ItemDetails(), tag: 1, selection: self.$selection){
+                                
+                                Button(action: {
+                                    self.selection = 1
+                                }) {
+                                    VStack {
+                                        Text("Nike x Sacai")
+                                            .font(.title)
+                                        Text("LDV Waffle")
+                                            .font(.headline)
+                                    }
+                                    Text("4.5")
+                                        .font(.title)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color.yellow)
+                                        .padding()
+                                }
                             }
                             
                             //Review Summary
                             Spacer()
-                            Text("4.5")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.yellow)
-                                .padding()
+                            Divider()
                         }
+                        
                         
                     }
                 }
             }
+//        }
     }
 }
 
@@ -68,8 +79,8 @@ struct LineView: View {
     var body: some View {
         HStack(spacing: 2){
             PreviewView(preview: previewArray[0])
-//            PreviewView(preview: previewArray[1])
-//            PreviewView(preview: previewArray[2])
+            //            PreviewView(preview: previewArray[1])
+            //            PreviewView(preview: previewArray[2])
         }
     }
 }
@@ -81,9 +92,9 @@ struct PreviewView: View {
     var body: some View {
         //Circle Image Version
         CircleImage(image: Image(preview.imageUrl) )
-        //Rectangular Version 
-//        Image(preview.imageUrl)
-//        .resizable()
-//        .frame(width: 136, height: 136)
+        //Rectangular Version
+        //        Image(preview.imageUrl)
+        //        .resizable()
+        //        .frame(width: 136, height: 136)
     }
 }

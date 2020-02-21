@@ -6,37 +6,82 @@
 //  Copyright © 2020 Jun Bang. All rights reserved.
 //
 
+//NavigationView {
+//   List(todoItems) { todoItem in
+//      NavigationLink(destination: TodoDetailView(todoItem: todoItem)) {
+//         Text(todoItem.action)
+//      }
+//   }.navigationBarTitle(Text("Todo Items"))
+//}
+
 import SwiftUI
 import WaterfallGrid
 
 struct MyPageViewController: View {
-
+    
     @State private var username : String = "olaf"
     @State private var fullname : String = "방준석"
     @State private var rank : String = "Bishop"
     
-
+    @State private var selection : Int? = nil
+    
+    
     var body: some View {
-        VStack {
-            CircleImage(image: Image("testProfile") )
-            Text("aldsfjalksdjflkajdslfj")
-                .font(.title)
-                .padding()
-            HStack {
-                Text("Rank")
-                Spacer()
-                Text("1,234 Votes")
-                Spacer()
-                Text("Followed by 2433")
+        NavigationView {
+            VStack {
+                CircleImage(image: Image("testProfile") )
+                Text("aldsfjalksdjflkajdslfj")
+                    .font(.title)
+                    .padding()
+                HStack {
+                    Text("Rank")
+                    Spacer()
+                    Text("1,234 Votes")
+                    Spacer()
+                    Text("Followed by 2433")
+                }
+                Divider()
+                TimelineView()
+//                HStack {
+//                    NavigationLink(destination: ItemDetails(), tag: 1, selection: $selection){
+//
+//                        Button(action: {
+//                            self.selection = 1
+//                        }) {
+//                            Text("Home")
+//                        }
+//                    }
+//                    .padding(.leading)
+//                    Spacer()
+//                    NavigationLink(destination: ItemDetails(), tag: 1, selection: $selection){
+//
+//                        Button(action: {
+//                            self.selection = 1
+//                        }) {
+//                            Text("Add")
+//                        }
+//                    }
+//                    Spacer()
+//                    NavigationLink(destination: ItemDetails(), tag: 1, selection: $selection){
+//
+//                        Button(action: {
+//                            self.selection = 1
+//                        }) {
+//                            Text("Switch")
+//                        }
+//                    }
+//                    .padding()
+//                }
+                
+                
             }
-            Divider()
-            TimelineView()
-            
         }
         
-        
     }
+    
+    
 }
+
 
 struct MyPageViewController_Previews: PreviewProvider {
     static var previews: some View {
