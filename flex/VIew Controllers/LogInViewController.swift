@@ -9,6 +9,7 @@
 //FIX: Navigation and picker for gender do not function when tried again
 
 import SwiftUI
+import FirebaseAuth
 
 struct LogInViewController: View {
     @State private var username : String = ""

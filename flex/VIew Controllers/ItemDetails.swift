@@ -35,102 +35,109 @@ struct ItemDetails: View {
     }
     
     var body: some View {
-        VStack {
-            BackgroundImage(image: Image("nikelogo"))
-                .edgesIgnoringSafeArea(.top)
-                .frame(height: 250)//400
+        
+        NavigationView {
             
-            CircleImage(image: Image("sacai") )
-                .offset(x: 0, y: -130)
-                .padding(.bottom, -130)
             VStack {
-                Text("Nike x Sacai")
-                    .font(.title)
-                Text("LDV Waffle")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
-            }
-            .padding()
-            //            Spacer()
-            
-            Text(self.compute())
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(Color.yellow)
-            
-            Spacer()
-            ScrollView {
-           
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("Sizing")
-                        //                        .font(.headline)
-                        //                        .multilineTextAlignment(.center)
-                        RatingView(rating: $sizeRating)
-                    }
-                    Spacer()
+                BackgroundImage(image: Image("nikelogo"))
+                    .edgesIgnoringSafeArea(.top)
+                    .frame(height: 230)//400
+                
+                CircleImage(image: Image("sacai") )
+                    .frame(width: 300, height: 300)
+                    .offset(x: 0, y: -200) //-130
+                    .padding(.bottom, -200)
+                
+                VStack {
+                    Text("Nike x Sacai")
+                        .font(.title)
+                    Text("LDV Waffle")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
                 }
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("Comfort")
-                        //                        .font(.headline)
-                        //                        .multilineTextAlignment(.center)
-                        RatingView(rating: $comfortRating)
+                //            .padding()
+                //            Spacer()
+                
+                Text(self.compute())
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.yellow)
+                
+                Spacer()
+                ScrollView {
+                    
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Text("Sizing")
+                            //                        .font(.headline)
+                            //                        .multilineTextAlignment(.center)
+                            RatingView(rating: $sizeRating)
+                        }
+                        Spacer()
                     }
-                    Spacer()
-                }
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("Design")
-                        RatingView(rating: $designRating)
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Text("Comfort")
+                            //                        .font(.headline)
+                            //                        .multilineTextAlignment(.center)
+                            RatingView(rating: $comfortRating)
+                        }
+                        Spacer()
                     }
-                    Spacer()
-                }
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("Quality")
-                        RatingView(rating: $qualityRating)
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Text("Design")
+                            RatingView(rating: $designRating)
+                        }
+                        Spacer()
                     }
-                    Spacer()
-                }
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("Mix n Match")
-                        RatingView(rating: $mixAndmatch)
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Text("Quality")
+                            RatingView(rating: $qualityRating)
+                        }
+                        Spacer()
                     }
-                    Spacer()
-                }
-                HStack {
-                    Spacer()
-                    VStack {
-                        Text("Headturning")
-                        RatingView(rating: $headTurning)
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Text("Mix n Match")
+                            RatingView(rating: $mixAndmatch)
+                        }
+                        Spacer()
                     }
-                    Spacer()
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Text("Headturning")
+                            RatingView(rating: $headTurning)
+                        }
+                        Spacer()
+                    }
                 }
                 
-            
+                Spacer()
             }
+            //        HStack {
+            //            NavigationLink(destination: LogInViewController(), tag: 1, selection: $detailedView){
+            //                EmptyView()
+            //                Button(action: {
+            //                    self.detailedView = 1
+            //                }) {
+            //                    Text("Detailed Review")
+            //                }
+            //            }
+            //        }
             
-            Spacer()
         }
-//        HStack {
-//            NavigationLink(destination: LogInViewController(), tag: 1, selection: $detailedView){
-//                EmptyView()
-//                Button(action: {
-//                    self.detailedView = 1
-//                }) {
-//                    Text("Detailed Review")
-//                }
-//            }
-//        }
-        
+        .navigationBarTitle("Hidden Title")
+        .navigationBarHidden(true)
     }
+    
 }
 
 //struct ItemDetails_Previews: PreviewProvider {

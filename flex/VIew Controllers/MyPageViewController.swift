@@ -19,6 +19,7 @@ import WaterfallGrid
 
 struct MyPageViewController: View {
     
+    
     @State private var username : String = "olaf"
     @State private var fullname : String = "방준석"
     @State private var rank : String = "Bishop"
@@ -75,7 +76,10 @@ struct MyPageViewController: View {
 //                }
                 
             }
+            .navigationBarTitle("Hidden Title")
+            .navigationBarHidden(true)
         }
+       
     }
 }
 struct MyPageViewController_Previews: PreviewProvider {
