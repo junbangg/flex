@@ -30,6 +30,7 @@ struct MyPageViewController: View {
         NavigationView {
             VStack {
                 CircleImage(image: Image("testProfile") )
+                    .aspectRatio(contentMode: .fit)
                 Text("aldsfjalksdjflkajdslfj")
                     .font(.title)
                     .padding()
@@ -73,16 +74,10 @@ struct MyPageViewController: View {
 //                    .padding()
 //                }
                 
-                
             }
         }
-        
     }
-    
-    
 }
-
-
 struct MyPageViewController_Previews: PreviewProvider {
     static var previews: some View {
         MyPageViewController()

@@ -23,42 +23,43 @@ struct TimelineView: View {
     ]
     
     var body: some View {
-//        NavigationView {
-            ScrollView{
-                VStack {
-                    ForEach(previews, id: \.id) { preview in
-                        HStack {
-                            LineView(previewArray: [preview])
-                                .padding()
-                            NavigationLink(destination: ItemDetails(), tag: 1, selection: self.$selection){
-                                
-                                Button(action: {
-                                    self.selection = 1
-                                }) {
-                                    VStack {
-                                        Text("Nike x Sacai")
-                                            .font(.title)
-                                        Text("LDV Waffle")
-                                            .font(.headline)
-                                    }
-                                    Text("4.5")
-                                        .font(.title)
-                                        .fontWeight(.bold)
-                                        .foregroundColor(Color.yellow)
-                                        .padding()
-                                }
-                            }
+        //        NavigationView {
+        ScrollView{
+            VStack {
+                ForEach(previews, id: \.id) { preview in
+                    HStack {
+                        LineView(previewArray: [preview])
+                            .padding()
+                        Spacer()
+                        NavigationLink(destination: ItemDetails(), tag: 1, selection: self.$selection){
                             
-                            //Review Summary
-                            Spacer()
-                            Divider()
+                            Button(action: {
+                                self.selection = 1
+                            }) {
+                                VStack {
+                                    Text("Nike x Sacai")
+                                        .font(.title)
+                                    Text("LDV Waffle")
+                                        .font(.headline)
+                                }
+                                Spacer()
+                                Text("4.5")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.yellow)
+                                    .padding()
+                            }
                         }
                         
+                        //Review Summary
                         
                     }
+                    
+                    
                 }
             }
-//        }
+        }
+        //        }
     }
 }
 
@@ -92,9 +93,10 @@ struct PreviewView: View {
     var body: some View {
         //Circle Image Version
         CircleImage(image: Image(preview.imageUrl) )
+            .frame(width: 136, height: 136)
         //Rectangular Version
         //        Image(preview.imageUrl)
-        //        .resizable()
-        //        .frame(width: 136, height: 136)
+        //            .resizable()
+        //            .frame(width: 136, height: 136)
     }
 }
