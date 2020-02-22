@@ -24,6 +24,11 @@ struct ItemDetails: View {
     @State private var mixAndmatch : Int = 0
     @State private var headTurning : Int = 0
     
+    @State private var testReview : String = ""
+    @State private var testVotes : Int = 365
+    
+    let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
+    
     func compute() -> String{
         var sum = 0
         var mean : Float
@@ -55,71 +60,34 @@ struct ItemDetails: View {
                         .font(.headline)
                         .multilineTextAlignment(.center)
                 }
-                //            .padding()
-                //            Spacer()
-                
-                Text(self.compute())
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.yellow)
+                HStack {
+                    Text(self.compute())
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.yellow)
+                        .padding(.leading)
+                    
+                    Spacer()
+                    VStack {
+                        Button(action: {self.testVotes += 1}) {
+                            Text("Upvote")
+                        }.foregroundColor(Color.red)
+                        Text("\(testVotes)").foregroundColor(Color.gray)
+                    }
+                    .padding(.trailing)
+                }
+                Divider()
                 
                 Spacer()
                 ScrollView {
                     
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("Sizing")
-                            //                        .font(.headline)
-                            //                        .multilineTextAlignment(.center)
-                            RatingView(rating: $sizeRating)
-                        }
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("Comfort")
-                            //                        .font(.headline)
-                            //                        .multilineTextAlignment(.center)
-                            RatingView(rating: $comfortRating)
-                        }
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("Design")
-                            RatingView(rating: $designRating)
-                        }
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("Quality")
-                            RatingView(rating: $qualityRating)
-                        }
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("Mix n Match")
-                            RatingView(rating: $mixAndmatch)
-                        }
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Text("Headturning")
-                            RatingView(rating: $headTurning)
-                        }
-                        Spacer()
-                    }
+                    RatingForm(category: "Sizing", sizeRating: $sizeRating, testReview: $testReview).padding(.top, 20)
+                    RatingForm(category: "Comfort", sizeRating: $comfortRating, testReview: $testReview).padding(.top, 20)
+                    RatingForm(category: "Design", sizeRating: $designRating, testReview: $testReview).padding(.top, 20)
+                    RatingForm(category: "Quality",sizeRating: $qualityRating, testReview: $testReview).padding(.top, 20)
+                    RatingForm(category: "Mix and Match",sizeRating: $mixAndmatch, testReview: $testReview).padding(.top, 20)
+                    RatingForm(category: "Headturning",sizeRating: $headTurning, testReview: $testReview).padding(.top, 20)
                 }
-                
                 Spacer()
             }
             //        HStack {

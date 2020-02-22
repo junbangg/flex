@@ -67,23 +67,6 @@ struct LogInViewController: View {
                     //
                     //
                     
-                    //                        //                Button(action: {print("\(self.username) : \(self.password)")}) {
-                    //                        //                    Text("Sign Up")
-                    //                        //                        .font(.body)
-                    //                        //                        .fontWeight(.semibold)
-                    //                        //                        .foregroundColor(Color.gray)
-                    //                        //                        .overlay(
-                    //                        //                            Capsule(style: .continuous)
-                    //                        //                                .size(width:80, height:35)
-                    //                        //                                .stroke(Color.gray, lineWidth : 2.5)
-                    //                        //                                .offset(x:-10, y:-7)
-                    //                        //                    )
-                    //                        //                }
-                    //                        .padding(.leading, 50)
-                    //
-                    //                }
-                    //                        .padding(.top, 10.0)
-                    
                 }
                 .padding(.bottom, 10.0)
                 

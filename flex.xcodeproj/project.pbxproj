@@ -11,6 +11,8 @@
 		366C444C23FB82710057267E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444B23FB82710057267E /* MyPageViewController.swift */; };
 		366C444E23FBAD110057267E /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444D23FBAD110057267E /* IntroView.swift */; };
 		366C445423FE68380057267E /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C445323FE68380057267E /* TimelineView.swift */; };
+		366C44562400FD0E0057267E /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C44552400FD0E0057267E /* NavigationTab.swift */; };
+		366C445A240119D40057267E /* RatingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C4459240119D40057267E /* RatingForm.swift */; };
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
 		369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169E23CD6B2500C0AB15 /* ContentView.swift */; };
@@ -37,6 +39,8 @@
 		366C444B23FB82710057267E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		366C444D23FBAD110057267E /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		366C445323FE68380057267E /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		366C44552400FD0E0057267E /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
+		366C4459240119D40057267E /* RatingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingForm.swift; sourceTree = "<group>"; };
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369A169923CD6B2500C0AB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				36D1924F23F573510078ED6B /* KeyboardHost.swift */,
 				366C444D23FBAD110057267E /* IntroView.swift */,
 				366C445323FE68380057267E /* TimelineView.swift */,
+				366C44552400FD0E0057267E /* NavigationTab.swift */,
+				366C4459240119D40057267E /* RatingForm.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -332,10 +338,12 @@
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
 				36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */,
+				366C44562400FD0E0057267E /* NavigationTab.swift in Sources */,
 				369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */,
 				36D1924823F1A2B20078ED6B /* Logo.swift in Sources */,
 				369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */,
 				366C444E23FBAD110057267E /* IntroView.swift in Sources */,
+				366C445A240119D40057267E /* RatingForm.swift in Sources */,
 				369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */,
 				369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */,
 				369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */,
