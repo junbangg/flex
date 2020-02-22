@@ -44,42 +44,13 @@ struct MyPageViewController: View {
                 }
                 Divider()
                 TimelineView()
-//                HStack {
-//                    NavigationLink(destination: ItemDetails(), tag: 1, selection: $selection){
-//
-//                        Button(action: {
-//                            self.selection = 1
-//                        }) {
-//                            Text("Home")
-//                        }
-//                    }
-//                    .padding(.leading)
-//                    Spacer()
-//                    NavigationLink(destination: ItemDetails(), tag: 1, selection: $selection){
-//
-//                        Button(action: {
-//                            self.selection = 1
-//                        }) {
-//                            Text("Add")
-//                        }
-//                    }
-//                    Spacer()
-//                    NavigationLink(destination: ItemDetails(), tag: 1, selection: $selection){
-//
-//                        Button(action: {
-//                            self.selection = 1
-//                        }) {
-//                            Text("Switch")
-//                        }
-//                    }
-//                    .padding()
-//                }
                 
+                NavigationTab()
             }
             .navigationBarTitle("Hidden Title")
             .navigationBarHidden(true)
         }
-       
+        
     }
 }
 struct MyPageViewController_Previews: PreviewProvider {

@@ -18,8 +18,8 @@ struct TimelineView: View {
         Preview(id: 3, imageUrl: "4"),
         Preview(id: 4, imageUrl: "5"),
         Preview(id: 5, imageUrl: "6"),
-        Preview(id: 6, imageUrl: "7"),
-        Preview(id: 7, imageUrl: "8")
+        Preview(id: 6, imageUrl: "7")
+//        Preview(id: 7, imageUrl: "8")
     ]
     
     var body: some View {

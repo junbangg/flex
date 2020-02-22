@@ -88,7 +88,8 @@ struct ItemDetails: View {
                     RatingForm(category: "Mix and Match",sizeRating: $mixAndmatch, testReview: $testReview).padding(.top, 20)
                     RatingForm(category: "Headturning",sizeRating: $headTurning, testReview: $testReview).padding(.top, 20)
                 }
-                Spacer()
+//                Spacer()
+                NavigationTab()
             }
             //        HStack {
             //            NavigationLink(destination: LogInViewController(), tag: 1, selection: $detailedView){
@@ -100,6 +101,7 @@ struct ItemDetails: View {
             //                }
             //            }
             //        }
+            
             
         }
         .navigationBarTitle("Hidden Title")
