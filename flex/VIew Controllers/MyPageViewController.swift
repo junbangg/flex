@@ -47,9 +47,10 @@ struct MyPageViewController: View {
                 
                 NavigationTab()
             }
-            .navigationBarTitle("Hidden Title")
-            .navigationBarHidden(true)
+            
         }
+        .navigationBarTitle("Hidden Title")
+        .navigationBarHidden(true)
         
     }
 }

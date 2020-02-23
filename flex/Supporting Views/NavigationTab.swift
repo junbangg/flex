@@ -31,7 +31,8 @@ struct NavigationTab: View {
 //        }
 //        .navigationBarTitle("Hidden Title")
 //        .navigationBarHidden(true)
-        //        .frame(height: 80)
+//                .frame(height: 50)
+//        .padding(.top, -100)
         
     }
 }
