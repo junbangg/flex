@@ -13,8 +13,8 @@ struct TimelineView: View {
     //    var productName : String
     
     let previews:[Preview] = [
-        Preview(id: 0, imageUrl: "1", product: Product(brandName: "Nike x ACW", productName: "Zoom Vomero 5")),
-        Preview(id: 1, imageUrl: "2", product: Product(brandName: "Nike x Sacai", productName: "LDV Waffle")),
+        Preview(id: 0, imageUrl: "1", product: Product(brandName: "Nike x Sacai", productName: "LDV Waffle")),
+        Preview(id: 1, imageUrl: "2", product: Product(brandName: "Nike x ACW", productName: "Zoom Vomero 5")),
         Preview(id: 2, imageUrl: "3", product: Product(brandName: "Acne Studios", productName: "Non-collar")),
         Preview(id: 3, imageUrl: "4", product: Product(brandName: "New Balance", productName: "V4")),
         Preview(id: 4, imageUrl: "5", product: Product(brandName: "Nike", productName: "Air Max 97"))

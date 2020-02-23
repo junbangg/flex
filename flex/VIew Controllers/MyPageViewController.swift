@@ -32,15 +32,35 @@ struct MyPageViewController: View {
             VStack {
                 CircleImage(image: Image("testProfile") )
                     .aspectRatio(contentMode: .fit)
-                Text("aldsfjalksdjflkajdslfj")
+                Text(username)
                     .font(.title)
                     .padding()
                 HStack {
-                    Text("Rank")
+                    VStack {
+                        Text("Rank")
+                            .font(.headline)
+//                            .foregroundColor(Color.red)
+                        Text("Gold"
+                        ).foregroundColor(Color.yellow)
+                    }
+                    .padding(.leading)
                     Spacer()
-                    Text("1,234 Votes")
+                    VStack {
+                        Text("Votes")
+                            .font(.headline)
+//                            .foregroundColor(Color.red)
+                        Text("365").foregroundColor(Color.gray)
+                    }
+                    .padding(.leading, 30.0)
                     Spacer()
-                    Text("Followed by 2433")
+                    VStack {
+                        Text("Followers")
+                            .font(.headline)
+//                            .foregroundColor(Color.red)
+                        Text("1234")
+                            .foregroundColor(Color.gray)
+                    }
+                    .padding(.trailing)
                 }
                 Divider()
                 TimelineView()
