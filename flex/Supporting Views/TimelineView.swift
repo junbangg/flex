@@ -9,16 +9,17 @@
 import SwiftUI
 
 struct TimelineView: View {
-    @State private var selection : Int? = nil
+    
+    //    var productName : String
     
     let previews:[Preview] = [
-        Preview(id: 0, imageUrl: "1"),
-        Preview(id: 1, imageUrl: "2"),
-        Preview(id: 2, imageUrl: "3"),
-        Preview(id: 3, imageUrl: "4"),
-        Preview(id: 4, imageUrl: "5"),
-        Preview(id: 5, imageUrl: "6"),
-        Preview(id: 6, imageUrl: "7")
+        Preview(id: 0, imageUrl: "1", product: Product(brandName: "Nike x ACW", productName: "Zoom Vomero 5")),
+        Preview(id: 1, imageUrl: "2", product: Product(brandName: "Nike x Sacai", productName: "LDV Waffle")),
+        Preview(id: 2, imageUrl: "3", product: Product(brandName: "Acne Studios", productName: "Non-collar")),
+        Preview(id: 3, imageUrl: "4", product: Product(brandName: "New Balance", productName: "V4")),
+        Preview(id: 4, imageUrl: "5", product: Product(brandName: "Nike", productName: "Air Max 97"))
+        //        Preview(id: 5, imageUrl: "6"),
+        //        Preview(id: 6, imageUrl: "7")
         //        Preview(id: 7, imageUrl: "8")
     ]
     
@@ -26,36 +27,23 @@ struct TimelineView: View {
         //        NavigationView {
         ScrollView{
             VStack {
+                //                for index in 0..<previews.count {
+                //
+                //                }
                 ForEach(previews, id: \.id) { preview in
                     HStack {
                         LineView(previewArray: [preview])
                             .padding()
                         Spacer()
-                        //                        NavigationLink(destination: ItemDetails(), tag: 1, selection: self.$selection){
-                        //
-                        //                            Button(action: {
-                        //                                self.selection = 1
-                        //                            }) {
-                        //                                VStack {
-                        //                                    Text("Nike x Sacai")
-                        //                                        .font(.title)
-                        //                                    Text("LDV Waffle")
-                        //                                        .font(.headline)
-                        //                                }
-                        //                                Spacer()
-                        //                                Text("4.5")
-                        //                                    .font(.title)
-                        //                                    .fontWeight(.bold)
-                        //                                    .foregroundColor(Color.yellow)
-                        //                                    .padding()
-                        //                            }
-                        //                        }
                         NavigationLink(destination: ItemDetails()) {
                             VStack {
-                                Text("Nike x Sacai")
+                                Text(preview.brandToString())
                                     .font(.title)
-                                Text("LDV Waffle")
+                                    .multilineTextAlignment(.center)
+                                    
+                                Text(preview.productNameToString())
                                     .font(.headline)
+                                    .multilineTextAlignment(.center)
                             }
                             Spacer()
                             Text("4.5")
@@ -63,53 +51,65 @@ struct TimelineView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.yellow)
                                 .padding()
-                            }
-                            //Review Summary
-                            
                         }
-                        
+                        //Review Summary
                         
                     }
+                    
+                    
                 }
             }
-            //        }
+        }
+        //        }
+    }
+}
+
+struct TimelineView_Previews: PreviewProvider {
+    static var previews: some View {
+        TimelineView()
+    }
+}
+struct Product {
+    let brandName : String
+    let productName : String
+    
+}
+struct Preview {
+    var id: Int
+    let imageUrl: String
+    let product: Product
+    
+    func brandToString() -> String {
+        return product.brandName
+    }
+    func productNameToString() -> String {
+        return product.productName
+    }
+}
+
+struct LineView: View {
+    let previewArray:[Preview]
+    
+    var body: some View {
+        HStack(spacing: 2){
+            PreviewView(preview: previewArray[0])
+            //            PreviewView(preview: previewArray[1])
+            //            PreviewView(preview: previewArray[2])
         }
     }
+}
+
+struct PreviewView: View {
     
-    struct TimelineView_Previews: PreviewProvider {
-        static var previews: some View {
-            TimelineView()
-        }
+    let preview: Preview
+    
+    var body: some View {
+        //Circle Image Version
+        CircleImage(image: Image(preview.imageUrl) )
+            .frame(width: 136, height: 136)
+        //Rectangular Version
+        //        Image(preview.imageUrl)
+        //            .resizable()
+        //            .frame(width: 136, height: 136)
     }
-    
-    struct Preview {
-        var id: Int
-        let imageUrl: String
-    }
-    
-    struct LineView: View {
-        let previewArray:[Preview]
-        
-        var body: some View {
-            HStack(spacing: 2){
-                PreviewView(preview: previewArray[0])
-                //            PreviewView(preview: previewArray[1])
-                //            PreviewView(preview: previewArray[2])
-            }
-        }
-    }
-    
-    struct PreviewView: View {
-        
-        let preview: Preview
-        
-        var body: some View {
-            //Circle Image Version
-            CircleImage(image: Image(preview.imageUrl) )
-                .frame(width: 136, height: 136)
-            //Rectangular Version
-            //        Image(preview.imageUrl)
-            //            .resizable()
-            //            .frame(width: 136, height: 136)
-        }
 }

@@ -12,6 +12,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct LogInViewController: View {
+    
     @State private var email : String = ""
     @State private var password : String = ""
     @State private var action :  Int? = 0
@@ -86,6 +87,7 @@ struct LogInViewController: View {
                                 else {
                                     print("Log In Successful")
                                     self.selection = 1
+                                    
                                 }
                                 
                                 
