@@ -191,7 +191,7 @@ struct RegisterViewController: View {
                                                 // User was created successfully, now store the first name and last name
                                                 let db = Firestore.firestore()
                                                 
-                                                db.collection("users").addDocument(data: ["First Name" : self.firstname, "Last Name" : self.lastname, "Username" : self.username, "Gender" : self.gender,"Birthdate" : self.birthdate, "uid": result!.user.uid]) { (error) in
+                                                db.collection("users").addDocument(data: ["Email" : self.email,"Password" : self.passwordcheck,"First Name" : self.firstname, "Last Name" : self.lastname, "Username" : self.username, "Gender" : self.gender,"Birthdate" : self.birthdate, "uid": result!.user.uid]) { (error) in
                                                     
                                                     if error != nil {
                                                         // Show error message

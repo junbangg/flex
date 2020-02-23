@@ -72,10 +72,25 @@ struct LogInViewController: View {
                 
                 HStack {
                     //                    if self.validateFields(){
-                    NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
+                    NavigationLink(destination: MyPageViewController(), tag: 1, selection: $selection){
                         EmptyView()
                         Button(action: {
-                            print("testing")
+                            let cleanedEmail = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
+                            let cleanedPassword = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
+                            //Sign in User
+                            Auth.auth().signIn(withEmail: cleanedEmail, password: cleanedPassword) {
+                                (result,error) in
+                                if error != nil {
+                                    print("error")
+                                }
+                                else {
+                                    print("Log In Successful")
+                                    self.selection = 1
+                                }
+                                
+                                
+                            }
+                            
                             //navigate to home screen
                             //                        if self.validateFields() {
                             //

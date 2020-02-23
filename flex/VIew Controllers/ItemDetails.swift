@@ -90,6 +90,7 @@ struct ItemDetails: View {
                 }
 //                Spacer()
                 NavigationTab()
+                    .padding(.bottom)
             }
             //        HStack {
             //            NavigationLink(destination: LogInViewController(), tag: 1, selection: $detailedView){
@@ -101,7 +102,6 @@ struct ItemDetails: View {
             //                }
             //            }
             //        }
-            
             
         }
         .navigationBarTitle("Hidden Title")
