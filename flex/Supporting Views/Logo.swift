@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Logo: View {
     var body: some View {
-        Text("flex")
+        Text("checked")
             .font(.largeTitle)
             .fontWeight(.bold)
             .foregroundColor(Color.red)

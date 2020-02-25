@@ -46,7 +46,7 @@ struct MyPageViewController: View {
                     .padding(.leading)
                     Spacer()
                     VStack {
-                        Text("Votes")
+                        Text("Checks")
                             .font(.headline)
 //                            .foregroundColor(Color.red)
                         Text("365").foregroundColor(Color.gray)
@@ -54,7 +54,7 @@ struct MyPageViewController: View {
                     .padding(.leading, 30.0)
                     Spacer()
                     VStack {
-                        Text("Followers")
+                        Text("Checkers")
                             .font(.headline)
 //                            .foregroundColor(Color.red)
                         Text("1234")

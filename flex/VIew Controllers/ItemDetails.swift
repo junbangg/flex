@@ -70,7 +70,7 @@ struct ItemDetails: View {
                     Spacer()
                     VStack {
                         Button(action: {self.testVotes += 1}) {
-                            Text("Upvote")
+                            Text("Checked")
                         }.foregroundColor(Color.red)
                         Text("\(testVotes)").foregroundColor(Color.gray)
                     }
