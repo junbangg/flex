@@ -8,7 +8,6 @@
 
 import SwiftUI
 import UIKit
-import AnimatedField
 
 
 struct SignUpViewController: View {

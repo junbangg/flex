@@ -42,53 +42,60 @@ struct ItemDetails: View {
     var body: some View {
         
         NavigationView {
-            
             VStack {
-                BackgroundImage(image: Image("nikelogo"))
-                    .edgesIgnoringSafeArea(.top)
-                    .frame(height: 230)//400
-                
-                CircleImage(image: Image("sacai") )
-                    .frame(width: 300, height: 300)
-                    .offset(x: 0, y: -200) //-130
-                    .padding(.bottom, -200)
-                
-                VStack {
-                    Text("Nike x Sacai")
-                        .font(.title)
-                    Text("LDV Waffle")
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
-                }
-                HStack {
-                    Text(self.compute())
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.yellow)
-                        .padding(.leading)
-                    
-                    Spacer()
-                    VStack {
-                        Button(action: {self.testVotes += 1}) {
-                            Text("Checked")
-                        }.foregroundColor(Color.red)
-                        Text("\(testVotes)").foregroundColor(Color.gray)
-                    }
-                    .padding(.trailing)
-                }
-                Divider()
-                
-                Spacer()
                 ScrollView {
+                    VStack {
+                        BackgroundImage(image: Image("nikelogo"))
+                            .edgesIgnoringSafeArea(.top)
+                            .frame(height: 200)//400
+                        
+                        CircleImage(image: Image("sacai") )
+                            .frame(width: 250, height: 250)
+                            .offset(x: 0, y: -100) //-130
+                            .padding(.bottom, -100)
+                        
+                        VStack {
+                            Text("Nike x Sacai")
+                                .font(.title)
+                            Text("LDV Waffle")
+                                .font(.headline)
+                                .multilineTextAlignment(.center)
+                        }
+                        HStack {
+                            Text(self.compute())
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.yellow)
+                                .padding(.leading)
+                            
+                            Spacer()
+                            VStack {
+                                Button(action: {self.testVotes += 1}) {
+                                    Text("Checked")
+                                }.foregroundColor(Color.red)
+                                Text("\(testVotes)").foregroundColor(Color.gray)
+                            }
+                            .padding(.trailing)
+                        }
+                        Divider()
+                        
+                        Spacer()
+                        //                ScrollView {
+                        VStack {
+                            RatingForm(category: "Sizing", sizeRating: $sizeRating, testReview: $testReview).padding(.top, 20)
+                            RatingForm(category: "Comfort", sizeRating: $comfortRating, testReview: $testReview).padding(.top, 20)
+                            RatingForm(category: "Design", sizeRating: $designRating, testReview: $testReview).padding(.top, 20)
+                            RatingForm(category: "Quality",sizeRating: $qualityRating, testReview: $testReview).padding(.top, 20)
+                            RatingForm(category: "Mix and Match",sizeRating: $mixAndmatch, testReview: $testReview).padding(.top, 20)
+                            RatingForm(category: "Headturning",sizeRating: $headTurning, testReview: $testReview).padding(.top, 20)
+                        }
+                        
+                        //                }
+                        //                Spacer()
+                        
+                    }
                     
-                    RatingForm(category: "Sizing", sizeRating: $sizeRating, testReview: $testReview).padding(.top, 20)
-                    RatingForm(category: "Comfort", sizeRating: $comfortRating, testReview: $testReview).padding(.top, 20)
-                    RatingForm(category: "Design", sizeRating: $designRating, testReview: $testReview).padding(.top, 20)
-                    RatingForm(category: "Quality",sizeRating: $qualityRating, testReview: $testReview).padding(.top, 20)
-                    RatingForm(category: "Mix and Match",sizeRating: $mixAndmatch, testReview: $testReview).padding(.top, 20)
-                    RatingForm(category: "Headturning",sizeRating: $headTurning, testReview: $testReview).padding(.top, 20)
                 }
-//                Spacer()
                 NavigationTab()
                     .padding(.bottom)
             }

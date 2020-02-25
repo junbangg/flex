@@ -15,7 +15,7 @@
 //}
 
 import SwiftUI
-import WaterfallGrid
+
 
 struct MyPageViewController: View {
     
