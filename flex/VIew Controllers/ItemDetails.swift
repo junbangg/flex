@@ -99,16 +99,6 @@ struct ItemDetails: View {
                 NavigationTab()
                     .padding(.bottom)
             }
-            //        HStack {
-            //            NavigationLink(destination: LogInViewController(), tag: 1, selection: $detailedView){
-            //                EmptyView()
-            //                Button(action: {
-            //                    self.detailedView = 1
-            //                }) {
-            //                    Text("Detailed Review")
-            //                }
-            //            }
-            //        }
             
         }
         .navigationBarTitle("Hidden Title")

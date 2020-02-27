@@ -31,33 +31,38 @@ struct TimelineView: View {
                 //
                 //                }
                 ForEach(previews, id: \.id) { preview in
-                    HStack {
-                        LineView(previewArray: [preview])
-                            .padding()
-                        Spacer()
-                        NavigationLink(destination: ItemDetails()) {
-                            VStack {
-                                Text(preview.brandToString())
-                                    .font(.title)
-                                    .multilineTextAlignment(.center)
-                                    
-                                Text(preview.productNameToString())
-                                    .font(.headline)
-                                    .multilineTextAlignment(.center)
-                            }
-                            Spacer()
-                            Text("4.5")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.yellow)
+                    VStack {
+                        //                        Divider()
+                        HStack {
+                            LineView(previewArray: [preview])
                                 .padding()
+                            Spacer()
+                            NavigationLink(destination: ItemDetails()) {
+                                VStack {
+                                    Text(preview.brandToString())
+                                        .font(.title)
+                                        .multilineTextAlignment(.center)
+                                    
+                                    Text(preview.productNameToString())
+                                        .font(.headline)
+                                        .multilineTextAlignment(.center)
+                                }
+                                Spacer()
+                                Text("4.5")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.yellow)
+                                    .padding()
+                            }
+                            //Review Summary
                         }
-                        //Review Summary
-                        
+                        Divider()
                     }
-                    
-                    
                 }
+                AddCard()
+                    .padding(.vertical, 30.0)
+                
+                Divider()
             }
         }
         //        }

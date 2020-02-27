@@ -64,7 +64,7 @@ struct MyPageViewController: View {
                 }
                 Divider()
                 TimelineView()
-                
+               
                 NavigationTab()
             }
             
