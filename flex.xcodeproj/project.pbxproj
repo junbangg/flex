@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3638F379240762D900CFC4F4 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F378240762D900CFC4F4 /* AddCard.swift */; };
 		3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */; };
+		3638F37D2408EC0900CFC4F4 /* NewReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37C2408EC0900CFC4F4 /* NewReview.swift */; };
+		3638F3812408F4A800CFC4F4 /* CircleFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F3802408F4A800CFC4F4 /* CircleFrame.swift */; };
 		366C444923FA826B0057267E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444823FA826B0057267E /* RatingView.swift */; };
 		366C444C23FB82710057267E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444B23FB82710057267E /* MyPageViewController.swift */; };
 		366C445423FE68380057267E /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C445323FE68380057267E /* TimelineView.swift */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		3638F378240762D900CFC4F4 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
 		3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
+		3638F37C2408EC0900CFC4F4 /* NewReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReview.swift; sourceTree = "<group>"; };
+		3638F3802408F4A800CFC4F4 /* CircleFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFrame.swift; sourceTree = "<group>"; };
 		366C444823FA826B0057267E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		366C444B23FB82710057267E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		366C445323FE68380057267E /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				366C4459240119D40057267E /* RatingForm.swift */,
 				3638F378240762D900CFC4F4 /* AddCard.swift */,
 				3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */,
+				3638F3802408F4A800CFC4F4 /* CircleFrame.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */,
 				36D1924D23F295970078ED6B /* RegisterViewController.swift */,
 				369A16B123CD6D5400C0AB15 /* ItemDetails.swift */,
+				3638F37C2408EC0900CFC4F4 /* NewReview.swift */,
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
 			);
 			path = "VIew Controllers";
@@ -342,8 +348,10 @@
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
 				36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */,
+				3638F37D2408EC0900CFC4F4 /* NewReview.swift in Sources */,
 				366C44562400FD0E0057267E /* NavigationTab.swift in Sources */,
 				369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */,
+				3638F3812408F4A800CFC4F4 /* CircleFrame.swift in Sources */,
 				36D1924823F1A2B20078ED6B /* Logo.swift in Sources */,
 				369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */,
 				366C445A240119D40057267E /* RatingForm.swift in Sources */,
