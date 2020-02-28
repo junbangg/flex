@@ -78,7 +78,6 @@ struct TimelineView_Previews: PreviewProvider {
 struct Product {
     let brandName : String
     let productName : String
-    
 }
 struct Preview {
     var id: Int

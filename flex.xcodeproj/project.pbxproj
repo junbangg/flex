@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3638F379240762D900CFC4F4 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F378240762D900CFC4F4 /* AddCard.swift */; };
+		3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */; };
 		366C444923FA826B0057267E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444823FA826B0057267E /* RatingView.swift */; };
 		366C444C23FB82710057267E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444B23FB82710057267E /* MyPageViewController.swift */; };
 		366C445423FE68380057267E /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C445323FE68380057267E /* TimelineView.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		3638F378240762D900CFC4F4 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
+		3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 		366C444823FA826B0057267E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		366C444B23FB82710057267E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		366C445323FE68380057267E /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				366C44552400FD0E0057267E /* NavigationTab.swift */,
 				366C4459240119D40057267E /* RatingForm.swift */,
 				3638F378240762D900CFC4F4 /* AddCard.swift */,
+				3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				36D1925423F68C1A0078ED6B /* FirebaseReferenceManager.swift in Sources */,
 				366C445423FE68380057267E /* TimelineView.swift in Sources */,
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
+				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
 				36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */,
 				366C44562400FD0E0057267E /* NavigationTab.swift in Sources */,
