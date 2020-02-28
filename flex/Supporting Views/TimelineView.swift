@@ -27,19 +27,15 @@ struct TimelineView: View {
         //        NavigationView {
         ScrollView{
             VStack {
-                //                for index in 0..<previews.count {
-                //
-                //                }
                 ForEach(previews, id: \.id) { preview in
                     VStack {
-                        //                        Divider()
                         HStack {
                             LineView(previewArray: [preview])
                                 .padding()
                             Spacer()
                             NavigationLink(destination: ItemDetails()) {
                                 VStack {
-                                    Text(preview.brandToString())
+                                     Text(preview.brandToString())
                                         .font(.title)
                                         .multilineTextAlignment(.center)
                                     
@@ -54,14 +50,15 @@ struct TimelineView: View {
                                     .foregroundColor(Color.yellow)
                                     .padding()
                             }
-                            //testing git
-                            //Review Summary
                         }
                         Divider()
                     }
                 }
-                AddCard()
+                NavigationLink(destination: NewReview()) {
+                    AddCard()
                     .padding(.vertical, 30.0)
+                }
+                
                 
                 Divider()
             }

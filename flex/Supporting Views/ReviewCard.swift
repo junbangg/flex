@@ -22,3 +22,4 @@ struct ReviewCard_Previews: PreviewProvider {
         ReviewCard()
     }
 }
+
