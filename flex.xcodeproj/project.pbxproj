@@ -11,6 +11,7 @@
 		3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */; };
 		3638F37D2408EC0900CFC4F4 /* NewReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37C2408EC0900CFC4F4 /* NewReview.swift */; };
 		3638F3812408F4A800CFC4F4 /* CircleFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F3802408F4A800CFC4F4 /* CircleFrame.swift */; };
+		3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F38224090BDD00CFC4F4 /* FeedViewController.swift */; };
 		366C444923FA826B0057267E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444823FA826B0057267E /* RatingView.swift */; };
 		366C444C23FB82710057267E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444B23FB82710057267E /* MyPageViewController.swift */; };
 		366C445423FE68380057267E /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C445323FE68380057267E /* TimelineView.swift */; };
@@ -42,6 +43,7 @@
 		3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 		3638F37C2408EC0900CFC4F4 /* NewReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReview.swift; sourceTree = "<group>"; };
 		3638F3802408F4A800CFC4F4 /* CircleFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFrame.swift; sourceTree = "<group>"; };
+		3638F38224090BDD00CFC4F4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		366C444823FA826B0057267E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		366C444B23FB82710057267E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		366C445323FE68380057267E /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				369A16B123CD6D5400C0AB15 /* ItemDetails.swift */,
 				3638F37C2408EC0900CFC4F4 /* NewReview.swift */,
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
+				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
 			);
 			path = "VIew Controllers";
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */,
 				369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */,
 				369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */,
+				3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */,
 				3638F379240762D900CFC4F4 /* AddCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
