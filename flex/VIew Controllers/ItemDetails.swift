@@ -101,6 +101,7 @@ struct ItemDetails: View {
             }
             
         }
+            .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarTitle("Hidden Title")
         .navigationBarHidden(true)
     }

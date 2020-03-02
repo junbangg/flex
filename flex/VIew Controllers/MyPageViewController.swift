@@ -69,6 +69,7 @@ struct MyPageViewController: View {
             }
             
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarTitle("Hidden Title")
         .navigationBarHidden(true)
         

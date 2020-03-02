@@ -11,8 +11,11 @@ import SwiftUI
 struct FeedViewController: View {
     var body: some View {
         NavigationView {
-            TimelineView()
-            NavigationTab()
+            VStack {
+                TimelineView()
+                NavigationTab()
+            }
+            
         }
         .navigationBarTitle("Hidden Title")
         .navigationBarHidden(true)
