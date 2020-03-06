@@ -163,6 +163,7 @@
 				366C44552400FD0E0057267E /* NavigationTab.swift */,
 				366C4459240119D40057267E /* RatingForm.swift */,
 				3638F378240762D900CFC4F4 /* AddCard.swift */,
+				3638F386240CFA4300CFC4F4 /* OutfitCard.swift */,
 				3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */,
 				3638F3802408F4A800CFC4F4 /* CircleFrame.swift */,
 			);
@@ -186,7 +187,6 @@
 				3638F37C2408EC0900CFC4F4 /* NewReview.swift */,
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
 				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
-				3638F386240CFA4300CFC4F4 /* OutfitCard.swift */,
 			);
 			path = "VIew Controllers";
 			sourceTree = "<group>";
