@@ -36,6 +36,9 @@
 		36D1925423F68C1A0078ED6B /* FirebaseReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1925323F68C1A0078ED6B /* FirebaseReferenceManager.swift */; };
 		36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1925523F696710078ED6B /* FirebaseKeys.swift */; };
 		36D1926523F7AE5C0078ED6B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1926423F7AE5C0078ED6B /* Utilities.swift */; };
+		36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */; };
+		36E3F0D824128E6700E322B7 /* ReviewCardThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E3F0D724128E6700E322B7 /* ReviewCardThree.swift */; };
+		36E3F0DA2412909A00E322B7 /* ReviewCardFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */; };
 		6BC01F3161F442B9EE810431 /* Pods_flex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397C82D52D0FB9BB9FC4C7E1 /* Pods_flex.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,9 @@
 		36D1925323F68C1A0078ED6B /* FirebaseReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReferenceManager.swift; sourceTree = "<group>"; };
 		36D1925523F696710078ED6B /* FirebaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKeys.swift; sourceTree = "<group>"; };
 		36D1926423F7AE5C0078ED6B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardTwo.swift; sourceTree = "<group>"; };
+		36E3F0D724128E6700E322B7 /* ReviewCardThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardThree.swift; sourceTree = "<group>"; };
+		36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardFour.swift; sourceTree = "<group>"; };
 		397C82D52D0FB9BB9FC4C7E1 /* Pods_flex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C285D1B4B837560E73D702 /* Pods-flex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flex.release.xcconfig"; path = "Target Support Files/Pods-flex/Pods-flex.release.xcconfig"; sourceTree = "<group>"; };
 		7AC609F3F689CDFAD2B8B7C1 /* Pods-flex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flex.debug.xcconfig"; path = "Target Support Files/Pods-flex/Pods-flex.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +172,9 @@
 				3638F386240CFA4300CFC4F4 /* OutfitCard.swift */,
 				3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */,
 				3638F3802408F4A800CFC4F4 /* CircleFrame.swift */,
+				36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */,
+				36E3F0D724128E6700E322B7 /* ReviewCardThree.swift */,
+				36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -345,12 +354,14 @@
 				369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */,
 				36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */,
 				36D1926523F7AE5C0078ED6B /* Utilities.swift in Sources */,
+				36E3F0DA2412909A00E322B7 /* ReviewCardFour.swift in Sources */,
 				3638F387240CFA4300CFC4F4 /* OutfitCard.swift in Sources */,
 				366C444923FA826B0057267E /* RatingView.swift in Sources */,
 				369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */,
 				369A16B223CD6D5400C0AB15 /* ItemDetails.swift in Sources */,
 				36D1925423F68C1A0078ED6B /* FirebaseReferenceManager.swift in Sources */,
 				366C445423FE68380057267E /* TimelineView.swift in Sources */,
+				36E3F0D824128E6700E322B7 /* ReviewCardThree.swift in Sources */,
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
@@ -362,6 +373,7 @@
 				36D1924823F1A2B20078ED6B /* Logo.swift in Sources */,
 				369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */,
 				366C445A240119D40057267E /* RatingForm.swift in Sources */,
+				36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */,
 				369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */,
 				369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */,
 				369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */,

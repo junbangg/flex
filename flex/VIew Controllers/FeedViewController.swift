@@ -12,7 +12,13 @@ struct FeedViewController: View {
     var body: some View {
         NavigationView {
             VStack {
-                TimelineView()
+                ReviewCard()
+                Spacer()
+                ReviewCardThree()
+                Spacer()
+                ReviewCardTwo()
+                Spacer()
+                ReviewCardFour()
                 NavigationTab()
             }
             
