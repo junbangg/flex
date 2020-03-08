@@ -19,6 +19,7 @@ struct ReviewCardFour: View {
                 Text("LDV Waffle")
                     .font(.headline)
                     .multilineTextAlignment(.center)
+               
             }
             .overlay(
                 Rectangle()

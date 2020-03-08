@@ -13,50 +13,84 @@ struct ReviewCardThree: View {
         HStack {
             CircleImage(image: Image("sacai") )
                 .frame(width: 136, height: 136)
-                .offset(x:-20)
-            //                .padding(.trailing, 50)
+                .offset(x:-30)
             
             VStack {
-                VStack {
-                    Text("Nike")
-                        .font(.title)
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom, 5 )
-                    Text("LDV Waffle")
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
-                }
-                .offset(x:-10)
                 HStack {
+                    
+                    VStack {
+                        HStack {
+                            Image(systemName: "flame")
+                                .foregroundColor(Color.red)
+                                .font(.system(size: 20, weight: .medium))
+                            Text("53")
+                                .font(.headline)
+                                .fontWeight(.regular)
+                                .fixedSize()
+                                .frame(width:20)
+                                .foregroundColor(Color.gray)
+                                .padding(.leading,10)
+                        }
+                        //                    .offset(x:40, y:-40)
+                        
+                        HStack {
+                            Image(systemName: "bubble.left.and.bubble.right")
+                                .foregroundColor(Color.black)
+                                .font(.system(size: 15, weight: .medium))
+                            Text("2")
+                                .font(.headline)
+                                .fontWeight(.regular)
+                                .fixedSize()
+                                .frame(width:20)
+                                .foregroundColor(Color.gray)
+                                .padding(.leading,10)
+                        }
+                        //                        .offset(x:-9)
+                        
+                    }
+                    //                    .offset(x:40, y:-10)
                     HStack {
-                        Image(systemName: "checkmark")
-                            .foregroundColor(Color.green)
+                        Image(systemName: "star.fill")
+                            .foregroundColor(Color.yellow)
                             .font(.system(size: 30, weight: .medium))
                         Text("8.5")
                             .font(.title)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color.yellow)
+                            .foregroundColor(Color.green)
+                    }
+                    .offset(x:45, y:-30)
+                }
+                HStack {
+                    VStack {
+                        Text("Nike")
+                            .font(.title)
+                            .offset(x:-15)
+                        //                            .multilineTextAlignment(.center)
+                        Text("LDV Waffle")
+                            .font(.headline)
+                            .multilineTextAlignment(.center)
                     }
                     HStack {
-                        Image(systemName: "flame")
-                            .foregroundColor(Color.red)
-                            .font(.system(size: 30, weight: .medium))
-                        Text("534")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color.yellow)
+                        Image(systemName: "s.circle")
+                            .foregroundColor(Color.blue)
+                            .font(.system(size: 20, weight: .medium))
+                        Text("265")
+                            .font(.headline)
+                            .fontWeight(.regular)
+                            .fixedSize()
+                            .frame(width:20)
+                            .foregroundColor(Color.gray)
+                            .padding(.leading,10)
                     }
-                    .offset(x:5 )
                 }
-                .offset(x:5)
+                
+                //                .offset(y:-10)
+                
             }
             
-        }.overlay(
-            Rectangle()
-                .fill(Color.clear)
-                .border(Color.gray, width: 4)
-                .frame(width: 400, height: 160)
-        )
+            
+        }
+        .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
     }
 }
 
