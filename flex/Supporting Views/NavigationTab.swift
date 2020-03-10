@@ -22,8 +22,10 @@ struct NavigationTab: View {
             Image(systemName: "magnifyingglass")
                 .font(.system(size: 20, weight: .medium))
             Spacer()
-            Image(systemName: "plus.app")
+            NavigationLink(destination: NewReview()) {
+                Image(systemName: "plus.app")
                 .font(.system(size: 20, weight: .medium))
+            }
             Spacer()
             NavigationLink(destination: MyPageViewController()) {
                 Image(systemName: "person.circle")

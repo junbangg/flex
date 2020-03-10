@@ -47,7 +47,7 @@ struct UsersItems: View {
                         AddCard()
                             .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
                             .padding(.top, 60.0)
-                            .padding(.bottom, 60)
+                            .padding(.bottom, 70)
                     }
                 }.frame(width: geometry.size.width)
                     .padding(.top,30)
