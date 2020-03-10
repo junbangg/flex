@@ -9,25 +9,39 @@
 import SwiftUI
 
 struct ReviewCard: View {
+    @State private var flame : Bool = false
     var body: some View {
+        
         HStack {
             CircleImage(image: Image("sacai") )
                 .frame(width: 136, height: 136)
                 .offset(x:-40)
             
             VStack {
-                VStack(alignment: .leading) {
-                    Text("Nikea")
-                        .font(.title)
-//                        .fixedSize()
-//                        .frame(width:100)
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Nike")
+                            .font(.title)
+                            .fixedSize()
+                            .frame(width:100)
+                        
+                        Text("LDV Waffle")
+                            .font(.headline)
+                            .fixedSize()
+                            .frame(width:100)
+                    }
+                    .offset(x:-20)
+                    Image(systemName: "flame")
+                        .font(.system(size: 30, weight: .medium))
+                        .offset(x:60, y:-30)
+                        .foregroundColor(flame ? Color.red : Color.gray)
+                        .onTapGesture {
+                            print("work")
+                            self.flame.toggle()
+                    }
                     
-                    Text("LDV Waffle")
-                        .font(.headline)
-//                        .fixedSize()
-//                        .frame(width:100)
                 }
-                .offset(x:-20)
+                
                 VStack {
                     HStack {
                         HStack {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3617240D2417508100CFC6BC /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617240C2417508100CFC6BC /* ProfilePicture.swift */; };
+		3617240F2417583A00CFC6BC /* UsersItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617240E2417583A00CFC6BC /* UsersItems.swift */; };
 		3638F379240762D900CFC4F4 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F378240762D900CFC4F4 /* AddCard.swift */; };
 		3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */; };
 		3638F37D2408EC0900CFC4F4 /* NewReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37C2408EC0900CFC4F4 /* NewReview.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3617240C2417508100CFC6BC /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		3617240E2417583A00CFC6BC /* UsersItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersItems.swift; sourceTree = "<group>"; };
 		3638F378240762D900CFC4F4 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
 		3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 		3638F37C2408EC0900CFC4F4 /* NewReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReview.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */,
 				36E3F0D724128E6700E322B7 /* ReviewCardThree.swift */,
 				36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */,
+				3617240C2417508100CFC6BC /* ProfilePicture.swift */,
+				3617240E2417583A00CFC6BC /* UsersItems.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 				366C444923FA826B0057267E /* RatingView.swift in Sources */,
 				369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */,
 				369A16B223CD6D5400C0AB15 /* ItemDetails.swift in Sources */,
+				3617240D2417508100CFC6BC /* ProfilePicture.swift in Sources */,
 				36D1925423F68C1A0078ED6B /* FirebaseReferenceManager.swift in Sources */,
 				366C445423FE68380057267E /* TimelineView.swift in Sources */,
 				36E3F0D824128E6700E322B7 /* ReviewCardThree.swift in Sources */,
@@ -375,6 +382,7 @@
 				366C445A240119D40057267E /* RatingForm.swift in Sources */,
 				36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */,
 				369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */,
+				3617240F2417583A00CFC6BC /* UsersItems.swift in Sources */,
 				369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */,
 				369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */,
 				3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */,

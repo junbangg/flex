@@ -30,52 +30,50 @@ struct MyPageViewController: View {
     var body: some View {
         NavigationView {
             VStack {
-                ScrollView {
-                    VStack {
-                        CircleImage(image: Image("testProfile") )
-                            .frame(width: 300, height:300)
-                            .aspectRatio(contentMode: .fit)
-                        Text(username)
-                            .font(.title)
-                            .padding()
-                        HStack {
-                            VStack {
-                                Text("Rank")
-                                    .font(.headline)
-                                //                            .foregroundColor(Color.red)
-                                Text("Gold"
-                                ).foregroundColor(Color.yellow)
-                            }
-                            .padding(.leading)
-                            Spacer()
-                            VStack {
-                                Text("Checks")
-                                    .font(.headline)
-                                //                            .foregroundColor(Color.red)
-                                Text("365").foregroundColor(Color.gray)
-                            }
-                            .padding(.leading, 30.0)
-                            Spacer()
-                            VStack {
-                                Text("Checkers")
-                                    .font(.headline)
-                                //                            .foregroundColor(Color.red)
-                                Text("1234")
-                                    .foregroundColor(Color.gray)
-                            }
-                            .padding(.trailing)
+                //                ScrollView {
+                VStack {
+                    CircleImage(image: Image("testProfile") )
+                        .frame(width: 200, height:200)
+                        .aspectRatio(contentMode: .fit)
+                    Text(username)
+                        .font(.title)
+                        .padding()
+                    HStack {
+                        VStack {
+                            Text("Rank")
+                                .font(.headline)
+                            //                            .foregroundColor(Color.red)
+                            Text("Gold"
+                            ).foregroundColor(Color.yellow)
                         }
-                        Divider()
-                        //                TimelineView()
-                        ReviewCardFour()
-                        ReviewCardFour()
-                        ReviewCardFour()
-                        ReviewCardFour()
-                        ReviewCardFour()
-                        ReviewCardFour()
-                        
+                        .padding(.leading)
+                        Spacer()
+                        VStack {
+                            Text("Flames")
+                                .font(.headline)
+                            //                            .foregroundColor(Color.red)
+                            Text("365").foregroundColor(Color.gray)
+                        }
+                        .padding(.leading, 30.0)
+                        Spacer()
+                        VStack {
+                            Text("Followers")
+                                .font(.headline)
+                            //                            .foregroundColor(Color.red)
+                            Text("1234")
+                                .foregroundColor(Color.gray)
+                        }
+                        .padding(.trailing)
                     }
+                    Divider()
+                    
+                    //                TimelineView()
+                    UsersItems()
                 }
+                    
+                    
+                
+                //                }
                 NavigationTab()
             }
             

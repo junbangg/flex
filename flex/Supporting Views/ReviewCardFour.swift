@@ -39,7 +39,7 @@ struct ReviewCardFour: View {
                         .foregroundColor(flame ? Color.red : Color.gray)
                         .onTapGesture {
                             print("work")
-                            self.flame = true
+                            self.flame.toggle()
                     }
                     
                     
