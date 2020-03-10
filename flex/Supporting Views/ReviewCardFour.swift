@@ -107,7 +107,7 @@ struct ReviewCardFour: View {
                         .offset(x:50, y:1)
                         
                     }
-                    .offset(x:-10)
+                    .offset(x:-30)
                     //                    .offset(y:10)
                     //                .offset(x:40, y:-10)
                     HStack {
