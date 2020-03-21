@@ -13,7 +13,7 @@ struct AddCard: View {
         //        VStack {
         //            Divider()
         
-        Image(systemName: "plus")
+        Image(systemName: "plus.circle")
             .font(.system(size: 75, weight: .ultraLight))
             .foregroundColor(Color.gray)
             .padding(.trailing)

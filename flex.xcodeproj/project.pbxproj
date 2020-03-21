@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3617240D2417508100CFC6BC /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617240C2417508100CFC6BC /* ProfilePicture.swift */; };
 		3617240F2417583A00CFC6BC /* UsersItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617240E2417583A00CFC6BC /* UsersItems.swift */; };
+		3617241124176CA100CFC6BC /* RectangleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617241024176CA100CFC6BC /* RectangleImage.swift */; };
+		3617241324177CBE00CFC6BC /* OutfitCardTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */; };
 		3638F379240762D900CFC4F4 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F378240762D900CFC4F4 /* AddCard.swift */; };
 		3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */; };
 		3638F37D2408EC0900CFC4F4 /* NewReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37C2408EC0900CFC4F4 /* NewReview.swift */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		3617240C2417508100CFC6BC /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		3617240E2417583A00CFC6BC /* UsersItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersItems.swift; sourceTree = "<group>"; };
+		3617241024176CA100CFC6BC /* RectangleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleImage.swift; sourceTree = "<group>"; };
+		3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCardTwo.swift; sourceTree = "<group>"; };
 		3638F378240762D900CFC4F4 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
 		3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 		3638F37C2408EC0900CFC4F4 /* NewReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReview.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */,
 				3617240C2417508100CFC6BC /* ProfilePicture.swift */,
 				3617240E2417583A00CFC6BC /* UsersItems.swift */,
+				3617241024176CA100CFC6BC /* RectangleImage.swift */,
+				3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -385,6 +391,8 @@
 				3617240F2417583A00CFC6BC /* UsersItems.swift in Sources */,
 				369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */,
 				369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */,
+				3617241124176CA100CFC6BC /* RectangleImage.swift in Sources */,
+				3617241324177CBE00CFC6BC /* OutfitCardTwo.swift in Sources */,
 				3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */,
 				3638F379240762D900CFC4F4 /* AddCard.swift in Sources */,
 			);

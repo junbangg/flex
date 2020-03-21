@@ -6,28 +6,29 @@
 //  Copyright © 2020 Jun Bang. All rights reserved.
 //
 
-
 import SwiftUI
 
-struct ReviewCardFour: View {
+struct OutfitCardTwo: View {
     @State private var flame : Bool = false
     @State private var selection : Int? = nil
     
     var body: some View {
         HStack {
-            CircleImage(image: Image("sacai") )
-                .frame(width: 136, height: 136)
-                .offset(x:-60, y:-30)
+//            CircleImage(image: Image("sacai") )
+//                .frame(width: 136, height: 136)
+            RectangleImage(image: Image("outfitTwo"))
+                .frame(width: 130, height: 180)
+                .offset(x:-60, y:-10)
             
             VStack {
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("Nike")
-                            .font(.title)
+//                        Text("Nike")
+//                            .font(.title)
                         //                        .fixedSize()
                         //                        .frame(width:100)
                         
-                        Text("LDV Waffle")
+                        Text("171/65")
                             .font(.headline)
                             .fixedSize()
                             .frame(width:100)
@@ -42,21 +43,23 @@ struct ReviewCardFour: View {
                             print("work")
                             self.flame.toggle()
                     }
+                    
                 }
+                
                 
                 VStack {
                     HStack {
-                        HStack {
-                            Image(systemName: "s.circle")
-                                .foregroundColor(Color.blue)
-                                .font(.system(size: 15, weight: .medium))
-                            Text("265")
-                                .font(.headline)
-                                .fontWeight(.regular)
-                                .fixedSize()
-                                .frame(width:20)
-                                .foregroundColor(Color.gray)
-                        }.offset(x:-10)
+//                        HStack {
+//                            Image(systemName: "s.circle")
+//                                .foregroundColor(Color.blue)
+//                                .font(.system(size: 15, weight: .medium))
+//                            Text("265")
+//                                .font(.headline)
+//                                .fontWeight(.regular)
+//                                .fixedSize()
+//                                .frame(width:20)
+//                                .foregroundColor(Color.gray)
+//                        }.offset(x:-10)
                         
                         //                    .offset(x:40, y:-25)
                         HStack {
@@ -115,8 +118,8 @@ struct ReviewCardFour: View {
     }
 }
 
-struct ReviewCardFour_Previews: PreviewProvider {
+struct OutfitCardTwo_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewCardFour()
+        OutfitCardTwo()
     }
 }
