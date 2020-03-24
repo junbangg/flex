@@ -22,6 +22,9 @@
 		366C445423FE68380057267E /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C445323FE68380057267E /* TimelineView.swift */; };
 		366C44562400FD0E0057267E /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C44552400FD0E0057267E /* NavigationTab.swift */; };
 		366C445A240119D40057267E /* RatingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C4459240119D40057267E /* RatingForm.swift */; };
+		3677907B24260B1900C45F08 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907A24260B1900C45F08 /* PopoverView.swift */; };
+		3677907D242881AA00C45F08 /* FloatingNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */; };
+		367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367790802428AF9500C45F08 /* FloatingNavigationTab.swift */; };
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
 		369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169E23CD6B2500C0AB15 /* ContentView.swift */; };
@@ -62,6 +65,9 @@
 		366C445323FE68380057267E /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		366C44552400FD0E0057267E /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
 		366C4459240119D40057267E /* RatingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingForm.swift; sourceTree = "<group>"; };
+		3677907A24260B1900C45F08 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
+		3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationBar.swift; sourceTree = "<group>"; };
+		367790802428AF9500C45F08 /* FloatingNavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationTab.swift; sourceTree = "<group>"; };
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369A169923CD6B2500C0AB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +193,9 @@
 				3617240E2417583A00CFC6BC /* UsersItems.swift */,
 				3617241024176CA100CFC6BC /* RectangleImage.swift */,
 				3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */,
+				3677907A24260B1900C45F08 /* PopoverView.swift */,
+				3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */,
+				367790802428AF9500C45F08 /* FloatingNavigationTab.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -363,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3677907B24260B1900C45F08 /* PopoverView.swift in Sources */,
 				369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */,
 				36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */,
 				36D1926523F7AE5C0078ED6B /* Utilities.swift in Sources */,
@@ -377,9 +387,11 @@
 				36E3F0D824128E6700E322B7 /* ReviewCardThree.swift in Sources */,
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
+				3677907D242881AA00C45F08 /* FloatingNavigationBar.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
 				36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */,
 				3638F37D2408EC0900CFC4F4 /* NewReview.swift in Sources */,
+				367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */,
 				366C44562400FD0E0057267E /* NavigationTab.swift in Sources */,
 				369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */,
 				3638F3812408F4A800CFC4F4 /* CircleFrame.swift in Sources */,

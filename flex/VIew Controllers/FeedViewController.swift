@@ -19,7 +19,8 @@ struct FeedViewController: View {
                 ReviewCardTwo()
                 Spacer()
                 ReviewCardFour()
-                NavigationTab()
+//                NavigationTab()
+                FloatingNavigationTab()
             }
             
         }

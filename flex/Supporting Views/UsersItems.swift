@@ -18,7 +18,9 @@ struct UsersItems: View {
                         AddCard()
                             .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
                             .padding(.top, 30.0)
-                            .padding(.bottom, 70)
+                            .padding(.bottom, 50)
+//                            .padding(.top,10)
+//                            .padding(.bottom,30)
                     }
                     ReviewCardFour()
                     .padding(.top, 15)

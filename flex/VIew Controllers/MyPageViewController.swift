@@ -74,7 +74,7 @@ struct MyPageViewController: View {
                     
                 
                 //                }
-                NavigationTab()
+                FloatingNavigationTab()
             }
             
             

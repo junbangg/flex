@@ -56,12 +56,12 @@ struct NewReview: View {
                         Image(systemName: "plus")
                             .font(.system(size: 120, weight: .ultraLight))
                             .foregroundColor(Color.gray)
-//                            .padding(.trailing)
+                            //                            .padding(.trailing)
                             .overlay(
-                        CircleFrame()
-                            .frame(width: 250, height: 250)
-//                            .offset(x: 0, y: -100) //-130
-//                            .padding(.bottom, -100)
+                                CircleFrame()
+                                    .frame(width: 250, height: 250)
+                                //                            .offset(x: 0, y: -100) //-130
+                                //                            .padding(.bottom, -100)
                         )
                         
                         
@@ -110,11 +110,13 @@ struct NewReview: View {
                     }
                     
                 }
-                NavigationTab()
-                    .padding(.bottom)
+//                NavigationTab()
+//                    .padding(.bottom)
             }
             
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+            
         .navigationBarTitle("Hidden Title")
         .navigationBarHidden(true)
     }
