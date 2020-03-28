@@ -35,7 +35,7 @@ struct LogInViewController: View {
                 VStack(alignment: .center, spacing: 10.0) {
                     
                     Logo()
-                    
+                    // MARK: - Login Form
                     Group {
                         TextField("Email", text: $email)
                             .padding()

@@ -9,8 +9,11 @@
 import SwiftUI
 
 struct FeedViewController: View {
+    
     var body: some View {
+        
         NavigationView {
+            
             VStack {
                 ReviewCard()
                 Spacer()
@@ -19,7 +22,7 @@ struct FeedViewController: View {
                 ReviewCardTwo()
                 Spacer()
                 ReviewCardFour()
-//                NavigationTab()
+                //                NavigationTab()
                 FloatingNavigationTab()
             }
             

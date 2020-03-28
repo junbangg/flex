@@ -9,12 +9,11 @@
 import Foundation
 
 class Utilities {
-    
-    //name validation
+    // MARK: - Name Validation
     static func isBlank(_ text : String?) -> Bool {
         return text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
     }
-    //email validation
+    // MARK: - Email Validation
     static func isValidEmail(_ email : String?) -> Bool {
         
         guard email != nil else { return false }
@@ -24,7 +23,7 @@ class Utilities {
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         return pred.evaluate(with: email)
     }
-    //password validation
+    // MARK: - Password Validation
     static func isValidPassword(_ testStr : String?) -> Bool {
         guard testStr != nil else { return false }
         
@@ -41,6 +40,7 @@ class Utilities {
         return passwordTest.evaluate(with: testStr)
     }
     
+    // MARK: - Check if passwords match
     static func matchPasswords(_ first : String?,_ second : String?) -> Bool {
         return first == second
     }

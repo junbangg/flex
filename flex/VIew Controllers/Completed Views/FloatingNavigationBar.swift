@@ -10,7 +10,7 @@ struct FloatingNavigationBar: View {
         ZStack(alignment: .bottom){
             
             VStack{
-                
+                // MARK: - Home
                 if self.selected == 0{
                     
                     NavigationView{
@@ -31,22 +31,25 @@ struct FloatingNavigationBar: View {
                         .edgesIgnoringSafeArea(.bottom)
                     }
                 }
+                    // MARK: - Search
                 else if self.selected == 1{
                     
                     GeometryReader{_ in
                         
-                        Text("Wishlist")
+                        Text("Search")
                     }
                     
                 }
+                    // MARK: - Add New Item
                 else if self.selected == 2{
                     
                     GeometryReader{_ in
                         
-                        Text("Wishlist")
+                        Text("Add New Item")
                     }
                     
                 }
+                    // MARK: - Mypage
                 else{
                     
                     GeometryReader{_ in
@@ -91,16 +94,10 @@ struct FloatingNavigationBar: View {
                                     Divider()
                                     
                                     //                TimelineView()
+                                    // MARK: - List of Review Items
                                     UsersItems()
                                 }
-                                
-                                
-                                
-                                //                }
                             }
-                            
-                            
-                            
                         }
                         .navigationViewStyle(StackNavigationViewStyle())
                         .navigationBarTitle("Hidden Title")
@@ -131,7 +128,7 @@ struct FloatingTabbar : View {
         HStack{
             
             Spacer(minLength: 0)
-            
+            // MARK: - Floating Navigation Tab
             HStack{
                 
                 if !self.expand{
@@ -141,7 +138,6 @@ struct FloatingTabbar : View {
                         self.expand.toggle()
                         
                     }) {
-                        
                         Image(systemName: "arrow.left").foregroundColor(.black).padding()
                     }
                 }

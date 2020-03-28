@@ -130,6 +130,71 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		366D8ED8242F486B00BA64B7 /* Testing Views */ = {
+			isa = PBXGroup;
+			children = (
+				366D8ED3242A59A900BA64B7 /* NewReviewCard.swift */,
+				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
+			);
+			path = "Testing Views";
+			sourceTree = "<group>";
+		};
+		366D8ED9242F487200BA64B7 /* Completed Views */ = {
+			isa = PBXGroup;
+			children = (
+				369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */,
+				36D1924D23F295970078ED6B /* RegisterViewController.swift */,
+				366C444B23FB82710057267E /* MyPageViewController.swift */,
+				3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */,
+			);
+			path = "Completed Views";
+			sourceTree = "<group>";
+		};
+		366D8EDA242F48CA00BA64B7 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				369A16DC23D1DC8E00C0AB15 /* SignUpViewController.swift */,
+				369A16B123CD6D5400C0AB15 /* ItemDetails.swift */,
+				3638F37C2408EC0900CFC4F4 /* NewReview.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		366D8EDB242F497000BA64B7 /* Completed Views */ = {
+			isa = PBXGroup;
+			children = (
+				369A16B323CD6EE100C0AB15 /* CircleImage.swift */,
+				369A16B523CD916300C0AB15 /* BackgroundImage.swift */,
+				36D1924723F1A2B20078ED6B /* Logo.swift */,
+				3638F378240762D900CFC4F4 /* AddCard.swift */,
+				3617240E2417583A00CFC6BC /* UsersItems.swift */,
+				3617240C2417508100CFC6BC /* ProfilePicture.swift */,
+				3638F386240CFA4300CFC4F4 /* OutfitCard.swift */,
+				36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */,
+				366C44552400FD0E0057267E /* NavigationTab.swift */,
+				3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */,
+				3638F3802408F4A800CFC4F4 /* CircleFrame.swift */,
+				3617241024176CA100CFC6BC /* RectangleImage.swift */,
+			);
+			path = "Completed Views";
+			sourceTree = "<group>";
+		};
+		366D8EDC242F4BEC00BA64B7 /* Testing Views */ = {
+			isa = PBXGroup;
+			children = (
+				3677907A24260B1900C45F08 /* PopoverView.swift */,
+				36E3F0D724128E6700E322B7 /* ReviewCardThree.swift */,
+				36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */,
+				3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */,
+				366C4459240119D40057267E /* RatingForm.swift */,
+				366C445323FE68380057267E /* TimelineView.swift */,
+				36D1924F23F573510078ED6B /* KeyboardHost.swift */,
+				366C444823FA826B0057267E /* RatingView.swift */,
+				367790802428AF9500C45F08 /* FloatingNavigationTab.swift */,
+			);
+			path = "Testing Views";
+			sourceTree = "<group>";
+		};
 		369A168B23CD6B2500C0AB15 = {
 			isa = PBXGroup;
 			children = (
@@ -187,27 +252,8 @@
 		369A16AF23CD6C3E00C0AB15 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
-				366C444823FA826B0057267E /* RatingView.swift */,
-				369A16B323CD6EE100C0AB15 /* CircleImage.swift */,
-				369A16B523CD916300C0AB15 /* BackgroundImage.swift */,
-				36D1924723F1A2B20078ED6B /* Logo.swift */,
-				36D1924F23F573510078ED6B /* KeyboardHost.swift */,
-				366C445323FE68380057267E /* TimelineView.swift */,
-				366C44552400FD0E0057267E /* NavigationTab.swift */,
-				366C4459240119D40057267E /* RatingForm.swift */,
-				3638F378240762D900CFC4F4 /* AddCard.swift */,
-				3638F386240CFA4300CFC4F4 /* OutfitCard.swift */,
-				3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */,
-				3638F3802408F4A800CFC4F4 /* CircleFrame.swift */,
-				36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */,
-				36E3F0D724128E6700E322B7 /* ReviewCardThree.swift */,
-				36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */,
-				3617240C2417508100CFC6BC /* ProfilePicture.swift */,
-				3617240E2417583A00CFC6BC /* UsersItems.swift */,
-				3617241024176CA100CFC6BC /* RectangleImage.swift */,
-				3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */,
-				3677907A24260B1900C45F08 /* PopoverView.swift */,
-				367790802428AF9500C45F08 /* FloatingNavigationTab.swift */,
+				366D8EDB242F497000BA64B7 /* Completed Views */,
+				366D8EDC242F4BEC00BA64B7 /* Testing Views */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -222,15 +268,9 @@
 		369A16DB23D1DC5E00C0AB15 /* VIew Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				369A16DC23D1DC8E00C0AB15 /* SignUpViewController.swift */,
-				369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */,
-				36D1924D23F295970078ED6B /* RegisterViewController.swift */,
-				3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */,
-				369A16B123CD6D5400C0AB15 /* ItemDetails.swift */,
-				3638F37C2408EC0900CFC4F4 /* NewReview.swift */,
-				366C444B23FB82710057267E /* MyPageViewController.swift */,
-				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
-				366D8ED3242A59A900BA64B7 /* NewReviewCard.swift */,
+				366D8ED9242F487200BA64B7 /* Completed Views */,
+				366D8ED8242F486B00BA64B7 /* Testing Views */,
+				366D8EDA242F48CA00BA64B7 /* Others */,
 			);
 			path = "VIew Controllers";
 			sourceTree = "<group>";

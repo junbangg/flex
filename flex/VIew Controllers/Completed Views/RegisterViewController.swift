@@ -58,6 +58,8 @@ struct RegisterViewController: View {
     var genders : [String] = ["M", "F"]
     
     //form validation
+    
+    // MARK: - Method to check information validation
     func validateFields() -> Bool {
         
 //        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
@@ -105,6 +107,8 @@ struct RegisterViewController: View {
                             //                                TextField("First Name", text: $firstname)
                             //                                    .border(Utilities.isBlank(self.firstname) ? Color.clear : Color.blue)
                             //                            }
+                            
+                            // MARK: - Registration Form
                             Section {
                                 TextField("email@domain.com", text: $email) {
                                     if Utilities.isValidEmail(self.email) == false{
@@ -169,12 +173,15 @@ struct RegisterViewController: View {
                             //need to add function that will take the user to home page
                             //add new data to the database
                         }
+                        
+                        // MARK: - Sign Up Button & Functionality
                         HStack {
-                            //                    if self.validateFields(){
                             NavigationLink(destination: MyPageViewController(), tag: 1, selection: $selection){
                                 EmptyView()
                                 Button(action: {
                                     //navigate to home screen
+                                    
+                                    // MARK: - Login Handeling
                                     if self.validateFields() {
                                         // fire off a login request to server of localhost
                                         guard let url = URL(string: "http://15.164.142.209:3001/api/users/register") else { return }
@@ -209,6 +216,7 @@ struct RegisterViewController: View {
                                     }
                                     
                                 }) {
+                                    // MARK: - Button Styling
                                     HStack(alignment: .center) {
                                         Spacer()
                                         Text("Sign Up").foregroundColor(Color.white).bold()
