@@ -22,6 +22,8 @@
 		366C445423FE68380057267E /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C445323FE68380057267E /* TimelineView.swift */; };
 		366C44562400FD0E0057267E /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C44552400FD0E0057267E /* NavigationTab.swift */; };
 		366C445A240119D40057267E /* RatingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C4459240119D40057267E /* RatingForm.swift */; };
+		366D8ED4242A59A900BA64B7 /* NewReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8ED3242A59A900BA64B7 /* NewReviewCard.swift */; };
+		366D8ED7242DFDFF00BA64B7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8ED6242DFDFF00BA64B7 /* Services.swift */; };
 		3677907B24260B1900C45F08 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907A24260B1900C45F08 /* PopoverView.swift */; };
 		3677907D242881AA00C45F08 /* FloatingNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */; };
 		367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367790802428AF9500C45F08 /* FloatingNavigationTab.swift */; };
@@ -65,6 +67,8 @@
 		366C445323FE68380057267E /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		366C44552400FD0E0057267E /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
 		366C4459240119D40057267E /* RatingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingForm.swift; sourceTree = "<group>"; };
+		366D8ED3242A59A900BA64B7 /* NewReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReviewCard.swift; sourceTree = "<group>"; };
+		366D8ED6242DFDFF00BA64B7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		3677907A24260B1900C45F08 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationBar.swift; sourceTree = "<group>"; };
 		367790802428AF9500C45F08 /* FloatingNavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationTab.swift; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		366D8ED5242DFDE900BA64B7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				36D1926423F7AE5C0078ED6B /* Utilities.swift */,
+				366D8ED6242DFDFF00BA64B7 /* Services.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		369A168B23CD6B2500C0AB15 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +151,7 @@
 		369A169623CD6B2500C0AB15 /* flex */ = {
 			isa = PBXGroup;
 			children = (
+				366D8ED5242DFDE900BA64B7 /* Tools */,
 				369A16DB23D1DC5E00C0AB15 /* VIew Controllers */,
 				366C444A23FB82360057267E /* Delegates */,
 				369A16AF23CD6C3E00C0AB15 /* Supporting Views */,
@@ -173,7 +187,6 @@
 		369A16AF23CD6C3E00C0AB15 /* Supporting Views */ = {
 			isa = PBXGroup;
 			children = (
-				36D1926423F7AE5C0078ED6B /* Utilities.swift */,
 				366C444823FA826B0057267E /* RatingView.swift */,
 				369A16B323CD6EE100C0AB15 /* CircleImage.swift */,
 				369A16B523CD916300C0AB15 /* BackgroundImage.swift */,
@@ -194,7 +207,6 @@
 				3617241024176CA100CFC6BC /* RectangleImage.swift */,
 				3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */,
 				3677907A24260B1900C45F08 /* PopoverView.swift */,
-				3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */,
 				367790802428AF9500C45F08 /* FloatingNavigationTab.swift */,
 			);
 			path = "Supporting Views";
@@ -213,10 +225,12 @@
 				369A16DC23D1DC8E00C0AB15 /* SignUpViewController.swift */,
 				369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */,
 				36D1924D23F295970078ED6B /* RegisterViewController.swift */,
+				3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */,
 				369A16B123CD6D5400C0AB15 /* ItemDetails.swift */,
 				3638F37C2408EC0900CFC4F4 /* NewReview.swift */,
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
 				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
+				366D8ED3242A59A900BA64B7 /* NewReviewCard.swift */,
 			);
 			path = "VIew Controllers";
 			sourceTree = "<group>";
@@ -388,6 +402,7 @@
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
 				3677907D242881AA00C45F08 /* FloatingNavigationBar.swift in Sources */,
+				366D8ED4242A59A900BA64B7 /* NewReviewCard.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
 				36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */,
 				3638F37D2408EC0900CFC4F4 /* NewReview.swift in Sources */,
@@ -405,6 +420,7 @@
 				369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */,
 				3617241124176CA100CFC6BC /* RectangleImage.swift in Sources */,
 				3617241324177CBE00CFC6BC /* OutfitCardTwo.swift in Sources */,
+				366D8ED7242DFDFF00BA64B7 /* Services.swift in Sources */,
 				3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */,
 				3638F379240762D900CFC4F4 /* AddCard.swift in Sources */,
 			);

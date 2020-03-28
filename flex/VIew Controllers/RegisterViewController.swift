@@ -13,27 +13,25 @@
 // TODO: Make validation method for sign up button
 // TODO: Link validation method with a boolean for appropriate display of sign up button
 // TODO: Change the return button to blue Done button
-// TOOD: Highlight textfields red or green after input
+
 // TODO: Link up to Firestore
 // TODO: Check if there are any errors with registration form
 
-
-//Some useful code for later
-//Conditional use of views
-
-//@ViewBuilder
-//var body: some View {
-//    if user.isLoggedIn {
-//        MainView()
-//    } else {
-//        LoginView()
-//    }
-//}
+// TODO: Write method that changes birthdate to age int
+// TODO: Write a method that changes gender to int 1 or 2
 import SwiftUI
 //import KeyboardAvoider
 import Foundation
 import FirebaseAuth
 import Firebase
+
+struct User: Decodable {
+    var email: String
+    var pw: String
+    var nickname: String
+    var age: Int
+    var gender: Int
+}
 
 struct RegisterViewController: View {
     
@@ -62,11 +60,11 @@ struct RegisterViewController: View {
     //form validation
     func validateFields() -> Bool {
         
-        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            return false
-        }
-        if firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-        }
+//        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+//            return false
+//        }
+//        if firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+//        }
         if email.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return false
         }
@@ -99,14 +97,14 @@ struct RegisterViewController: View {
                     VStack {
                         Logo()
                         Form {
-                            Section {
-                                TextField("Last Name", text: $lastname)
-                                    .border(Utilities.isBlank(self.lastname) ? Color.clear : Color.blue)
-                            }
-                            Section {
-                                TextField("First Name", text: $firstname)
-                                    .border(Utilities.isBlank(self.firstname) ? Color.clear : Color.blue)
-                            }
+                            //                            Section {
+                            //                                TextField("Last Name", text: $lastname)
+                            //                                    .border(Utilities.isBlank(self.lastname) ? Color.clear : Color.blue)
+                            //                            }
+                            //                            Section {
+                            //                                TextField("First Name", text: $firstname)
+                            //                                    .border(Utilities.isBlank(self.firstname) ? Color.clear : Color.blue)
+                            //                            }
                             Section {
                                 TextField("email@domain.com", text: $email) {
                                     if Utilities.isValidEmail(self.email) == false{
@@ -173,40 +171,38 @@ struct RegisterViewController: View {
                         }
                         HStack {
                             //                    if self.validateFields(){
-                            NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
+                            NavigationLink(destination: MyPageViewController(), tag: 1, selection: $selection){
                                 EmptyView()
                                 Button(action: {
                                     //navigate to home screen
                                     if self.validateFields() {
-                                        //add to database
-                                        Auth.auth().createUser(withEmail: self.email, password: self.passwordcheck) { (result, err) in
+                                        // fire off a login request to server of localhost
+                                        guard let url = URL(string: "http://15.164.142.209:3001/api/users/register") else { return }
+                                        
+                                        var loginRequest = URLRequest(url: url)
+                                        loginRequest.httpMethod = "Post"
+                                        
+                                        do {
+                                            let params = ["email": self.email, "pw": self.passwordcheck, "name": self.username]
                                             
-                                            // Check for errors
-                                            if err != nil {
+                                            loginRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: .init())
+                                            
+                                            URLSession.shared.dataTask(with: loginRequest) { (data, resp, err) in
                                                 
-                                                // There was an error creating the user
-                                                print("Error while creating user")
-                                            }
-                                            else {
-                                                // User was created successfully, now store the first name and last name
-                                                let db = Firestore.firestore()
-                                                
-                                                db.collection("users").addDocument(data: ["Email" : self.email,"Password" : self.passwordcheck,"First Name" : self.firstname, "Last Name" : self.lastname, "Username" : self.username, "Gender" : self.gender,"Birthdate" : self.birthdate, "uid": result!.user.uid]) { (error) in
-                                                    
-                                                    if error != nil {
-                                                        // Show error message
-                                                       print("Error saving user data")
-                                                    }
+                                                if let err = err {
+                                                    print("Failed to login:", err)
+                                                    return
                                                 }
-                                                // Transition to the home screen
-                                            }
-                                            
+                                                self.selection = 1
+                                                print("Probably logged in successfully..")
+//                                                self.fetchPosts()
+                                                
+                                            }.resume() // never forget this resume
+                                        } catch {
+                                            print("Failed to serialize data:", error)
                                         }
-                                        //disable validation alert
-                                        self.validationIncomplete = false
-                                        //change tag for navigation to home screen
-                                        self.selection = 1
-                                    }else {
+                                    }
+                                    else {
                                         //enable validation alert
                                         self.validationIncomplete = true
                                         print("error")

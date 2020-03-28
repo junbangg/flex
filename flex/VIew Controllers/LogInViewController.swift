@@ -21,6 +21,7 @@ struct LogInViewController: View {
     
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
     
+    // MARK: - Method to check if all data is valid
     func validateFields() -> Bool {
         if Utilities.isValidEmail(email.trimmingCharacters(in: .whitespacesAndNewlines)) == true && Utilities.isValidPassword(password.trimmingCharacters(in: .whitespacesAndNewlines)) == true {
             return true
@@ -31,7 +32,6 @@ struct LogInViewController: View {
     var body: some View {
         NavigationView{
             VStack {
-                
                 VStack(alignment: .center, spacing: 10.0) {
                     
                     Logo()
