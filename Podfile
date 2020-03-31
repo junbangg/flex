@@ -6,14 +6,6 @@ target 'flex' do
   use_frameworks!
 
   # Pods for flex
-# add the Firebase pod for Google Analytics
-pod 'Firebase/Analytics'
-pod 'Firebase/Core'
-pod 'Firebase/Firestore'
-pod 'FirebaseUI/Auth'
-pod 'FirebaseUI/Google'
-pod 'FirebaseUI/Facebook'
-pod 'FirebaseUI/Phone'
 pod 'KeyboardAvoider', '~> 1.0'
 #pod 'AnimatedField'
 #pod 'WaterfallGrid', '~> 0.4.0'

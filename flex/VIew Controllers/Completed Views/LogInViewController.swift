@@ -9,8 +9,6 @@
 //FIX: Navigation and picker for gender do not function when tried again
 
 import SwiftUI
-import FirebaseAuth
-
 struct LogInViewController: View {
     
     @State private var email : String = ""
@@ -75,23 +73,24 @@ struct LogInViewController: View {
                     //                    if self.validateFields(){
                     NavigationLink(destination: MyPageViewController(), tag: 1, selection: $selection){
                         EmptyView()
+                        
                         Button(action: {
-                            let cleanedEmail = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
-                            let cleanedPassword = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
-                            //Sign in User
-                            Auth.auth().signIn(withEmail: cleanedEmail, password: cleanedPassword) {
-                                (result,error) in
-                                if error != nil {
-                                    print("error")
-                                }
-                                else {
-                                    print("Log In Successful")
-                                    self.selection = 1
-                                    
-                                }
-                                
-                                
-                            }
+//                            let cleanedEmail = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
+//                            let cleanedPassword = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
+                            // MARK: - Login Handler
+//                            Auth.auth().signIn(withEmail: cleanedEmail, password: cleanedPassword) {
+//                                (result,error) in
+//                                if error != nil {
+//                                    print("error")
+//                                }
+//                                else {
+//                                    print("Log In Successful")
+//                                    self.selection = 1
+//
+//                                }
+//
+//
+//                            }
                             
                             //navigate to home screen
                             //                        if self.validateFields() {

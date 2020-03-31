@@ -54,7 +54,7 @@ struct TimelineView: View {
                         Divider()
                     }
                 }
-                NavigationLink(destination: NewReview()) {
+                NavigationLink(destination: ReviewCard_Edit()) {
                     AddCard()
                     .padding(.vertical, 30.0)
                 }

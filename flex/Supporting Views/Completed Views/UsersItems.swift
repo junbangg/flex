@@ -14,7 +14,7 @@ struct UsersItems: View {
         GeometryReader { geometry in
             ScrollView {
                 VStack {
-                    NavigationLink(destination: NewReview()) {
+                    NavigationLink(destination: ReviewCard_Edit()) {
                         AddCard()
                             .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
                             .padding(.top, 30.0)

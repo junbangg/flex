@@ -22,8 +22,6 @@
 import SwiftUI
 //import KeyboardAvoider
 import Foundation
-import FirebaseAuth
-import Firebase
 
 struct User: Decodable {
     var email: String
@@ -181,7 +179,7 @@ struct RegisterViewController: View {
                                 Button(action: {
                                     //navigate to home screen
                                     
-                                    // MARK: - Login Handeling
+                                    // MARK: - Login Handling
                                     if self.validateFields() {
                                         // fire off a login request to server of localhost
                                         guard let url = URL(string: "http://15.164.142.209:3001/api/users/register") else { return }

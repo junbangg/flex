@@ -13,7 +13,6 @@
 		3617241324177CBE00CFC6BC /* OutfitCardTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */; };
 		3638F379240762D900CFC4F4 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F378240762D900CFC4F4 /* AddCard.swift */; };
 		3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */; };
-		3638F37D2408EC0900CFC4F4 /* NewReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37C2408EC0900CFC4F4 /* NewReview.swift */; };
 		3638F3812408F4A800CFC4F4 /* CircleFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F3802408F4A800CFC4F4 /* CircleFrame.swift */; };
 		3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F38224090BDD00CFC4F4 /* FeedViewController.swift */; };
 		3638F387240CFA4300CFC4F4 /* OutfitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F386240CFA4300CFC4F4 /* OutfitCard.swift */; };
@@ -21,9 +20,11 @@
 		366C444C23FB82710057267E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444B23FB82710057267E /* MyPageViewController.swift */; };
 		366C445423FE68380057267E /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C445323FE68380057267E /* TimelineView.swift */; };
 		366C44562400FD0E0057267E /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C44552400FD0E0057267E /* NavigationTab.swift */; };
-		366C445A240119D40057267E /* RatingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C4459240119D40057267E /* RatingForm.swift */; };
-		366D8ED4242A59A900BA64B7 /* NewReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8ED3242A59A900BA64B7 /* NewReviewCard.swift */; };
+		366C445A240119D40057267E /* RatingForm_Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C4459240119D40057267E /* RatingForm_Edit.swift */; };
+		366D8ED4242A59A900BA64B7 /* ReviewCard_Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8ED3242A59A900BA64B7 /* ReviewCard_Display.swift */; };
 		366D8ED7242DFDFF00BA64B7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8ED6242DFDFF00BA64B7 /* Services.swift */; };
+		366D8EE624335ED500BA64B7 /* ReviewCard_Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8EE524335ED500BA64B7 /* ReviewCard_Edit.swift */; };
+		366D8EE824335F8C00BA64B7 /* RatingForm_Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */; };
 		3677907B24260B1900C45F08 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907A24260B1900C45F08 /* PopoverView.swift */; };
 		3677907D242881AA00C45F08 /* FloatingNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */; };
 		367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367790802428AF9500C45F08 /* FloatingNavigationTab.swift */; };
@@ -42,8 +43,6 @@
 		36D1924823F1A2B20078ED6B /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924723F1A2B20078ED6B /* Logo.swift */; };
 		36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924D23F295970078ED6B /* RegisterViewController.swift */; };
 		36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924F23F573510078ED6B /* KeyboardHost.swift */; };
-		36D1925423F68C1A0078ED6B /* FirebaseReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1925323F68C1A0078ED6B /* FirebaseReferenceManager.swift */; };
-		36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1925523F696710078ED6B /* FirebaseKeys.swift */; };
 		36D1926523F7AE5C0078ED6B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1926423F7AE5C0078ED6B /* Utilities.swift */; };
 		36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */; };
 		36E3F0D824128E6700E322B7 /* ReviewCardThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E3F0D724128E6700E322B7 /* ReviewCardThree.swift */; };
@@ -58,7 +57,6 @@
 		3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCardTwo.swift; sourceTree = "<group>"; };
 		3638F378240762D900CFC4F4 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
 		3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
-		3638F37C2408EC0900CFC4F4 /* NewReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReview.swift; sourceTree = "<group>"; };
 		3638F3802408F4A800CFC4F4 /* CircleFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFrame.swift; sourceTree = "<group>"; };
 		3638F38224090BDD00CFC4F4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3638F386240CFA4300CFC4F4 /* OutfitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCard.swift; sourceTree = "<group>"; };
@@ -66,9 +64,11 @@
 		366C444B23FB82710057267E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		366C445323FE68380057267E /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		366C44552400FD0E0057267E /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
-		366C4459240119D40057267E /* RatingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingForm.swift; sourceTree = "<group>"; };
-		366D8ED3242A59A900BA64B7 /* NewReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReviewCard.swift; sourceTree = "<group>"; };
+		366C4459240119D40057267E /* RatingForm_Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingForm_Edit.swift; sourceTree = "<group>"; };
+		366D8ED3242A59A900BA64B7 /* ReviewCard_Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard_Display.swift; sourceTree = "<group>"; };
 		366D8ED6242DFDFF00BA64B7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		366D8EE524335ED500BA64B7 /* ReviewCard_Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard_Edit.swift; sourceTree = "<group>"; };
+		366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingForm_Display.swift; sourceTree = "<group>"; };
 		3677907A24260B1900C45F08 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationBar.swift; sourceTree = "<group>"; };
 		367790802428AF9500C45F08 /* FloatingNavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationTab.swift; sourceTree = "<group>"; };
@@ -89,8 +89,6 @@
 		36D1924723F1A2B20078ED6B /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		36D1924D23F295970078ED6B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		36D1924F23F573510078ED6B /* KeyboardHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHost.swift; sourceTree = "<group>"; };
-		36D1925323F68C1A0078ED6B /* FirebaseReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReferenceManager.swift; sourceTree = "<group>"; };
-		36D1925523F696710078ED6B /* FirebaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseKeys.swift; sourceTree = "<group>"; };
 		36D1926423F7AE5C0078ED6B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardTwo.swift; sourceTree = "<group>"; };
 		36E3F0D724128E6700E322B7 /* ReviewCardThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardThree.swift; sourceTree = "<group>"; };
@@ -133,7 +131,8 @@
 		366D8ED8242F486B00BA64B7 /* Testing Views */ = {
 			isa = PBXGroup;
 			children = (
-				366D8ED3242A59A900BA64B7 /* NewReviewCard.swift */,
+				366D8ED3242A59A900BA64B7 /* ReviewCard_Display.swift */,
+				366D8EE524335ED500BA64B7 /* ReviewCard_Edit.swift */,
 				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
 			);
 			path = "Testing Views";
@@ -155,7 +154,6 @@
 			children = (
 				369A16DC23D1DC8E00C0AB15 /* SignUpViewController.swift */,
 				369A16B123CD6D5400C0AB15 /* ItemDetails.swift */,
-				3638F37C2408EC0900CFC4F4 /* NewReview.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -175,6 +173,9 @@
 				3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */,
 				3638F3802408F4A800CFC4F4 /* CircleFrame.swift */,
 				3617241024176CA100CFC6BC /* RectangleImage.swift */,
+				366C444823FA826B0057267E /* RatingView.swift */,
+				366C4459240119D40057267E /* RatingForm_Edit.swift */,
+				366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -186,10 +187,8 @@
 				36E3F0D724128E6700E322B7 /* ReviewCardThree.swift */,
 				36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */,
 				3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */,
-				366C4459240119D40057267E /* RatingForm.swift */,
 				366C445323FE68380057267E /* TimelineView.swift */,
 				36D1924F23F573510078ED6B /* KeyboardHost.swift */,
-				366C444823FA826B0057267E /* RatingView.swift */,
 				367790802428AF9500C45F08 /* FloatingNavigationTab.swift */,
 			);
 			path = "Testing Views";
@@ -243,8 +242,6 @@
 		369A16AE23CD6C2800C0AB15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				36D1925323F68C1A0078ED6B /* FirebaseReferenceManager.swift */,
-				36D1925523F696710078ED6B /* FirebaseKeys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,7 +301,6 @@
 				369A169123CD6B2500C0AB15 /* Frameworks */,
 				369A169223CD6B2500C0AB15 /* Resources */,
 				920F9049779F555F37ED5228 /* [CP] Embed Pods Frameworks */,
-				6325B89755388CFAFAABF2C1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -363,23 +359,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6325B89755388CFAFAABF2C1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-flex/Pods-flex-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-flex/Pods-flex-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-flex/Pods-flex-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		920F9049779F555F37ED5228 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,24 +414,23 @@
 				366C444923FA826B0057267E /* RatingView.swift in Sources */,
 				369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */,
 				369A16B223CD6D5400C0AB15 /* ItemDetails.swift in Sources */,
+				366D8EE624335ED500BA64B7 /* ReviewCard_Edit.swift in Sources */,
 				3617240D2417508100CFC6BC /* ProfilePicture.swift in Sources */,
-				36D1925423F68C1A0078ED6B /* FirebaseReferenceManager.swift in Sources */,
 				366C445423FE68380057267E /* TimelineView.swift in Sources */,
 				36E3F0D824128E6700E322B7 /* ReviewCardThree.swift in Sources */,
+				366D8EE824335F8C00BA64B7 /* RatingForm_Display.swift in Sources */,
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
 				3677907D242881AA00C45F08 /* FloatingNavigationBar.swift in Sources */,
-				366D8ED4242A59A900BA64B7 /* NewReviewCard.swift in Sources */,
+				366D8ED4242A59A900BA64B7 /* ReviewCard_Display.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
-				36D1925623F696710078ED6B /* FirebaseKeys.swift in Sources */,
-				3638F37D2408EC0900CFC4F4 /* NewReview.swift in Sources */,
 				367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */,
 				366C44562400FD0E0057267E /* NavigationTab.swift in Sources */,
 				369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */,
 				3638F3812408F4A800CFC4F4 /* CircleFrame.swift in Sources */,
 				36D1924823F1A2B20078ED6B /* Logo.swift in Sources */,
 				369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */,
-				366C445A240119D40057267E /* RatingForm.swift in Sources */,
+				366C445A240119D40057267E /* RatingForm_Edit.swift in Sources */,
 				36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */,
 				369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */,
 				3617240F2417583A00CFC6BC /* UsersItems.swift in Sources */,

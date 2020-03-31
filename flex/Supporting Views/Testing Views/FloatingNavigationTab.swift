@@ -55,7 +55,7 @@ struct FloatingNavigationTab: View {
                     
                     Spacer(minLength: 15)
                     
-                    NavigationLink(destination: NewReview()) {
+                    NavigationLink(destination: ReviewCard_Display()) {
                         Image(systemName: "plus.app")
                             .font(.system(size: 20, weight: .medium))
                     }

@@ -82,12 +82,12 @@ struct ItemDetails: View {
                         Spacer()
                         //                ScrollView {
                         VStack {
-                            RatingForm(category: "Sizing", sizeRating: $sizeRating, testReview: $testReview).padding(.top, 20)
-                            RatingForm(category: "Comfort", sizeRating: $comfortRating, testReview: $testReview).padding(.top, 20)
-                            RatingForm(category: "Design", sizeRating: $designRating, testReview: $testReview).padding(.top, 20)
-                            RatingForm(category: "Quality",sizeRating: $qualityRating, testReview: $testReview).padding(.top, 20)
-                            RatingForm(category: "Mix and Match",sizeRating: $mixAndmatch, testReview: $testReview).padding(.top, 20)
-                            RatingForm(category: "Headturning",sizeRating: $headTurning, testReview: $testReview).padding(.top, 20)
+                            RatingForm_Edit(category: "Sizing", sizeRating: $sizeRating, testReview: $testReview).padding(.top, 20)
+                            RatingForm_Edit(category: "Comfort", sizeRating: $comfortRating, testReview: $testReview).padding(.top, 20)
+                            RatingForm_Edit(category: "Design", sizeRating: $designRating, testReview: $testReview).padding(.top, 20)
+                            RatingForm_Edit(category: "Quality",sizeRating: $qualityRating, testReview: $testReview).padding(.top, 20)
+                            RatingForm_Edit(category: "Mix and Match",sizeRating: $mixAndmatch, testReview: $testReview).padding(.top, 20)
+                            RatingForm_Edit(category: "Headturning",sizeRating: $headTurning, testReview: $testReview).padding(.top, 20)
                         }
                         
                         //                }
