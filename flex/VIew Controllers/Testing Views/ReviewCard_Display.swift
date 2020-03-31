@@ -1,8 +1,9 @@
 import SwiftUI
 
-// TODO: Plus button is awkward when always in the view, change so that when editing, a floatable button hovers above horizontal view
+// TODO: - Plus button is awkward when always in the view, change so that when editing, a floatable button hovers above horizontal view
+//TODO: - 댓글창 float  or  fixed  결정
+//TODO: - Decide whether User info is included in top of page
 
-//TODO: 댓글창 float  or  fixed  결정
 
 struct ReviewCard_Display: View {
     
@@ -39,12 +40,12 @@ struct ReviewCard_Display: View {
                     // MARK: - 기본정보
                     VStack {
                         VStack {
-//                            TextField("브랜드명", text: $brandName)
-//                                .font(.title)
-//                                .multilineTextAlignment(.center)
-//                            TextField("제품명", text: $productName)
-//                                .font(.headline)
-//                                .multilineTextAlignment(.center)
+                            //                            TextField("브랜드명", text: $brandName)
+                            //                                .font(.title)
+                            //                                .multilineTextAlignment(.center)
+                            //                            TextField("제품명", text: $productName)
+                            //                                .font(.headline)
+                            //                                .multilineTextAlignment(.center)
                             Text("Nike x Sacai")
                                 .font(.title)
                                 .multilineTextAlignment(.center)
@@ -156,7 +157,7 @@ struct ReviewCard_Display: View {
                                 ScrollView(.horizontal) {
                                     
                                     HStack {
-//                                        AddCard()
+                                        //                                        AddCard()
                                         //                                            .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
                                         //                                            .padding(.leading, 150)
                                         //                                            .padding(.trailing, 100)
@@ -172,23 +173,29 @@ struct ReviewCard_Display: View {
                                             //                                            .edgesIgnoringSafeArea(.top)
                                             .frame(height: 300)//400
                                         BackgroundImage(image: Image("nikelogo"))
-                                        //                                            .edgesIgnoringSafeArea(.top)
-                                        .frame(height: 300)//400
+                                            //                                            .edgesIgnoringSafeArea(.top)
+                                            .frame(height: 300)//400
                                     }
                                 }
+                                Divider()
                                 // MARK: - 제품 리뷰
                                 //develop another card class that represents the
                                 ScrollView(.horizontal) {
                                     HStack {
                                         
                                         RatingForm_Display(category: "Sizing", sizeRating: $sizeRating, testReview: $testReview).padding(.top, 20)
-                                            
+                                        .padding(.leading,10)
+                                        
                                         Spacer()
                                         RatingForm_Display(category: "Comfort", sizeRating: $comfortRating, testReview: $testReview).padding(.top, 20)
+                                        .padding(.leading,10)
                                         RatingForm_Display(category: "Design", sizeRating: $designRating, testReview: $testReview).padding(.top, 20)
+                                        .padding(.leading,10)
                                         RatingForm_Display(category: "Quality",sizeRating: $qualityRating, testReview: $testReview).padding(.top, 20)
+                                        .padding(.leading,10)
                                         RatingForm_Display(category: "Mix and Match",sizeRating: $mixAndmatch, testReview: $testReview).padding(.top, 20)
                                         RatingForm_Display(category: "Headturning",sizeRating: $headTurning, testReview: $testReview).padding(.top, 20)
+                                        .padding(.leading,10)
                                     }
                                 }
                             }

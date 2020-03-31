@@ -36,6 +36,7 @@ struct RatingForm_Edit: View {
                     Spacer()
                     RatingView(rating: $sizeRating)
                         .padding(.leading)
+                        .padding(.top,10)
                 }
                 Spacer()
                 TextField("Please fill in a descriptive review", text: $testReview)
@@ -44,7 +45,8 @@ struct RatingForm_Edit: View {
                     .background(lightGreyColor)
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
-                    .padding(.leading, 20)
+                    .padding(.top, 10)
+//                    .padding(.leading, 20)
             }
             
         }

@@ -54,7 +54,7 @@ struct RatingForm_Display: View {
             
         }
         .frame(width:380, height:200)
-        .padding(.trailing,30)
+        
         .padding(.trailing,30)
     }
 }
