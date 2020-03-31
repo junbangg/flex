@@ -34,14 +34,14 @@ struct RatingForm_Display: View {
                         Image(systemName: "star.fill")
                             .foregroundColor(Color.yellow)
                             .font(.system(size: 30, weight: .light))
-                            .offset(x:-5,y:-1)
+                            .offset(x:-10)
                         
                         Text("8.5")
                             .font(.title)
                             .fontWeight(.semibold)
                             .fixedSize()
                             .frame(width:20)
-                            .foregroundColor(Color.gray)
+                            .foregroundColor(Color.red)
                         //                                .offset(x:10,y:1)
                     }
                 }

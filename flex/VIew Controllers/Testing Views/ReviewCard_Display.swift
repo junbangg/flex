@@ -20,6 +20,8 @@ struct ReviewCard_Display: View {
     @State private var testReview : String = ""
     @State private var testVotes : Int = 365
     
+    @State private var comment : String = ""
+    
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
     
     func compute() -> String{
@@ -39,13 +41,13 @@ struct ReviewCard_Display: View {
                 ScrollView {
                     // MARK: - 기본정보
                     VStack {
+                        
                         VStack {
-                            //                            TextField("브랜드명", text: $brandName)
-                            //                                .font(.title)
-                            //                                .multilineTextAlignment(.center)
-                            //                            TextField("제품명", text: $productName)
-                            //                                .font(.headline)
-                            //                                .multilineTextAlignment(.center)
+                            Text("Edit")
+                                .font(.headline)
+                                .foregroundColor(Color.blue)
+                                .offset(x:180,y:-30)
+                            
                             Text("Nike x Sacai")
                                 .font(.title)
                                 .multilineTextAlignment(.center)
@@ -54,6 +56,8 @@ struct ReviewCard_Display: View {
                                 .multilineTextAlignment(.center)
                             
                         }
+                        
+                        
                         Divider()
                         // MARK: - 데이터
                         VStack {
@@ -184,26 +188,55 @@ struct ReviewCard_Display: View {
                                     HStack {
                                         
                                         RatingForm_Display(category: "Sizing", sizeRating: $sizeRating, testReview: $testReview).padding(.top, 20)
-                                        .padding(.leading,10)
+                                            .padding(.leading,10)
                                         
                                         Spacer()
                                         RatingForm_Display(category: "Comfort", sizeRating: $comfortRating, testReview: $testReview).padding(.top, 20)
-                                        .padding(.leading,10)
+                                            .padding(.leading,10)
                                         RatingForm_Display(category: "Design", sizeRating: $designRating, testReview: $testReview).padding(.top, 20)
-                                        .padding(.leading,10)
+                                            .padding(.leading,10)
                                         RatingForm_Display(category: "Quality",sizeRating: $qualityRating, testReview: $testReview).padding(.top, 20)
-                                        .padding(.leading,10)
+                                            .padding(.leading,10)
                                         RatingForm_Display(category: "Mix and Match",sizeRating: $mixAndmatch, testReview: $testReview).padding(.top, 20)
                                         RatingForm_Display(category: "Headturning",sizeRating: $headTurning, testReview: $testReview).padding(.top, 20)
-                                        .padding(.leading,10)
+                                            .padding(.leading,10)
                                     }
                                 }
+                                
                             }
                         }
                         
                         Spacer()
                         
                     }
+                        //MARK: -Set Offset for entire VStack
+                        .offset(y:-50)
+                    
+                }
+                // MARK: - 댓글창
+                // TODO: - Add navigation to a new Comments page(Create as well)
+                HStack {
+                    
+                    Image(systemName: "bubble.left.and.bubble.right")
+                        .foregroundColor(Color.black)
+                        .font(.system(size: 15, weight: .medium))
+                        .padding(.leading,10)
+                    Text("22")
+                        .font(.headline)
+                        .fontWeight(.regular)
+                        .fixedSize()
+                        .frame(width:20)
+                        .foregroundColor(Color.gray)
+                    
+                    Spacer()
+                    TextField("댓글을 입력하세요...", text: $comment)
+                    
+                    Image(systemName: "paperplane")
+                        .foregroundColor(Color.blue)
+                        .font(.system(size:20, weight: .medium))
+                        .padding(.trailing,10)
+                    
+                    
                     
                 }
             }
