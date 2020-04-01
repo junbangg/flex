@@ -14,7 +14,6 @@
 // TODO: Link validation method with a boolean for appropriate display of sign up button
 // TODO: Change the return button to blue Done button
 
-// TODO: Link up to Firestore
 // TODO: Check if there are any errors with registration form
 
 // TODO: Write method that changes birthdate to age int
@@ -178,19 +177,32 @@ struct RegisterViewController: View {
                                 EmptyView()
                                 Button(action: {
                                     //navigate to home screen
-                                    
                                     // MARK: - Login Handling
                                     if self.validateFields() {
                                         // fire off a login request to server of localhost
                                         guard let url = URL(string: "http://15.164.142.209:3001/api/users/register") else { return }
                                         
-                                        var loginRequest = URLRequest(url: url)
-                                        loginRequest.httpMethod = "Post"
+                                        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+
                                         
                                         do {
-                                            let params = ["email": self.email, "pw": self.passwordcheck, "name": self.username]
+//                                            let params : [String: Any] = ["email": self.email, "pw": self.passwordcheck, "name": self.username]
                                             
-                                            loginRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: .init())
+//                                            let paramS = "{\"email\": \(self.email), \"pw\": \(self.passwordcheck), \"name\": \(self.username)}"
+//                                            let data = Data(paramS.utf8)
+
+                                            components.queryItems = [
+                                                URLQueryItem(name: "email", value: self.email),
+                                                URLQueryItem(name: "pw", value: self.passwordcheck),
+                                                URLQueryItem(name: "name", value: self.username)
+                                            ]
+                                            let query = components.url!.query
+                                            
+                                            var loginRequest = URLRequest(url: url)
+                                            loginRequest.httpMethod = "POST"
+                                            
+                                            loginRequest.httpBody = Data(query!.utf8)
+//                                            loginRequest.httpBody = try JSONSerialization.data(withJSONObject: data, options:.init())
                                             
                                             URLSession.shared.dataTask(with: loginRequest) { (data, resp, err) in
                                                 
