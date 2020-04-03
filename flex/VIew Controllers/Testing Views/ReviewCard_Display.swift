@@ -1,5 +1,6 @@
 import SwiftUI
 
+
 // TODO: - Plus button is awkward when always in the view, change so that when editing, a floatable button hovers above horizontal view
 //TODO: - 댓글창 float  or  fixed  결정
 //TODO: - Decide whether User info is included in top of page
@@ -24,7 +25,7 @@ struct ReviewCard_Display: View {
     
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
     
-    func compute() -> String{
+    func compute() -> String {
         var sum = 0
         var mean : Float
         let denominator = 6

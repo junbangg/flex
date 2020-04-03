@@ -25,6 +25,7 @@
 		366D8ED7242DFDFF00BA64B7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8ED6242DFDFF00BA64B7 /* Services.swift */; };
 		366D8EE624335ED500BA64B7 /* ReviewCard_Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8EE524335ED500BA64B7 /* ReviewCard_Edit.swift */; };
 		366D8EE824335F8C00BA64B7 /* RatingForm_Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */; };
+		366D8EEA24370D2800BA64B7 /* TestingRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8EE924370D2800BA64B7 /* TestingRegisterViewController.swift */; };
 		3677907B24260B1900C45F08 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907A24260B1900C45F08 /* PopoverView.swift */; };
 		3677907D242881AA00C45F08 /* FloatingNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */; };
 		367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367790802428AF9500C45F08 /* FloatingNavigationTab.swift */; };
@@ -69,6 +70,7 @@
 		366D8ED6242DFDFF00BA64B7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		366D8EE524335ED500BA64B7 /* ReviewCard_Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard_Edit.swift; sourceTree = "<group>"; };
 		366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingForm_Display.swift; sourceTree = "<group>"; };
+		366D8EE924370D2800BA64B7 /* TestingRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingRegisterViewController.swift; sourceTree = "<group>"; };
 		3677907A24260B1900C45F08 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationBar.swift; sourceTree = "<group>"; };
 		367790802428AF9500C45F08 /* FloatingNavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationTab.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		366D8ED8242F486B00BA64B7 /* Testing Views */ = {
 			isa = PBXGroup;
 			children = (
+				366D8EE924370D2800BA64B7 /* TestingRegisterViewController.swift */,
 				366D8ED3242A59A900BA64B7 /* ReviewCard_Display.swift */,
 				366D8EE524335ED500BA64B7 /* ReviewCard_Edit.swift */,
 				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
@@ -432,6 +435,7 @@
 				369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */,
 				366C445A240119D40057267E /* RatingForm_Edit.swift in Sources */,
 				36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */,
+				366D8EEA24370D2800BA64B7 /* TestingRegisterViewController.swift in Sources */,
 				369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */,
 				3617240F2417583A00CFC6BC /* UsersItems.swift in Sources */,
 				369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */,

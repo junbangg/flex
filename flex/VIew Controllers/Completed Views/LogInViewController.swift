@@ -75,35 +75,75 @@ struct LogInViewController: View {
                         EmptyView()
                         
                         Button(action: {
-//                            let cleanedEmail = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
-//                            let cleanedPassword = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
-                            // MARK: - Login Handler
-//                            Auth.auth().signIn(withEmail: cleanedEmail, password: cleanedPassword) {
-//                                (result,error) in
-//                                if error != nil {
-//                                    print("error")
-//                                }
-//                                else {
-//                                    print("Log In Successful")
-//                                    self.selection = 1
-//
-//                                }
-//
-//
-//                            }
+                            let cleanedEmail = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
+                            let cleanedPassword = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
                             
+                            //maybe make an if statement to check if email and password is empty?
+                            
+                            
+                            // MARK: - Login Handler
                             //navigate to home screen
-                            //                        if self.validateFields() {
-                            //
-                            //                            //disable validation alert
-                            //                            self.validationIncomplete = false
-                            //                            //change tag for navigation to home screen
-                            //                            self.selection = 1
-                            //                        }else {
-                            //                            //enable validation alert
-                            //                            self.validationIncomplete = true
-                            //                            print("error")
-                            //                        }
+                            // MARK: - Login Handling                                // fire off a login request to server of localhost
+                            
+                            guard let myUrl = URL(string: "http://15.164.142.209:3001/api/users/login") else { return }
+                            
+                            var components = URLComponents(url: myUrl, resolvingAgainstBaseURL: false)!
+                            
+                            components.queryItems = [
+                                URLQueryItem(name: "email", value: cleanedEmail),
+                                URLQueryItem(name: "pw", value: cleanedPassword)
+                            ]
+                            let query = components.url!.query
+                            
+                            var loginRequest = URLRequest(url: myUrl)
+                            loginRequest.httpMethod = "POST"
+                            
+                            loginRequest.httpBody = Data(query!.utf8)
+                            
+                            let task = URLSession.shared.dataTask(with: loginRequest) { (data: Data?, response : URLResponse?, error: Error?) in
+                                
+                                if let err = error {
+                                    print("Failed to login:", err)
+                                    return
+                                }
+                                do {
+                                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                                    
+                                    if let parseJSON = json {
+                                        
+//                                        let result = parseJSON["result"]
+                                        print(parseJSON)
+                                        let result = parseJSON["result"] as? [String: AnyObject]
+                                        let accessToken = result!["token"] as? String
+                                        let userID = parseJSON["email"] as? String
+                                        print("Access Token: \(String(describing: accessToken!))")
+                                        
+                                        if accessToken == nil
+                                        {
+                                            print("error with access token")
+                                            return
+                                        }
+                                        self.selection = 1
+                                        print("Probably logged in successfully..")
+                                        //
+                                        
+                                    } else {
+                                        print("something went wrong")
+                                    }
+                                } catch {
+                                    print(error)
+                                }
+                                
+//                                                                          self.fetchPosts()
+                                
+                            }
+                            task.resume() // never forget this resume
+                            
+                            
+                            
+                            
+                            
+                            
                             
                         }) {
                             HStack(alignment: .center) {

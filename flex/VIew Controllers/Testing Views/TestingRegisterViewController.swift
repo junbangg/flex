@@ -24,7 +24,7 @@ import SwiftUI
 //import KeyboardAvoider
 import Foundation
 
-struct User: Decodable {
+struct UserTwo: Decodable {
     var email: String
     var pw: String
     var nickname: String
@@ -32,7 +32,7 @@ struct User: Decodable {
     var gender: Int
 }
 
-struct RegisterViewController: View {
+struct TestingRegisterViewController: View {
     
     @State private var email : String = ""
     @State private var password : String = ""
@@ -61,11 +61,11 @@ struct RegisterViewController: View {
     // MARK: - Method to check information validation
     func validateFields() -> Bool {
         
-//        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-//            return false
-//        }
-//        if firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-//        }
+        //        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        //            return false
+        //        }
+        //        if firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        //        }
         if email.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return false
         }
@@ -157,7 +157,7 @@ struct RegisterViewController: View {
                                     .border(Utilities.isBlank(self.username) ? Color.clear : Color.blue)
                             }
                             Section {
-                                DatePicker(selection:$birthdate,displayedComponents: .date, label: 
+                                DatePicker(selection:$birthdate,displayedComponents: .date, label:
                                     { Text("Birthdate") })
                             }
                             // FIX: Not able to press gender again after picking a gender once
@@ -181,45 +181,32 @@ struct RegisterViewController: View {
                                     //navigate to home screen
                                     // MARK: - Login Handling
                                     if self.validateFields() {
-                                        // fire off a login request to server of localhost
-                                        guard let url = URL(string: "http://15.164.142.209:3001/api/users/register") else { return }
+                                        let myUrl = URL(string: "http://15.164.142.209:3001/api/users/register")
+                                        var request = URLRequest(url:myUrl!)
+                                        request.httpMethod = "POST"
+//                                        request.addValue("users/register", forHTTPHeaderField: "")
                                         
-                                        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
-
+                                        let postString = ["email": self.email, "pw": self.passwordcheck, "name": self.username] as [String:String]
                                         
                                         do {
-//                                            let params : [String: Any] = ["email": self.email, "pw": self.passwordcheck, "name": self.username]
-                                            
-//                                            let paramS = "{\"email\": \(self.email), \"pw\": \(self.passwordcheck), \"name\": \(self.username)}"
-//                                            let data = Data(paramS.utf8)
-
-                                            components.queryItems = [
-                                                URLQueryItem(name: "email", value: self.email),
-                                                URLQueryItem(name: "pw", value: self.passwordcheck),
-                                                URLQueryItem(name: "name", value: self.username)
-                                            ]
-                                            let query = components.url!.query
-                                            
-                                            var loginRequest = URLRequest(url: url)
-                                            loginRequest.httpMethod = "POST"
-                                            
-                                            loginRequest.httpBody = Data(query!.utf8)
-//                                            loginRequest.httpBody = try JSONSerialization.data(withJSONObject: data, options:.init())
-                                            
-                                            URLSession.shared.dataTask(with: loginRequest) { (data, resp, err) in
-                                                
-                                                if let err = err {
-                                                    print("Failed to login:", err)
-                                                    return
-                                                }
-                                                self.selection = 1
-                                                print("Probably logged in successfully..")
-//                                                self.fetchPosts()
-                                                
-                                            }.resume() // never forget this resume
-                                        } catch {
-                                            print("Failed to serialize data:", error)
+                                            request.httpBody = try JSONSerialization.data(withJSONObject: postString, options: .prettyPrinted)
+                                        }catch let error {
+                                            print(error.localizedDescription)
                                         }
+                                        
+                                        let task = URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error : Error?) in
+                                            
+                                            if let err = error {
+                                                print("Failed to login:", err)
+                                                return
+                                            }
+                                            self.selection = 1
+                                            print("Probably logged in successfully..")
+                                            //                                                self.fetchPosts()
+                                            
+                                        }
+                                        task.resume()
+                                        
                                     }
                                     else {
                                         //enable validation alert
@@ -252,7 +239,7 @@ struct RegisterViewController: View {
                     }
                 }.gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
                     .navigationBarTitle("")
-//                    .navigationBarHidden(true)
+                //                    .navigationBarHidden(true)
                 //sign up button
                 //used conditional inside HStack to show sign up button only when validation is completed
             }
@@ -260,7 +247,7 @@ struct RegisterViewController: View {
     }
 }
 
-struct RegisterViewController_Previews: PreviewProvider {
+struct TestRegisterViewController_Previews: PreviewProvider {
     static var previews: some View {
         RegisterViewController()
     }
