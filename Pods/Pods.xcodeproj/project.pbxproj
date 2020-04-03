@@ -7,69 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1E9D786CA1040C50244F3427482C2C /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EB75B75FBE8268FF4AA029A48A526B /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1121451FDA2300B8FF04A3D53DE41703 /* Pods-flex-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA57A299ABE7BDA730AA887A609CC5CF /* Pods-flex-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16AE6C685C939266DDCEF2000293C6A9 /* Pods-flex-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF561EC45F0EA12C9B76793A3B41B6C1 /* Pods-flex-dummy.m */; };
 		170C157F5C6AA4ECC860D53CAAAC660E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D9E39EADA09E21EB984C9093D4FDBA /* SwiftUI.framework */; };
-		1F3D4FC1602967298D81D3EB625A0D5B /* KeyboardAvoider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B16B2C81D9177E11D49B514BFE896AB6 /* KeyboardAvoider-dummy.m */; };
+		1BB72D35C1614D5955F927774DCC7C44 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9450F583A662890AC74F48778FE47A3 /* SwiftKeychainWrapper-dummy.m */; };
+		1F3D4FC1602967298D81D3EB625A0D5B /* KeyboardAvoider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA231310E69F9E5966902F3AE299BF5 /* KeyboardAvoider-dummy.m */; };
+		35C7EB60E66E2814886504B822190484 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506B91C7E71789D86D1E1FCC40FF3492 /* Foundation.framework */; };
+		3A246CB408E326D4798A114169A4D9E3 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C128C1594AEBC26FEAA1207727F284 /* KeychainWrapper.swift */; };
 		3CE71519DFD5166B930A67266A9749C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82F54313F1AA5251A96D50AAF73BAB8 /* UIKit.framework */; };
-		5066CEFB36806C48D2E439E88C825121 /* KeyboardAvoider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0402A19A218A8CCA93B6941DA287443B /* KeyboardAvoider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54F0D659853CEDFDFE35A9C67A05860A /* Pods-flex-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA57A299ABE7BDA730AA887A609CC5CF /* Pods-flex-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5066CEFB36806C48D2E439E88C825121 /* KeyboardAvoider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78FB4117E7F78177CAFA24C4820D0B13 /* KeyboardAvoider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		611885C15B588F47BD3AE49CB761DCA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506B91C7E71789D86D1E1FCC40FF3492 /* Foundation.framework */; };
-		6C86C6616BE9A4D6BB2DBDADC0393DE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506B91C7E71789D86D1E1FCC40FF3492 /* Foundation.framework */; };
-		7CA1FDCC2199640C853269FFF6F6C3B6 /* Pods-flex-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF561EC45F0EA12C9B76793A3B41B6C1 /* Pods-flex-dummy.m */; };
-		82A0F15683A0D0011D9AA858E88ACF20 /* UIResponder_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D49370F178F4D69ACED73EDEBC2916 /* UIResponder_Extension.swift */; };
+		77E830DCB02EA493CCBC71F71F11006C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506B91C7E71789D86D1E1FCC40FF3492 /* Foundation.framework */; };
+		7BDEA58982AE38EC64F549D981FD45E6 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBE16830CE49195E10CB18926A1773D /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82A0F15683A0D0011D9AA858E88ACF20 /* UIResponder_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E2F7E8625EBA7F9D97103A324C14F9 /* UIResponder_Extension.swift */; };
+		853500B973255E0957451456FAAD6E31 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC48E4209A093902DC0A39631A05C72F /* KeychainItemAccessibility.swift */; };
 		9A21A616FE0C771BE257F47B49CECE58 /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0EF20BC9B4865BFF381E13FC8DA7E41 /* Combine.framework */; };
-		A2DD7749B07ED5AF1674F81BB5348305 /* KeyboardAvoiderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3E1A614FA5CA1CE093D197B4EC987 /* KeyboardAvoiderModifier.swift */; };
-		D9488DA00C3C105FF9C5352544E61825 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA8F595EE0402C3D09031F4C840C70 /* KeyboardHandler.swift */; };
-		EA16238C255F0F2B5A63C12AFB372759 /* KeyboardAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35163CC6D0BEF0DFD6C68A94C9EBC77 /* KeyboardAvoider.swift */; };
+		A2DD7749B07ED5AF1674F81BB5348305 /* KeyboardAvoiderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CE8A433AA56E443C75B4DF89C6DA15 /* KeyboardAvoiderModifier.swift */; };
+		D9488DA00C3C105FF9C5352544E61825 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A05BAE6C169CC2527EFB72B781AC52 /* KeyboardHandler.swift */; };
+		EA16238C255F0F2B5A63C12AFB372759 /* KeyboardAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC1141B5270C354C832DDAC548FCC9 /* KeyboardAvoider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4EB5D34DBCF526EA59FEB5A790448051 /* PBXContainerItemProxy */ = {
+		03ECFFEB8FB9A9A014A879430F96FC63 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 436822C39504F034A86DAE1EBA6F2B38;
 			remoteInfo = KeyboardAvoider;
 		};
+		ED2BD95401AF5C666F275C5FB26F6259 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF903DF43E111410ECA0C288D36FA21A;
+			remoteInfo = SwiftKeychainWrapper;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0402A19A218A8CCA93B6941DA287443B /* KeyboardAvoider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardAvoider-umbrella.h"; sourceTree = "<group>"; };
-		08B3E1A614FA5CA1CE093D197B4EC987 /* KeyboardAvoiderModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardAvoiderModifier.swift; path = Sources/KeyboardAvoider/KeyboardAvoiderModifier.swift; sourceTree = "<group>"; };
-		142B3597AA2C19235380C3C1AADC122A /* KeyboardAvoider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeyboardAvoider.xcconfig; sourceTree = "<group>"; };
+		22EB75B75FBE8268FF4AA029A48A526B /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
 		2385FF7EE9DE0697F53AA036AD3F5F38 /* Pods-flex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-flex.debug.xcconfig"; sourceTree = "<group>"; };
+		2465DD2FD05916A9FD650D11FF507076 /* KeyboardAvoider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeyboardAvoider-Info.plist"; sourceTree = "<group>"; };
+		32BF7FCC46EAB735ED905E5A381D8218 /* SwiftKeychainWrapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftKeychainWrapper-Info.plist"; sourceTree = "<group>"; };
+		36CE8A433AA56E443C75B4DF89C6DA15 /* KeyboardAvoiderModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardAvoiderModifier.swift; path = Sources/KeyboardAvoider/KeyboardAvoiderModifier.swift; sourceTree = "<group>"; };
+		3CA231310E69F9E5966902F3AE299BF5 /* KeyboardAvoider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeyboardAvoider-dummy.m"; sourceTree = "<group>"; };
+		46A05BAE6C169CC2527EFB72B781AC52 /* KeyboardHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardHandler.swift; path = Sources/KeyboardAvoider/KeyboardHandler.swift; sourceTree = "<group>"; };
+		4CBE16830CE49195E10CB18926A1773D /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
+		5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		506B91C7E71789D86D1E1FCC40FF3492 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		576A40191426203E52A42A1943D0D330 /* Pods-flex-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-flex-frameworks.sh"; sourceTree = "<group>"; };
 		5A425D71CF5764DD6F3720FD1B0D19FE /* KeyboardAvoider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeyboardAvoider.framework; path = KeyboardAvoider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8A4C4DFE895D456032DC25CF529087 /* Pods-flex-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-flex-acknowledgements.plist"; sourceTree = "<group>"; };
 		5BF9E86AE99F69E2AA0F86D33BAEDCAB /* Pods-flex.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-flex.modulemap"; sourceTree = "<group>"; };
+		6BCD84A79213955062A34C7EC3AD1BB3 /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
+		78FB4117E7F78177CAFA24C4820D0B13 /* KeyboardAvoider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardAvoider-umbrella.h"; sourceTree = "<group>"; };
 		8731B257759CB55C3F12ABC7F33082A1 /* Pods-flex-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-flex-Info.plist"; sourceTree = "<group>"; };
+		8748AA470E028A7182AA7A524D995CBC /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
 		92D9E39EADA09E21EB984C9093D4FDBA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
+		9718A60C226031B0924635924F084BA9 /* KeyboardAvoider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeyboardAvoider.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E45EFDC2BF72E7C72CF220B33F7C6C3 /* Pods-flex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-flex.release.xcconfig"; sourceTree = "<group>"; };
 		9EB045814E08E4B68421F3AC9E4A57E9 /* Pods-flex-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-flex-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AECA8F595EE0402C3D09031F4C840C70 /* KeyboardHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardHandler.swift; path = Sources/KeyboardAvoider/KeyboardHandler.swift; sourceTree = "<group>"; };
-		B16B2C81D9177E11D49B514BFE896AB6 /* KeyboardAvoider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeyboardAvoider-dummy.m"; sourceTree = "<group>"; };
-		B35163CC6D0BEF0DFD6C68A94C9EBC77 /* KeyboardAvoider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardAvoider.swift; path = Sources/KeyboardAvoider/KeyboardAvoider.swift; sourceTree = "<group>"; };
-		C5D49370F178F4D69ACED73EDEBC2916 /* UIResponder_Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIResponder_Extension.swift; path = Sources/KeyboardAvoider/UIResponder_Extension.swift; sourceTree = "<group>"; };
-		D38CBFE90072CB3439E1F71DF014A23B /* KeyboardAvoider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KeyboardAvoider-Info.plist"; sourceTree = "<group>"; };
+		A5C128C1594AEBC26FEAA1207727F284 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
+		BA54D1220DB48AD4737248094872FAF9 /* SwiftKeychainWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.xcconfig; sourceTree = "<group>"; };
+		CD5D8324920067C0B822091725FCC1D9 /* KeyboardAvoider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardAvoider-prefix.pch"; sourceTree = "<group>"; };
+		D1E2F7E8625EBA7F9D97103A324C14F9 /* UIResponder_Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIResponder_Extension.swift; path = Sources/KeyboardAvoider/UIResponder_Extension.swift; sourceTree = "<group>"; };
+		D6777B67F81BB949805480AF233DE1A8 /* KeyboardAvoider.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeyboardAvoider.xcconfig; sourceTree = "<group>"; };
+		DFCC1141B5270C354C832DDAC548FCC9 /* KeyboardAvoider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardAvoider.swift; path = Sources/KeyboardAvoider/KeyboardAvoider.swift; sourceTree = "<group>"; };
 		E0EF20BC9B4865BFF381E13FC8DA7E41 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Combine.framework; sourceTree = DEVELOPER_DIR; };
-		E64FB21298A01A2BEE1AC3CB8CF7EDC5 /* KeyboardAvoider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeyboardAvoider.modulemap; sourceTree = "<group>"; };
 		F82F54313F1AA5251A96D50AAF73BAB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F9450F583A662890AC74F48778FE47A3 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
 		FA57A299ABE7BDA730AA887A609CC5CF /* Pods-flex-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-flex-umbrella.h"; sourceTree = "<group>"; };
 		FB4D0FA7AE8ECEAB94606FD61F2EDFF0 /* Pods_flex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_flex.framework; path = "Pods-flex.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCF63013CCBB69A3D2EB4A56884B64CC /* KeyboardAvoider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeyboardAvoider-prefix.pch"; sourceTree = "<group>"; };
+		FC48E4209A093902DC0A39631A05C72F /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		FF561EC45F0EA12C9B76793A3B41B6C1 /* Pods-flex-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-flex-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2399A886998B9BFF8BC0496D5BB3F450 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6C86C6616BE9A4D6BB2DBDADC0393DE6 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6CD622C36801C6F49D9A83DFD22DCFAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,40 +96,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D27E3D377EA6802DF12279917E57AE30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77E830DCB02EA493CCBC71F71F11006C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D44BE32F0F2A099860CD3EA3E14F13E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35C7EB60E66E2814886504B822190484 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E4F881AF2914A47D02C215C52F233BD /* Products */ = {
+		07828875F99D19F7266BD75ADA34867E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A425D71CF5764DD6F3720FD1B0D19FE /* KeyboardAvoider.framework */,
-				FB4D0FA7AE8ECEAB94606FD61F2EDFF0 /* Pods_flex.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2089482D44B8EA3D45BA91C390F11ADB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E64FB21298A01A2BEE1AC3CB8CF7EDC5 /* KeyboardAvoider.modulemap */,
-				142B3597AA2C19235380C3C1AADC122A /* KeyboardAvoider.xcconfig */,
-				B16B2C81D9177E11D49B514BFE896AB6 /* KeyboardAvoider-dummy.m */,
-				D38CBFE90072CB3439E1F71DF014A23B /* KeyboardAvoider-Info.plist */,
-				FCF63013CCBB69A3D2EB4A56884B64CC /* KeyboardAvoider-prefix.pch */,
-				0402A19A218A8CCA93B6941DA287443B /* KeyboardAvoider-umbrella.h */,
+				8748AA470E028A7182AA7A524D995CBC /* SwiftKeychainWrapper.modulemap */,
+				BA54D1220DB48AD4737248094872FAF9 /* SwiftKeychainWrapper.xcconfig */,
+				F9450F583A662890AC74F48778FE47A3 /* SwiftKeychainWrapper-dummy.m */,
+				32BF7FCC46EAB735ED905E5A381D8218 /* SwiftKeychainWrapper-Info.plist */,
+				6BCD84A79213955062A34C7EC3AD1BB3 /* SwiftKeychainWrapper-prefix.pch */,
+				22EB75B75FBE8268FF4AA029A48A526B /* SwiftKeychainWrapper-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/KeyboardAvoider";
+			path = "../Target Support Files/SwiftKeychainWrapper";
 			sourceTree = "<group>";
 		};
-		7A0E902DFA2C6DA74A7A47AB1B467786 /* KeyboardAvoider */ = {
+		1B44DE792263B542FC654766DBF9A048 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B35163CC6D0BEF0DFD6C68A94C9EBC77 /* KeyboardAvoider.swift */,
-				08B3E1A614FA5CA1CE093D197B4EC987 /* KeyboardAvoiderModifier.swift */,
-				AECA8F595EE0402C3D09031F4C840C70 /* KeyboardHandler.swift */,
-				C5D49370F178F4D69ACED73EDEBC2916 /* UIResponder_Extension.swift */,
-				2089482D44B8EA3D45BA91C390F11ADB /* Support Files */,
+				8CB17FE09335B9649AD6531923A5FC20 /* KeyboardAvoider */,
+				CDE376DF194FD8115B88197F7EDFA7DD /* SwiftKeychainWrapper */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8CB17FE09335B9649AD6531923A5FC20 /* KeyboardAvoider */ = {
+			isa = PBXGroup;
+			children = (
+				DFCC1141B5270C354C832DDAC548FCC9 /* KeyboardAvoider.swift */,
+				36CE8A433AA56E443C75B4DF89C6DA15 /* KeyboardAvoiderModifier.swift */,
+				46A05BAE6C169CC2527EFB72B781AC52 /* KeyboardHandler.swift */,
+				D1E2F7E8625EBA7F9D97103A324C14F9 /* UIResponder_Extension.swift */,
+				D14CC8E2C2EBFA84D125FB66EC0CFF58 /* Support Files */,
 			);
 			name = KeyboardAvoider;
 			path = KeyboardAvoider;
@@ -128,6 +159,16 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		9A15A564D5D75D7FB8E0CC66CAD328B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A425D71CF5764DD6F3720FD1B0D19FE /* KeyboardAvoider.framework */,
+				FB4D0FA7AE8ECEAB94606FD61F2EDFF0 /* Pods_flex.framework */,
+				5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,13 +177,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CDE376DF194FD8115B88197F7EDFA7DD /* SwiftKeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				FC48E4209A093902DC0A39631A05C72F /* KeychainItemAccessibility.swift */,
+				A5C128C1594AEBC26FEAA1207727F284 /* KeychainWrapper.swift */,
+				4CBE16830CE49195E10CB18926A1773D /* SwiftKeychainWrapper.h */,
+				07828875F99D19F7266BD75ADA34867E /* Support Files */,
+			);
+			name = SwiftKeychainWrapper;
+			path = SwiftKeychainWrapper;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				F67CF70B0F896D1DDAFE41471DFE0377 /* Pods */,
-				0E4F881AF2914A47D02C215C52F233BD /* Products */,
+				1B44DE792263B542FC654766DBF9A048 /* Pods */,
+				9A15A564D5D75D7FB8E0CC66CAD328B2 /* Products */,
 				901A33F4486A6A9DAA80ECFEF2F72EB5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -175,22 +228,28 @@
 			path = "Target Support Files/Pods-flex";
 			sourceTree = "<group>";
 		};
-		F67CF70B0F896D1DDAFE41471DFE0377 /* Pods */ = {
+		D14CC8E2C2EBFA84D125FB66EC0CFF58 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7A0E902DFA2C6DA74A7A47AB1B467786 /* KeyboardAvoider */,
+				9718A60C226031B0924635924F084BA9 /* KeyboardAvoider.modulemap */,
+				D6777B67F81BB949805480AF233DE1A8 /* KeyboardAvoider.xcconfig */,
+				3CA231310E69F9E5966902F3AE299BF5 /* KeyboardAvoider-dummy.m */,
+				2465DD2FD05916A9FD650D11FF507076 /* KeyboardAvoider-Info.plist */,
+				CD5D8324920067C0B822091725FCC1D9 /* KeyboardAvoider-prefix.pch */,
+				78FB4117E7F78177CAFA24C4820D0B13 /* KeyboardAvoider-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/KeyboardAvoider";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7F39E5A5A26D5EC12DA7174BD1E19A83 /* Headers */ = {
+		A868FB65E9BBA49E4E2645B38782D373 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F0D659853CEDFDFE35A9C67A05860A /* Pods-flex-umbrella.h in Headers */,
+				1121451FDA2300B8FF04A3D53DE41703 /* Pods-flex-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,22 +261,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E46D83F0CD00CB6C581A15FACBBDB57E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A1E9D786CA1040C50244F3427482C2C /* SwiftKeychainWrapper-umbrella.h in Headers */,
+				7BDEA58982AE38EC64F549D981FD45E6 /* SwiftKeychainWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3B5B07A0476FC810E4CDC0C1E15B5280 /* Pods-flex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65447F596403AB83C79CBE0BDA772A71 /* Build configuration list for PBXNativeTarget "Pods-flex" */;
+			buildConfigurationList = 90F278A626F9742A57F0703C27809D1B /* Build configuration list for PBXNativeTarget "Pods-flex" */;
 			buildPhases = (
-				7F39E5A5A26D5EC12DA7174BD1E19A83 /* Headers */,
-				D1B5647620F80A8708ECA815E925D9A3 /* Sources */,
-				2399A886998B9BFF8BC0496D5BB3F450 /* Frameworks */,
-				CCFA18CD9D9A2B176DF2040E42A3BAB1 /* Resources */,
+				A868FB65E9BBA49E4E2645B38782D373 /* Headers */,
+				1BFFC29232C3A0F25931B09A228C7BDF /* Sources */,
+				D27E3D377EA6802DF12279917E57AE30 /* Frameworks */,
+				06E8F0D31FE96C8F39909EC7764DC902 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AA6AFC2663DFA34B41483D7381A56841 /* PBXTargetDependency */,
+				75F21E4D18A6741BC16DFC0483928280 /* PBXTargetDependency */,
+				400C54743002100C192FA2D73C246FC2 /* PBXTargetDependency */,
 			);
 			name = "Pods-flex";
 			productName = "Pods-flex";
@@ -242,6 +311,24 @@
 			productReference = 5A425D71CF5764DD6F3720FD1B0D19FE /* KeyboardAvoider.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97C26D1F56B79A699BC4DE26433A422F /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
+			buildPhases = (
+				E46D83F0CD00CB6C581A15FACBBDB57E /* Headers */,
+				330DE2BD20DFC08839359EADFE5BBCF0 /* Sources */,
+				D44BE32F0F2A099860CD3EA3E14F13E2 /* Frameworks */,
+				BBE4D27BCC51B5E2A3D3C5FFE924AA40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftKeychainWrapper;
+			productName = SwiftKeychainWrapper;
+			productReference = 5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -260,17 +347,25 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 0E4F881AF2914A47D02C215C52F233BD /* Products */;
+			productRefGroup = 9A15A564D5D75D7FB8E0CC66CAD328B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				436822C39504F034A86DAE1EBA6F2B38 /* KeyboardAvoider */,
 				3B5B07A0476FC810E4CDC0C1E15B5280 /* Pods-flex */,
+				CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		06E8F0D31FE96C8F39909EC7764DC902 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		635C53ACF39EB8E54E36EFD224FDD78B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,7 +373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CCFA18CD9D9A2B176DF2040E42A3BAB1 /* Resources */ = {
+		BBE4D27BCC51B5E2A3D3C5FFE924AA40 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,11 +383,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D1B5647620F80A8708ECA815E925D9A3 /* Sources */ = {
+		1BFFC29232C3A0F25931B09A228C7BDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CA1FDCC2199640C853269FFF6F6C3B6 /* Pods-flex-dummy.m in Sources */,
+				16AE6C685C939266DDCEF2000293C6A9 /* Pods-flex-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		330DE2BD20DFC08839359EADFE5BBCF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853500B973255E0957451456FAAD6E31 /* KeychainItemAccessibility.swift in Sources */,
+				3A246CB408E326D4798A114169A4D9E3 /* KeychainWrapper.swift in Sources */,
+				1BB72D35C1614D5955F927774DCC7C44 /* SwiftKeychainWrapper-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,20 +416,25 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AA6AFC2663DFA34B41483D7381A56841 /* PBXTargetDependency */ = {
+		400C54743002100C192FA2D73C246FC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftKeychainWrapper;
+			target = CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */;
+			targetProxy = ED2BD95401AF5C666F275C5FB26F6259 /* PBXContainerItemProxy */;
+		};
+		75F21E4D18A6741BC16DFC0483928280 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KeyboardAvoider;
 			target = 436822C39504F034A86DAE1EBA6F2B38 /* KeyboardAvoider */;
-			targetProxy = 4EB5D34DBCF526EA59FEB5A790448051 /* PBXContainerItemProxy */;
+			targetProxy = 03ECFFEB8FB9A9A014A879430F96FC63 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2A43C01B186251EEE173AB8E288C6973 /* Release */ = {
+		0D68731B1708A659462C629F01084692 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 142B3597AA2C19235380C3C1AADC122A /* KeyboardAvoider.xcconfig */;
+			baseConfigurationReference = BA54D1220DB48AD4737248094872FAF9 /* SwiftKeychainWrapper.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -334,30 +444,29 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/KeyboardAvoider/KeyboardAvoider-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/KeyboardAvoider/KeyboardAvoider-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/KeyboardAvoider/KeyboardAvoider.modulemap";
-				PRODUCT_MODULE_NAME = KeyboardAvoider;
-				PRODUCT_NAME = KeyboardAvoider;
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
+				PRODUCT_NAME = SwiftKeychainWrapper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		37E50C45C7BF360E854E90FB7A44E5DE /* Debug */ = {
+		19CC0B08C49CB050BB0A7A8AEEFA3BFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2385FF7EE9DE0697F53AA036AD3F5F38 /* Pods-flex.debug.xcconfig */;
 			buildSettings = {
@@ -395,9 +504,82 @@
 			};
 			name = Debug;
 		};
+		2A43C01B186251EEE173AB8E288C6973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6777B67F81BB949805480AF233DE1A8 /* KeyboardAvoider.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KeyboardAvoider/KeyboardAvoider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeyboardAvoider/KeyboardAvoider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KeyboardAvoider/KeyboardAvoider.modulemap";
+				PRODUCT_MODULE_NAME = KeyboardAvoider;
+				PRODUCT_NAME = KeyboardAvoider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		43CE06E37A8B99DB615367984EBD4567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA54D1220DB48AD4737248094872FAF9 /* SwiftKeychainWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		86ADBCE3018B374571BD0CF067D493E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 142B3597AA2C19235380C3C1AADC122A /* KeyboardAvoider.xcconfig */;
+			baseConfigurationReference = D6777B67F81BB949805480AF233DE1A8 /* KeyboardAvoider.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -495,6 +677,45 @@
 			};
 			name = Debug;
 		};
+		BA69CDACEAE1C3F907B6EA4EEEDD1FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E45EFDC2BF72E7C72CF220B33F7C6C3 /* Pods-flex.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-flex/Pods-flex-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-flex/Pods-flex.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -555,45 +776,6 @@
 			};
 			name = Release;
 		};
-		F9DCC1C20BE5D5B29CC8065B9B1BB2A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E45EFDC2BF72E7C72CF220B33F7C6C3 /* Pods-flex.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-flex/Pods-flex-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-flex/Pods-flex.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -606,11 +788,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65447F596403AB83C79CBE0BDA772A71 /* Build configuration list for PBXNativeTarget "Pods-flex" */ = {
+		90F278A626F9742A57F0703C27809D1B /* Build configuration list for PBXNativeTarget "Pods-flex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37E50C45C7BF360E854E90FB7A44E5DE /* Debug */,
-				F9DCC1C20BE5D5B29CC8065B9B1BB2A5 /* Release */,
+				19CC0B08C49CB050BB0A7A8AEEFA3BFC /* Debug */,
+				BA69CDACEAE1C3F907B6EA4EEEDD1FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97C26D1F56B79A699BC4DE26433A422F /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D68731B1708A659462C629F01084692 /* Debug */,
+				43CE06E37A8B99DB615367984EBD4567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

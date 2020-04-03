@@ -9,6 +9,8 @@
 //FIX: Navigation and picker for gender do not function when tried again
 
 import SwiftUI
+import SwiftKeychainWrapper
+
 struct LogInViewController: View {
     
     @State private var email : String = ""
@@ -49,29 +51,14 @@ struct LogInViewController: View {
                             .padding(.bottom, 20)
                     }
                     .padding(.horizontal, 50.0)
-                    //                HStack {
-                    //                    Button(action: {print("\(self.username) : \(self.password)")}) {
-                    //                        Text("Login")
-                    //                            .font(.body)
-                    //                            .fontWeight(.semibold)
-                    //                            .foregroundColor(Color.red)
-                    //                            .overlay(
-                    //                                Capsule(style: .continuous)
-                    //                                    .size(width:80, height:35)
-                    //                                    .stroke(Color.red, lineWidth : 2.5)
-                    //                                    .offset(x:-18, y:-7)
-                    //                        )
-                    //                    }
-                    //                    .padding(.leading, 10.0)
-                    //
-                    //
+                  
                     
                 }
                 .padding(.bottom, 10.0)
                 
                 HStack {
                     //                    if self.validateFields(){
-                    NavigationLink(destination: MyPageViewController(), tag: 1, selection: $selection){
+                    NavigationLink(destination: FloatingNavigationBar(), tag: 1, selection: $selection){
                         EmptyView()
                         
                         Button(action: {
@@ -81,9 +68,7 @@ struct LogInViewController: View {
                             //maybe make an if statement to check if email and password is empty?
                             
                             
-                            // MARK: - Login Handler
-                            //navigate to home screen
-                            // MARK: - Login Handling                                // fire off a login request to server of localhost
+                            // MARK: - Login Handling
                             
                             guard let myUrl = URL(string: "http://15.164.142.209:3001/api/users/login") else { return }
                             
@@ -106,17 +91,28 @@ struct LogInViewController: View {
                                     print("Failed to login:", err)
                                     return
                                 }
+                                // MARK: - Receive JSON Data
                                 do {
+                                    //parsed JSON into dictionary
                                     let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                                     
                                     if let parseJSON = json {
                                         
-//                                        let result = parseJSON["result"]
                                         print(parseJSON)
+                                        //extracted result dictionary from whole JSON
                                         let result = parseJSON["result"] as? [String: AnyObject]
+                                        //extracted profile dictionary from result dictionary
+                                        let profile = result!["profile"] as? [String: AnyObject]
+                                        //saved accessToken and userID
                                         let accessToken = result!["token"] as? String
-                                        let userID = parseJSON["email"] as? String
-                                        print("Access Token: \(String(describing: accessToken!))")
+                                        let userID = profile!["id"] as? Int
+//                                        print("Access Token: \(String(describing: accessToken!))")
+                                        
+                                        let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "accessToken")
+                                        let saveuserID: Bool = KeychainWrapper.standard.set(userID!, forKey: "userID")
+                                        
+                                        print("The access token save result: \(saveAccessToken)")
+                                        print("The userID save sesult: \(saveuserID)")
                                         
                                         if accessToken == nil
                                         {
@@ -134,15 +130,8 @@ struct LogInViewController: View {
                                     print(error)
                                 }
                                 
-//                                                                          self.fetchPosts()
-                                
                             }
                             task.resume() // never forget this resume
-                            
-                            
-                            
-                            
-                            
                             
                             
                         }) {

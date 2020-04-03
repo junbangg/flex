@@ -1,16 +1,20 @@
 PODS:
   - KeyboardAvoider (1.0.3)
+  - SwiftKeychainWrapper (3.4.0)
 
 DEPENDENCIES:
   - KeyboardAvoider (~> 1.0)
+  - SwiftKeychainWrapper
 
 SPEC REPOS:
   trunk:
     - KeyboardAvoider
+    - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   KeyboardAvoider: 9a53d579c0d656dcb81876ae8193ef320c70d994
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
 
-PODFILE CHECKSUM: d466e9e33ce972cc610ff1d368ab6b9293ced87d
+PODFILE CHECKSUM: a87f35aedaa30baa5805f2bbd1e962881a3bc179
 
 COCOAPODS: 1.8.4

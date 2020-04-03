@@ -51,6 +51,7 @@ struct RegisterViewController: View {
     @State private var passwordsNotMatch : Bool = false
     
     @State private var validationIncomplete : Bool = false
+    @State private var registerSuccess : Bool = false
     
     //    @State private var testingBoolean : Bool = false
     @State private var selection : Int? = nil
@@ -61,11 +62,11 @@ struct RegisterViewController: View {
     // MARK: - Method to check information validation
     func validateFields() -> Bool {
         
-//        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-//            return false
-//        }
-//        if firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-//        }
+        //        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        //            return false
+        //        }
+        //        if firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        //        }
         if email.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return false
         }
@@ -175,7 +176,7 @@ struct RegisterViewController: View {
                         
                         // MARK: - Sign Up Button & Functionality
                         HStack {
-                            NavigationLink(destination: MyPageViewController(), tag: 1, selection: $selection){
+                            NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
                                 EmptyView()
                                 Button(action: {
                                     //navigate to home screen
@@ -185,41 +186,33 @@ struct RegisterViewController: View {
                                         guard let url = URL(string: "http://15.164.142.209:3001/api/users/register") else { return }
                                         
                                         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
-
                                         
-                                        do {
-//                                            let params : [String: Any] = ["email": self.email, "pw": self.passwordcheck, "name": self.username]
+                                        components.queryItems = [
+                                            URLQueryItem(name: "email", value: self.email),
+                                            URLQueryItem(name: "pw", value: self.passwordcheck),
+                                            URLQueryItem(name: "name", value: self.username)
+                                        ]
+                                        let query = components.url!.query
+                                        
+                                        var loginRequest = URLRequest(url: url)
+                                        loginRequest.httpMethod = "POST"
+                                        
+                                        loginRequest.httpBody = Data(query!.utf8)
+                                        //                                            loginRequest.httpBody = try JSONSerialization.data(withJSONObject: data, options:.init())
+                                        
+                                        let task = URLSession.shared.dataTask(with: loginRequest) { (data: Data?, response: URLResponse?, error : Error?) in
                                             
-//                                            let paramS = "{\"email\": \(self.email), \"pw\": \(self.passwordcheck), \"name\": \(self.username)}"
-//                                            let data = Data(paramS.utf8)
-
-                                            components.queryItems = [
-                                                URLQueryItem(name: "email", value: self.email),
-                                                URLQueryItem(name: "pw", value: self.passwordcheck),
-                                                URLQueryItem(name: "name", value: self.username)
-                                            ]
-                                            let query = components.url!.query
+                                            if let err = error {
+                                                print("Failed to login:", err)
+                                                return
+                                            }
+                                            print("Successfully Registered")
+                                            self.selection = 1
+                                            self.registerSuccess = true
                                             
-                                            var loginRequest = URLRequest(url: url)
-                                            loginRequest.httpMethod = "POST"
                                             
-                                            loginRequest.httpBody = Data(query!.utf8)
-//                                            loginRequest.httpBody = try JSONSerialization.data(withJSONObject: data, options:.init())
-                                            
-                                            URLSession.shared.dataTask(with: loginRequest) { (data, resp, err) in
-                                                
-                                                if let err = err {
-                                                    print("Failed to login:", err)
-                                                    return
-                                                }
-                                                self.selection = 1
-                                                print("Probably logged in successfully..")
-//                                                self.fetchPosts()
-                                                
-                                            }.resume() // never forget this resume
-                                        } catch {
-                                            print("Failed to serialize data:", error)
                                         }
+                                        task.resume() // never forget this resume
                                     }
                                     else {
                                         //enable validation alert
@@ -241,18 +234,21 @@ struct RegisterViewController: View {
                                     .alert(isPresented: $validationIncomplete) {
                                         Alert(title: Text("Incomplete form"), message: Text("Please check if all fields are correctly filled"))
                                 }
+                                .alert(isPresented: $registerSuccess) {
+                                    
+                                    Alert(title: Text("Register Successful"), message: Text("Thank you for your time!"))
+                                    
+                                }
                                 
                             }
                             .padding(.horizontal, 10.0)
                             //                    }
                         }
                         
-                        
-                        
                     }
                 }.gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
                     .navigationBarTitle("")
-//                    .navigationBarHidden(true)
+                    .navigationBarHidden(true)
                 //sign up button
                 //used conditional inside HStack to show sign up button only when validation is completed
             }
