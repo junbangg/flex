@@ -11,7 +11,7 @@ struct FloatingNavigationBar: View {
             
             VStack{
                 // MARK: - Home
-                if self.selected == 0{
+                if self.selected == 0 {
                     
                     NavigationView{
                         
@@ -45,7 +45,7 @@ struct FloatingNavigationBar: View {
                     
                     GeometryReader{_ in
                         
-                        Text("Add New Item")
+                        ReviewCard_Edit()
                     }
                     
                 }

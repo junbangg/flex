@@ -8,6 +8,8 @@ import SwiftUI
 
 struct ReviewCard_Display: View {
     
+    @State private var selection : Int? = nil
+    
     @State private var sizeRating : Int = 0
     @State private var comfortRating : Int = 0
     @State private var designRating : Int = 0
@@ -37,28 +39,33 @@ struct ReviewCard_Display: View {
     
     var body: some View {
         
-        NavigationView {
+//        NavigationView {
             VStack {
                 ScrollView {
                     // MARK: - 기본정보
                     VStack {
-                        
+                        NavigationLink(destination: ReviewCard_Edit(), tag : 1, selection: $selection){
+                            EmptyView()
+                            Button(action: {
+                                print("edit button pressed")
+                                self.selection = 1
+                            }) {
+                                Text("Edit")
+                                    .font(.headline)
+                                    .foregroundColor(Color.blue)
+                                    .offset(x:180,y:-30)
+                            }
+                        }
                         VStack {
-                            Text("Edit")
-                                .font(.headline)
-                                .foregroundColor(Color.blue)
-                                .offset(x:180,y:-30)
-                            
                             Text("Nike x Sacai")
                                 .font(.title)
                                 .multilineTextAlignment(.center)
                             Text("LDV Waffle")
                                 .font(.headline)
                                 .multilineTextAlignment(.center)
+                                                        
                             
                         }
-                        
-                        
                         Divider()
                         // MARK: - 데이터
                         VStack {
@@ -70,12 +77,11 @@ struct ReviewCard_Display: View {
                                 
                                 Spacer()
                                 
-                                //                                VStack {
-                                //                                    Button(action: {self.testVotes += 1}) {
-                                //                                        Text("Checked")
-                                //                                    }.foregroundColor(Color.red)
-                                //                                    Text("\(testVotes)").foregroundColor(Color.gray)
-                                //                                }
+                                
+                                
+                                //                                Spacer()
+                                
+                                
                                 VStack {
                                     Button(action: {print("bookmarked")}) {
                                         Image(systemName: "bookmark")
@@ -153,7 +159,6 @@ struct ReviewCard_Display: View {
                             }
                         }
                         
-                        
                         Divider()
                         
                         ScrollView(.vertical) {
@@ -174,9 +179,7 @@ struct ReviewCard_Display: View {
                                         BackgroundImage(image: Image("acw"))
                                             //                                            .edgesIgnoringSafeArea(.top)
                                             .frame(height: 300)//400
-                                        BackgroundImage(image: Image("testProfile"))
-                                            //                                            .edgesIgnoringSafeArea(.top)
-                                            .frame(height: 300)//400
+                                        
                                         BackgroundImage(image: Image("nikelogo"))
                                             //                                            .edgesIgnoringSafeArea(.top)
                                             .frame(height: 300)//400
@@ -240,13 +243,13 @@ struct ReviewCard_Display: View {
                     
                     
                 }
+//                FloatingNavigationTab()
             }
             
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-            
-        .navigationBarTitle("Hidden Title")
-        .navigationBarHidden(true)
+//        }
+//        .navigationViewStyle(StackNavigationViewStyle())
+//        .navigationBarTitle("Hidden Title")
+//        .navigationBarHidden(true)
     }
     
 }

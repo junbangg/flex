@@ -28,7 +28,7 @@ struct MyPageViewController: View {
     
         var body: some View {
         
-        NavigationView {
+//        NavigationView {
             
             VStack {
                 
@@ -80,10 +80,10 @@ struct MyPageViewController: View {
                 }
                 FloatingNavigationTab()
             }
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .navigationBarTitle("Hidden Title")
-        .navigationBarHidden(true)
+//        }
+//        .navigationViewStyle(StackNavigationViewStyle())
+//        .navigationBarTitle("Hidden Title")
+//        .navigationBarHidden(true)
     }
 }
 struct MyPageViewController_Previews: PreviewProvider {

@@ -19,15 +19,20 @@ struct UsersItems: View {
                             .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
                             .padding(.top, 30.0)
                             .padding(.bottom, 50)
-//                            .padding(.top,10)
-//                            .padding(.bottom,30)
+                        //                            .padding(.top,10)
+                        //                            .padding(.bottom,30)
                     }
+                    
                     ReviewCardFour()
-                    .padding(.top, 15)
+                        .padding(.top, 15)
+                    
+                    
                     ReviewCardFour()
                         .padding(.top, 15)
                     OutfitCard()
                         .padding(.top, 15)
+                    
+                    
                     OutfitCardTwo()
                         .padding(.top, 15)
                     ReviewCardFour()
@@ -37,19 +42,19 @@ struct UsersItems: View {
                     ReviewCardFour()
                         .padding(.top, 15)
                     
-//                    ReviewCard()
-//                    ReviewCard()
-//                        .padding(.top, 15)
-//                    ReviewCard()
-//                        .padding(.top, 15)
-//                    ReviewCard()
-//                        .padding(.top, 15)
-//                    ReviewCard()
-//                        .padding(.top, 15)
-//                    ReviewCard()
-//                        .padding(.top, 15)
-//                    ReviewCard()
-//                        .padding(.top, 15)
+                    //                    ReviewCard()
+                    //                    ReviewCard()
+                    //                        .padding(.top, 15)
+                    //                    ReviewCard()
+                    //                        .padding(.top, 15)
+                    //                    ReviewCard()
+                    //                        .padding(.top, 15)
+                    //                    ReviewCard()
+                    //                        .padding(.top, 15)
+                    //                    ReviewCard()
+                    //                        .padding(.top, 15)
+                    //                    ReviewCard()
+                    //                        .padding(.top, 15)
                     
                     
                 }.frame(width: geometry.size.width)

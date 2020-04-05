@@ -40,7 +40,7 @@ struct ReviewCard_Edit: View {
     
     var body: some View {
         
-        NavigationView {
+//        NavigationView {
             VStack {
                 ScrollView {
                     // MARK: - 기본정보
@@ -70,106 +70,6 @@ struct ReviewCard_Edit: View {
                                 
                             }
                         }
-//                        Divider()
-//                        HStack {
-//                            Image(systemName: "sun.min")
-//                            Slider(value: $progress, from: 0.0, through: 100.0, by: 5.0)
-//                            Image(systemName: "sun.max.fill")
-//                        }
-//                        Divider()
-                        // MARK: - 데이터
-                        //                        VStack {
-                        //                            HStack {
-                        //                                Text(self.compute())
-                        //                                    .font(.largeTitle)
-                        //                                    .fontWeight(.bold)
-                        //                                    .foregroundColor(Color.yellow)
-                        //
-                        //                                Spacer()
-                        //
-                        //                                //                                VStack {
-                        //                                //                                    Button(action: {self.testVotes += 1}) {
-                        //                                //                                        Text("Checked")
-                        //                                //                                    }.foregroundColor(Color.red)
-                        //                                //                                    Text("\(testVotes)").foregroundColor(Color.gray)
-                        //                                //                                }
-                        //                                VStack {
-                        //                                    Button(action: {print("bookmarked")}) {
-                        //                                        Image(systemName: "bookmark")
-                        //                                            .font(.system(size: 30, weight: .medium))
-                        //                                    }
-                        //                                }
-                        //                                .offset(x:-10, y:-5)
-                        //
-                        //
-                        //                            }
-                        //                            HStack {
-                        //                                HStack {
-                        //                                    Image(systemName: "s.circle")
-                        //                                        .foregroundColor(Color.blue)
-                        //                                        .font(.system(size: 20, weight: .medium))
-                        //                                    Text("265")
-                        //                                        .font(.headline)
-                        //                                        .fontWeight(.regular)
-                        //                                        .fixedSize()
-                        //                                        .frame(width:50)
-                        //                                        .foregroundColor(Color.gray)
-                        //                                        .offset(x:-10)
-                        //                                }
-                        //                                Spacer()
-                        //                                //                                .offset(x:-10)
-                        //
-                        //                                //                    .offset(x:40, y:-25)
-                        //                                HStack {
-                        //                                    Image(systemName: "flame")
-                        //                                        .foregroundColor(Color.red)
-                        //                                        .font(.system(size: 20, weight: .medium))
-                        //                                    Text("533")
-                        //                                        .font(.headline)
-                        //                                        .fontWeight(.regular)
-                        //                                        .fixedSize()
-                        //                                        .frame(width:20)
-                        //                                        .foregroundColor(Color.gray)
-                        //                                        .offset(x:10)
-                        //                                }
-                        //                                Spacer()
-                        //                                //                                .offset(x:20)
-                        //                                //                    .offset(x:40, y:-40)
-                        //
-                        //                                HStack {
-                        //                                    Image(systemName: "eye")
-                        //                                        .foregroundColor(Color.black)
-                        //                                        .font(.system(size: 15, weight: .medium))
-                        //                                    Text("3000")
-                        //                                        .font(.headline)
-                        //                                        .fontWeight(.regular)
-                        //                                        .fixedSize()
-                        //                                        .frame(width:20)
-                        //                                        .foregroundColor(Color.gray)
-                        //                                        .offset(x:10)
-                        //                                }
-                        //                                .offset(x:20)
-                        //
-                        //                                Spacer()
-                        //
-                        //                                HStack {
-                        //                                    Image(systemName: "bubble.left.and.bubble.right")
-                        //                                        .foregroundColor(Color.black)
-                        //                                        .font(.system(size: 15, weight: .medium))
-                        //                                    Text("2")
-                        //                                        .font(.headline)
-                        //                                        .fontWeight(.regular)
-                        //                                        .fixedSize()
-                        //                                        .frame(width:20)
-                        //                                        .foregroundColor(Color.gray)
-                        //                                }
-                        //                                .offset(x:50)
-                        //                                Spacer()
-                        //                                //                                .offset(x:50, y:1)
-                        //
-                        //                            }
-                        //                        }
-                        
                         
                         Divider()
                         
@@ -222,11 +122,11 @@ struct ReviewCard_Edit: View {
                 }
             }
             
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-            
-        .navigationBarTitle("Hidden Title")
-        .navigationBarHidden(true)
+//        }
+//        .navigationViewStyle(StackNavigationViewStyle())
+//
+//        .navigationBarTitle("Hidden Title")
+//        .navigationBarHidden(true)
     }
     
 }
