@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FloatingNavigationBar: View {
+struct RootViewController: View {
     
     @State var selected = 0
     let col1 = UIColor(red: 235, green: 235, blue: 235, alpha: 1)
@@ -53,55 +53,7 @@ struct FloatingNavigationBar: View {
                 else{
                     
                     GeometryReader{_ in
-                        
-                        NavigationView {
-                            VStack {
-                                //                ScrollView {
-                                VStack {
-                                    CircleImage(image: Image("testProfile") )
-                                        .frame(width: 200, height:200)
-                                        .aspectRatio(contentMode: .fit)
-                                    Text("Asdf")
-                                        .font(.title)
-                                        .padding()
-                                    HStack {
-                                        VStack {
-                                            Text("Rank")
-                                                .font(.headline)
-                                            //                            .foregroundColor(Color.red)
-                                            Text("Gold"
-                                            ).foregroundColor(Color.yellow)
-                                        }
-                                        .padding(.leading)
-                                        Spacer()
-                                        VStack {
-                                            Text("Flames")
-                                                .font(.headline)
-                                            //                            .foregroundColor(Color.red)
-                                            Text("365").foregroundColor(Color.gray)
-                                        }
-                                        .padding(.leading, 30.0)
-                                        Spacer()
-                                        VStack {
-                                            Text("Followers")
-                                                .font(.headline)
-                                            //                            .foregroundColor(Color.red)
-                                            Text("1234")
-                                                .foregroundColor(Color.gray)
-                                        }
-                                        .padding(.trailing)
-                                    }
-                                    Divider()
-                                    
-                                    //                TimelineView()
-                                    // MARK: - List of Review Items
-                                    UsersItems()
-                                }
-                            }
-                        }
-                        .navigationViewStyle(StackNavigationViewStyle())
-                        .navigationBarTitle("Hidden Title")
-                        .navigationBarHidden(true)
+                        MyPageViewController()
                     }
                 }
                 
@@ -112,9 +64,9 @@ struct FloatingNavigationBar: View {
     }
 }
 
-struct FloatingNavigationBar_Previews: PreviewProvider {
+struct RootViewController_Previews: PreviewProvider {
     static var previews: some View {
-        FloatingNavigationBar()
+        RootViewController()
     }
 }
 

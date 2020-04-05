@@ -58,7 +58,7 @@ struct LogInViewController: View {
                 
                 HStack {
                     //                    if self.validateFields(){
-                    NavigationLink(destination: FloatingNavigationBar(), tag: 1, selection: $selection){
+                    NavigationLink(destination: RootViewController(), tag: 1, selection: $selection){
                         EmptyView()
                         
                         Button(action: {

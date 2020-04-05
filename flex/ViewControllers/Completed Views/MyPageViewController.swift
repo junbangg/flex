@@ -26,23 +26,18 @@ struct MyPageViewController: View {
     
     @State private var selection : Int? = nil
     
-        var body: some View {
-        
-//        NavigationView {
-            
+    var body: some View {
+        NavigationView {
             VStack {
-                
+                //                ScrollView {
                 VStack {
                     CircleImage(image: Image("testProfile") )
                         .frame(width: 200, height:200)
                         .aspectRatio(contentMode: .fit)
-                    
-                    Text(username)
+                    Text("Asdf")
                         .font(.title)
                         .padding()
-                    
                     HStack {
-                        
                         VStack {
                             Text("Rank")
                                 .font(.headline)
@@ -51,9 +46,7 @@ struct MyPageViewController: View {
                             ).foregroundColor(Color.yellow)
                         }
                         .padding(.leading)
-                        
                         Spacer()
-                        
                         VStack {
                             Text("Flames")
                                 .font(.headline)
@@ -61,9 +54,7 @@ struct MyPageViewController: View {
                             Text("365").foregroundColor(Color.gray)
                         }
                         .padding(.leading, 30.0)
-                        
                         Spacer()
-                        
                         VStack {
                             Text("Followers")
                                 .font(.headline)
@@ -74,16 +65,16 @@ struct MyPageViewController: View {
                         .padding(.trailing)
                     }
                     Divider()
-                    
-                    // MARK: - List of Items
+
+                    //                TimelineView()
+                    // MARK: - List of Review Items
                     UsersItems()
                 }
-                FloatingNavigationTab()
             }
-//        }
-//        .navigationViewStyle(StackNavigationViewStyle())
-//        .navigationBarTitle("Hidden Title")
-//        .navigationBarHidden(true)
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarTitle("Hidden Title")
+        .navigationBarHidden(true)
     }
 }
 struct MyPageViewController_Previews: PreviewProvider {

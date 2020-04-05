@@ -27,7 +27,7 @@
 		366D8EE824335F8C00BA64B7 /* RatingForm_Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */; };
 		366D8EEA24370D2800BA64B7 /* TestingRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D8EE924370D2800BA64B7 /* TestingRegisterViewController.swift */; };
 		3677907B24260B1900C45F08 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907A24260B1900C45F08 /* PopoverView.swift */; };
-		3677907D242881AA00C45F08 /* FloatingNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */; };
+		3677907D242881AA00C45F08 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907C242881AA00C45F08 /* RootViewController.swift */; };
 		367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367790802428AF9500C45F08 /* FloatingNavigationTab.swift */; };
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
@@ -72,7 +72,7 @@
 		366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingForm_Display.swift; sourceTree = "<group>"; };
 		366D8EE924370D2800BA64B7 /* TestingRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingRegisterViewController.swift; sourceTree = "<group>"; };
 		3677907A24260B1900C45F08 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
-		3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationBar.swift; sourceTree = "<group>"; };
+		3677907C242881AA00C45F08 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		367790802428AF9500C45F08 /* FloatingNavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationTab.swift; sourceTree = "<group>"; };
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 				369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */,
 				36D1924D23F295970078ED6B /* RegisterViewController.swift */,
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
-				3677907C242881AA00C45F08 /* FloatingNavigationBar.swift */,
+				3677907C242881AA00C45F08 /* RootViewController.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -169,9 +169,9 @@
 				36D1924723F1A2B20078ED6B /* Logo.swift */,
 				3638F378240762D900CFC4F4 /* AddCard.swift */,
 				3617240E2417583A00CFC6BC /* UsersItems.swift */,
+				36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */,
 				3617240C2417508100CFC6BC /* ProfilePicture.swift */,
 				3638F386240CFA4300CFC4F4 /* OutfitCard.swift */,
-				36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */,
 				366C44552400FD0E0057267E /* NavigationTab.swift */,
 				3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */,
 				3638F3802408F4A800CFC4F4 /* CircleFrame.swift */,
@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				366D8ED5242DFDE900BA64B7 /* Tools */,
-				369A16DB23D1DC5E00C0AB15 /* VIew Controllers */,
+				369A16DB23D1DC5E00C0AB15 /* ViewControllers */,
 				366C444A23FB82360057267E /* Delegates */,
 				369A16AF23CD6C3E00C0AB15 /* Supporting Views */,
 				369A169E23CD6B2500C0AB15 /* ContentView.swift */,
@@ -265,14 +265,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		369A16DB23D1DC5E00C0AB15 /* VIew Controllers */ = {
+		369A16DB23D1DC5E00C0AB15 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				366D8ED9242F487200BA64B7 /* Completed Views */,
 				366D8ED8242F486B00BA64B7 /* Testing Views */,
 				366D8EDA242F48CA00BA64B7 /* Others */,
 			);
-			path = "VIew Controllers";
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		5E176A0058349FA706E07D41 /* Pods */ = {
@@ -424,7 +424,7 @@
 				366D8EE824335F8C00BA64B7 /* RatingForm_Display.swift in Sources */,
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
-				3677907D242881AA00C45F08 /* FloatingNavigationBar.swift in Sources */,
+				3677907D242881AA00C45F08 /* RootViewController.swift in Sources */,
 				366D8ED4242A59A900BA64B7 /* ReviewCard_Display.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
 				367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */,
