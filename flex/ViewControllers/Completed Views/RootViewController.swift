@@ -25,11 +25,14 @@ struct RootViewController: View {
                                 }
                                 
                             }.padding()
-                                .navigationBarTitle("Home",displayMode: .inline)
-                            
+//                                .navigationBarTitle("Home",displayMode: .inline)
+                                
                         }
                         .edgesIgnoringSafeArea(.bottom)
                     }
+                    .navigationViewStyle(StackNavigationViewStyle())
+                    .navigationBarTitle("Hidden Title")
+                    .navigationBarHidden(true)
                 }
                     // MARK: - Search
                 else if self.selected == 1{

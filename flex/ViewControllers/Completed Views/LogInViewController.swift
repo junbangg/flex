@@ -12,6 +12,7 @@ import SwiftUI
 import SwiftKeychainWrapper
 
 struct LogInViewController: View {
+//    public var accessToken : String?
     
     @State private var email : String = ""
     @State private var password : String = ""
