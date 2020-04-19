@@ -27,9 +27,9 @@ struct SegmentedTab : View {
                 }
                 .offset(x: self.offset)
                 .highPriorityGesture(DragGesture()
-                
+                    
                 .onEnded({ (value) in
-                
+                    
                     if value.translation.width > 50{// minimum drag...
                         
                         print("right")
@@ -92,12 +92,12 @@ struct AppBar : View {
         VStack(alignment: .leading, content: {
             UserInfo()
             
-//            Text("Home")
-//                .font(.title)
-//                .foregroundColor(.white)
-//                .padding(.leading)
-//                .padding(.bottom)
-//
+            //            Text("Home")
+            //                .font(.title)
+            //                .foregroundColor(.white)
+            //                .padding(.leading)
+            //                .padding(.bottom)
+            //
             HStack{
                 Button(action: {
                     
@@ -154,7 +154,7 @@ struct AppBar : View {
                         HStack(spacing: 12){
                             
                             Image(systemName: "text.alignright")
-                                .foregroundColor(self.index == 3 ? .white : Color.white.opacity(0.7))
+                                .foregroundColor(self.index == 3 ? .gray : Color.white.opacity(0.7))
                             
                         }
                         
@@ -163,13 +163,13 @@ struct AppBar : View {
                             .frame(height: 4)
                     }
                 }
-
+                
             }
         })
-        .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 15)
-        .padding(.horizontal)
-        .padding(.bottom, 10)
-        .background(Color.gray)
+            .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 15)
+            .padding(.horizontal)
+            .padding(.bottom, 10)
+            .background(MyColors.midGreyColor)
     }
 }
 

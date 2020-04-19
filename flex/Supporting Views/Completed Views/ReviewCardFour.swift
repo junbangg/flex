@@ -114,7 +114,7 @@ struct ReviewCardFour: View {
             
             
         }
-        .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
+        .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(MyColors.lightGreyColor).frame(width: 400, height: 160))
     }
 }
 

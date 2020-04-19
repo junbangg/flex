@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct UsersItems: View {
+    
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -42,25 +44,13 @@ struct UsersItems: View {
                     ReviewCardFour()
                         .padding(.top, 15)
                     
-                    //                    ReviewCard()
-                    //                    ReviewCard()
-                    //                        .padding(.top, 15)
-                    //                    ReviewCard()
-                    //                        .padding(.top, 15)
-                    //                    ReviewCard()
-                    //                        .padding(.top, 15)
-                    //                    ReviewCard()
-                    //                        .padding(.top, 15)
-                    //                    ReviewCard()
-                    //                        .padding(.top, 15)
-                    //                    ReviewCard()
-                    //                        .padding(.top, 15)
-                    
                     
                 }
                 .frame(width: geometry.size.width)
 //                    .padding(.top,30)
             }
+            .background(MyColors.lowGreyColor)
+        
         }
     }
 }
