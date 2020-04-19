@@ -180,11 +180,11 @@ struct MyPageViewController: View {
                         }
                         .padding(.trailing)
                     }
-                    Divider()
+//                    Divider()
                     
                     //                TimelineView()
                     // MARK: - List of Review Items
-                    UsersItems()
+//                    SegmentedTab()
                 }
             }
         }

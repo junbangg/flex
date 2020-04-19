@@ -57,8 +57,9 @@ struct UsersItems: View {
                     //                        .padding(.top, 15)
                     
                     
-                }.frame(width: geometry.size.width)
-                    .padding(.top,30)
+                }
+                .frame(width: geometry.size.width)
+//                    .padding(.top,30)
             }
         }
     }
