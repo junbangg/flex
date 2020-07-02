@@ -8,8 +8,7 @@
 
 import SwiftUI
 
-struct UsersItems: View {
-    
+struct UserOutfits: View {
     
     var body: some View {
         
@@ -21,26 +20,13 @@ struct UsersItems: View {
                             .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
                             .padding(.top, 30.0)
                             .padding(.bottom, 50)
-                        //                            .padding(.top,10)
-                        //                            .padding(.bottom,30)
                     }
                     
-                    ReviewCardFour()
+                    OutfitCard()
                         .padding(.top, 15)
-                    
-                    
-                    
-                    
-//                    OutfitCardTwo()
-//                        .padding(.top, 15)
-                    ReviewCardThree()
+                    OutfitCardTwo()
                         .padding(.top, 15)
-                    ReviewCardFour()
-                        .padding(.top, 15)
-                    ReviewCardFour()
-                        .padding(.top, 15)
-                    
-                    
+
                 }
                 .frame(width: geometry.size.width)
 //                    .padding(.top,30)
@@ -51,8 +37,8 @@ struct UsersItems: View {
     }
 }
 
-struct UsersItems_Previews: PreviewProvider {
+struct UserOutfits_Previews: PreviewProvider {
     static var previews: some View {
-        UsersItems()
+        UserOutfits()
     }
 }

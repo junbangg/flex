@@ -93,7 +93,19 @@ struct FloatingTabbar : View {
                         self.expand.toggle()
                         
                     }) {
-                        Image(systemName: "arrow.left").foregroundColor(.black).padding()
+                        if self.selected == 0 {
+                            Image(systemName: "house").foregroundColor(.black).padding()
+                        }
+                        else if self.selected == 1{
+                            Image(systemName: "magnifyingglass").foregroundColor(.black).padding()
+                        }
+                        else if self.selected == 2{
+                            Image(systemName: "plus.app").foregroundColor(.black).padding()
+                        }
+                        else{
+                            Image(systemName: "person.circle").foregroundColor(.black).padding()
+                        }
+                        
                     }
                 }
                 else{

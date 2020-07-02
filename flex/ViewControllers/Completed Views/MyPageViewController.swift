@@ -147,44 +147,15 @@ struct MyPageViewController: View {
             VStack {
                 //                ScrollView {
                 VStack {
-                    CircleImage(image: Image("testProfile") )
-                        .frame(width: 200, height:200)
-                        .aspectRatio(contentMode: .fit)
-                    Text("Asdf")
-                        .font(.title)
-                        .padding()
-                    HStack {
-                        VStack {
-                            Text("Rank")
-                                .font(.headline)
-                            //                            .foregroundColor(Color.red)
-                            Text("Gold"
-                            ).foregroundColor(Color.yellow)
-                        }
-                        .padding(.leading)
-                        Spacer()
-                        VStack {
-                            Text("Flames")
-                                .font(.headline)
-                            //                            .foregroundColor(Color.red)
-                            Text("365").foregroundColor(Color.gray)
-                        }
-                        .padding(.leading, 30.0)
-                        Spacer()
-                        VStack {
-                            Text("Followers")
-                                .font(.headline)
-                            //                            .foregroundColor(Color.red)
-                            Text("1234")
-                                .foregroundColor(Color.gray)
-                        }
-                        .padding(.trailing)
-                    }
+//                    UserInfo()
 //                    Divider()
                     
-                    //                TimelineView()
+//                    UsersItems()
                     // MARK: - List of Review Items
-//                    SegmentedTab()
+                    
+                    /*SegmentedTab() is for segmented version of mypage. to disable, comment out SegmentedTab()
+                                and uncomment above code*/
+                    SegmentedTab()
                 }
             }
         }

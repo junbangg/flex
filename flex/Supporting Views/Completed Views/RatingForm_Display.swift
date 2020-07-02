@@ -47,7 +47,7 @@ struct RatingForm_Display: View {
                 }
                 Spacer()
                 
-                Text("adsfkjalskdjflka sdjfkljalksdfjl asj dflkaasdf\nalksdjflakdsjflkajsdl;fkasdj\nasdlfkj alsdkfj l\nalksdjflkajsdflkjasdklfjadlksjf\nlaksdjflkajdsf\nalksdfjladksjflaksj")
+                Text("Fits tight because of the double laces. Going up a full size is recommended")
                     .lineLimit(nil)
                 
             }
