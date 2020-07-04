@@ -29,6 +29,7 @@
 		3677907D242881AA00C45F08 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3677907C242881AA00C45F08 /* RootViewController.swift */; };
 		367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367790802428AF9500C45F08 /* FloatingNavigationTab.swift */; };
 		367C753F2462040A00066F4E /* ReviewCardThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C753E2462040A00066F4E /* ReviewCardThree.swift */; };
+		36840A5A24B0492E0054943E /* ItemGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A5924B0492E0054943E /* ItemGrid.swift */; };
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
 		369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169E23CD6B2500C0AB15 /* ContentView.swift */; };
@@ -78,6 +79,7 @@
 		3677907C242881AA00C45F08 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		367790802428AF9500C45F08 /* FloatingNavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingNavigationTab.swift; sourceTree = "<group>"; };
 		367C753E2462040A00066F4E /* ReviewCardThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardThree.swift; sourceTree = "<group>"; };
+		36840A5924B0492E0054943E /* ItemGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGrid.swift; sourceTree = "<group>"; };
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369A169923CD6B2500C0AB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				36F820E9244C2BA0005A5107 /* SegmentedTab.swift */,
 				36F820ED244C4764005A5107 /* UserInfo.swift */,
 				36F820EF244C4841005A5107 /* RectImage.swift */,
+				36840A5924B0492E0054943E /* ItemGrid.swift */,
 			);
 			path = "Testing Views";
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				3677907D242881AA00C45F08 /* RootViewController.swift in Sources */,
 				366D8ED4242A59A900BA64B7 /* ReviewCard_Display.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
+				36840A5A24B0492E0054943E /* ItemGrid.swift in Sources */,
 				367790812428AF9500C45F08 /* FloatingNavigationTab.swift in Sources */,
 				366C44562400FD0E0057267E /* NavigationTab.swift in Sources */,
 				369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */,

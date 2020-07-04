@@ -16,20 +16,17 @@ struct UsersItems: View {
         GeometryReader { geometry in
             ScrollView {
                 VStack {
-                    NavigationLink(destination: ReviewCard_Edit()) {
-                        AddCard()
-                            .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
-                            .padding(.top, 30.0)
-                            .padding(.bottom, 50)
-                        //                            .padding(.top,10)
-                        //                            .padding(.bottom,30)
-                    }
+//                    NavigationLink(destination: ReviewCard_Edit()) {
+//                        AddCard()
+//                            .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
+//                            .padding(.top, 30.0)
+//                            .padding(.bottom, 50)
+//                        //                            .padding(.top,10)
+//                        //                            .padding(.bottom,30)
+//                    }
                     
                     ReviewCardFour()
                         .padding(.top, 15)
-                    
-                    
-                    
                     
 //                    OutfitCardTwo()
 //                        .padding(.top, 15)
@@ -43,7 +40,7 @@ struct UsersItems: View {
                     
                 }
                 .frame(width: geometry.size.width)
-//                    .padding(.top,30)
+                    .padding(.top,30)
             }
             .background(Color.white)
         

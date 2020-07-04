@@ -131,7 +131,12 @@ struct AppBar : View {
 
 struct First : View {
     var body: some View{
-        Text("Grid View")
+        GeometryReader{_ in
+            VStack{
+                ItemGrid()
+            }
+        }
+        .background(Color.white)
     }
 }
 
