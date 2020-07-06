@@ -27,9 +27,6 @@ struct UsersItems: View {
                     
                     ReviewCardFour()
                         .padding(.top, 15)
-                    
-//                    OutfitCardTwo()
-//                        .padding(.top, 15)
                     ReviewCardThree()
                         .padding(.top, 15)
                     ReviewCardFour()

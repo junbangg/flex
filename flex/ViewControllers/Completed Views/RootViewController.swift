@@ -38,7 +38,6 @@ struct RootViewController: View {
                 else if self.selected == 1{
                     
                     GeometryReader{_ in
-                        
                         Text("Search")
                     }
                     
@@ -56,7 +55,8 @@ struct RootViewController: View {
                 else{
                     
                     GeometryReader{_ in
-                        MyPageViewController()
+//                        MyPageViewController()
+                        NeuromorphicMypage()
                     }
                 }
                 

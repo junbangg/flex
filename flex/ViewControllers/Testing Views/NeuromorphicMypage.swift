@@ -42,16 +42,18 @@ struct Home: View{
                     Button(action: {
                         
                     }){
-                        Text("Add")
+                        Image(systemName: "text.justify")
 //                            .foregroundColor(MyColors.offwhite)
-                            .foregroundColor(.white)
+                            .foregroundColor(MyColors.lightGreyColor)
                             .padding(.vertical, 10)
-                            .padding(.horizontal, 25)
-                            .background(Color.red)
+//                            .padding(.horizontal, 25)
+                            .background(Color.white)
                             .cornerRadius(10)
                     }
+//                    .buttonStyle(NeuromorhpicButtonStyle())
                 }
                 .padding()
+                //Profile
                 HStack {
                     VStack(spacing: 0) {
                         Rectangle()
@@ -79,16 +81,15 @@ struct Home: View{
                             .foregroundColor(Color.black.opacity(0.8))
                         Text("사용자 소개")
                             .foregroundColor(Color.black.opacity(0.7))
-                        
-                        
                     }
                     .padding(.leading,20)
                     Spacer(minLength: 0)
                 }
                 .padding(.horizontal,20)
                 .padding(.top,10)
-                
-                HStack {
+                //App bar
+                HStack(spacing: 25) {
+                    Spacer()
                     Button(action: {
                         self.index = 0
                     }) {
@@ -112,72 +113,38 @@ struct Home: View{
                     Button(action: {
                         self.index = 2
                     }) {
-                        Text("Bookmarks")
+//                        Text("Bookmarks")
+                        Image(systemName: "bookmark.fill")
                             .foregroundColor(self.index==2 ? .white : .gray)
                             .padding(.vertical, 10)
                             .padding(.horizontal)
                             .background(self.index==2 ? .gray : Color.clear)
                             .cornerRadius(10)
                     }
+                    Spacer()
                 }
                 .padding(.horizontal,10)
                 .padding(.vertical,5)
-//                .background(MyColors.offwhite)
                 .background(Color.white)
                 .cornerRadius(8)
                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                 .padding(.horizontal)
                 .padding(.top,25)
-                
-                HStack(spacing:20) {
-                    VStack(spacing:12) {
-                        CircleImage(image: Image("sacai"))
-                            .frame(width:100, height:100)
-                        Text("Sacai x Nike")
-                            .font(.title)
+                //Cards
+                if self.index == 0 {
+                    GeometryReader{_ in
+                        UserOutfits()
                             .padding(.top,10)
-                        Text("LDV Waffle")
-                        
-                        Text("whatever")
-                            .font(.caption)
-                            .foregroundColor(.gray)
                     }
-                    .padding(.vertical)
-                        //half screen - spacing - two side paddings = 60
-                        .frame(width:(UIScreen.main.bounds.width-60)/2)
-                        //                    .background(MyColors.lightGreyColor)
-//                        .background(MyColors.offwhite)
-                        .background(Color.white)
-                        .cornerRadius(15)
-                        //shading
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                    
-                    VStack(spacing:12) {
-                        CircleImage(image: Image("acw"))
-                            .frame(width:100, height:100)
-                        Text("ACW x Nike")
-                            .font(.title)
-                            .padding(.top,10)
-                        Text("Zoom Vomero")
-                        
-                        Text("whatever")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
-                    .padding(.vertical)
-                        //half screen - spacing - two side paddings = 60
-                        .frame(width:(UIScreen.main.bounds.width-60)/2)
-                        //                    .background(MyColors.lightGreyColor)
-//                        .background(MyColors.offwhite)
-                        .background(Color.white)
-                        .cornerRadius(15)
-                        //shading
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -8, y: -8)
                 }
-                .padding(.top,10)
+                else if self.index == 1 {
+                    GeometryReader{_ in
+                        UserReviews()
+                            .padding(.top,10)
+                    }
+                }
+                //                .padding(.top,10)
                 
                 Spacer(minLength: 0)
             }

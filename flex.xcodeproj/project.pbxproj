@@ -32,6 +32,10 @@
 		36840A5A24B0492E0054943E /* ItemGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A5924B0492E0054943E /* ItemGrid.swift */; };
 		36840A6424B1A8470054943E /* NeuromorphicMypage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6324B1A8470054943E /* NeuromorphicMypage.swift */; };
 		36840A6624B3135E0054943E /* NeuromorphicRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6524B3135E0054943E /* NeuromorphicRoundButton.swift */; };
+		36840A6824B31BC40054943E /* NeuromorphicRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6724B31BC40054943E /* NeuromorphicRectButton.swift */; };
+		36840A6C24B33B570054943E /* NeuromorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6B24B33B570054943E /* NeuromorphicCard.swift */; };
+		36840A6E24B366050054943E /* UserReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6D24B366050054943E /* UserReviews.swift */; };
+		36840A7024B3698D0054943E /* NeomorphicOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6F24B3698D0054943E /* NeomorphicOutfit.swift */; };
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
 		369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169E23CD6B2500C0AB15 /* ContentView.swift */; };
@@ -84,6 +88,10 @@
 		36840A5924B0492E0054943E /* ItemGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGrid.swift; sourceTree = "<group>"; };
 		36840A6324B1A8470054943E /* NeuromorphicMypage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuromorphicMypage.swift; sourceTree = "<group>"; };
 		36840A6524B3135E0054943E /* NeuromorphicRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuromorphicRoundButton.swift; sourceTree = "<group>"; };
+		36840A6724B31BC40054943E /* NeuromorphicRectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuromorphicRectButton.swift; sourceTree = "<group>"; };
+		36840A6B24B33B570054943E /* NeuromorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuromorphicCard.swift; sourceTree = "<group>"; };
+		36840A6D24B366050054943E /* UserReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviews.swift; sourceTree = "<group>"; };
+		36840A6F24B3698D0054943E /* NeomorphicOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeomorphicOutfit.swift; sourceTree = "<group>"; };
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369A169923CD6B2500C0AB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				366D8EE924370D2800BA64B7 /* TestingRegisterViewController.swift */,
+				36840A6324B1A8470054943E /* NeuromorphicMypage.swift */,
 				366D8ED3242A59A900BA64B7 /* ReviewCard_Display.swift */,
 				366D8EE524335ED500BA64B7 /* ReviewCard_Edit.swift */,
 				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
@@ -155,7 +164,6 @@
 				36F820ED244C4764005A5107 /* UserInfo.swift */,
 				36F820EF244C4841005A5107 /* RectImage.swift */,
 				36840A5924B0492E0054943E /* ItemGrid.swift */,
-				36840A6324B1A8470054943E /* NeuromorphicMypage.swift */,
 			);
 			path = "Testing Views";
 			sourceTree = "<group>";
@@ -186,7 +194,6 @@
 				369A16B323CD6EE100C0AB15 /* CircleImage.swift */,
 				369A16B523CD916300C0AB15 /* BackgroundImage.swift */,
 				36D1924723F1A2B20078ED6B /* Logo.swift */,
-				3638F378240762D900CFC4F4 /* AddCard.swift */,
 				3617240E2417583A00CFC6BC /* UsersItems.swift */,
 				36CF466824ADF55900432082 /* UserOutfits.swift */,
 				36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */,
@@ -201,6 +208,10 @@
 				366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */,
 				367C753E2462040A00066F4E /* ReviewCardThree.swift */,
 				36840A6524B3135E0054943E /* NeuromorphicRoundButton.swift */,
+				36840A6724B31BC40054943E /* NeuromorphicRectButton.swift */,
+				36840A6B24B33B570054943E /* NeuromorphicCard.swift */,
+				36840A6D24B366050054943E /* UserReviews.swift */,
+				36840A6F24B3698D0054943E /* NeomorphicOutfit.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -208,6 +219,7 @@
 		366D8EDC242F4BEC00BA64B7 /* Testing Views */ = {
 			isa = PBXGroup;
 			children = (
+				3638F378240762D900CFC4F4 /* AddCard.swift */,
 				3677907A24260B1900C45F08 /* PopoverView.swift */,
 				36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */,
 				3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */,
@@ -445,6 +457,9 @@
 				3617240D2417508100CFC6BC /* ProfilePicture.swift in Sources */,
 				366C445423FE68380057267E /* TimelineView.swift in Sources */,
 				366D8EE824335F8C00BA64B7 /* RatingForm_Display.swift in Sources */,
+				36840A7024B3698D0054943E /* NeomorphicOutfit.swift in Sources */,
+				36840A6E24B366050054943E /* UserReviews.swift in Sources */,
+				36840A6C24B33B570054943E /* NeuromorphicCard.swift in Sources */,
 				36F820EA244C2BA0005A5107 /* SegmentedTab.swift in Sources */,
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
@@ -472,6 +487,7 @@
 				36CF466924ADF55900432082 /* UserOutfits.swift in Sources */,
 				3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */,
 				36F820F2244C8E56005A5107 /* MyColors.swift in Sources */,
+				36840A6824B31BC40054943E /* NeuromorphicRectButton.swift in Sources */,
 				3638F379240762D900CFC4F4 /* AddCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -76,7 +76,7 @@ struct AppBar : View {
     var body: some View{
         
         VStack(alignment: .leading, content: {
-            UserInfo()
+//            UserInfo()
             HStack{
                 Button(action: {
                     self.index = 1

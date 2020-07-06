@@ -15,17 +15,10 @@ struct UserOutfits: View {
         GeometryReader { geometry in
             ScrollView {
                 VStack {
-                    NavigationLink(destination: ReviewCard_Edit()) {
-                        AddCard()
-                            .background(RoundedRectangle(cornerRadius: 4.0, style: .continuous).stroke(Color.gray).frame(width: 400, height: 160))
-                            .padding(.top, 30.0)
-                            .padding(.bottom, 50)
+                    HStack {
+                        NeuromorphicOutfit(image: Image("outfit"), brand: "testing", product: "가을아 와라")
+                        NeuromorphicOutfit(image: Image("outfitTwo"), brand: "데일리룩", product: "덥다")
                     }
-                    
-                    OutfitCard()
-                        .padding(.top, 15)
-                    OutfitCardTwo()
-                        .padding(.top, 15)
 
                 }
                 .frame(width: geometry.size.width)
