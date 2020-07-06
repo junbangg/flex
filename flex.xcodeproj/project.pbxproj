@@ -31,6 +31,7 @@
 		367C753F2462040A00066F4E /* ReviewCardThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C753E2462040A00066F4E /* ReviewCardThree.swift */; };
 		36840A5A24B0492E0054943E /* ItemGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A5924B0492E0054943E /* ItemGrid.swift */; };
 		36840A6424B1A8470054943E /* NeuromorphicMypage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6324B1A8470054943E /* NeuromorphicMypage.swift */; };
+		36840A6624B3135E0054943E /* NeuromorphicRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6524B3135E0054943E /* NeuromorphicRoundButton.swift */; };
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
 		369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169E23CD6B2500C0AB15 /* ContentView.swift */; };
@@ -82,6 +83,7 @@
 		367C753E2462040A00066F4E /* ReviewCardThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardThree.swift; sourceTree = "<group>"; };
 		36840A5924B0492E0054943E /* ItemGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGrid.swift; sourceTree = "<group>"; };
 		36840A6324B1A8470054943E /* NeuromorphicMypage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuromorphicMypage.swift; sourceTree = "<group>"; };
+		36840A6524B3135E0054943E /* NeuromorphicRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuromorphicRoundButton.swift; sourceTree = "<group>"; };
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369A169923CD6B2500C0AB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				366C4459240119D40057267E /* RatingForm_Edit.swift */,
 				366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */,
 				367C753E2462040A00066F4E /* ReviewCardThree.swift */,
+				36840A6524B3135E0054943E /* NeuromorphicRoundButton.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */,
 				369A16B223CD6D5400C0AB15 /* ItemDetails.swift in Sources */,
 				36840A6424B1A8470054943E /* NeuromorphicMypage.swift in Sources */,
+				36840A6624B3135E0054943E /* NeuromorphicRoundButton.swift in Sources */,
 				366D8EE624335ED500BA64B7 /* ReviewCard_Edit.swift in Sources */,
 				3617240D2417508100CFC6BC /* ProfilePicture.swift in Sources */,
 				366C445423FE68380057267E /* TimelineView.swift in Sources */,
