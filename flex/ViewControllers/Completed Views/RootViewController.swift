@@ -95,16 +95,16 @@ struct FloatingTabbar : View {
                         
                     }) {
                         if self.selected == 0 {
-                            Image(systemName: "house").foregroundColor(.black).padding()
+                            Image(systemName: "house").foregroundColor(MyColors.ferrariRed).padding()
                         }
                         else if self.selected == 1{
-                            Image(systemName: "magnifyingglass").foregroundColor(.black).padding()
+                            Image(systemName: "magnifyingglass").foregroundColor(MyColors.ferrariRed).padding()
                         }
                         else if self.selected == 2{
-                            Image(systemName: "plus.app").foregroundColor(.black).padding()
+                            Image(systemName: "plus.app").foregroundColor(MyColors.ferrariRed).padding()
                         }
                         else{
-                            Image(systemName: "person.circle").foregroundColor(.black).padding()
+                            Image(systemName: "person.circle").foregroundColor(MyColors.ferrariRed).padding()
                         }
                         
                     }
@@ -118,7 +118,7 @@ struct FloatingTabbar : View {
                     }) {
                         Image(systemName: "house")
                             .font(.system(size: 20, weight: .medium))
-                            .foregroundColor(self.selected == 0 ? .black : .gray).padding(.horizontal)
+                            .foregroundColor(self.selected == 0 ? MyColors.ferrariRed : .gray).padding(.horizontal)
                     }
                     
                     Spacer(minLength: 15)
@@ -131,7 +131,7 @@ struct FloatingTabbar : View {
                         
                         Image(systemName: "magnifyingglass")
                             .font(.system(size: 20, weight: .medium))
-                            .foregroundColor(self.selected == 1 ? .black : .gray).padding(.horizontal)
+                            .foregroundColor(self.selected == 1 ? MyColors.ferrariRed : .gray).padding(.horizontal)
                     }
                     
                     Spacer(minLength: 15)
@@ -144,7 +144,7 @@ struct FloatingTabbar : View {
                         
                         Image(systemName: "plus.app")
                             .font(.system(size: 20, weight: .medium))
-                            .foregroundColor(self.selected == 2 ? .black : .gray).padding(.horizontal)
+                            .foregroundColor(self.selected == 2 ? MyColors.ferrariRed : .gray).padding(.horizontal)
                     }
                     
                     Spacer(minLength: 15)
@@ -157,7 +157,7 @@ struct FloatingTabbar : View {
                         
                         Image(systemName: "person.circle")
                             .font(.system(size: 20, weight: .medium))
-                            .foregroundColor(self.selected == 3 ? .black : .gray).padding(.horizontal)
+                            .foregroundColor(self.selected == 3 ? MyColors.ferrariRed : .gray).padding(.horizontal)
                     }
                 }
                 

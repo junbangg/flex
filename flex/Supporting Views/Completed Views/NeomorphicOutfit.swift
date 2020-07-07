@@ -13,62 +13,72 @@ struct NeuromorphicOutfit: View {
     var brand: String
     var product: String
     
-    @State var expand = false
-    
+    @State var viewState = CGSize.zero
     var body: some View {
         
         VStack(spacing:12) {
-            ScrollView(.horizontal) {
-                HStack {
-                    VStack {
-                        RectangleImage(image: image)
-                            .frame(width: 130, height: 180)
-                        //            Text(brand)
-                        //                .font(.title)
-                        //                .padding(.top,5)
-                        Text(brand)
-                            .padding(.top,5)
+            ZStack {
+                VStack(spacing: 5) {
+                    HStack(spacing: 10) {
+                        Text("Top")
+                            .font(.headline)
+                        
+                        Text("유니클로")
+                            .font(.caption)
+//                            .padding(.horizontal)
                     }
+                .cornerRadius(10)
+                    .background(Color.white)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+//                    .padding(.horizontal)
                     
-                    VStack(spacing:20) {
-                        HStack(spacing: 20) {
-                            Text("Top")
-                                .font(.caption)
-                            
-                            Text("유니클로")
-                                .font(.caption)
-                                .padding(.horizontal)
-                        }
-                        .background(Color.white)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                        .padding(.horizontal)
-                        
-                        HStack(spacing: 25) {
-                            Text("Bottom")
-                                .font(.caption)
-                            Text("APC")
-                                .font(.caption)
-                        }
-                        .background(Color.white)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                        .padding(.horizontal)
-                        
-                        HStack(spacing:25) {
-                            Text("Shoes")
-                                .font(.caption)
-                            
-                            Text("Converse 척테일러")
-                                .font(.caption)
-                        }
-                        .background(Color.white)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                        .padding(.horizontal)
+                    HStack(spacing: 10) {
+                        Text("Bottom")
+                            .font(.headline)
+                        Text("APC")
+                            .font(.caption)
                     }
+                    .background(Color.white)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+//                    .padding(.horizontal)
+                    
+                    HStack(spacing:10) {
+                        Text("Shoes")
+                            .font(.headline)
+                        
+                        Text("컨버스")
+                            .font(.caption)
+                    }
+                    .padding(.horizontal)
+                    .background(Color.white)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+//                    .padding(.horizontal)
                 }
-                .padding(.leading,25)
+                .offset(y:-50)
+                .animation(.spring())
+                VStack {
+                    RectangleImage(image: image)
+                        .frame(width: 130, height: 180)
+                    //            Text(brand)
+                    //                .font(.title)
+                    //                .padding(.top,5)
+                    Text(brand)
+                        .padding(.top,5)
+                }
+                .offset(y: viewState.height)
+                .animation(.spring())
+                .gesture(
+                    DragGesture()
+                        .onChanged{value in
+                            self.viewState = value.translation
+                    }
+                    .onEnded{ value in
+                        self.viewState = .zero
+                    }
+                )
             }
             //Number data
             HStack {

@@ -30,7 +30,7 @@ struct Home: View{
                 //Top
                 HStack(spacing: 15) {
 //                    Button(action: {
-//                        
+//
 //                    }) {
 //                        Image(systemName: "chevron.left")
 //                            .font(.system(size: 22))
@@ -98,7 +98,7 @@ struct Home: View{
                             .foregroundColor(self.index==0 ? .white : .gray)
                             .padding(.vertical, 10)
                             .padding(.horizontal)
-                            .background(self.index==0 ? .gray : Color.clear)
+                            .background(self.index==0 ? MyColors.ferrariRed : Color.clear)
                             .cornerRadius(10)
                     }
                     Button(action: {
@@ -108,18 +108,18 @@ struct Home: View{
                             .foregroundColor(self.index==1 ? .white : .gray)
                             .padding(.vertical, 10)
                             .padding(.horizontal)
-                            .background(self.index==1 ? .gray : Color.clear)
+                            .background(self.index==1 ? MyColors.ferrariRed : Color.clear)
                             .cornerRadius(10)
                     }
                     Button(action: {
                         self.index = 2
                     }) {
 //                        Text("Bookmarks")
-                        Image(systemName: "bookmark.fill")
+                        Image(systemName: "flame.fill")
                             .foregroundColor(self.index==2 ? .white : .gray)
                             .padding(.vertical, 10)
                             .padding(.horizontal)
-                            .background(self.index==2 ? .gray : Color.clear)
+                            .background(self.index==2 ? MyColors.ferrariRed : Color.clear)
                             .cornerRadius(10)
                     }
                     Spacer()

@@ -53,16 +53,16 @@ struct NeuromorphicCard: View {
                 }
 //                .padding(.horizontal)
                 HStack {
-                    Image(systemName: "star.fill")
-                        .foregroundColor(Color.yellow)
-                        .font(.system(size: 20, weight: .light))
+                    Image(systemName: "star")
+                        .foregroundColor(Color.black)
+                        .font(.system(size: 15, weight: .light))
                     
                     Text("8.5")
 //                        .font(.title)
                         .fontWeight(.semibold)
                         .fixedSize()
                         .frame(width:15)
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(Color.gray)
                         .offset(y:1)
                 }
                 .padding(.horizontal)

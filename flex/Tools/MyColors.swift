@@ -15,4 +15,7 @@ struct MyColors {
     static let midGreyColor = Color(red:85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, opacity:1.0)
     static let lowGreyColor = Color(red:85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, opacity:1.0)
     static let offwhite = Color(red: 225/255, green: 225/255, blue: 235/255)
+    static let ferrariRed = Color(red:230/255, green:36/255, blue: 0/255)
+    static let midnightBlue = Color(red:34/255, green:58/255, blue: 94/255)
+    static let lightBlue = Color(red:0/255, green: 102/255, blue: 204/255)
 }
