@@ -43,10 +43,7 @@ struct OutfitCard: View {
                             print("work")
                             self.flame.toggle()
                     }
-                    
                 }
-                
-                
                 VStack {
                     HStack {
                         HStack {
@@ -88,7 +85,6 @@ struct OutfitCard: View {
                                 .foregroundColor(Color.gray)
                         }
                         .offset(x:50, y:1)
-                        
                     }
                     .offset(x:-30)
                     //                    .offset(y:10)

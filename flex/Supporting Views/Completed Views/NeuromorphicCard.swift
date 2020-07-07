@@ -16,7 +16,7 @@ struct NeuromorphicCard: View {
     var body: some View {
         VStack(spacing:12) {
             CircleImage(image: image)
-                .frame(width:100, height:100)
+                .frame(width:120, height:120)
 //            Text(brand)
 //                .font(.title)
 //                .padding(.top,5)
@@ -24,6 +24,52 @@ struct NeuromorphicCard: View {
                 .padding(.top,5)
             Text(product)
                 .font(.caption)
+            HStack(spacing: 5) {
+                HStack {
+                    Image(systemName: "flame")
+                        .foregroundColor(Color.red)
+                        .font(.system(size: 15, weight: .medium))
+                    Text("533")
+                        .font(.headline)
+                        .fontWeight(.regular)
+                        .fixedSize()
+                        .frame(width:20)
+                        .foregroundColor(Color.gray)
+                        .offset(y:1)
+                }
+                .padding(.horizontal)
+//                Spacer()
+                HStack {
+                    Image(systemName: "bubble.left.and.bubble.right")
+                        .foregroundColor(Color.black)
+                        .font(.system(size: 10, weight: .medium))
+                        .offset(y:2)
+                    Text("2")
+                        .font(.headline)
+                        .fontWeight(.regular)
+                        .fixedSize()
+                        .frame(width:20)
+                        .foregroundColor(Color.gray)
+                }
+//                .padding(.horizontal)
+                HStack {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(Color.yellow)
+                        .font(.system(size: 20, weight: .light))
+                    
+                    Text("8.5")
+//                        .font(.title)
+                        .fontWeight(.semibold)
+                        .fixedSize()
+                        .frame(width:15)
+                        .foregroundColor(Color.blue)
+                        .offset(y:1)
+                }
+                .padding(.horizontal)
+                .offset(x:-5)
+                
+            }
+            
 //                .foregroundColor(.gray)
         }
         .padding(.vertical)

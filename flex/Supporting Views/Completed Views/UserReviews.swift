@@ -13,6 +13,7 @@ struct UserReviews: View {
         GeometryReader { geometry in
             ScrollView {
                 VStack {
+                    //Dummy data
                     HStack(spacing:20) {
                         
                         NeuromorphicCard(image: Image("sacai"), brand: "Sacai x Nike", product: "LD Waffle")
@@ -24,11 +25,16 @@ struct UserReviews: View {
                         
                         NeuromorphicCard(image: Image("0"), brand: "Ader Error", product: "Color Block Jacket")
                         
-                        NeuromorphicCard(image: Image("5"), brand: "Acne Studios", product: "Denim Jacket")
+                        NeuromorphicCard(image: Image("4"), brand: "Nike", product: "Silver Bullet")
                     }
                     .padding(.top,10)
-                    
-                    
+                    HStack(spacing:20) {
+                        
+                        NeuromorphicCard(image: Image("3"), brand: "Acne Studios", product: "Denim Jacket")
+                        
+                        NeuromorphicCard(image: Image("5"), brand: "New Balance", product: "990v4")
+                    }
+                    .padding(.top,10)
                 }
                 .frame(width: geometry.size.width)
 //                .padding(.top,30)

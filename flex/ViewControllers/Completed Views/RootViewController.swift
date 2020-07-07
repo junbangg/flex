@@ -63,6 +63,7 @@ struct RootViewController: View {
             }.background(Color(.white).edgesIgnoringSafeArea(.all))
             
             FloatingTabbar(selected: self.$selected)
+            
         }
     }
 }
@@ -167,6 +168,8 @@ struct FloatingTabbar : View {
                 .background(Color(red: 250/255, green: 250/255, blue: 250/255))
                 .clipShape(Capsule())
                 .padding(22)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                 .gesture(DragGesture()
                     .onEnded{_ in
                         self.expand.toggle()

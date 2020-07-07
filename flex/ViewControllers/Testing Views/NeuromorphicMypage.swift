@@ -27,14 +27,15 @@ struct Home: View{
         ZStack {
 //            MyColors.offwhite
             VStack {
+                //Top
                 HStack(spacing: 15) {
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "chevron.left")
-                            .font(.system(size: 22))
-                            .foregroundColor(.black)
-                    }
+//                    Button(action: {
+//                        
+//                    }) {
+//                        Image(systemName: "chevron.left")
+//                            .font(.system(size: 22))
+//                            .foregroundColor(.black)
+//                    }
                     Text("Profile")
                         .font(.title)
                     Spacer(minLength: 0)
@@ -44,7 +45,7 @@ struct Home: View{
                     }){
                         Image(systemName: "text.justify")
 //                            .foregroundColor(MyColors.offwhite)
-                            .foregroundColor(MyColors.lightGreyColor)
+                            .foregroundColor(Color.black)
                             .padding(.vertical, 10)
 //                            .padding(.horizontal, 25)
                             .background(Color.white)
