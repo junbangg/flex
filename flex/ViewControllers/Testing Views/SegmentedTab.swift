@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SegmentedTab : View {
     
-    @State var index = 1
+    @State var index = 0
     @State var offset : CGFloat = UIScreen.main.bounds.width
     var width = UIScreen.main.bounds.width
     
@@ -11,6 +11,7 @@ struct SegmentedTab : View {
         VStack(spacing: 0){
             
             AppBar(index: self.$index, offset: self.$offset)
+                .padding(.bottom,25)
             
             GeometryReader{g in
                 
@@ -27,11 +28,11 @@ struct SegmentedTab : View {
                 .onEnded({ (value) in
                     
                     if value.translation.width > 50{// minimum drag...
-//                        print("right")
+                        //                        print("right")
                         self.changeView(left: false)
                     }
                     if -value.translation.width > 50{
-//                        print("left")
+                        //                        print("left")
                         self.changeView(left: true)
                     }
                 }))
@@ -39,7 +40,6 @@ struct SegmentedTab : View {
             }
         }
         .animation(.default)
-        .edgesIgnoringSafeArea(.all)
     }
     
     func changeView(left : Bool){
@@ -76,56 +76,164 @@ struct AppBar : View {
     var body: some View{
         
         VStack(alignment: .leading, content: {
-//            UserInfo()
-            HStack{
+            //            UserInfo()
+            //Top
+            HStack(spacing: 15) {
+                //                    Button(action: {
+                //
+                //                    }) {
+                //                        Image(systemName: "chevron.left")
+                //                            .font(.system(size: 22))
+                //                            .foregroundColor(.black)
+                //                    }
+                Text("Profile")
+                    .font(.title)
+                Spacer(minLength: 0)
+                
                 Button(action: {
-                    self.index = 1
+                    
+                }){
+                    Image(systemName: "text.justify")
+                        //                            .foregroundColor(MyColors.offwhite)
+                        .foregroundColor(Color.black)
+                        .padding(.vertical, 10)
+                        //                            .padding(.horizontal, 25)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                }
+                //                    .buttonStyle(NeuromorhpicButtonStyle())
+            }
+            .padding()
+            //Profile
+            HStack {
+                VStack(spacing: 0) {
+                    Rectangle()
+                        .fill(MyColors.ferrariRed)
+                        .frame(width:80, height: 3)
+                        .zIndex(1)
+                    
+                    CircleImage(image: Image("testProfile"))
+                        //                    .resizable()
+                        .frame(width:100, height:100)
+                        .padding(.top, 6)
+                        .padding(.bottom,4)
+                        .padding(.horizontal, 8)
+                        //                            .background(MyColors.offwhite)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        //                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 8, y: 8)
+                        //                            .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                        .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                }
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("olafo0o")
+                        .font(.title)
+                        .foregroundColor(Color.black.opacity(0.8))
+                    Text("사용자 소개")
+                        .foregroundColor(Color.black.opacity(0.7))
+                }
+                .padding(.leading,20)
+                Spacer(minLength: 0)
+            }
+            .padding(.horizontal,20)
+            .padding(.top,10)
+            //App Bar
+            HStack(spacing: 25) {
+                Spacer()
+                Button(action: {
+                    self.index = 0
                     self.offset = self.width
                 }) {
-                    VStack(spacing: 8){
-                        HStack(spacing: 12){
-                            Image(systemName: "circle.grid.3x3")
-                                .foregroundColor(self.index == 1 ? .white : Color.gray.opacity(0.7))
-                        }
-                        Capsule()
-                            .fill(self.index == 1 ? Color.white : Color.clear)
-                            .frame(height: 4)
-                    }
+                    Text("Outfits")
+                        .foregroundColor(self.index==0 ? .white : .gray)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal)
+                        .background(self.index==0 ? MyColors.ferrariRed : Color.clear)
+                        .cornerRadius(10)
+                }
+                Button(action: {
+                    self.index = 1
+                    self.offset = 0
+                }) {
+                    Text("Reviews")
+                        .foregroundColor(self.index==1 ? .white : .gray)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal)
+                        .background(self.index==1 ? MyColors.ferrariRed : Color.clear)
+                        .cornerRadius(10)
                 }
                 Button(action: {
                     self.index = 2
-                    self.offset = 0
-                }) {
-                    VStack(spacing: 8){
-                        HStack(spacing: 12){
-                            Image(systemName: "list.dash")
-                                .foregroundColor(self.index == 2 ? .white : Color.gray.opacity(0.7))
-                        }
-                        Capsule()
-                            .fill(self.index == 2 ? Color.white : Color.clear)
-                            .frame(height: 4)
-                    }
-                }
-                Button(action: {
-                    self.index = 3
                     self.offset = -self.width
                 }) {
-                    VStack(spacing: 8){
-                        HStack(spacing: 12){
-                            Image(systemName: "list.dash")
-                                .foregroundColor(self.index == 3 ? .white : Color.gray.opacity(0.7))
-                        }
-                        Capsule()
-                            .fill(self.index == 3 ? Color.white : Color.clear)
-                            .frame(height: 4)
-                    }
+                    //                        Text("Bookmarks")
+                    Image(systemName: "flame.fill")
+                        .foregroundColor(self.index==2 ? .white : .gray)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal)
+                        .background(self.index==2 ? MyColors.ferrariRed : Color.clear)
+                        .cornerRadius(10)
                 }
+                Spacer()
             }
-        })
-            .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 15)
-            .padding(.horizontal)
-            .padding(.bottom, 10)
+            .padding(.horizontal,10)
+            .padding(.vertical,5)
             .background(Color.white)
+            .cornerRadius(8)
+            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+            .padding(.horizontal)
+            .padding(.top,25)
+            //            HStack{
+            //                Button(action: {
+            //                    self.index = 1
+            //                    self.offset = self.width
+            //                }) {
+            //                    VStack(spacing: 8){
+            //                        HStack(spacing: 12){
+            //                            Image(systemName: "circle.grid.3x3")
+            //                                .foregroundColor(self.index == 1 ? .white : Color.gray.opacity(0.7))
+            //                        }
+            //                        Capsule()
+            //                            .fill(self.index == 1 ? Color.white : Color.clear)
+            //                            .frame(height: 4)
+            //                    }
+            //                }
+            //                Button(action: {
+            //                    self.index = 2
+            //                    self.offset = 0
+            //                }) {
+            //                    VStack(spacing: 8){
+            //                        HStack(spacing: 12){
+            //                            Image(systemName: "list.dash")
+            //                                .foregroundColor(self.index == 2 ? .white : Color.gray.opacity(0.7))
+            //                        }
+            //                        Capsule()
+            //                            .fill(self.index == 2 ? Color.white : Color.clear)
+            //                            .frame(height: 4)
+            //                    }
+            //                }
+            //                Button(action: {
+            //                    self.index = 3
+            //                    self.offset = -self.width
+            //                }) {
+            //                    VStack(spacing: 8){
+            //                        HStack(spacing: 12){
+            //                            Image(systemName: "list.dash")
+            //                                .foregroundColor(self.index == 3 ? .white : Color.gray.opacity(0.7))
+            //                        }
+            //                        Capsule()
+            //                            .fill(self.index == 3 ? Color.white : Color.clear)
+            //                            .frame(height: 4)
+            //                    }
+            //                }
+            //            }
+        })
+//            .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 15)
+//            .padding(.horizontal)
+//            .padding(.bottom, 10)
+//            .background(Color.white)
     }
 }
 
@@ -133,7 +241,8 @@ struct First : View {
     var body: some View{
         GeometryReader{_ in
             VStack{
-                ItemGrid()
+                //                ItemGrid()
+                UserOutfits()
             }
         }
         .background(Color.white)
@@ -144,7 +253,8 @@ struct Scnd : View {
     var body: some View{
         GeometryReader{_ in
             VStack{
-                UsersItems()
+                //                UsersItems()
+                UserReviews()
             }
         }
         .background(Color.white)
@@ -158,7 +268,6 @@ struct Third : View {
         GeometryReader{_ in
             
             VStack{
-                
                 UserOutfits()
             }
         }

@@ -18,4 +18,5 @@ struct MyColors {
     static let ferrariRed = Color(red:230/255, green:36/255, blue: 0/255)
     static let midnightBlue = Color(red:34/255, green:58/255, blue: 94/255)
     static let lightBlue = Color(red:0/255, green: 102/255, blue: 204/255)
+//    static let ferrariRed = Color(red:167/255, green:0/255, blue: 44/255)
 }

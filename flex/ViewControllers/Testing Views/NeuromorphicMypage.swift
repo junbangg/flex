@@ -58,7 +58,7 @@ struct Home: View{
                 HStack {
                     VStack(spacing: 0) {
                         Rectangle()
-                            .fill(MyColors.lightGreyColor)
+                            .fill(MyColors.ferrariRed)
                             .frame(width:80, height: 3)
                             .zIndex(1)
                         

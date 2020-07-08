@@ -55,8 +55,8 @@ struct RootViewController: View {
                 else{
                     
                     GeometryReader{_ in
-//                        MyPageViewController()
                         NeuromorphicMypage()
+//                        SegmentedTab()
                     }
                 }
                 
@@ -95,16 +95,16 @@ struct FloatingTabbar : View {
                         
                     }) {
                         if self.selected == 0 {
-                            Image(systemName: "house").foregroundColor(MyColors.ferrariRed).padding()
+                            Image(systemName: "house").font(.system(size: 20, weight: .medium)).foregroundColor(MyColors.ferrariRed).padding()
                         }
                         else if self.selected == 1{
-                            Image(systemName: "magnifyingglass").foregroundColor(MyColors.ferrariRed).padding()
+                            Image(systemName: "magnifyingglass").font(.system(size: 20, weight: .medium)).foregroundColor(MyColors.ferrariRed).padding()
                         }
                         else if self.selected == 2{
-                            Image(systemName: "plus.app").foregroundColor(MyColors.ferrariRed).padding()
+                            Image(systemName: "plus.app").font(.system(size: 20, weight: .medium)).foregroundColor(MyColors.ferrariRed).padding()
                         }
                         else{
-                            Image(systemName: "person.circle").foregroundColor(MyColors.ferrariRed).padding()
+                            Image(systemName: "person.circle").font(.system(size: 20, weight: .medium)).foregroundColor(MyColors.ferrariRed).padding()
                         }
                         
                     }
