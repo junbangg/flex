@@ -4,6 +4,7 @@ struct SegmentedTab : View {
     
     @State var index = 1
     @State var offset : CGFloat = UIScreen.main.bounds.width
+    
     var width = UIScreen.main.bounds.width
     
     var body: some View{
@@ -71,12 +72,13 @@ struct AppBar : View {
     
     @Binding var index : Int
     @Binding var offset : CGFloat
+    @State var selected : Int = 0
+    @State var followedPressed : Bool = false
     var width = UIScreen.main.bounds.width
     
     var body: some View{
         
         VStack(alignment: .leading, content: {
-            //            UserInfo()
             //Top
             HStack(spacing: 15) {
                 Button(action: {
@@ -91,29 +93,10 @@ struct AppBar : View {
                     .font(.title)
                 Spacer(minLength: 0)
                 
-                Button(action: {
-
-                }) {
-                    Text("Follow")
-                        .foregroundColor(.white)
-                        .padding(.vertical, 10)
-                        .padding(.horizontal)
-                        .background(MyColors.ferrariRed)
-                        .cornerRadius(10)
-                }
+                //Follow Button
+                FollowButton(selected: self.$selected)
+                    .offset(x:10)
                 
-//                Button(action: {
-//                    
-//                }){
-//                    Image(systemName: "text.justify")
-//                        //                            .foregroundColor(MyColors.offwhite)
-//                        .foregroundColor(Color.black)
-//                        .padding(.vertical, 10)
-//                        //                            .padding(.horizontal, 25)
-//                        .background(Color.white)
-//                        .cornerRadius(10)
-//                }
-                //                    .buttonStyle(NeuromorhpicButtonStyle())
             }
             .padding()
             //Profile
@@ -149,7 +132,7 @@ struct AppBar : View {
                 Spacer(minLength: 0)
             }
             .padding(.horizontal,20)
-            .padding(.top,10)
+            .offset(y:-30)
             //App Bar
             HStack(spacing: 25) {
                 Spacer()
@@ -196,56 +179,9 @@ struct AppBar : View {
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
             .padding(.horizontal)
-            .padding(.top,25)
-            //            HStack{
-            //                Button(action: {
-            //                    self.index = 1
-            //                    self.offset = self.width
-            //                }) {
-            //                    VStack(spacing: 8){
-            //                        HStack(spacing: 12){
-            //                            Image(systemName: "circle.grid.3x3")
-            //                                .foregroundColor(self.index == 1 ? .white : Color.gray.opacity(0.7))
-            //                        }
-            //                        Capsule()
-            //                            .fill(self.index == 1 ? Color.white : Color.clear)
-            //                            .frame(height: 4)
-            //                    }
-            //                }
-            //                Button(action: {
-            //                    self.index = 2
-            //                    self.offset = 0
-            //                }) {
-            //                    VStack(spacing: 8){
-            //                        HStack(spacing: 12){
-            //                            Image(systemName: "list.dash")
-            //                                .foregroundColor(self.index == 2 ? .white : Color.gray.opacity(0.7))
-            //                        }
-            //                        Capsule()
-            //                            .fill(self.index == 2 ? Color.white : Color.clear)
-            //                            .frame(height: 4)
-            //                    }
-            //                }
-            //                Button(action: {
-            //                    self.index = 3
-            //                    self.offset = -self.width
-            //                }) {
-            //                    VStack(spacing: 8){
-            //                        HStack(spacing: 12){
-            //                            Image(systemName: "list.dash")
-            //                                .foregroundColor(self.index == 3 ? .white : Color.gray.opacity(0.7))
-            //                        }
-            //                        Capsule()
-            //                            .fill(self.index == 3 ? Color.white : Color.clear)
-            //                            .frame(height: 4)
-            //                    }
-            //                }
-            //            }
+//            .padding(.top,25)
+            
         })
-        //            .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 15)
-        //            .padding(.horizontal)
-        //            .padding(.bottom, 10)
-        //            .background(Color.white)
     }
 }
 
@@ -286,7 +222,65 @@ struct Third : View {
         .background(Color.white)
     }
 }
+ // MARK: - Follow Button
+struct FollowButton : View {
+    
+    @Binding var selected : Int
+    @State var expand = true
+    
+    var body : some View{
+        
+        HStack{
+            
+            //            Spacer(minLength: 0)
+           
+            HStack{
+                
+                if !self.expand{
+                    
+                    Button(action: {
+                        
+                        self.expand.toggle()
+                        
+                    }) {
+                        if self.selected == 0 {
+                            Image(systemName: "flame").font(.system(size: 20, weight: .medium)).foregroundColor(.white).padding()
+                        }
+                        
+                    }
+                }
+                else{
+                    
+                    Button(action: {
+                        
+                        self.expand.toggle()
+                        
+                    }) {
+                        Text("Follow")
+                            .foregroundColor(MyColors.ferrariRed)
+                    }
+                    
+                    
+                    //                    Spacer(minLength: 15)
+                    
+                }
+                
+                
+            }.padding(.vertical,self.expand ? 20 : 8)
+                .padding(.horizontal,self.expand ? 30 : 8)
+                //                .background(Color.white)
+                .background(self.expand ? .white : MyColors.ferrariRed)
+                .clipShape(Capsule())
+                .padding(22)
+                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
 
+        }
+        
+        
+    }
+}
 struct SegmentedTab_Preview: PreviewProvider {
     static var previews: some View {
         SegmentedTab()

@@ -21,6 +21,7 @@ import SwiftUI
 //}
 
 struct NeuromorphicRectButtonStyle: ButtonStyle {
+    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .padding(30)
@@ -28,7 +29,7 @@ struct NeuromorphicRectButtonStyle: ButtonStyle {
                 Group {
                     if configuration.isPressed {
                         Rectangle()
-                            .fill(Color.white)
+                            .fill(MyColors.ferrariRed)
                             .cornerRadius(8)
                             .overlay(
                                 Rectangle()
@@ -40,7 +41,7 @@ struct NeuromorphicRectButtonStyle: ButtonStyle {
                         )
                         .overlay(
                             Rectangle()
-                                .stroke(Color.white, lineWidth: 8)
+                                .stroke(MyColors.ferrariRed, lineWidth: 8)
                                 .cornerRadius(8)
                                 .blur(radius :4)
                                 .offset(x:-2,y:-2)
@@ -49,15 +50,15 @@ struct NeuromorphicRectButtonStyle: ButtonStyle {
 
                     } else {
                         Rectangle()
-                            .fill(Color.white)
+                            .fill(MyColors.ferrariRed)
                             .cornerRadius(8)
                             .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
                             .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
                     }
                 }
                 
-                .frame(width:50,height:35)
-            
+//                .frame(width:50,height:35)
+                    .frame(width:85,height:40)
 
         )
     }

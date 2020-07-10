@@ -37,6 +37,7 @@
 		36840A7424B5F3CA0054943E /* ReviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7324B5F3CA0054943E /* ReviewDetails.swift */; };
 		36840A7A24B681570054943E /* NeuromorphicRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7924B681560054943E /* NeuromorphicRoundButton.swift */; };
 		36840A7C24B6830A0054943E /* NeuromorphicRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7B24B6830A0054943E /* NeuromorphicRectButton.swift */; };
+		36840A7E24B8725B0054943E /* FloatingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7D24B8725B0054943E /* FloatingTabBar.swift */; };
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
 		369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169E23CD6B2500C0AB15 /* ContentView.swift */; };
@@ -94,6 +95,7 @@
 		36840A7324B5F3CA0054943E /* ReviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetails.swift; sourceTree = "<group>"; };
 		36840A7924B681560054943E /* NeuromorphicRoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuromorphicRoundButton.swift; sourceTree = "<group>"; };
 		36840A7B24B6830A0054943E /* NeuromorphicRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuromorphicRectButton.swift; sourceTree = "<group>"; };
+		36840A7D24B8725B0054943E /* FloatingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabBar.swift; sourceTree = "<group>"; };
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369A169923CD6B2500C0AB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				36D1924D23F295970078ED6B /* RegisterViewController.swift */,
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
 				3677907C242881AA00C45F08 /* RootViewController.swift */,
+				36840A7D24B8725B0054943E /* FloatingTabBar.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				367C753F2462040A00066F4E /* ReviewCardThree.swift in Sources */,
 				3677907B24260B1900C45F08 /* PopoverView.swift in Sources */,
 				369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */,
+				36840A7E24B8725B0054943E /* FloatingTabBar.swift in Sources */,
 				36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */,
 				36D1926523F7AE5C0078ED6B /* Utilities.swift in Sources */,
 				36E3F0DA2412909A00E322B7 /* ReviewCardFour.swift in Sources */,

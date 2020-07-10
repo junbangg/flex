@@ -8,19 +8,10 @@
 
 import SwiftUI
 
-//struct NeuromorphicRoundButton: View {
-//    var body: some View {
-//        Button(action: {
-//            print("Button tapped")
-//        }) {
-//            Image(systemName: "flame.fill")
-//                .foregroundColor(.red)
-//        }
-//        .buttonStyle(NeuromorhpicButtonStyle())
-//    }
-//}
+
 
 struct NeuromorphicButtonStyle: ButtonStyle {
+    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .padding(30)
