@@ -55,8 +55,8 @@ struct RootViewController: View {
                 else{
                     
                     GeometryReader{_ in
-                        NeuromorphicMypage()
-//                        SegmentedTab()
+//                        NeuromorphicMypage()
+                        SegmentedTab()
                     }
                 }
                 

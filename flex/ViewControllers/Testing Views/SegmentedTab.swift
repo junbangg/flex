@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SegmentedTab : View {
     
-    @State var index = 0
+    @State var index = 1
     @State var offset : CGFloat = UIScreen.main.bounds.width
     var width = UIScreen.main.bounds.width
     
@@ -50,7 +50,7 @@ struct SegmentedTab : View {
             }
         }
         else{
-            if self.index != 0{
+            if self.index != 1{
                 self.index -= 1
             }
         }
@@ -79,28 +79,40 @@ struct AppBar : View {
             //            UserInfo()
             //Top
             HStack(spacing: 15) {
-                //                    Button(action: {
-                //
-                //                    }) {
-                //                        Image(systemName: "chevron.left")
-                //                            .font(.system(size: 22))
-                //                            .foregroundColor(.black)
-                //                    }
+                Button(action: {
+                    
+                }) {
+                    Image(systemName: "text.justify")
+                        .font(.system(size: 22))
+                        .foregroundColor(.black)
+                }
+                .offset(y:1)
                 Text("Profile")
                     .font(.title)
                 Spacer(minLength: 0)
                 
                 Button(action: {
-                    
-                }){
-                    Image(systemName: "text.justify")
-                        //                            .foregroundColor(MyColors.offwhite)
-                        .foregroundColor(Color.black)
+
+                }) {
+                    Text("Follow")
+                        .foregroundColor(.white)
                         .padding(.vertical, 10)
-                        //                            .padding(.horizontal, 25)
-                        .background(Color.white)
+                        .padding(.horizontal)
+                        .background(MyColors.ferrariRed)
                         .cornerRadius(10)
                 }
+                
+//                Button(action: {
+//                    
+//                }){
+//                    Image(systemName: "text.justify")
+//                        //                            .foregroundColor(MyColors.offwhite)
+//                        .foregroundColor(Color.black)
+//                        .padding(.vertical, 10)
+//                        //                            .padding(.horizontal, 25)
+//                        .background(Color.white)
+//                        .cornerRadius(10)
+//                }
                 //                    .buttonStyle(NeuromorhpicButtonStyle())
             }
             .padding()
@@ -142,21 +154,10 @@ struct AppBar : View {
             HStack(spacing: 25) {
                 Spacer()
                 Button(action: {
-                    self.index = 0
+                    self.index = 1
                     self.offset = self.width
                 }) {
                     Text("Outfits")
-                        .foregroundColor(self.index==0 ? .white : .gray)
-                        .padding(.vertical, 10)
-                        .padding(.horizontal)
-                        .background(self.index==0 ? MyColors.ferrariRed : Color.clear)
-                        .cornerRadius(10)
-                }
-                Button(action: {
-                    self.index = 1
-                    self.offset = 0
-                }) {
-                    Text("Reviews")
                         .foregroundColor(self.index==1 ? .white : .gray)
                         .padding(.vertical, 10)
                         .padding(.horizontal)
@@ -165,14 +166,25 @@ struct AppBar : View {
                 }
                 Button(action: {
                     self.index = 2
-                    self.offset = -self.width
+                    self.offset = 0
                 }) {
-                    //                        Text("Bookmarks")
-                    Image(systemName: "flame.fill")
+                    Text("Reviews")
                         .foregroundColor(self.index==2 ? .white : .gray)
                         .padding(.vertical, 10)
                         .padding(.horizontal)
                         .background(self.index==2 ? MyColors.ferrariRed : Color.clear)
+                        .cornerRadius(10)
+                }
+                Button(action: {
+                    self.index = 3
+                    self.offset = -self.width
+                }) {
+                    //                        Text("Bookmarks")
+                    Image(systemName: "flame.fill")
+                        .foregroundColor(self.index==3 ? .white : .gray)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal)
+                        .background(self.index==3 ? MyColors.ferrariRed : Color.clear)
                         .cornerRadius(10)
                 }
                 Spacer()
@@ -230,10 +242,10 @@ struct AppBar : View {
             //                }
             //            }
         })
-//            .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 15)
-//            .padding(.horizontal)
-//            .padding(.bottom, 10)
-//            .background(Color.white)
+        //            .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 15)
+        //            .padding(.horizontal)
+        //            .padding(.bottom, 10)
+        //            .background(Color.white)
     }
 }
 

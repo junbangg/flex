@@ -22,7 +22,6 @@ struct RatingForm_Display: View {
     var body: some View {
         HStack {
             VStack {
-                
                 HStack {
                     Text("Sizing")
                         .font(.title)
@@ -44,17 +43,26 @@ struct RatingForm_Display: View {
                             .foregroundColor(Color.red)
                         //                                .offset(x:10,y:1)
                     }
+                    .offset(x:-20)
                 }
-                Spacer()
                 
                 Text("Fits tight because of the double laces. Going up a full size is recommended")
                     .lineLimit(nil)
+                    .padding(.top,10)
                 
             }
             
         }
         .frame(width:380, height:200)
-        
+        .padding(.horizontal,10)
+//        .padding(.vertical,5)
+        .background(Color.white)
+        .cornerRadius(8)
+        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+        .padding(.horizontal)
+//        .padding(.top,25)
+            
         .padding(.trailing,30)
     }
 }

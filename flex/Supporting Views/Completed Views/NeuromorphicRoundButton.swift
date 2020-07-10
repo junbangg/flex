@@ -8,19 +8,19 @@
 
 import SwiftUI
 
-struct NeuromorphicRoundButton: View {
-    var body: some View {
-        Button(action: {
-            print("Button tapped")
-        }) {
-            Image(systemName: "flame.fill")
-                .foregroundColor(.red)
-        }
-        .buttonStyle(NeuromorhpicButtonStyle())
-    }
-}
+//struct NeuromorphicRoundButton: View {
+//    var body: some View {
+//        Button(action: {
+//            print("Button tapped")
+//        }) {
+//            Image(systemName: "flame.fill")
+//                .foregroundColor(.red)
+//        }
+//        .buttonStyle(NeuromorhpicButtonStyle())
+//    }
+//}
 
-struct NeuromorhpicButtonStyle: ButtonStyle {
+struct NeuromorphicButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .padding(30)
@@ -51,6 +51,7 @@ struct NeuromorhpicButtonStyle: ButtonStyle {
                             .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
                     }
                 }
+                .frame(width:50,height:50)
                 
         )
     }
@@ -62,8 +63,8 @@ extension LinearGradient {
     }
 }
 
-struct NeuromorphicRoundButton_Previews: PreviewProvider {
-    static var previews: some View {
-        NeuromorphicRoundButton()
-    }
-}
+//struct NeuromorphicRoundButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NeuromorphicRoundButton()
+//    }
+//}
