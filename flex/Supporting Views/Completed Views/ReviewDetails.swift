@@ -26,6 +26,8 @@ struct ReviewDetails: View {
     @State private var comment : String = ""
     
     @State private var flamePressed : Bool = false
+    @State private var bookmarkPressed : Bool = false
+    
     
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
     
@@ -46,79 +48,137 @@ struct ReviewDetails: View {
             ScrollView {
                 // MARK: - 기본정보
                 VStack {
-                    //                    NavigationLink(destination: ReviewCard_Edit(), tag : 1, selection: $selection){
-                    //                        EmptyView()
-                    //
-                    //                        Button(action: {
-                    //                            print("edit button pressed")
-                    //                            self.selection = 1
-                    //                        }) {
-                    //                            Text("Edit")
-                    //                                .font(.headline)
-                    //                                .foregroundColor(Color.blue)
-                    //                                .offset(x:180,y:-30)
-                    //                        }
-                    //
-                    //
-                    //                    }
-                    HStack {
+                    HStack(spacing: 15) {
+                        //                        Button(action: {
+                        //
+                        //                        }) {
+                        //                            Image(systemName: "text.justify")
+                        //                                .font(.system(size: 22))
+                        //                                .foregroundColor(.black)
+                        //                        }
+                        //                        .offset(y:1)
                         HStack {
-                            //Profile
                             VStack(spacing: 0) {
                                 Rectangle()
                                     .fill(MyColors.ferrariRed)
-                                    .frame(width:80, height: 3)
+                                    .frame(width:40, height: 2)
                                     .zIndex(1)
                                 
                                 CircleImage(image: Image("testProfile"))
-                                    //                    .resizable()
-                                    .frame(width:100, height:100)
+                                    .frame(width:50, height:50)
                                     .padding(.top, 6)
                                     .padding(.bottom,4)
                                     .padding(.horizontal, 8)
-                                    //                            .background(MyColors.offwhite)
                                     .background(Color.white)
                                     .cornerRadius(10)
-                                    //                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 8, y: 8)
-                                    //                            .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
                                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
                                     .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                                Text("olafo0o")
+                                .font(.caption)
+                                .foregroundColor(Color.black.opacity(0.8))
+                                    .offset(y:5)
                             }
-                            .padding(.horizontal,20)
-                            .padding(.top,10)
+                            //                            Spacer()
                             //                            VStack(alignment: .leading, spacing: 12) {
                             //                                Text("olafo0o")
                             //                                    .font(.title)
-                            //                                    .foregroundColor(Color.black.opacity(0.8))
-                            //                                Text("사용자 소개")
-                            //                                    .foregroundColor(Color.black.opacity(0.7))
+                            //                                    .foregroundColor(Color.gray.opacity(0.8))
+                            //
                             //                            }
                             //                            .padding(.leading,20)
-                            Spacer(minLength: 0)
+                            VStack(alignment: .leading){
+                                Text("Nike x Sacai")
+                                    .font(.title)
+                                    .foregroundColor(Color.gray)
+                                    .multilineTextAlignment(.center)
+                                Text("LDV Waffle")
+                                    .font(.headline)
+                                    .foregroundColor(Color.gray)
+                                    .multilineTextAlignment(.center)
+                            }
+                            .padding(.leading,20)
+                            
+                            
                         }
-                        VStack {
-                            Text("Nike x Sacai")
-                                .font(.title)
-                                .multilineTextAlignment(.center)
-                            Text("LDV Waffle")
-                                .font(.headline)
-                                .multilineTextAlignment(.center)
-                        }
-                        .offset(x:-80)
+                        
+                        Spacer(minLength: 0)
+                        
+                        
                         
                     }
+                    .padding()
+                    //                    HStack {
+                    
+                    //                        HStack {
+                    //Profile
+                    //                            VStack(spacing: 0) {
+                    //                                Rectangle()
+                    //                                    .fill(MyColors.ferrariRed)
+                    //                                    .frame(width:80, height: 3)
+                    //                                    .zIndex(1)
+                    //
+                    //                                CircleImage(image: Image("testProfile"))
+                    //                                    .frame(width:100, height:100)
+                    //                                    .padding(.top, 6)
+                    //                                    .padding(.bottom,4)
+                    //                                    .padding(.horizontal, 8)
+                    //                                    .background(Color.white)
+                    //                                    .cornerRadius(10)
+                    //                                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                    //                                    .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                    //                            }
+                    //                            .padding(.horizontal,20)
+                    //                            .padding(.top,10)
+                    //                            VStack(alignment: .leading, spacing: 12) {
+                    //                                Text("olafo0o")
+                    //                                    .font(.title)
+                    //                                    .foregroundColor(Color.black.opacity(0.8))
+                    //                                Text("사용자 소개")
+                    //                                    .foregroundColor(Color.black.opacity(0.7))
+                    //                            }
+                    //                            .padding(.leading,20)
+                    //                            Spacer(minLength: 0)
+                    //                        }
+                    //                        VStack {
+                    //                            Text("Nike x Sacai")
+                    //                                .font(.title)
+                    //                                .multilineTextAlignment(.center)
+                    //                            Text("LDV Waffle")
+                    //                                .font(.headline)
+                    //                                .multilineTextAlignment(.center)
+                    //                        }
+                    //                        .padding(.horizontal,50)
+                    //                        .background(Color.white)
+                    //                        .cornerRadius(8)
+                    //                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                    //                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                    //                        .padding(.horizontal)
+                    //                                                .offset(y:50)
+                    
+                    //                    }
                     
                     //                    Divider()
                     // MARK: - 데이터
                     VStack {
                         HStack {
+                            //Bookmark Button
+                            Button(action: {
+                                self.bookmarkPressed.toggle()
+                            }) {
+                                Image(systemName: "bookmark")
+                                    .foregroundColor(self.bookmarkPressed==false ? .blue : .gray)
+                                    .font(.system(size: 30, weight: .medium))
+                                    .padding(.horizontal)
+                                .offset(x:-50)
+                            }
+                            Spacer()
                             //Rating
                             Text(self.compute())
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.yellow)
                                 .padding(.horizontal)
-                            
+                                .offset(x:5)
                             Spacer()
                             //Flame Button
                             VStack {
@@ -130,7 +190,8 @@ struct ReviewDetails: View {
                                 .padding(.horizontal)
                                 //                                .buttonStyle(NeuromorphicRectButtonStyle())
                             }
-                            .offset(x:-10, y:-5)
+                            .offset(x:50)
+//                            .offset(x:-10, y:-5)
                             
                         }
                         .padding(.top,20)
@@ -202,13 +263,16 @@ struct ReviewDetails: View {
                             //                                .offset(x:50, y:1)
                             
                         }
-                        .padding(.horizontal,50)
-                        .background(Color.white)
-                        .cornerRadius(8)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                        .padding(.horizontal)
+                        .padding(.bottom, 20)
+                        
                     }
+                    .padding(.horizontal,50)
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                    .padding(.horizontal)
+                    
                     //                    Divider()
                     //                    ScrollView(.vertical) {
                     VStack {
@@ -233,14 +297,15 @@ struct ReviewDetails: View {
                                     .frame(height: 300)//400
                             }
                         }
-//                        Divider()
+                        //                        Divider()
+//                        Spacer()
                         // MARK: - 제품 리뷰
                         //develop another card class that represents the
                         ScrollView(.horizontal) {
                             HStack {
                                 RatingForm_Display(category: "Sizing", sizeRating: $sizeRating, testReview: $testReview)
                                     .padding(.top, 20)
-//                                    .padding(.leading,10)
+                                //                                    .padding(.leading,10)
                                 
                                 Spacer()
                                 RatingForm_Display(category: "Comfort", sizeRating: $comfortRating, testReview: $testReview).padding(.top, 20)
@@ -255,7 +320,7 @@ struct ReviewDetails: View {
                             }
                             .padding(.bottom,20)
                         }
-                        .offset(y:-20)
+                        .offset(y:-40)
                         
                     }
                     .padding(.top,10)
@@ -291,12 +356,12 @@ struct ReviewDetails: View {
                     print("send")
                 }) {
                     Image(systemName: "paperplane")
-                    .foregroundColor(Color.blue)
-                    .font(.system(size:20, weight: .medium))
+                        .foregroundColor(Color.blue)
+                        .font(.system(size:20, weight: .medium))
                     
                 }
-//                    .padding(.trailing,10)
-                .buttonStyle(NeuromorphicButtonStyle())
+                    //                    .padding(.trailing,10)
+                    .buttonStyle(NeuromorphicButtonStyle())
                 
                 
                 
@@ -311,3 +376,4 @@ struct ReviewDetails: View {
     }
     
 }
+

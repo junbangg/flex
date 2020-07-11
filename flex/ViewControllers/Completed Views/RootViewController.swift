@@ -56,7 +56,7 @@ struct RootViewController: View {
                     
                     GeometryReader{_ in
 //                        NeuromorphicMypage()
-                        SegmentedTab()
+                        Profile()
                     }
                 }
                 

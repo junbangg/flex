@@ -57,7 +57,7 @@
 		36D1926523F7AE5C0078ED6B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1926423F7AE5C0078ED6B /* Utilities.swift */; };
 		36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */; };
 		36E3F0DA2412909A00E322B7 /* ReviewCardFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */; };
-		36F820EA244C2BA0005A5107 /* SegmentedTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F820E9244C2BA0005A5107 /* SegmentedTab.swift */; };
+		36F820EA244C2BA0005A5107 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F820E9244C2BA0005A5107 /* Profile.swift */; };
 		36F820EE244C4764005A5107 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F820ED244C4764005A5107 /* UserInfo.swift */; };
 		36F820F0244C4841005A5107 /* RectImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F820EF244C4841005A5107 /* RectImage.swift */; };
 		36F820F2244C8E56005A5107 /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F820F1244C8E56005A5107 /* MyColors.swift */; };
@@ -117,7 +117,7 @@
 		36D1926423F7AE5C0078ED6B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		36E3F0D52412869C00E322B7 /* ReviewCardTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardTwo.swift; sourceTree = "<group>"; };
 		36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardFour.swift; sourceTree = "<group>"; };
-		36F820E9244C2BA0005A5107 /* SegmentedTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedTab.swift; sourceTree = "<group>"; };
+		36F820E9244C2BA0005A5107 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		36F820ED244C4764005A5107 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		36F820EF244C4841005A5107 /* RectImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectImage.swift; sourceTree = "<group>"; };
 		36F820F1244C8E56005A5107 /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 				366D8ED3242A59A900BA64B7 /* ReviewCard_Display.swift */,
 				366D8EE524335ED500BA64B7 /* ReviewCard_Edit.swift */,
 				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
-				36F820E9244C2BA0005A5107 /* SegmentedTab.swift */,
+				36F820E9244C2BA0005A5107 /* Profile.swift */,
 				36F820ED244C4764005A5107 /* UserInfo.swift */,
 				36F820EF244C4841005A5107 /* RectImage.swift */,
 				36840A5924B0492E0054943E /* ItemGrid.swift */,
@@ -467,7 +467,7 @@
 				36840A7024B3698D0054943E /* NeomorphicOutfit.swift in Sources */,
 				36840A6E24B366050054943E /* UserReviews.swift in Sources */,
 				36840A6C24B33B570054943E /* NeuromorphicCard.swift in Sources */,
-				36F820EA244C2BA0005A5107 /* SegmentedTab.swift in Sources */,
+				36F820EA244C2BA0005A5107 /* Profile.swift in Sources */,
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
 				3677907D242881AA00C45F08 /* RootViewController.swift in Sources */,

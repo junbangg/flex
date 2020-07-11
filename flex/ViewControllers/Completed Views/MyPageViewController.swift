@@ -155,7 +155,7 @@ struct MyPageViewController: View {
                     
                     /*SegmentedTab() is for segmented version of mypage. to disable, comment out SegmentedTab()
                                 and uncomment above code*/
-                    SegmentedTab()
+                    Profile()
                 }
             }
         }

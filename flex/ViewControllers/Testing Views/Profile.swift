@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SegmentedTab : View {
+struct Profile : View {
     
     @State var index = 1
     @State var offset : CGFloat = UIScreen.main.bounds.width
@@ -281,8 +281,8 @@ struct FollowButton : View {
         
     }
 }
-struct SegmentedTab_Preview: PreviewProvider {
+struct Profile_Preview: PreviewProvider {
     static var previews: some View {
-        SegmentedTab()
+        Profile()
     }
 }
