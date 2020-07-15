@@ -8,39 +8,46 @@ struct Profile : View {
     var width = UIScreen.main.bounds.width
     
     var body: some View{
-        
-        VStack(spacing: 0){
-            
-            AppBar(index: self.$index, offset: self.$offset)
-                .padding(.bottom,25)
-            
-            GeometryReader{g in
+        NavigationView {
+            VStack(spacing: 0){
                 
-                HStack(spacing: 0){
-                    First()
-                        .frame(width: g.frame(in : .global).width)
-                    Scnd()
-                        .frame(width: g.frame(in : .global).width)
-                    Third()
-                        .frame(width: g.frame(in : .global).width)
-                }
-                .offset(x: self.offset)
-                .highPriorityGesture(DragGesture()
-                .onEnded({ (value) in
+                AppBar(index: self.$index, offset: self.$offset)
+                    .padding(.bottom,25)
+                
+                GeometryReader{g in
                     
-                    if value.translation.width > 50{// minimum drag...
-                        //                        print("right")
-                        self.changeView(left: false)
+                    HStack(spacing: 0){
+                        First()
+                            .frame(width: g.frame(in : .global).width)
+                        Scnd()
+                            .frame(width: g.frame(in : .global).width)
+                        Third()
+                            .frame(width: g.frame(in : .global).width)
                     }
-                    if -value.translation.width > 50{
-                        //                        print("left")
-                        self.changeView(left: true)
-                    }
-                }))
-                
+                    .offset(x: self.offset)
+                    .highPriorityGesture(DragGesture()
+                    .onEnded({ (value) in
+                        
+                        if value.translation.width > 50{// minimum drag...
+                            //                        print("right")
+                            self.changeView(left: false)
+                        }
+                        if -value.translation.width > 50{
+                            //                        print("left")
+                            self.changeView(left: true)
+                        }
+                    }))
+                    
+                }
             }
+            .animation(.default)
+            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
-        .animation(.default)
+        
+        
     }
     
     func changeView(left : Bool){
@@ -95,12 +102,14 @@ struct AppBar : View {
                 
                 //Follow Button
                 FollowButton(selected: self.$selected)
-                    .offset(x:10)
+                    .offset(x:30)
                 
             }
+            .offset(y:-20)
             .padding()
             //Profile
             HStack {
+                //profile block
                 VStack(spacing: 0) {
                     Rectangle()
                         .fill(MyColors.ferrariRed)
@@ -121,6 +130,7 @@ struct AppBar : View {
                         .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
                         .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
                 }
+                //name
                 VStack(alignment: .leading, spacing: 12) {
                     Text("olafo0o")
                         .font(.title)
@@ -132,7 +142,7 @@ struct AppBar : View {
                 Spacer(minLength: 0)
             }
             .padding(.horizontal,20)
-            .offset(y:-30)
+            .offset(y:-70)
             //App Bar
             HStack(spacing: 25) {
                 Spacer()
@@ -179,7 +189,7 @@ struct AppBar : View {
             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
             .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
             .padding(.horizontal)
-//            .padding(.top,25)
+            //            .padding(.top,25)
             
         })
     }
@@ -222,7 +232,7 @@ struct Third : View {
         .background(Color.white)
     }
 }
- // MARK: - Follow Button
+// MARK: - Follow Button
 struct FollowButton : View {
     
     @Binding var selected : Int
@@ -233,7 +243,7 @@ struct FollowButton : View {
         HStack{
             
             //            Spacer(minLength: 0)
-           
+            
             HStack{
                 
                 if !self.expand{
@@ -275,7 +285,7 @@ struct FollowButton : View {
                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                 .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
-
+            
         }
         
         

@@ -31,13 +31,14 @@
 		367C753F2462040A00066F4E /* ReviewCardThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C753E2462040A00066F4E /* ReviewCardThree.swift */; };
 		36840A5A24B0492E0054943E /* ItemGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A5924B0492E0054943E /* ItemGrid.swift */; };
 		36840A6424B1A8470054943E /* NeuromorphicMypage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6324B1A8470054943E /* NeuromorphicMypage.swift */; };
-		36840A6C24B33B570054943E /* NeuromorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6B24B33B570054943E /* NeuromorphicCard.swift */; };
+		36840A6C24B33B570054943E /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6B24B33B570054943E /* Review.swift */; };
 		36840A6E24B366050054943E /* UserReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6D24B366050054943E /* UserReviews.swift */; };
 		36840A7024B3698D0054943E /* NeomorphicOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6F24B3698D0054943E /* NeomorphicOutfit.swift */; };
 		36840A7424B5F3CA0054943E /* ReviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7324B5F3CA0054943E /* ReviewDetails.swift */; };
 		36840A7A24B681570054943E /* NeuromorphicRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7924B681560054943E /* NeuromorphicRoundButton.swift */; };
 		36840A7C24B6830A0054943E /* NeuromorphicRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7B24B6830A0054943E /* NeuromorphicRectButton.swift */; };
 		36840A7E24B8725B0054943E /* FloatingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7D24B8725B0054943E /* FloatingTabBar.swift */; };
+		36840A8024B9F69D0054943E /* OutfitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7F24B9F69D0054943E /* OutfitDetails.swift */; };
 		369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169723CD6B2500C0AB15 /* AppDelegate.swift */; };
 		369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169923CD6B2500C0AB15 /* SceneDelegate.swift */; };
 		369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A169E23CD6B2500C0AB15 /* ContentView.swift */; };
@@ -89,13 +90,14 @@
 		367C753E2462040A00066F4E /* ReviewCardThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCardThree.swift; sourceTree = "<group>"; };
 		36840A5924B0492E0054943E /* ItemGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemGrid.swift; sourceTree = "<group>"; };
 		36840A6324B1A8470054943E /* NeuromorphicMypage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuromorphicMypage.swift; sourceTree = "<group>"; };
-		36840A6B24B33B570054943E /* NeuromorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuromorphicCard.swift; sourceTree = "<group>"; };
+		36840A6B24B33B570054943E /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		36840A6D24B366050054943E /* UserReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviews.swift; sourceTree = "<group>"; };
 		36840A6F24B3698D0054943E /* NeomorphicOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeomorphicOutfit.swift; sourceTree = "<group>"; };
 		36840A7324B5F3CA0054943E /* ReviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetails.swift; sourceTree = "<group>"; };
 		36840A7924B681560054943E /* NeuromorphicRoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuromorphicRoundButton.swift; sourceTree = "<group>"; };
 		36840A7B24B6830A0054943E /* NeuromorphicRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuromorphicRectButton.swift; sourceTree = "<group>"; };
 		36840A7D24B8725B0054943E /* FloatingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabBar.swift; sourceTree = "<group>"; };
+		36840A7F24B9F69D0054943E /* OutfitDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitDetails.swift; sourceTree = "<group>"; };
 		369A169423CD6B2500C0AB15 /* flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369A169723CD6B2500C0AB15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369A169923CD6B2500C0AB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,7 +166,6 @@
 				366D8ED3242A59A900BA64B7 /* ReviewCard_Display.swift */,
 				366D8EE524335ED500BA64B7 /* ReviewCard_Edit.swift */,
 				3638F38224090BDD00CFC4F4 /* FeedViewController.swift */,
-				36F820E9244C2BA0005A5107 /* Profile.swift */,
 				36F820ED244C4764005A5107 /* UserInfo.swift */,
 				36F820EF244C4841005A5107 /* RectImage.swift */,
 				36840A5924B0492E0054943E /* ItemGrid.swift */,
@@ -180,6 +181,11 @@
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
 				3677907C242881AA00C45F08 /* RootViewController.swift */,
 				36840A7D24B8725B0054943E /* FloatingTabBar.swift */,
+				36F820E9244C2BA0005A5107 /* Profile.swift */,
+				36CF466824ADF55900432082 /* UserOutfits.swift */,
+				36840A6D24B366050054943E /* UserReviews.swift */,
+				36840A6B24B33B570054943E /* Review.swift */,
+				36840A7324B5F3CA0054943E /* ReviewDetails.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -200,7 +206,6 @@
 				369A16B523CD916300C0AB15 /* BackgroundImage.swift */,
 				36D1924723F1A2B20078ED6B /* Logo.swift */,
 				3617240E2417583A00CFC6BC /* UsersItems.swift */,
-				36CF466824ADF55900432082 /* UserOutfits.swift */,
 				36E3F0D92412909A00E322B7 /* ReviewCardFour.swift */,
 				3617240C2417508100CFC6BC /* ProfilePicture.swift */,
 				3638F386240CFA4300CFC4F4 /* OutfitCard.swift */,
@@ -211,11 +216,9 @@
 				366C444823FA826B0057267E /* RatingView.swift */,
 				366C4459240119D40057267E /* RatingForm_Edit.swift */,
 				367C753E2462040A00066F4E /* ReviewCardThree.swift */,
-				36840A6B24B33B570054943E /* NeuromorphicCard.swift */,
-				36840A6D24B366050054943E /* UserReviews.swift */,
 				36840A6F24B3698D0054943E /* NeomorphicOutfit.swift */,
 				366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */,
-				36840A7324B5F3CA0054943E /* ReviewDetails.swift */,
+				36840A7F24B9F69D0054943E /* OutfitDetails.swift */,
 				36840A7B24B6830A0054943E /* NeuromorphicRectButton.swift */,
 				36840A7924B681560054943E /* NeuromorphicRoundButton.swift */,
 			);
@@ -460,13 +463,14 @@
 				369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */,
 				369A16B223CD6D5400C0AB15 /* ItemDetails.swift in Sources */,
 				36840A6424B1A8470054943E /* NeuromorphicMypage.swift in Sources */,
+				36840A8024B9F69D0054943E /* OutfitDetails.swift in Sources */,
 				366D8EE624335ED500BA64B7 /* ReviewCard_Edit.swift in Sources */,
 				3617240D2417508100CFC6BC /* ProfilePicture.swift in Sources */,
 				366C445423FE68380057267E /* TimelineView.swift in Sources */,
 				366D8EE824335F8C00BA64B7 /* RatingForm_Display.swift in Sources */,
 				36840A7024B3698D0054943E /* NeomorphicOutfit.swift in Sources */,
 				36840A6E24B366050054943E /* UserReviews.swift in Sources */,
-				36840A6C24B33B570054943E /* NeuromorphicCard.swift in Sources */,
+				36840A6C24B33B570054943E /* Review.swift in Sources */,
 				36F820EA244C2BA0005A5107 /* Profile.swift in Sources */,
 				366C444C23FB82710057267E /* MyPageViewController.swift in Sources */,
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,

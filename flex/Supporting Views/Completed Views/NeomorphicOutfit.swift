@@ -18,6 +18,7 @@ struct NeuromorphicOutfit: View {
         
         VStack(spacing:12) {
             ZStack {
+                //글씨
                 VStack(spacing: 5) {
                     HStack(spacing: 10) {
                         Text("Top")
@@ -59,6 +60,7 @@ struct NeuromorphicOutfit: View {
                 }
                 .offset(y:-50)
                 .animation(.spring())
+                //이미지
                 VStack {
                     RectangleImage(image: image)
                         .frame(width: 130, height: 180)
