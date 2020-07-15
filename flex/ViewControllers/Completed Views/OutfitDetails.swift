@@ -219,7 +219,7 @@ struct OutfitDetails: View {
                     
                 }
                     //Set Offset for entire VStack
-                    .offset(y:30)
+//                    .offset(y:30)
                 
             }
             // MARK: - 댓글창
@@ -255,6 +255,7 @@ struct OutfitDetails: View {
                 
                 
             }
+            .navigationBarTitle("Outfit Details", displayMode: .inline)
         }
     }
 }

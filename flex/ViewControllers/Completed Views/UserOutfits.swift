@@ -16,8 +16,8 @@ struct UserOutfits: View {
             ScrollView {
                 VStack {
                     HStack {
-                        NeuromorphicOutfit(image: Image("outfit"), brand: "testing", product: "가을아 와라")
-                        NeuromorphicOutfit(image: Image("outfitTwo"), brand: "데일리룩", product: "덥다")
+                        Outfit(image: Image("outfit"), brand: "testing", product: "가을아 와라")
+                        Outfit(image: Image("outfitTwo"), brand: "데일리룩", product: "덥다")
                     }
 
                 }

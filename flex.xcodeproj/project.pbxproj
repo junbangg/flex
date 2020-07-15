@@ -33,7 +33,7 @@
 		36840A6424B1A8470054943E /* NeuromorphicMypage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6324B1A8470054943E /* NeuromorphicMypage.swift */; };
 		36840A6C24B33B570054943E /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6B24B33B570054943E /* Review.swift */; };
 		36840A6E24B366050054943E /* UserReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6D24B366050054943E /* UserReviews.swift */; };
-		36840A7024B3698D0054943E /* NeomorphicOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6F24B3698D0054943E /* NeomorphicOutfit.swift */; };
+		36840A7024B3698D0054943E /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A6F24B3698D0054943E /* Outfit.swift */; };
 		36840A7424B5F3CA0054943E /* ReviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7324B5F3CA0054943E /* ReviewDetails.swift */; };
 		36840A7A24B681570054943E /* NeuromorphicRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7924B681560054943E /* NeuromorphicRoundButton.swift */; };
 		36840A7C24B6830A0054943E /* NeuromorphicRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36840A7B24B6830A0054943E /* NeuromorphicRectButton.swift */; };
@@ -92,7 +92,7 @@
 		36840A6324B1A8470054943E /* NeuromorphicMypage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuromorphicMypage.swift; sourceTree = "<group>"; };
 		36840A6B24B33B570054943E /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		36840A6D24B366050054943E /* UserReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviews.swift; sourceTree = "<group>"; };
-		36840A6F24B3698D0054943E /* NeomorphicOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeomorphicOutfit.swift; sourceTree = "<group>"; };
+		36840A6F24B3698D0054943E /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
 		36840A7324B5F3CA0054943E /* ReviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetails.swift; sourceTree = "<group>"; };
 		36840A7924B681560054943E /* NeuromorphicRoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuromorphicRoundButton.swift; sourceTree = "<group>"; };
 		36840A7B24B6830A0054943E /* NeuromorphicRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuromorphicRectButton.swift; sourceTree = "<group>"; };
@@ -186,6 +186,8 @@
 				36840A6D24B366050054943E /* UserReviews.swift */,
 				36840A6B24B33B570054943E /* Review.swift */,
 				36840A7324B5F3CA0054943E /* ReviewDetails.swift */,
+				36840A6F24B3698D0054943E /* Outfit.swift */,
+				36840A7F24B9F69D0054943E /* OutfitDetails.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -216,9 +218,7 @@
 				366C444823FA826B0057267E /* RatingView.swift */,
 				366C4459240119D40057267E /* RatingForm_Edit.swift */,
 				367C753E2462040A00066F4E /* ReviewCardThree.swift */,
-				36840A6F24B3698D0054943E /* NeomorphicOutfit.swift */,
 				366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */,
-				36840A7F24B9F69D0054943E /* OutfitDetails.swift */,
 				36840A7B24B6830A0054943E /* NeuromorphicRectButton.swift */,
 				36840A7924B681560054943E /* NeuromorphicRoundButton.swift */,
 			);
@@ -468,7 +468,7 @@
 				3617240D2417508100CFC6BC /* ProfilePicture.swift in Sources */,
 				366C445423FE68380057267E /* TimelineView.swift in Sources */,
 				366D8EE824335F8C00BA64B7 /* RatingForm_Display.swift in Sources */,
-				36840A7024B3698D0054943E /* NeomorphicOutfit.swift in Sources */,
+				36840A7024B3698D0054943E /* Outfit.swift in Sources */,
 				36840A6E24B366050054943E /* UserReviews.swift in Sources */,
 				36840A6C24B33B570054943E /* Review.swift in Sources */,
 				36F820EA244C2BA0005A5107 /* Profile.swift in Sources */,
