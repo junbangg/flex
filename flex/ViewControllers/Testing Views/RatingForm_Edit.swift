@@ -47,6 +47,22 @@ struct RatingForm_Edit: View {
                     .padding(.bottom, 20)
                     .padding(.top, 10)
 //                    .padding(.leading, 20)
+                HStack {
+                    Button(action: {
+                        //save to database and add to horizontal scroll
+                        print("save pressed")
+                    }) {
+                        Text("Save")
+                    }
+                    Spacer()
+                    Button(action: {
+                        print("delete pressed")
+                    }) {
+                        Image(systemName: "trash")
+                            .foregroundColor(Color.red)
+                    }
+                }
+                .padding(.bottom, 10)
             }
             
         }

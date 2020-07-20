@@ -12,9 +12,12 @@ struct OutfitDetails: View {
     
     @State var bookmarkPressed : Bool = false
     @State var flamePressed : Bool = false
+    @State var username : String = "olafo0o"
     
     @State var comment : String = ""
     @State var viewState = CGSize.zero
+    @State var originalTitle : String = "도서관 가는 길"
+    @State var editedTitle : String = ""
     var body: some View {
         VStack {
             ScrollView {
@@ -39,21 +42,21 @@ struct OutfitDetails: View {
                                     .cornerRadius(10)
                                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
                                     .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
-                                Text("olafo0o")
-                                    .font(.caption)
-                                    .foregroundColor(Color.black.opacity(0.8))
-                                    .offset(y:5)
+                                //                                Text(self.username)
+                                //                                    .font(.caption)
+                                //                                    .foregroundColor(Color.black.opacity(0.8))
+                                //                                    .offset(y:5)
                             }
                             //제목
                             VStack(alignment: .leading){
-                                Text("도서관 가는 길")
+                                TextField(originalTitle,text: self.$editedTitle)
                                     .font(.title)
                                     .foregroundColor(Color.gray)
                                     .multilineTextAlignment(.center)
-//                                Text("공부하러 가는 길")
-//                                    .font(.headline)
-//                                    .foregroundColor(Color.gray)
-//                                    .multilineTextAlignment(.center)
+                                //                                Text("공부하러 가는 길")
+                                //                                    .font(.headline)
+                                //                                    .foregroundColor(Color.gray)
+                                //                                    .multilineTextAlignment(.center)
                             }
                             .padding(.leading,20)
                             //bookmark
@@ -63,7 +66,7 @@ struct OutfitDetails: View {
                             }) {
                                 Image(systemName: "bookmark")
                                     .foregroundColor(self.bookmarkPressed == false ? .gray : .blue)
-                                .font(.system(size: 35, weight: .medium))
+                                    .font(.system(size: 35, weight: .medium))
                             }
                         }
                         Spacer(minLength: 0)
@@ -116,7 +119,7 @@ struct OutfitDetails: View {
                                     .fixedSize()
                                     .frame(width:50)
                                     .foregroundColor(Color.gray)
-//                                    .offset(x:-10)
+                                //                                    .offset(x:-10)
                             }
                             .offset(x:20)
                             
@@ -155,8 +158,8 @@ struct OutfitDetails: View {
                             VStack(alignment: .leading,spacing: 70) {
                                 HStack {
                                     Text("Top")
-                                    .font(.headline)
-                                    .foregroundColor(Color.gray)
+                                        .font(.headline)
+                                        .foregroundColor(Color.gray)
                                     Spacer()
                                     Text("유니클로")
                                         .font(.title)
@@ -165,14 +168,14 @@ struct OutfitDetails: View {
                                 }
                                 
                                 HStack {
-                                   Text("Bottom")
-                                    .font(.headline)
-                                    .foregroundColor(Color.gray)
+                                    Text("Bottom")
+                                        .font(.headline)
+                                        .foregroundColor(Color.gray)
                                     Spacer()
                                     Text("APC")
-                                    .font(.title)
-                                    .foregroundColor(Color.black)
-                                    .offset(x:-220)
+                                        .font(.title)
+                                        .foregroundColor(Color.black)
+                                        .offset(x:-220)
                                 }
                                 HStack {
                                     Text("Shoe")
@@ -180,27 +183,38 @@ struct OutfitDetails: View {
                                         .foregroundColor(Color.gray)
                                     Spacer()
                                     Text("컨버스")
-                                    .font(.title)
-                                    .foregroundColor(Color.black)
-                                    .offset(x:-220)
+                                        .font(.title)
+                                        .foregroundColor(Color.black)
+                                        .offset(x:-220)
                                 }
                                 HStack {
                                     Text("Accessory")
                                         .font(.headline)
-                                    .foregroundColor(Color.gray)
+                                        .foregroundColor(Color.gray)
                                     Spacer()
                                     Text("캉골")
-                                    .font(.title)
-                                    .foregroundColor(Color.black)
-                                    .offset(x:-220)
+                                        .font(.title)
+                                        .foregroundColor(Color.black)
+                                        .offset(x:-220)
                                 }
                                 
                             }
                         }
-                        VStack {
-                            RectangleImage(image: Image("outfitTwo"))
-                                .frame(width: 300, height: 450)
-                                .offset(x:30)
+                        ZStack {
+                            VStack {
+                                RectangleImage(image: Image("outfitTwo"))
+                                    .frame(width: 300, height: 450)
+                                    .offset(x:30)
+                            }
+                            Button(action:{
+                                print("choose new image")
+                            }){
+                                //                                Text("이미지 고르기")
+                                Image(systemName: "plus.app")
+                                    .font(.system(size:30,weight:.light))
+                                    .foregroundColor(MyColors.lightBlue)
+                            }
+                            .offset(x:30,y:-20)
                         }
                         .offset(x: viewState.width)
                         .animation(.spring())
@@ -214,12 +228,14 @@ struct OutfitDetails: View {
                             }
                         )
                         
+                        
+                        
                     }
                     .padding(.top,20)
                     
                 }
-                    //Set Offset for entire VStack
-//                    .offset(y:30)
+                //Set Offset for entire VStack
+                //                    .offset(y:30)
                 
             }
             // MARK: - 댓글창
@@ -255,7 +271,7 @@ struct OutfitDetails: View {
                 
                 
             }
-            .navigationBarTitle("Outfit Details", displayMode: .inline)
+            .navigationBarTitle("olafo0o", displayMode: .inline)
         }
     }
 }

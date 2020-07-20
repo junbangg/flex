@@ -88,7 +88,7 @@ struct ReviewCard_Display: View {
                                         .foregroundColor(self.flamePressed==false ? MyColors.ferrariRed : .gray)
                                         .font(.system(size: 30, weight: .medium))
                                 }
-                            .buttonStyle(NeuromorphicRectButtonStyle())
+//                            .buttonStyle(NeuromorphicRectButtonStyle())
                             }
                                 
                             .offset(x:-10, y:-5)

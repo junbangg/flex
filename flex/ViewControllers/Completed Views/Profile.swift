@@ -6,7 +6,7 @@ struct Profile : View {
     @State var offset : CGFloat = UIScreen.main.bounds.width
     
     var width = UIScreen.main.bounds.width
-    
+   
     var body: some View{
         NavigationView {
             VStack(spacing: 0){
@@ -42,9 +42,9 @@ struct Profile : View {
             }
             .animation(.default)
             .navigationViewStyle(StackNavigationViewStyle())
-            .navigationBarTitle("")
+            .navigationBarTitle("Profile")
             .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
+//            .navigationBarBackButtonHidden(true)
         }
         
         
@@ -82,7 +82,8 @@ struct AppBar : View {
     @State var selected : Int = 0
     @State var followedPressed : Bool = false
     var width = UIScreen.main.bounds.width
-    
+    @State var intro : String = "사용자 소개"
+    @State var newIntro : String = ""
     var body: some View{
         
         VStack(alignment: .leading, content: {
@@ -110,32 +111,42 @@ struct AppBar : View {
             //Profile
             HStack {
                 //profile block
-                VStack(spacing: 0) {
-                    Rectangle()
-                        .fill(MyColors.ferrariRed)
-                        .frame(width:80, height: 3)
-                        .zIndex(1)
-                    
-                    CircleImage(image: Image("testProfile"))
-                        //                    .resizable()
-                        .frame(width:100, height:100)
-                        .padding(.top, 6)
-                        .padding(.bottom,4)
-                        .padding(.horizontal, 8)
-                        //                            .background(MyColors.offwhite)
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        //                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 8, y: 8)
-                        //                            .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
-                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
-                        .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                ZStack {
+                    VStack(spacing: 0) {
+                        Rectangle()
+                            .fill(MyColors.ferrariRed)
+                            .frame(width:80, height: 3)
+                            .zIndex(1)
+                        
+                        CircleImage(image: Image("testProfile"))
+                            //                    .resizable()
+                            .frame(width:100, height:100)
+                            .padding(.top, 6)
+                            .padding(.bottom,4)
+                            .padding(.horizontal, 8)
+                            //                            .background(MyColors.offwhite)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            //                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 8, y: 8)
+                            //                            .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                            .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                    }
+                    Button(action: {
+                        print("add image")
+                    }) {
+                        Image(systemName: "plus.app")
+                            .font(.system(size:30,weight:.light))
+                            .foregroundColor(MyColors.lightBlue)
+                    }
                 }
+                
                 //name
                 VStack(alignment: .leading, spacing: 12) {
                     Text("olafo0o")
                         .font(.title)
                         .foregroundColor(Color.black.opacity(0.8))
-                    Text("사용자 소개")
+                    TextField(intro, text: self.$newIntro)
                         .foregroundColor(Color.black.opacity(0.7))
                 }
                 .padding(.leading,20)
@@ -173,7 +184,7 @@ struct AppBar : View {
                     self.offset = -self.width
                 }) {
                     //                        Text("Bookmarks")
-                    Image(systemName: "flame.fill")
+                    Image(systemName: "bookmark")
                         .foregroundColor(self.index==3 ? .white : .gray)
                         .padding(.vertical, 10)
                         .padding(.horizontal)

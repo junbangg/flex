@@ -46,8 +46,8 @@ struct RootViewController: View {
                 else if self.selected == 2{
                     
                     GeometryReader{_ in
-                        
-                        ReviewCard_Edit()
+                        ReviewOrOutfit()
+//                        ReviewCard_Edit()
                     }
                     
                 }
