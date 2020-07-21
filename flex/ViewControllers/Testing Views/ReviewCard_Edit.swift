@@ -117,6 +117,13 @@ struct ReviewCard_Edit: View {
             
         }
         .navigationBarTitle("Add Review", displayMode: .inline)
+    .navigationBarItems(trailing:
+        Button(action: {
+            print("Save pressed")
+        }) {
+            Text("Save")
+        }
+        )
         
         //        }
         //        .navigationBarTitle("olafo0o", displayMode: .inline)

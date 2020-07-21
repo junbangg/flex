@@ -13,7 +13,7 @@ struct ReviewOrOutfit: View {
     var body: some View {
         NavigationView {
             HStack {
-                NavigationLink(destination: ReviewCard_Edit()) {
+                NavigationLink(destination: AddOutfit()) {
                     VStack {
                         Text("Outfit")
                             .font(.headline)
