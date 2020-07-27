@@ -20,6 +20,11 @@ struct ReviewCard_Edit: View {
     @State private var testReview : String = ""
     @State private var testVotes : Int = 365
     
+    //for image picker
+    @State var isShowingImagePicker = false
+    @State var outfitImage = UIImage()
+    @State var imageSelected = false
+    
     @State var categoryChoice = 0
     var categorys = ["상의", "하의", "신발", "악세사리","기타"]
     
@@ -88,8 +93,42 @@ struct ReviewCard_Edit: View {
                     }
                     
                     //                        Spacer()
+                    Group {
+                        if imageSelected == false {
+                            Button(action: {
+                                self.isShowingImagePicker.toggle()
+                            }) {
+                                Text("이미지 추가")
+                                //                        Image(systemName:"plus")
+                                //                            .font(.system(size:30, weight:.medium))
+                            }
+                                .padding(.top, 140)
+                                .padding(.bottom, 100)
+                            .sheet(isPresented: self.$isShowingImagePicker, content: {
+                                ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$outfitImage, isSelected: self.$imageSelected)
+                            })
+                        }else {
+                            ZStack {
+                                RectangleImage(image: Image(uiImage:outfitImage))
+                                    .frame(width: UIScreen.screenWidth-100, height: 300)
+                                Button(action: {
+                                    self.isShowingImagePicker.toggle()
+                                }) {
+                                    Text("이미지 바꾸기")
+                                }
+                                
+                                .sheet(isPresented: self.$isShowingImagePicker, content: {
+                                    ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$outfitImage, isSelected: self.$imageSelected)
+                                })
+                                
+                            }
+                            .padding(.top,50)
+                        }
+                        
+                    }
                     
                     //                        Spacer()
+                    
                     ScrollView(.horizontal) {
                         Spacer()
                         HStack {
@@ -117,12 +156,12 @@ struct ReviewCard_Edit: View {
             
         }
         .navigationBarTitle("Add Review", displayMode: .inline)
-    .navigationBarItems(trailing:
-        Button(action: {
-            print("Save pressed")
-        }) {
-            Text("Save")
-        }
+        .navigationBarItems(trailing:
+            Button(action: {
+                print("Save pressed")
+            }) {
+                Text("Save")
+            }
         )
         
         //        }

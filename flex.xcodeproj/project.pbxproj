@@ -13,6 +13,8 @@
 		3617241324177CBE00CFC6BC /* OutfitCardTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */; };
 		362301C024C4416200253D3E /* ReviewOrOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362301BF24C4416200253D3E /* ReviewOrOutfit.swift */; };
 		362301C224C578F200253D3E /* AddOutfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362301C124C578F200253D3E /* AddOutfit.swift */; };
+		3632833524CE51A40017D5CF /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3632833424CE51A40017D5CF /* SignUp.swift */; };
+		3632833724CE51CE0017D5CF /* ArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3632833624CE51CE0017D5CF /* ArrowButton.swift */; };
 		3638F379240762D900CFC4F4 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F378240762D900CFC4F4 /* AddCard.swift */; };
 		3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */; };
 		3638F3812408F4A800CFC4F4 /* CircleFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F3802408F4A800CFC4F4 /* CircleFrame.swift */; };
@@ -73,6 +75,8 @@
 		3617241224177CBE00CFC6BC /* OutfitCardTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCardTwo.swift; sourceTree = "<group>"; };
 		362301BF24C4416200253D3E /* ReviewOrOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrOutfit.swift; sourceTree = "<group>"; };
 		362301C124C578F200253D3E /* AddOutfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOutfit.swift; sourceTree = "<group>"; };
+		3632833424CE51A40017D5CF /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		3632833624CE51CE0017D5CF /* ArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowButton.swift; sourceTree = "<group>"; };
 		3638F378240762D900CFC4F4 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCard.swift; sourceTree = "<group>"; };
 		3638F37A2408AF7100CFC4F4 /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 		3638F3802408F4A800CFC4F4 /* CircleFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleFrame.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				36840A7F24B9F69D0054943E /* OutfitDetails.swift */,
 				362301BF24C4416200253D3E /* ReviewOrOutfit.swift */,
 				362301C124C578F200253D3E /* AddOutfit.swift */,
+				3632833424CE51A40017D5CF /* SignUp.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				367C753E2462040A00066F4E /* ReviewCardThree.swift */,
 				366D8EE724335F8C00BA64B7 /* RatingForm_Display.swift */,
 				36840A7924B681560054943E /* NeuromorphicRoundButton.swift */,
+				3632833624CE51CE0017D5CF /* ArrowButton.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 				3677907B24260B1900C45F08 /* PopoverView.swift in Sources */,
 				369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */,
 				36840A7E24B8725B0054943E /* FloatingTabBar.swift in Sources */,
+				3632833524CE51A40017D5CF /* SignUp.swift in Sources */,
 				36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */,
 				36D1926523F7AE5C0078ED6B /* Utilities.swift in Sources */,
 				36E3F0DA2412909A00E322B7 /* ReviewCardFour.swift in Sources */,
@@ -495,6 +502,7 @@
 				36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */,
 				366D8EEA24370D2800BA64B7 /* TestingRegisterViewController.swift in Sources */,
 				369A169A23CD6B2500C0AB15 /* SceneDelegate.swift in Sources */,
+				3632833724CE51CE0017D5CF /* ArrowButton.swift in Sources */,
 				3617240F2417583A00CFC6BC /* UsersItems.swift in Sources */,
 				369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */,
 				369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */,

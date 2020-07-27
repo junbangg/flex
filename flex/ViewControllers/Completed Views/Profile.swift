@@ -6,7 +6,7 @@ struct Profile : View {
     @State var offset : CGFloat = UIScreen.main.bounds.width
     
     var width = UIScreen.main.bounds.width
-   
+    
     var body: some View{
         NavigationView {
             VStack(spacing: 0){
@@ -42,9 +42,9 @@ struct Profile : View {
             }
             .animation(.default)
             .navigationViewStyle(StackNavigationViewStyle())
-            .navigationBarTitle("Profile")
+            //        .navigationBarBackButtonHidden(true)
+            .navigationBarTitle("Profile", displayMode: .inline)
             .navigationBarHidden(true)
-//            .navigationBarBackButtonHidden(true)
         }
         
         
@@ -137,7 +137,7 @@ struct AppBar : View {
                     }) {
                         Image(systemName: "plus.app")
                             .font(.system(size:30,weight:.light))
-                            .foregroundColor(MyColors.lightBlue)
+                            .foregroundColor(MyColors.ferrariRed)
                     }
                 }
                 

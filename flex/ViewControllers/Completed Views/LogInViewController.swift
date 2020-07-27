@@ -12,7 +12,7 @@ import SwiftUI
 import SwiftKeychainWrapper
 
 struct LogInViewController: View {
-//    public var accessToken : String?
+    //    public var accessToken : String?
     
     @State private var email : String = ""
     @State private var password : String = ""
@@ -20,7 +20,6 @@ struct LogInViewController: View {
     @State private var selection : Int? = nil
     @State private var validationIncomplete : Bool = false
     
-    let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
     
     // MARK: - Method to check if all data is valid
     func validateFields() -> Bool {
@@ -36,23 +35,28 @@ struct LogInViewController: View {
                 VStack(alignment: .center, spacing: 10.0) {
                     
                     Logo()
+                    
                     // MARK: - Login Form
                     Group {
                         TextField("Email", text: $email)
                             .padding()
-                            .background(lightGreyColor)
+                            .background(MyColors.lightGreyColor)
                             .cornerRadius(5.0)
                             .padding(.bottom, 20)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                         
                         
                         TextField("Password", text: $password)
                             .padding()
-                            .background(lightGreyColor)
+                            .background(MyColors.lightGreyColor)
                             .cornerRadius(5.0)
                             .padding(.bottom, 20)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                     }
                     .padding(.horizontal, 50.0)
-                  
+                    
                     
                 }
                 .padding(.bottom, 10.0)
@@ -107,7 +111,7 @@ struct LogInViewController: View {
                                         //saved accessToken and userID
                                         let accessToken = result!["token"] as? String
                                         let userID = profile!["id"] as? Int
-//                                        print("Access Token: \(String(describing: accessToken!))")
+                                        //                                        print("Access Token: \(String(describing: accessToken!))")
                                         
                                         let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "accessToken")
                                         let saveuserID: Bool = KeychainWrapper.standard.set(userID!, forKey: "userID")
@@ -138,7 +142,7 @@ struct LogInViewController: View {
                         }) {
                             HStack(alignment: .center) {
                                 Spacer()
-                                Text("Login").foregroundColor(Color.white).bold()
+                                Text("Sign In").foregroundColor(Color.white).bold()
                                 Spacer()
                             }
                         }.padding()
@@ -157,7 +161,7 @@ struct LogInViewController: View {
                 
                 HStack {
                     //                    if self.validateFields(){
-                    NavigationLink(destination: RegisterViewController(), tag: 2, selection: $selection){
+                    NavigationLink(destination: SignUp(), tag: 2, selection: $selection){
                         EmptyView()
                         Button(action: {
                             print("testing")
@@ -193,10 +197,11 @@ struct LogInViewController: View {
                     //                    }
                 }
             }
-            
+            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarTitle("",displayMode: .inline)
+            .navigationBarHidden(true)
         }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
+        
         
     }
 }
