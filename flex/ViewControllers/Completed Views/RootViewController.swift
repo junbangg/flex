@@ -65,6 +65,8 @@ struct RootViewController: View {
             FloatingTabBar(selected: self.$selected)
             
         }
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
     }
 }
 

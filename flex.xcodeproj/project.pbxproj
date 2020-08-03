@@ -54,6 +54,8 @@
 		369A16DA23D1687000C0AB15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 369A16B923D08EA500C0AB15 /* GoogleService-Info.plist */; };
 		369A16DD23D1DC8E00C0AB15 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A16DC23D1DC8E00C0AB15 /* SignUpViewController.swift */; };
 		369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */; };
+		36C9127624D6E90A00175375 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C9127524D6E90A00175375 /* Networking.swift */; };
+		36C9127824D7BDC100175375 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C9127724D7BDC100175375 /* SignIn.swift */; };
 		36CF466924ADF55900432082 /* UserOutfits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF466824ADF55900432082 /* UserOutfits.swift */; };
 		36D1924823F1A2B20078ED6B /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924723F1A2B20078ED6B /* Logo.swift */; };
 		36D1924E23F295970078ED6B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D1924D23F295970078ED6B /* RegisterViewController.swift */; };
@@ -118,6 +120,8 @@
 		369A16B923D08EA500C0AB15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		369A16DC23D1DC8E00C0AB15 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		36C9127524D6E90A00175375 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		36C9127724D7BDC100175375 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		36CF466824ADF55900432082 /* UserOutfits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOutfits.swift; sourceTree = "<group>"; };
 		36D1924723F1A2B20078ED6B /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		36D1924D23F295970078ED6B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 			children = (
 				36D1926423F7AE5C0078ED6B /* Utilities.swift */,
 				36F820F1244C8E56005A5107 /* MyColors.swift */,
+				36C9127524D6E90A00175375 /* Networking.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -184,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				369A16DE23D1DC9900C0AB15 /* LogInViewController.swift */,
+				36C9127724D7BDC100175375 /* SignIn.swift */,
+				3632833424CE51A40017D5CF /* SignUp.swift */,
 				36D1924D23F295970078ED6B /* RegisterViewController.swift */,
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
 				3677907C242881AA00C45F08 /* RootViewController.swift */,
@@ -197,7 +204,6 @@
 				36840A7F24B9F69D0054943E /* OutfitDetails.swift */,
 				362301BF24C4416200253D3E /* ReviewOrOutfit.swift */,
 				362301C124C578F200253D3E /* AddOutfit.swift */,
-				3632833424CE51A40017D5CF /* SignUp.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				367C753F2462040A00066F4E /* ReviewCardThree.swift in Sources */,
+				36C9127624D6E90A00175375 /* Networking.swift in Sources */,
 				362301C024C4416200253D3E /* ReviewOrOutfit.swift in Sources */,
 				3677907B24260B1900C45F08 /* PopoverView.swift in Sources */,
 				369A169823CD6B2500C0AB15 /* AppDelegate.swift in Sources */,
@@ -497,6 +504,7 @@
 				3638F3812408F4A800CFC4F4 /* CircleFrame.swift in Sources */,
 				36D1924823F1A2B20078ED6B /* Logo.swift in Sources */,
 				36840A7424B5F3CA0054943E /* ReviewDetails.swift in Sources */,
+				36C9127824D7BDC100175375 /* SignIn.swift in Sources */,
 				369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */,
 				366C445A240119D40057267E /* RatingForm_Edit.swift in Sources */,
 				36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */,

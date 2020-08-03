@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         // Create the SwiftUI view that provides the window contents.
-        let contentView = LogInViewController()
+        let contentView = SignIn()
         
         //token based rootview
 //        rootView: AppRootView()

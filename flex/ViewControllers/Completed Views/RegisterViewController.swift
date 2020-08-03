@@ -79,9 +79,9 @@ struct RegisterViewController: View {
         if username.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return false
         }
-        if gender.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            return false
-        }
+//        if gender.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+//            return false
+//        }
         
         let cleanedPassword = passwordcheck.trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -103,10 +103,10 @@ struct RegisterViewController: View {
                             //                                TextField("Last Name", text: $lastname)
                             //                                    .border(Utilities.isBlank(self.lastname) ? Color.clear : Color.blue)
                             //                            }
-                            //                            Section {
-                            //                                TextField("First Name", text: $firstname)
-                            //                                    .border(Utilities.isBlank(self.firstname) ? Color.clear : Color.blue)
-                            //                            }
+//                            Section {
+//                                TextField("이름", text: $name)
+//                                    .border(Utilities.isBlank(self.name) ? Color.clear : Color.blue)
+//                            }
                             
                             // MARK: - Registration Form
                             Section {
@@ -157,19 +157,19 @@ struct RegisterViewController: View {
                                 TextField("Username", text: $username)
                                     .border(Utilities.isBlank(self.username) ? Color.clear : Color.blue)
                             }
-                            Section {
-                                DatePicker(selection:$birthdate,displayedComponents: .date, label: 
-                                    { Text("Birthdate") })
-                            }
-                            // FIX: Not able to press gender again after picking a gender once
-                            Section {
-                                Picker(selection: $gender, label: Text("Gender")) {
-                                    ForEach(genders, id : \.self) { (string:String) in
-                                        Text(string)
-                                    }
-                                }
-                                //check if all data is valid and add to database as a user
-                            }
+                            //                            Section {
+                            //                                DatePicker(selection:$birthdate,displayedComponents: .date, label:
+                            //                                    { Text("Birthdate") })
+                            //                            }
+                            //                            // FIX: Not able to press gender again after picking a gender once
+                            //                            Section {
+                            //                                Picker(selection: $gender, label: Text("Gender")) {
+                            //                                    ForEach(genders, id : \.self) { (string:String) in
+                            //                                        Text(string)
+                            //                                    }
+                            //                                }
+                            //                                //check if all data is valid and add to database as a user
+                            //                            }
                             //need to add function that will take the user to home page
                             //add new data to the database
                         }
@@ -183,14 +183,14 @@ struct RegisterViewController: View {
                                     // MARK: - Login Handling
                                     if self.validateFields() {
                                         // fire off a login request to server of localhost
-                                        guard let url = URL(string: "http://15.164.142.209:3001/api/users/register") else { return }
+                                        guard let url = URL(string: "http://localhost:3000/api/users") else { return }
                                         
                                         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
                                         
                                         components.queryItems = [
                                             URLQueryItem(name: "email", value: self.email),
-                                            URLQueryItem(name: "pw", value: self.passwordcheck),
-                                            URLQueryItem(name: "name", value: self.username)
+                                            URLQueryItem(name: "password", value: self.passwordcheck),
+                                            URLQueryItem(name: "username", value: self.username)
                                         ]
                                         let query = components.url!.query
                                         

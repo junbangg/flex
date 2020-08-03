@@ -11,7 +11,7 @@
 import SwiftUI
 import SwiftKeychainWrapper
 
-struct LogInViewController: View {
+struct SignIn: View {
     //    public var accessToken : String?
     
     @State private var email : String = ""
@@ -36,7 +36,6 @@ struct LogInViewController: View {
                 VStack(alignment: .center, spacing: 10.0) {
                     
                     Logo()
-                    
                     // MARK: - Login Form
                     Group {
                         TextField("Email", text: $email)
@@ -58,18 +57,17 @@ struct LogInViewController: View {
                     }
                     .padding(.horizontal, 50.0)
                     
-                    
                 }
                 .padding(.bottom, 10.0)
                 
                 HStack {
-                    //                    if self.validateFields(){
+                    // MARK: - Login Button
                     NavigationLink(destination: RootViewController(), tag: 1, selection: $selection){
                         EmptyView()
                         
                         Button(action: {
-                            let cleanedEmail = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
-                            let cleanedPassword = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
+                            //                            let cleanedEmail = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
+                            //                            let cleanedPassword = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
                             
                             //maybe make an if statement to check if email and password is empty?
                             
@@ -78,25 +76,26 @@ struct LogInViewController: View {
                             
                             guard let myUrl = URL(string: "http://localhost:3000/api/users/login") else {return }
                             
-                            var components = URLComponents(url: myUrl, resolvingAgainstBaseURL: false)!
-                            
-                            components.queryItems = [
-                                URLQueryItem(name: "email", value: self.email),
-                                URLQueryItem(name: "password", value: self.password)
-                            ]
-                            let query = components.url!.query
+                            let params = ["email": self.email, "password": self.password]
                             
                             var loginRequest = URLRequest(url: myUrl)
                             loginRequest.httpMethod = "POST"
-                            loginRequest.httpBody = Data(query!.utf8)
                             
-                            let task = URLSession.shared.dataTask(with: loginRequest) { (data: Data?, response : URLResponse?, error: Error?) in
-                                
-                                if let err = error {
-                                    print("Failed to login:", err)
+                            do {
+                                loginRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+                            } catch let error{
+                                print(error.localizedDescription)
+                            }
+                            
+                            loginRequest.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                            
+                            URLSession.shared.dataTask(with: loginRequest as URLRequest){
+                                (data,resp,err) in
+                                if let err = err {
+                                    print("Failed to login:",err)
+                                    self.loginFailed = true
                                     return
                                 }
-                                // MARK: - Receive JSON Data
                                 do {
                                     //parsed JSON into dictionary
                                     let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
@@ -104,17 +103,18 @@ struct LogInViewController: View {
                                     if let parseJSON = json {
                                         //additional error handeling required
                                         let status = parseJSON["status"] as? Int
-                                        print(parseJSON)
+                                        
                                         if status == 200 {
                                             print(parseJSON)
                                             //extracted result dictionary from whole JSON
-                                            let result = parseJSON["result"] as? [String: AnyObject]
+                                            let results = parseJSON["results"] as? [String: AnyObject]
                                             //extracted profile dictionary from result dictionary
-                                            let profile = result!["profile"] as? [String: AnyObject]
+                                            let profile = results!["profile"] as? [String: AnyObject]
                                             //saved accessToken and userID
-                                            let accessToken = result!["token"] as? String
-                                            let userID = profile!["id"] as? Int
-                                            //                                        print("Access Token: \(String(describing: accessToken!))")
+                                            let accessToken = results!["token"] as? String
+                                            let userID = profile!["user_id"] as? Int
+                                            print("userID:", userID!)
+                                            print("Access Token: \(String(describing: accessToken!))")
                                             
                                             let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "accessToken")
                                             let saveuserID: Bool = KeychainWrapper.standard.set(userID!, forKey: "userID")
@@ -130,19 +130,20 @@ struct LogInViewController: View {
                                             self.selection = 1
                                             print("Probably logged in successfully..")
                                             //
+                                        }else {
+                                            self.loginFailed = true
                                         }
-                                        self.loginFailed = true
-                                        
-                                        
                                     } else {
+                                        self.loginFailed = true
                                         print("something went wrong")
                                     }
                                 } catch {
+                                    self.loginFailed = true
                                     print(error)
                                 }
                                 
-                            }
-                            task.resume() // never forget this resume
+                            }.resume()
+                            
                             
                             
                         }) {
@@ -212,8 +213,8 @@ struct LogInViewController: View {
     }
 }
 
-struct LogInViewController_Previews: PreviewProvider {
+struct SignIn_Previews: PreviewProvider {
     static var previews: some View {
-        LogInViewController()
+        SignIn()
     }
 }

@@ -12,19 +12,54 @@ struct SignUp: View {
     
     @State private var entry : Int = 0
     @State private var name : String = ""
+    @State private var username : String = ""
     @State private var email : String = ""
     @State private var password : String = ""
     @State private var checkPassword : String = ""
+    @State private var validationIncomplete : Bool = false
+    @State private var registerSuccess : Bool = false
     
+    // MARK: - Method to check information validation
+    func validateFields() -> Bool {
+        
+        //        if lastname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        //            return false
+        //        }
+        //        if firstname.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        //        }
+        if email.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        if password.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        if checkPassword.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        if username.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return false
+        }
+        //        if gender.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+        //            return false
+        //        }
+        
+        let cleanedPassword = checkPassword.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if Utilities.isValidPassword(cleanedPassword) == false {
+            return false
+        }
+        
+        return true
+    }
     var body: some View {
         
         VStack {
-            //            Spacer()
+            //Name
             if self.entry == 0 {
-                TextField("What is your name?", text: $name)
+                TextField("이름", text: $name)
                     .padding()
                     .background(MyColors.lightGreyColor)//or white
-//                    .background(Color.white)
+                    //                    .background(Color.white)
                     .cornerRadius(5.0)
                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                     .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
@@ -40,11 +75,32 @@ struct SignUp: View {
                 
                 Spacer()
             }
+            //username
             else if self.entry == 1 {
-                TextField("your@email.com", text: $email)
+                TextField("닉네임", text: $username)
+                    .padding()
+                    .background(MyColors.lightGreyColor)//or white
+                    //                    .background(Color.white)
+                    .cornerRadius(5.0)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                    .padding(.horizontal, 50.0)
+                    .padding(.bottom, 50.0)
+                    .padding(.top,150.0)
+                
+                if Utilities.isBlank(self.username) == false{
+                    Button(action: {self.entry += 1}) {
+                        ArrowButton()
+                    }
+                }
+                Spacer()
+            }
+                //email
+            else if self.entry == 2 {
+                TextField("이메일", text: $email)
                     .padding()
                     .background(MyColors.lightGreyColor)
-//                    .background(Color.white)
+                    //                    .background(Color.white)
                     .cornerRadius(5.0)
                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                     .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
@@ -59,8 +115,9 @@ struct SignUp: View {
                 
                 Spacer()
             }
-            else if self.entry == 2 {
-                TextField("Enter your password", text: $password)
+                //password
+            else if self.entry == 3 {
+                TextField("비밀번호", text: $password)
                     .padding()
                     .background(MyColors.lightGreyColor)
                     .cornerRadius(5.0)
@@ -69,7 +126,7 @@ struct SignUp: View {
                     .padding(.horizontal, 50.0)
                     .padding(.bottom, 50.0)
                     .padding(.top,150.0)
-                if Utilities.isBlank(self.password) == false{
+                if Utilities.isValidPassword(self.password) == true{
                     Button(action: {self.entry += 1}) {
                         ArrowButton()
                     }
@@ -77,11 +134,12 @@ struct SignUp: View {
                 
                 Spacer()
             }
-            else if self.entry == 3 {
-                TextField("Confirm your password", text: $checkPassword)
+                //password check
+            else if self.entry == 4 {
+                TextField("비밀번호 확인", text: $checkPassword)
                     .padding()
                     .background(MyColors.lightGreyColor)
-//                    .background(Color.white)
+                    //                    .background(Color.white)
                     .cornerRadius(5.0)
                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                     .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
@@ -89,16 +147,86 @@ struct SignUp: View {
                     .padding(.bottom, 50.0)
                     .padding(.top,150.0)
                 if Utilities.matchPasswords(self.password, self.checkPassword){
-                    Button(action: {self.entry += 1}) {
+                    Button(action: {
+                        // MARK: - Login Handling
+                        if self.validateFields() {
+                            
+                            guard let myUrl = URL(string: "http://localhost:3000/api/users") else { return }
+                            
+                            let params = ["email": self.email, "password": self.checkPassword, "username": self.username]
+                            
+                            var request = URLRequest(url: myUrl)
+                            request.httpMethod = "POST"
+                            do {
+                                request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+                            } catch let error{
+                                print(error.localizedDescription)
+                            }
+                            request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                            
+                            //                                            loginRequest.httpBody = try JSONSerialization.data(withJSONObject: data, options:.init())
+                            
+                            URLSession.shared.dataTask(with: request as URLRequest) { (data: Data?, response: URLResponse?, error : Error?) in
+                                
+                                if let err = error {
+                                    print("Failed to login:", err)
+                                    return
+                                }
+                                do {
+                                    //parsed JSON into dictionary
+                                    let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                                    
+                                    if let parseJSON = json {
+                                        //additional error handeling required
+                                        let status = parseJSON["status"] as? Int
+                                        print(parseJSON)
+                                        if status == 200 {
+                                            print(parseJSON)
+                                            print("Successfully Registered")
+                                            self.entry += 1
+                                            self.registerSuccess = true
+                                            //
+                                        }
+                                        
+                                        
+                                    } else {
+                                        print("something went wrong")
+                                    }
+                                } catch {
+                                    print(error)
+                                }
+                                //                                print("Successfully Registered")
+                                //                                self.entry += 1
+                                //                                self.registerSuccess = true
+                                
+                                
+                            }
+                                .resume() // never forget this resume
+                        }
+                        else {
+                            //enable validation alert
+                            self.validationIncomplete = true
+                            print("error")
+                        }
+                        
+                    }) {
                         ArrowButton()
+                    }
+                    .alert(isPresented: $validationIncomplete) {
+                        Alert(title: Text("Incomplete form"), message: Text("Please check if all fields are correctly filled"))
+                    }
+                    .alert(isPresented: $registerSuccess) {
+                        
+                        Alert(title: Text("Register Successful"), message: Text("Thank you for your time!"))
+                        
                     }
                 }
                 
                 Spacer()
             }
-            else {
+            else if self.entry == 5 {
                 GeometryReader {_ in
-                    RootViewController()
+                    SignIn()
                 }
             }
             
