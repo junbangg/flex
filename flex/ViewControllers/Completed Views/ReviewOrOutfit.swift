@@ -107,7 +107,7 @@ struct NeuromorphicRectButtonStyle: ButtonStyle {
                 }
                     
                     //                .frame(width:50,height:35)
-                    .frame(width:300,height:200)
+                    .frame(width:75,height:40)
                 
         )
     }

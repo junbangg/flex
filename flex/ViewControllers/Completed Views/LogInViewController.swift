@@ -81,8 +81,8 @@ struct LogInViewController: View {
                             var components = URLComponents(url: myUrl, resolvingAgainstBaseURL: false)!
                             
                             components.queryItems = [
-                                URLQueryItem(name: "email", value: self.email),
-                                URLQueryItem(name: "password", value: self.password)
+                                URLQueryItem(name: "email", value: cleanedEmail),
+                                URLQueryItem(name: "password", value: cleanedPassword)
                             ]
                             let query = components.url!.query
                             

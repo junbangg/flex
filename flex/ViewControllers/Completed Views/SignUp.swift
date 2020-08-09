@@ -18,6 +18,10 @@ struct SignUp: View {
     @State private var checkPassword : String = ""
     @State private var validationIncomplete : Bool = false
     @State private var registerSuccess : Bool = false
+    @State private var imageSelected = false
+    @State private var isShowingImagePicker = false
+    @State private var outfitImage = UIImage()
+    
     
     // MARK: - Method to check information validation
     func validateFields() -> Bool {
@@ -39,9 +43,6 @@ struct SignUp: View {
         if username.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return false
         }
-        //        if gender.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-        //            return false
-        //        }
         
         let cleanedPassword = checkPassword.trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -54,7 +55,7 @@ struct SignUp: View {
     var body: some View {
         
         VStack {
-            //Name
+            // MARK: - Name
             if self.entry == 0 {
                 TextField("이름", text: $name)
                     .padding()
@@ -75,7 +76,7 @@ struct SignUp: View {
                 
                 Spacer()
             }
-            //username
+                // MARK: - Username
             else if self.entry == 1 {
                 TextField("닉네임", text: $username)
                     .padding()
@@ -95,8 +96,97 @@ struct SignUp: View {
                 }
                 Spacer()
             }
-                //email
-            else if self.entry == 2 {
+                // MARK: - Profile pic
+            else if self.entry == 2{
+                
+                if imageSelected == false {
+                    VStack {
+                        Text("프로필 이미지 설정")
+                            .padding(.bottom, 50)
+                        ZStack {
+                            CircleImage(image: Image(systemName: "person.fill"))
+                                //                    .resizable()
+                                .frame(width:200, height:200)
+                                .padding(.top, 6)
+                                .padding(.bottom,4)
+                                .padding(.horizontal, 8)
+                                //                            .background(MyColors.offwhite)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                                .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                            Button(action: {
+                                self.isShowingImagePicker.toggle()
+                            }) {
+                                Image(systemName: "plus.app")
+                                    .font(.system(size:50,weight:.light))
+                                    .foregroundColor(Color.blue)
+                            }
+                            .padding(.top)
+                            .padding(.bottom)
+                            .sheet(isPresented: self.$isShowingImagePicker, content: {
+                                ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$outfitImage, isSelected: self.$imageSelected)
+                            })
+                            
+                        }
+                            Button (action: {
+                                self.entry += 1
+                            }) {
+                                Text("나중에 할게요")
+                                    .foregroundColor(Color.gray)
+                            }
+                            .padding(.top,30)
+                        
+                    }
+                    
+                }else {
+                    VStack {
+                        Text("프로필 이미지 설정")
+                        .padding(.bottom, 50)
+                        //                        Text("프로필 사진")
+                        ZStack {
+                            CircleImage(image: Image(uiImage: outfitImage))
+                                //                    .resizable()
+                                .frame(width:200, height:200)
+                                .padding(.top, 6)
+                                .padding(.bottom,4)
+                                .padding(.horizontal, 8)
+                                //                            .background(MyColors.offwhite)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                                .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                            Button(action: {
+                                self.isShowingImagePicker.toggle()
+                            }) {
+                                Image(systemName: "plus.app")
+                                    .font(.system(size:50,weight:.light))
+                                    .foregroundColor(Color.blue)
+                            }
+                            .padding(.top)
+                            .padding(.bottom)
+                            .sheet(isPresented: self.$isShowingImagePicker, content: {
+                                ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$outfitImage, isSelected: self.$imageSelected)
+                            })
+                            
+                        }
+                        VStack {
+                            ArrowButton()
+                            Button (action: {
+                                self.entry += 1
+                            }) {
+                                Text("나중에 할게요")
+                                    .foregroundColor(Color.gray)
+                            }
+                            .padding(.top,10)
+                        }
+                        .padding(.top, 30)
+                    }
+                    
+                }
+            }
+                // MARK: - Email
+            else if self.entry == 3 {
                 TextField("이메일", text: $email)
                     .padding()
                     .background(MyColors.lightGreyColor)
@@ -115,8 +205,8 @@ struct SignUp: View {
                 
                 Spacer()
             }
-                //password
-            else if self.entry == 3 {
+                // MARK: - Password
+            else if self.entry == 4 {
                 TextField("비밀번호", text: $password)
                     .padding()
                     .background(MyColors.lightGreyColor)
@@ -134,8 +224,8 @@ struct SignUp: View {
                 
                 Spacer()
             }
-                //password check
-            else if self.entry == 4 {
+                //MARK: - Password check
+            else if self.entry == 5 {
                 TextField("비밀번호 확인", text: $checkPassword)
                     .padding()
                     .background(MyColors.lightGreyColor)
@@ -183,9 +273,8 @@ struct SignUp: View {
                                         if status == 200 {
                                             print(parseJSON)
                                             print("Successfully Registered")
-                                            self.entry += 1
                                             self.registerSuccess = true
-                                            //
+                                            self.entry += 1         
                                         }
                                         
                                         
@@ -224,7 +313,8 @@ struct SignUp: View {
                 
                 Spacer()
             }
-            else if self.entry == 5 {
+                //MARK: - Go to SignIn
+            else if self.entry == 6 {
                 GeometryReader {_ in
                     SignIn()
                 }
@@ -237,9 +327,9 @@ struct SignUp: View {
     }
     
 }
-
-struct SignUp_Previews: PreviewProvider {
-    static var previews: some View {
-        SignUp()
-    }
-}
+//
+//struct SignUp_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SignUp()
+//    }
+//}

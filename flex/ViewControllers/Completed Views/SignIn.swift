@@ -66,8 +66,8 @@ struct SignIn: View {
                         EmptyView()
                         
                         Button(action: {
-                            //                            let cleanedEmail = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
-                            //                            let cleanedPassword = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
+                            let cleanedEmail = self.email.trimmingCharacters(in: .whitespacesAndNewlines)
+                            let cleanedPassword = self.password.trimmingCharacters(in: .whitespacesAndNewlines)
                             
                             //maybe make an if statement to check if email and password is empty?
                             
@@ -76,7 +76,7 @@ struct SignIn: View {
                             
                             guard let myUrl = URL(string: "http://localhost:3000/api/users/login") else {return }
                             
-                            let params = ["email": self.email, "password": self.password]
+                            let params = ["email": cleanedEmail, "password": cleanedPassword]
                             
                             var loginRequest = URLRequest(url: myUrl)
                             loginRequest.httpMethod = "POST"

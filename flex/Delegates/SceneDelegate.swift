@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         // Create the SwiftUI view that provides the window contents.
-        let contentView = SignIn()
+//        let contentView = SignIn()
         
         //token based rootview
 //        rootView: AppRootView()
@@ -42,7 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: AppRootView())
             self.window = window
             window.makeKeyAndVisible()
         }
