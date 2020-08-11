@@ -1,20 +1,34 @@
 PODS:
+  - AWSCognito (2.15.1):
+    - AWSCore (= 2.15.1)
+  - AWSCore (2.15.1)
+  - AWSS3 (2.15.1):
+    - AWSCore (= 2.15.1)
   - KeyboardAvoider (1.0.3)
   - SwiftKeychainWrapper (3.4.0)
 
 DEPENDENCIES:
+  - AWSCognito
+  - AWSCore
+  - AWSS3
   - KeyboardAvoider (~> 1.0)
   - SwiftKeychainWrapper
 
 SPEC REPOS:
   trunk:
+    - AWSCognito
+    - AWSCore
+    - AWSS3
     - KeyboardAvoider
     - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
+  AWSCognito: 9798b956beb6fef316c2eb00c5f3fa293dcba30f
+  AWSCore: 7dec5eefb9b95739adec68dcb3dba2a6770376a6
+  AWSS3: 13059f6168fbeba52600e2cb5473eeb588d76c51
   KeyboardAvoider: 9a53d579c0d656dcb81876ae8193ef320c70d994
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
 
-PODFILE CHECKSUM: 74de85861a7cf97ca95d9c3f5bffcfe6c0b7d616
+PODFILE CHECKSUM: 75de4da382dff9dc2f77a850af3bc70f04e07d9c
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0.beta.1

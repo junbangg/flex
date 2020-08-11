@@ -8,11 +8,9 @@
 
 
 import UIKit
-
+import AWSS3
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -36,6 +34,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func initializeS3() {
+        let poolID = "us-east-2:c58a7e24-f44d-4f2c-a2e0-8b3a0ed405fd"
+        // Initialize the Amazon Cognito credentials provider
+
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast2,
+           identityPoolId: poolID)
+
+        let configuration = AWSServiceConfiguration(region:.USEast2, credentialsProvider:credentialsProvider)
+
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
     }
     
 

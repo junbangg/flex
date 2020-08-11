@@ -8,7 +8,9 @@ target 'flex' do
   # Pods for flex
 pod 'KeyboardAvoider', '~> 1.0'
 pod 'SwiftKeychainWrapper'
-
+pod 'AWSS3'
+pod 'AWSCognito'
+pod 'AWSCore'
 #pod 'AnimatedField'
 #pod 'WaterfallGrid', '~> 0.4.0'
 

@@ -22,7 +22,7 @@ struct NavigationTab: View {
             Image(systemName: "magnifyingglass")
                 .font(.system(size: 20, weight: .medium))
             Spacer()
-            NavigationLink(destination: ReviewCard_Edit()) {
+            NavigationLink(destination: ReviewOrOutfit()) {
                 Image(systemName: "plus.app")
                 .font(.system(size: 20, weight: .medium))
             }
