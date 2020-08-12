@@ -45,14 +45,12 @@ struct Profile : View {
             .animation(.default)
             .navigationViewStyle(StackNavigationViewStyle())
                 //        .navigationBarBackButtonHidden(true)
-            .navigationBarTitle("Profile", displayMode: .inline)
-            .navigationBarHidden(self.isNavBarHidden)
-            .onAppear {
-                self.isNavBarHidden = true
+                .navigationBarTitle("Profile", displayMode: .inline)
+                .navigationBarHidden(self.isNavBarHidden)
+                .onAppear {
+                    self.isNavBarHidden = true
             }
         }
-        
-        
     }
     
     func changeView(left : Bool){
@@ -107,67 +105,60 @@ struct AppBar : View {
                             .foregroundColor(.black)
                     }
                     .offset(y:1)
-                    Text("Profile")
-                        .font(.title)
+                    //MARK: -Username
+                    Text("olafo0o")
+                        .font(.title)//headline
+                        .fixedSize()
+                        .frame(width:50)
+                        .foregroundColor(Color.black.opacity(0.8))
+                        .padding(.leading)
                     Spacer(minLength: 0)
-                    
                     //Follow Button
                     FollowButton(selected: self.$selected)
                         .offset(x:30)
-                    
                 }
                 .offset(y:-20)
                 .padding()
                 VStack {
                     //MARK: -Profile
                     HStack {
-                        VStack {
-                            //MARK: -Profile Picture
-                            ZStack {
-                                VStack(spacing: 0) {
-                                    Rectangle()
-                                        .fill(MyColors.ferrariRed)
-                                        .frame(width:80, height: 3)
-                                        .zIndex(1)
-                                    
-                                    CircleImage(image: Image("testProfile"))
-                                        //                    .resizable()
-                                        .frame(width:100, height:100)
-                                        .padding(.top, 6)
-                                        .padding(.bottom,4)
-                                        .padding(.horizontal, 8)
-                                        //                            .background(MyColors.offwhite)
-                                        .background(Color.white)
-                                        .cornerRadius(10)
-                                        //                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 8, y: 8)
-                                        //                            .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
-                                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
-                                        .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
-                                }
-                                Button(action: {
-                                    self.isShowingImagePicker.toggle()
-                                }) {
-                                    Image(systemName: "plus.app")
-                                        .font(.system(size:30,weight:.light))
-                                        .foregroundColor(Color.blue)
-                                }
-                                .sheet(isPresented: self.$isShowingImagePicker, content: {
-                                    ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$profileImage, isSelected: self.$imageSelected)
-                                })
+                        //MARK: -Profile Picture
+                        ZStack {
+                            VStack(spacing: 0) {
+                                Rectangle()
+                                    .fill(MyColors.ferrariRed)
+                                    .frame(width:80, height: 3)
+                                    .zIndex(1)
+                                
+                                CircleImage(image: Image("testProfile"))
+                                    //                    .resizable()
+                                    .frame(width:100, height:100)
+                                    .padding(.top, 6)
+                                    .padding(.bottom,4)
+                                    .padding(.horizontal, 8)
+                                    //                            .background(MyColors.offwhite)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    //                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 8, y: 8)
+                                    //                            .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
+                                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                                    .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
                             }
-                            //MARK: -Username
-                            Text("olafo0o")
-                                .font(.headline)
-                                .fixedSize()
-                                .frame(width:50)
-                                .foregroundColor(Color.black.opacity(0.8))
-                            
-                            
+                            Button(action: {
+                                self.isShowingImagePicker.toggle()
+                            }) {
+                                Image(systemName: "plus.app")
+                                    .font(.system(size:30,weight:.light))
+                                    .foregroundColor(Color.blue)
+                            }
+                            .sheet(isPresented: self.$isShowingImagePicker, content: {
+                                ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$profileImage, isSelected: self.$imageSelected)
+                            })
                         }
                         //MARK: -Intro
                         TextField(intro, text: self.$newIntro)
                             .foregroundColor(Color.black.opacity(0.7))
-                            .offset(x: 5,y:-50)
+                            .offset(x: 5, y:-45)//y -50
                     }
                     .padding(.horizontal,20)
                     //MARK: -Data
@@ -202,13 +193,14 @@ struct AppBar : View {
                             
                         }
                     }
-                    .offset(x:100,y:-35)//45
+                        .offset(x:100)//45
                 }
                 .offset(y:-70)
             }
+            .padding(.bottom, 30)
             //MARK: - App toggle bar
             Group {
-                HStack(spacing: 25) {
+                HStack(spacing: 40) {//25
                     Spacer()
                     Button(action: {
                         self.index = 1
@@ -216,6 +208,8 @@ struct AppBar : View {
                     }) {
                         Text("Outfits")
                             .foregroundColor(self.index==1 ? .white : .gray)
+                            .fixedSize()
+                            .frame(width:35)
                             .padding(.vertical, 10)
                             .padding(.horizontal)
                             .background(self.index==1 ? MyColors.ferrariRed : Color.clear)
@@ -227,6 +221,8 @@ struct AppBar : View {
                     }) {
                         Text("Reviews")
                             .foregroundColor(self.index==2 ? .white : .gray)
+                            .fixedSize()
+                            .frame(width:35)
                             .padding(.vertical, 10)
                             .padding(.horizontal)
                             .background(self.index==2 ? MyColors.ferrariRed : Color.clear)
@@ -239,6 +235,8 @@ struct AppBar : View {
                         //                        Text("Bookmarks")
                         Image(systemName: "bookmark")
                             .foregroundColor(self.index==3 ? .white : .gray)
+                            .fixedSize()
+                            .frame(width:10)
                             .padding(.vertical, 10)
                             .padding(.horizontal)
                             .background(self.index==3 ? MyColors.ferrariRed : Color.clear)
@@ -256,7 +254,8 @@ struct AppBar : View {
                 //            .offset(y:-30)
                 //            .padding(.top,25)
             }
-            .offset(y:-100)
+                //            .padding(.top,30)
+                .offset(y:-100)
         })
     }
 }
