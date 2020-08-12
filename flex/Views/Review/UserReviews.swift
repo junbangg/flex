@@ -40,11 +40,13 @@ struct UserReviews: View {
                     .padding(.top,10)
                 }
                 .frame(width: geometry.size.width)
+                //                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 //                .padding(.top,30)
             }
             .background(Color.white)
             
         }
+        
         
         
     }
