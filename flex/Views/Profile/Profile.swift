@@ -47,8 +47,7 @@ struct Profile : View {
                     VStack {
                         //MARK: -Profile
                         HStack {
-                            //MARK: -Profile Picture
-                            
+                            //MARK: -Profile Block
                             VStack(spacing: 0) {
                                 Rectangle()
                                     .fill(MyColors.ferrariRed)
@@ -61,62 +60,111 @@ struct Profile : View {
                                     .padding(.top, 6)
                                     .padding(.bottom,4)
                                     .padding(.horizontal, 8)
-                                    //                            .background(MyColors.offwhite)
                                     .background(Color.white)
                                     .cornerRadius(10)
-                                    //                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 8, y: 8)
-                                    //                            .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
                                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
                                     .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
                             }
-                            
+//                            .padding(.leading,20)
+                            .offset(x:15)
+//                            Spacer()
                             //MARK: -Intro
-                            //TODO: - Replace TextField for display
-                            TextField(intro, text: self.$newIntro)
-                                .foregroundColor(Color.black.opacity(0.7))
-                                .offset(x: 5, y:-45)//y -50
+                            HStack {
+                                VStack {
+                                    //Posts
+                                    HStack {
+                                        Text("포스트")
+                                            .font(.headline)
+                                            .fontWeight(.medium)
+                                            .foregroundColor(MyColors.ferrariRed)
+                                        //                                        .offset(y:)
+                                        Text("18")
+                                            .font(.subheadline)
+                                            .fontWeight(.regular)
+                                            .fixedSize()
+                                            .frame(width:20)
+                                    }
+                                        .padding(.bottom,20)//5
+                                        .offset(y:-1)
+                                    //팔로워
+                                    HStack {
+                                        Text("팔로워")
+                                            .font(.headline)
+                                            .fontWeight(.medium)
+                                            .foregroundColor(MyColors.ferrariRed)
+                                            .offset(y:-1)
+                                        Text("568")
+                                            .font(.subheadline)
+                                            .fontWeight(.regular)
+                                            .fixedSize()
+                                            .frame(width:20)
+                                    }
+                                    .offset(y:3)
+                                    
+                                }
+                                VStack {
+                                    //views
+                                    HStack {
+                                        Image(systemName: "eye")
+                                            .font(.system(size: 20, weight: .light))
+                                            .foregroundColor(MyColors.ferrariRed)
+                                        //                                        .offset(x:8)
+                                        
+                                        
+                                        Text("23412")
+                                            .font(.subheadline)
+                                            .fontWeight(.regular)
+                                            .fixedSize()
+                                            .frame(width:20)
+                                            .padding(.leading, 10)
+                                        
+                                    }
+                                    .padding(.bottom,15)
+                                    .offset(y:1)
+                                    //flames
+                                    HStack {
+                                        Image(systemName: "flame")
+                                            .font(.system(size: 20, weight: .light))
+                                            .foregroundColor(MyColors.ferrariRed)
+                                            .offset(y:-2)
+                                        
+                                        
+                                        Text("1865")
+                                            .font(.subheadline)
+                                            .fontWeight(.regular)
+                                            .fixedSize()
+                                            .frame(width:20)
+                                            .padding(.leading, 10)
+                                        
+                                    }
+                                    .offset(y:1)
+                                }
+                                .padding(.horizontal, 15)
+                            }
+                                .padding(.top, 24)
+                                .padding(.bottom,24)
+                                .padding(.horizontal, 10)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                                .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                                .offset(x:70)//100
+                            
                         }
-                        .padding(.horizontal,20)
+                        .offset(x:-50)
+//                        .padding(.horizontal,20)
                         //MARK: -Data
-                        HStack {
-                            //팔로워
-                            HStack {
-                                Text("팔로워")
-                                    .font(.subheadline)
-                                    .fontWeight(.medium)
-                                    .foregroundColor(MyColors.ferrariRed)
-                                Text("200")
-                                    .font(.caption)
-                                    .fontWeight(.regular)
-                                    .fixedSize()
-                                    .frame(width:20)
-                            }
-                            .offset(y:1)
-                            //flames
-                            HStack {
-                                Image(systemName: "flame")
-                                    .font(.system(size: 20, weight: .light))
-                                    .foregroundColor(MyColors.ferrariRed)
-                                    .offset(x:10, y:-2)
-                                
-                                
-                                Text("200")
-                                    .font(.caption)
-                                    .fontWeight(.regular)
-                                    .fixedSize()
-                                    .frame(width:20)
-                                    .padding(.leading, 10)
-                                
-                            }
-                        }
-                            .offset(x:100)//45
+                        //TODO: - Replace TextField for display
+                        TextField(intro, text: self.$newIntro)
+                            .foregroundColor(Color.black.opacity(0.7))
+                            .offset(x: 30)//y -50
                     }
-                    .offset(y:-70)
+                    .offset(y:-50)//-70
                 }
-//                .padding(.bottom, 30)
+                //                .padding(.bottom, 30)
                 AppBar(index: self.$index, offset: self.$offset)
-//                    .padding(.bottom,25)
-//                    .offset(y:-90)
+                //                    .padding(.bottom,25)
+                //                    .offset(y:-90)
                 GeometryReader{g in
                     
                     HStack(spacing: 0){
@@ -128,18 +176,18 @@ struct Profile : View {
                             .frame(width: g.frame(in : .global).width)
                     }
                         .offset(x: self.offset)//y:-90
-                    .highPriorityGesture(DragGesture()
-                    .onEnded({ (value) in
-                        
-                        if value.translation.width > 50{// minimum drag...
-                            //                        print("right")
-                            self.changeView(left: false)
-                        }
-                        if -value.translation.width > 50{
-                            //                        print("left")
-                            self.changeView(left: true)
-                        }
-                    }))
+                        .highPriorityGesture(DragGesture()
+                            .onEnded({ (value) in
+                                
+                                if value.translation.width > 50{// minimum drag...
+                                    //                        print("right")
+                                    self.changeView(left: false)
+                                }
+                                if -value.translation.width > 50{
+                                    //                        print("left")
+                                    self.changeView(left: true)
+                                }
+                            }))
                     
                 }
             }
@@ -259,7 +307,7 @@ struct First : View {
             }
         }
         .background(Color.white)
-//        .offset(y:-90)
+        //        .offset(y:-90)
     }
 }
 
@@ -278,7 +326,7 @@ struct Scnd : View {
         }
             
         .background(Color.white)
-//        .offset(y:-90)
+        //        .offset(y:-90)
     }
 }
 
@@ -293,7 +341,7 @@ struct Third : View {
             }
         }
         .background(Color.white)
-//        .offset(y:-90)
+        //        .offset(y:-90)
     }
 }
 // MARK: - Follow Button
