@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         // Create the SwiftUI view that provides the window contents.
-        let contentView = RootViewController()
+        let contentView = Profile()
         
         //token based rootview
 //        rootView: AppRootView()

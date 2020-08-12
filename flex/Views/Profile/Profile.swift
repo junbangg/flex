@@ -123,39 +123,30 @@ struct AppBar : View {
                     //MARK: -Profile
                     HStack {
                         //MARK: -Profile Picture
-                        ZStack {
-                            VStack(spacing: 0) {
-                                Rectangle()
-                                    .fill(MyColors.ferrariRed)
-                                    .frame(width:80, height: 3)
-                                    .zIndex(1)
-                                
-                                CircleImage(image: Image("testProfile"))
-                                    //                    .resizable()
-                                    .frame(width:100, height:100)
-                                    .padding(.top, 6)
-                                    .padding(.bottom,4)
-                                    .padding(.horizontal, 8)
-                                    //                            .background(MyColors.offwhite)
-                                    .background(Color.white)
-                                    .cornerRadius(10)
-                                    //                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 8, y: 8)
-                                    //                            .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
-                                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
-                                    .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
-                            }
-                            Button(action: {
-                                self.isShowingImagePicker.toggle()
-                            }) {
-                                Image(systemName: "plus.app")
-                                    .font(.system(size:30,weight:.light))
-                                    .foregroundColor(Color.blue)
-                            }
-                            .sheet(isPresented: self.$isShowingImagePicker, content: {
-                                ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$profileImage, isSelected: self.$imageSelected)
-                            })
+                        
+                        VStack(spacing: 0) {
+                            Rectangle()
+                                .fill(MyColors.ferrariRed)
+                                .frame(width:80, height: 3)
+                                .zIndex(1)
+                            
+                            CircleImage(image: Image("testProfile"))
+                                //                    .resizable()
+                                .frame(width:100, height:100)
+                                .padding(.top, 6)
+                                .padding(.bottom,4)
+                                .padding(.horizontal, 8)
+                                //                            .background(MyColors.offwhite)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                //                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 8, y: 8)
+                                //                            .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
+                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                                .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
                         }
+                        
                         //MARK: -Intro
+                        //TODO: - Replace TextField for display
                         TextField(intro, text: self.$newIntro)
                             .foregroundColor(Color.black.opacity(0.7))
                             .offset(x: 5, y:-45)//y -50
@@ -311,8 +302,6 @@ struct FollowButton : View {
     var body : some View{
         
         HStack{
-            
-            //            Spacer(minLength: 0)
             
             HStack{
                 

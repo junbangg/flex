@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360EC22D24E3903700EBAFC1 /* Profile_Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360EC22C24E3903700EBAFC1 /* Profile_Edit.swift */; };
 		3617240D2417508100CFC6BC /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617240C2417508100CFC6BC /* ProfilePicture.swift */; };
 		3617240F2417583A00CFC6BC /* UsersItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617240E2417583A00CFC6BC /* UsersItems.swift */; };
 		3617241124176CA100CFC6BC /* RectangleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617241024176CA100CFC6BC /* RectangleImage.swift */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		360EC22C24E3903700EBAFC1 /* Profile_Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_Edit.swift; sourceTree = "<group>"; };
 		3617240C2417508100CFC6BC /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		3617240E2417583A00CFC6BC /* UsersItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersItems.swift; sourceTree = "<group>"; };
 		3617241024176CA100CFC6BC /* RectangleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleImage.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				36F820E9244C2BA0005A5107 /* Profile.swift */,
+				360EC22C24E3903700EBAFC1 /* Profile_Edit.swift */,
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
 			);
 			path = Profile;
@@ -549,6 +552,7 @@
 				3638F37B2408AF7100CFC4F4 /* ReviewCard.swift in Sources */,
 				3677907D242881AA00C45F08 /* RootViewController.swift in Sources */,
 				366D8ED4242A59A900BA64B7 /* ReviewCard_Display.swift in Sources */,
+				360EC22D24E3903700EBAFC1 /* Profile_Edit.swift in Sources */,
 				362301C224C578F200253D3E /* AddOutfit.swift in Sources */,
 				36840A7A24B681570054943E /* NeuromorphicRoundButton.swift in Sources */,
 				36D1925023F573510078ED6B /* KeyboardHost.swift in Sources */,
