@@ -14,13 +14,15 @@ struct Profile : View {
     @State var profileImage = UIImage()
     @State var imageSelected = false
     @State var isNavBarHidden : Bool = false
+    //Flag for Follow button or Edit button
+    @State var followFlag : Bool = false
     var body: some View{
         //MARK:- Main View
         NavigationView {
             VStack(spacing: 30){
-                //MARK: -Profile Contents
+                //MARK: - User Profile
                 VStack {
-                    //MARK: - Top
+                    //MARK: - Top Bar
                     HStack(spacing: 15) {
                         Button(action: {
                             
@@ -39,13 +41,30 @@ struct Profile : View {
                             .padding(.leading)
                         Spacer(minLength: 0)
                         //Follow Button
-                        FollowButton(selected: self.$selected)
-                            .offset(x:30)
+                        if self.followFlag == true{
+                            FollowButton(selected: self.$selected)
+//                            .offset(x:30)
+                        }else {
+                            Button (action: {
+                                print("edit")
+                            }) {
+                                Text("Edit")
+                                    .foregroundColor(Color.white)
+                                    .fixedSize()
+                                    .frame(width:20)
+                                    .padding(.vertical, 10)
+                                    .padding(.horizontal, 25)
+                                    .background(MyColors.ferrariRed)
+                                    .cornerRadius(10)
+                            }
+                            .padding(.top,5)
+                        .padding(15)
+                        }
+                        
                     }
                     .offset(y:-20)
                     .padding()
                     VStack {
-                        //MARK: -Profile
                         HStack {
                             //MARK: -Profile Block
                             VStack(spacing: 0) {
@@ -65,10 +84,11 @@ struct Profile : View {
                                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
                                     .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
                             }
-//                            .padding(.leading,20)
-                            .offset(x:15)
-//                            Spacer()
-                            //MARK: -Intro
+                                //                            .padding(.leading,20)
+                                .offset(x:15)
+                            //                            Spacer()
+                            
+                            //MARK: -Data Block
                             HStack {
                                 VStack {
                                     //Posts
@@ -141,30 +161,32 @@ struct Profile : View {
                                 }
                                 .padding(.horizontal, 15)
                             }
-                                .padding(.top, 24)
-                                .padding(.bottom,24)
-                                .padding(.horizontal, 10)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
-                                .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                            .padding(.top, 24)
+                            .padding(.bottom,24)
+                            .padding(.horizontal, 10)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                            .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
                                 .offset(x:70)//100
                             
                         }
                         .offset(x:-50)
-//                        .padding(.horizontal,20)
-                        //MARK: -Data
+                        //                        .padding(.horizontal,20)
+                        
+                        //MARK: -User Info
                         //TODO: - Replace TextField for display
                         TextField(intro, text: self.$newIntro)
                             .foregroundColor(Color.black.opacity(0.7))
-                            .offset(x: 30)//y -50
+                            .offset(x: 30,y:10)//y -50
                     }
-                    .offset(y:-50)//-70
+                        .offset(y:-50)//-70
                 }
                 //                .padding(.bottom, 30)
                 AppBar(index: self.$index, offset: self.$offset)
-                //                    .padding(.bottom,25)
-                //                    .offset(y:-90)
+                    .padding(.bottom,10)
+//                                    .offset(y:-20)
+                //MARK: - User Posts
                 GeometryReader{g in
                     
                     HStack(spacing: 0){
@@ -188,7 +210,6 @@ struct Profile : View {
                                     self.changeView(left: true)
                                 }
                             }))
-                    
                 }
             }
             .animation(.default)
@@ -234,8 +255,6 @@ struct AppBar : View {
     var width = UIScreen.main.bounds.width
     
     var body: some View{
-        
-        
         
         HStack(spacing: 40) {//25
             Spacer()
@@ -292,8 +311,6 @@ struct AppBar : View {
         //            .padding(.top,25)
         
         //            .padding(.top,30)
-        
-        
     }
 }
 
@@ -353,28 +370,19 @@ struct FollowButton : View {
     var body : some View{
         
         HStack{
-            
             HStack{
-                
                 if !self.expand{
-                    
                     Button(action: {
-                        
                         self.expand.toggle()
-                        
                     }) {
                         if self.selected == 0 {
                             Image(systemName: "flame").font(.system(size: 20, weight: .medium)).foregroundColor(.white).padding()
                         }
-                        
                     }
                 }
                 else{
-                    
                     Button(action: {
-                        
                         self.expand.toggle()
-                        
                     }) {
                         Text("팔로우")
                             .foregroundColor(MyColors.ferrariRed)
@@ -391,7 +399,8 @@ struct FollowButton : View {
                 //                .background(Color.white)
                 .background(self.expand ? .white : MyColors.ferrariRed)
                 .clipShape(Capsule())
-                .padding(22)
+//                .padding(22)
+            .padding(15)
                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                 .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))

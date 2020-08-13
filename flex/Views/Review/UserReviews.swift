@@ -23,7 +23,7 @@ struct UserReviews: View {
                         
                         Review(image: Image("acw"), brand: "ACW x Nike", product: "Zoom Vomero 5", isNavBarHidden: self.$isNavBarHidden)
                     }
-                    .padding(.top,10)
+                    .padding(.top,10)//10
                     HStack(spacing:20) {
                         
                         Review(image: Image("0"), brand: "Ader Error", product: "Color Block Jacket", isNavBarHidden: self.$isNavBarHidden)
@@ -40,6 +40,7 @@ struct UserReviews: View {
                     .padding(.top,10)
                 }
                 .frame(width: geometry.size.width)
+                
                 //                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 //                .padding(.top,30)
             }

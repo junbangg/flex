@@ -20,5 +20,8 @@ struct MyColors {
     static let midnightBlue = Color(red:34/255, green:58/255, blue: 94/255)
     static let pantoneBlue = Color(red: 153.0/255.0, green: 186.0/255.0, blue: 221/255.0)
     static let lightBlue = Color(red:0/255, green: 102/255, blue: 204/255)
-//    static let ferrariRed = Color(red:167/255, green:0/255, blue: 44/255)
+    static let acnePink = Color(red:255/255, green: 182/255, blue: 193/255)
+    static let lamboOrange = Color(red:255/255, green: 97/255, blue: 0/255)
+    static let tigerOrange = Color(red:253/255, green: 106/255, blue: 2/255)
+    static let fireBlue = Color(red:0/255, green: 0/255, blue: 255/255)
 }
