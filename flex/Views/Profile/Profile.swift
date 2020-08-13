@@ -43,11 +43,9 @@ struct Profile : View {
                         //Follow Button
                         if self.followFlag == true{
                             FollowButton(selected: self.$selected)
-//                            .offset(x:30)
+                            //                            .offset(x:30)
                         }else {
-                            Button (action: {
-                                print("edit")
-                            }) {
+                            NavigationLink(destination: ProfileEdit(isNavBarHidden: self.$isNavBarHidden)) {
                                 Text("Edit")
                                     .foregroundColor(Color.white)
                                     .fixedSize()
@@ -58,7 +56,13 @@ struct Profile : View {
                                     .cornerRadius(10)
                             }
                             .padding(.top,5)
-                        .padding(15)
+                            .padding(15
+                                //                            Button (action: {
+                                //                                print("edit")
+                                //                            }) {
+                                //
+                                //                            }
+                            )
                         }
                         
                     }
@@ -185,7 +189,7 @@ struct Profile : View {
                 //                .padding(.bottom, 30)
                 AppBar(index: self.$index, offset: self.$offset)
                     .padding(.bottom,10)
-//                                    .offset(y:-20)
+                //                                    .offset(y:-20)
                 //MARK: - User Posts
                 GeometryReader{g in
                     
@@ -399,8 +403,8 @@ struct FollowButton : View {
                 //                .background(Color.white)
                 .background(self.expand ? .white : MyColors.ferrariRed)
                 .clipShape(Capsule())
-//                .padding(22)
-            .padding(15)
+                //                .padding(22)
+                .padding(15)
                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                 .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
