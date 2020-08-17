@@ -16,7 +16,7 @@ typealias completionBlock = (_ response: Any?, _ error: Error?) -> Void
 class AWSS3Manager {
     static let shared = AWSS3Manager()
     private init () {}
-    let bucketName = "heatcheck-data"
+    let bucketName = "heatshare"
     
     //MARK: -Upload UIImage
     func uploadImage(image: UIImage, progress: progressBlock?, completion: completionBlock?) {
@@ -30,7 +30,7 @@ class AWSS3Manager {
         let fileName : String = ProcessInfo.processInfo.globallyUniqueString + (".jpeg")
         let filePath = tmpPath + "/" + fileName
         let fileURL = URL(fileURLWithPath: filePath)
-        
+
         do {
             try imageData.write(to: fileURL)
             self.uploadFile(fileURL: fileURL, fileName: fileName, contentType: "image", progress: progress, completion: completion)
@@ -38,8 +38,44 @@ class AWSS3Manager {
             let error = NSError(domain: "", code: 402, userInfo: [NSLocalizedDescriptionKey: "invalid image"])
             completion?(nil, error)
         }
-        
+
     }
+//    func uploadImage(image: UIImage, progress: progressBlock?, completion: completionBlock?) {
+//        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
+//            let error = NSError(domain: "", code: 402, userInfo: [NSLocalizedDescriptionKey: "invalid image"])
+//            completion?(nil,error)
+//            print(error)
+//            return
+//        }
+//        let tmpPath = NSTemporaryDirectory() as String
+//        let fileName : String = ProcessInfo.processInfo.globallyUniqueString + (".jpeg")
+//        let filePath = tmpPath + "/" + fileName
+//        let fileURL = URL(fileURLWithPath: filePath)
+//
+//        do {
+//            try imageData.write(to: fileURL)
+//            self.uploadFile(fileURL: fileURL, fileName: fileName, contentType: "image", progress: progress, completion: completion)
+//        } catch {
+//            let error = NSError(domain: "", code: 402, userInfo: [NSLocalizedDescriptionKey: "invalid image"])
+//            completion?(nil, error)
+//        }
+////        let accessKey = "..."
+////        let secretKey = "..."
+////        let credentialsProvider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
+////        let configuration = AWSServiceConfiguration(region: AWSRegionType., credentialsProvider: credentialsProvider)
+////        AWSServiceManager.default().defaultServiceConfiguration = configuration
+////        let url = ...URL to your file...
+////        let remoteName = "Name of uploaded file"
+////        let S3BucketName = "Name of your bucket on Amazon S3"
+////        let uploadRequest = AWSS3TransferManagerUploadRequest()!
+////        uploadRequest.body = url
+////        uploadRequest.key = remoteName
+////        uploadRequest.bucket = S3BucketName
+////        uploadRequest.contentType = "image/jpeg"
+////        uploadRequest.acl = .publicRead
+//
+//
+//    }
     //MARK: -Upload file to AWS
     /*
      fileURL : file local path url
@@ -59,13 +95,15 @@ class AWSS3Manager {
             //                uploadProgress(awsprogress.fractionCompleted)
             //            })
         }
+//        expression.setValue("public-read-write", forRequestHeader: "x-amz-acl")
+//        expression.setValue("public-read-write", forRequestParameter: "x-amz-acl")
         //Completion block
         var completionHandler: AWSS3TransferUtilityUploadCompletionHandlerBlock?
         completionHandler = { (task,error) -> Void in
             //            DispatchQueue.main.async(execute: {
             if error == nil {
                 let url = AWSS3.default().configuration.endpoint.url
-                let publicURL = url?.appendingPathComponent(self.bucketName).appendingPathComponent(self.bucketName).appendingPathComponent(fileName)
+                let publicURL = url?.appendingPathComponent(self.bucketName).appendingPathComponent(fileName)
                 print("Uploaded to \(String(describing: publicURL))")
                 if let completionBlock = completion {
                     completionBlock(publicURL?.absoluteString, nil)
@@ -74,13 +112,11 @@ class AWSS3Manager {
                 if let completionBlock = completion {
                     completionBlock(nil, error)
                 }
-                
             }
-            //            })
         }
         //Start uploading
         let awsTransferUtility = AWSS3TransferUtility.default()
-        awsTransferUtility.uploadFile(fileURL, key: fileName, contentType: contentType, expression: expression, completionHandler: completionHandler).continueWith { (task) -> Any? in
+        awsTransferUtility.uploadFile(fileURL,bucket: bucketName, key: fileName, contentType: contentType, expression: expression, completionHandler: completionHandler).continueWith { (task) -> Any? in
             if let error = task.error {
                 print("error is:\(error.localizedDescription)")
             }

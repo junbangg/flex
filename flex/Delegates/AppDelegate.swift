@@ -14,14 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.initializeS3()
         return true
     }
-//    func application(_ application: UIApplication,
-//      didFinishLaunchingWithOptions launchOptions:
-//        [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//      FirebaseApp.configure()
-//      return true
-//    }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -37,13 +32,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func initializeS3() {
-        let poolID = "us-east-2:c58a7e24-f44d-4f2c-a2e0-8b3a0ed405fd"
+        
+        let poolID = "ap-northeast-2:26175f74-7c9b-4702-813d-9a0070e8de21"
         // Initialize the Amazon Cognito credentials provider
-
-        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast2,
+        
+//        let accessKey = "AKIASV6YIEO4FGUSHCGN"
+//        let secretKey = "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"
+//        let credentialsProvider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
+//        let configuration = AWSServiceConfiguration(region: AWSRegionType.USEast2, credentialsProvider: credentialsProvider)
+//        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.APNortheast2,
            identityPoolId: poolID)
 
-        let configuration = AWSServiceConfiguration(region:.USEast2, credentialsProvider:credentialsProvider)
+        let configuration = AWSServiceConfiguration(region:.APNortheast2, credentialsProvider:credentialsProvider)
 
         AWSServiceManager.default().defaultServiceConfiguration = configuration
     }

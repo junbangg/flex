@@ -21,6 +21,7 @@
 		3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F38224090BDD00CFC4F4 /* FeedViewController.swift */; };
 		3638F387240CFA4300CFC4F4 /* OutfitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F386240CFA4300CFC4F4 /* OutfitCard.swift */; };
 		3663FA1A24E537650029BDF1 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663FA1924E537650029BDF1 /* TextView.swift */; };
+		3663FA2024E64EC40029BDF1 /* AWSNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663FA1F24E64EC40029BDF1 /* AWSNetwork.swift */; };
 		366880D524DBCA9200FF4970 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366880D424DBCA9200FF4970 /* ImagePicker.swift */; };
 		3668C8E024DD37C600443B67 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668C8DF24DD37C600443B67 /* ImageRequest.swift */; };
 		3668C8E224DD37CE00443B67 /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668C8E124DD37CE00443B67 /* ImageResponse.swift */; };
@@ -92,6 +93,7 @@
 		3638F38224090BDD00CFC4F4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3638F386240CFA4300CFC4F4 /* OutfitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCard.swift; sourceTree = "<group>"; };
 		3663FA1924E537650029BDF1 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		3663FA1F24E64EC40029BDF1 /* AWSNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSNetwork.swift; sourceTree = "<group>"; };
 		366880D424DBCA9200FF4970 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		3668C8DF24DD37C600443B67 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 		3668C8E124DD37CE00443B67 /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				36C9127524D6E90A00175375 /* Networking.swift */,
 				366880D424DBCA9200FF4970 /* ImagePicker.swift */,
 				368EB10924E12C2E00364056 /* AWSS3Manager.swift */,
+				3663FA1F24E64EC40029BDF1 /* AWSNetwork.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				3617241324177CBE00CFC6BC /* OutfitCardTwo.swift in Sources */,
 				36CF466924ADF55900432082 /* UserOutfits.swift in Sources */,
 				3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */,
+				3663FA2024E64EC40029BDF1 /* AWSNetwork.swift in Sources */,
 				36F820F2244C8E56005A5107 /* MyColors.swift in Sources */,
 				3638F379240762D900CFC4F4 /* AddCard.swift in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AWSS3
 
 struct ProfileEdit: View {
     @EnvironmentObject var obj : observed
@@ -14,14 +15,15 @@ struct ProfileEdit: View {
     @State private var text : String = ""
     @State private var imageSelected = false
     @State private var isShowingImagePicker = false
-    @State private var outfitImage = UIImage()
-    
+    @State private var profileImage = UIImage()
+//    var completionHandler: AWSS3TransferUtilityUploadCompletionHandlerBlock?
     var body: some View {
         
         VStack {
             //MARK: - Profile Picture
             ZStack {
-                CircleImage(image: Image(systemName: "person.fill"))
+                if imageSelected == false {
+                   CircleImage(image: Image(systemName: "person.fill"))
                     //                    .resizable()
                     .frame(width:200, height:200)
                     .padding(.top, 6)
@@ -32,6 +34,21 @@ struct ProfileEdit: View {
                     .cornerRadius(10)
                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
                     .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                }else {
+                    CircleImage(image: Image(uiImage: self.profileImage))
+                    //                    .resizable()
+                    .frame(width:200, height:200)
+                    .padding(.top, 6)
+                    .padding(.bottom,4)
+                    .padding(.horizontal, 8)
+                    //                            .background(MyColors.offwhite)
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                    .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                }
+                
+                    
                 Button(action: {
                     self.isShowingImagePicker.toggle()
                 }) {
@@ -42,7 +59,7 @@ struct ProfileEdit: View {
                 .padding(.top)
                 .padding(.bottom)
                 .sheet(isPresented: self.$isShowingImagePicker, content: {
-                    ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$outfitImage, isSelected: self.$imageSelected)
+                    ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$profileImage, isSelected: self.$imageSelected)
                 })
                 
             }
@@ -71,7 +88,19 @@ struct ProfileEdit: View {
         .navigationBarTitle("프로필 수정")
         .navigationBarItems(trailing:
             Button(action: {
-                print("save")
+                AWSS3Manager.shared.uploadImage(image: self.profileImage, progress: {[self] ( uploadProgress) in
+                    
+                    print(Float(uploadProgress))
+                    
+                }) {[self] (uploadedFileUrl, error) in
+                    
+//                    guard let strongSelf = self else { return }
+                    if let finalPath = uploadedFileUrl as? String { // 3
+                        print(finalPath)
+                    } else {
+                        print("\(String(describing: error?.localizedDescription))") // 4
+                    }
+                }
             }) {
                 Text("저장")
         })
