@@ -21,10 +21,7 @@
 		3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F38224090BDD00CFC4F4 /* FeedViewController.swift */; };
 		3638F387240CFA4300CFC4F4 /* OutfitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3638F386240CFA4300CFC4F4 /* OutfitCard.swift */; };
 		3663FA1A24E537650029BDF1 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663FA1924E537650029BDF1 /* TextView.swift */; };
-		3663FA2024E64EC40029BDF1 /* AWSNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663FA1F24E64EC40029BDF1 /* AWSNetwork.swift */; };
 		366880D524DBCA9200FF4970 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366880D424DBCA9200FF4970 /* ImagePicker.swift */; };
-		3668C8E024DD37C600443B67 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668C8DF24DD37C600443B67 /* ImageRequest.swift */; };
-		3668C8E224DD37CE00443B67 /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668C8E124DD37CE00443B67 /* ImageResponse.swift */; };
 		366B2DC124E4FD83000A0011 /* ProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B2DC024E4FD83000A0011 /* ProfileEdit.swift */; };
 		366C444923FA826B0057267E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444823FA826B0057267E /* RatingView.swift */; };
 		366C444C23FB82710057267E /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C444B23FB82710057267E /* MyPageViewController.swift */; };
@@ -93,10 +90,7 @@
 		3638F38224090BDD00CFC4F4 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		3638F386240CFA4300CFC4F4 /* OutfitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCard.swift; sourceTree = "<group>"; };
 		3663FA1924E537650029BDF1 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
-		3663FA1F24E64EC40029BDF1 /* AWSNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSNetwork.swift; sourceTree = "<group>"; };
 		366880D424DBCA9200FF4970 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		3668C8DF24DD37C600443B67 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
-		3668C8E124DD37CE00443B67 /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
 		366B2DC024E4FD83000A0011 /* ProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEdit.swift; sourceTree = "<group>"; };
 		366C444823FA826B0057267E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		366C444B23FB82710057267E /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -223,15 +217,6 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
-		3668C8DE24DD37AE00443B67 /* ImageModels */ = {
-			isa = PBXGroup;
-			children = (
-				3668C8DF24DD37C600443B67 /* ImageRequest.swift */,
-				3668C8E124DD37CE00443B67 /* ImageResponse.swift */,
-			);
-			path = ImageModels;
-			sourceTree = "<group>";
-		};
 		366C444A23FB82360057267E /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +234,6 @@
 				36C9127524D6E90A00175375 /* Networking.swift */,
 				366880D424DBCA9200FF4970 /* ImagePicker.swift */,
 				368EB10924E12C2E00364056 /* AWSS3Manager.swift */,
-				3663FA1F24E64EC40029BDF1 /* AWSNetwork.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -372,7 +356,6 @@
 		369A16AE23CD6C2800C0AB15 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3668C8DE24DD37AE00443B67 /* ImageModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -568,11 +551,9 @@
 				366B2DC124E4FD83000A0011 /* ProfileEdit.swift in Sources */,
 				369A169F23CD6B2500C0AB15 /* ContentView.swift in Sources */,
 				36F820F0244C4841005A5107 /* RectImage.swift in Sources */,
-				3668C8E224DD37CE00443B67 /* ImageResponse.swift in Sources */,
 				3638F3812408F4A800CFC4F4 /* CircleFrame.swift in Sources */,
 				36D1924823F1A2B20078ED6B /* Logo.swift in Sources */,
 				36840A7424B5F3CA0054943E /* ReviewDetails.swift in Sources */,
-				3668C8E024DD37C600443B67 /* ImageRequest.swift in Sources */,
 				36C9127824D7BDC100175375 /* SignIn.swift in Sources */,
 				369A16DF23D1DC9900C0AB15 /* LogInViewController.swift in Sources */,
 				366C445A240119D40057267E /* RatingForm_Edit.swift in Sources */,
@@ -590,7 +571,6 @@
 				3617241324177CBE00CFC6BC /* OutfitCardTwo.swift in Sources */,
 				36CF466924ADF55900432082 /* UserOutfits.swift in Sources */,
 				3638F38324090BDD00CFC4F4 /* FeedViewController.swift in Sources */,
-				3663FA2024E64EC40029BDF1 /* AWSNetwork.swift in Sources */,
 				36F820F2244C8E56005A5107 /* MyColors.swift in Sources */,
 				3638F379240762D900CFC4F4 /* AddCard.swift in Sources */,
 			);

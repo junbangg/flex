@@ -40,42 +40,6 @@ class AWSS3Manager {
         }
 
     }
-//    func uploadImage(image: UIImage, progress: progressBlock?, completion: completionBlock?) {
-//        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
-//            let error = NSError(domain: "", code: 402, userInfo: [NSLocalizedDescriptionKey: "invalid image"])
-//            completion?(nil,error)
-//            print(error)
-//            return
-//        }
-//        let tmpPath = NSTemporaryDirectory() as String
-//        let fileName : String = ProcessInfo.processInfo.globallyUniqueString + (".jpeg")
-//        let filePath = tmpPath + "/" + fileName
-//        let fileURL = URL(fileURLWithPath: filePath)
-//
-//        do {
-//            try imageData.write(to: fileURL)
-//            self.uploadFile(fileURL: fileURL, fileName: fileName, contentType: "image", progress: progress, completion: completion)
-//        } catch {
-//            let error = NSError(domain: "", code: 402, userInfo: [NSLocalizedDescriptionKey: "invalid image"])
-//            completion?(nil, error)
-//        }
-////        let accessKey = "..."
-////        let secretKey = "..."
-////        let credentialsProvider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
-////        let configuration = AWSServiceConfiguration(region: AWSRegionType., credentialsProvider: credentialsProvider)
-////        AWSServiceManager.default().defaultServiceConfiguration = configuration
-////        let url = ...URL to your file...
-////        let remoteName = "Name of uploaded file"
-////        let S3BucketName = "Name of your bucket on Amazon S3"
-////        let uploadRequest = AWSS3TransferManagerUploadRequest()!
-////        uploadRequest.body = url
-////        uploadRequest.key = remoteName
-////        uploadRequest.bucket = S3BucketName
-////        uploadRequest.contentType = "image/jpeg"
-////        uploadRequest.acl = .publicRead
-//
-//
-//    }
     //MARK: -Upload file to AWS
     /*
      fileURL : file local path url

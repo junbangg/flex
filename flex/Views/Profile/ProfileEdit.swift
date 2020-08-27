@@ -88,6 +88,7 @@ struct ProfileEdit: View {
         .navigationBarTitle("프로필 수정")
         .navigationBarItems(trailing:
             Button(action: {
+                //MARK: - Upload image to AWSS3
                 AWSS3Manager.shared.uploadImage(image: self.profileImage, progress: {[self] ( uploadProgress) in
                     
                     print(Float(uploadProgress))
