@@ -314,11 +314,11 @@ struct SignUp: View {
                 Spacer()
             }
                 //MARK: - Go to SignIn
-            else if self.entry == 6 {
-                GeometryReader {_ in
-                    SignIn()
-                }
-            }
+//            else if self.entry == 6 {
+//                GeometryReader {_ in
+//                    SignIn()
+//                }
+//            }
             
             
         }

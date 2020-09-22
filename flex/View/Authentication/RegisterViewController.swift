@@ -176,7 +176,7 @@ struct RegisterViewController: View {
                         
                         // MARK: - Sign Up Button & Functionality
                         HStack {
-                            NavigationLink(destination: LogInViewController(), tag: 1, selection: $selection){
+                            NavigationLink(destination: ReviewOrOutfit(), tag: 1, selection: $selection){
                                 EmptyView()
                                 Button(action: {
                                     //navigate to home screen

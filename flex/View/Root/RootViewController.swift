@@ -1,8 +1,11 @@
 import SwiftUI
+import SwiftKeychainWrapper
 
 struct RootViewController: View {
-    
+    @ObservedObject var viewModel : ProfileViewModel
     @State var selected = 0
+    
+    let userID : Int? = KeychainWrapper.standard.integer(forKey: "userID")
     let col1 = UIColor(red: 235, green: 235, blue: 235, alpha: 1)
     
     var body: some View {
@@ -57,7 +60,9 @@ struct RootViewController: View {
                     GeometryReader{_ in
 //                        NeuromorphicMypage()
                         Profile()
+//                        self.viewModel.goToProfile
                     }
+                
                 }
                 
             }.background(Color(.white).edgesIgnoringSafeArea(.all))
@@ -67,13 +72,15 @@ struct RootViewController: View {
         }
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarHidden(true)
+        .onAppear(perform: self.viewModel.refresh)
     }
+    
 }
 
-struct RootViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        RootViewController()
-    }
-}
+//struct RootViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RootViewController()
+//    }
+//}
 
 

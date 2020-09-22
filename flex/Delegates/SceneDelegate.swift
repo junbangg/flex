@@ -32,18 +32,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //            print("nothing in accessToken")
         //        }
         
+        // MARK: -Original Version
         
         // Create the SwiftUI view that provides the window contents.
-        let obj = observed()
-//        let contentView = Profile()
-        let contentView = SignIn()
-        //token based rootview
-//        rootView: AppRootView()
+        //        let obj = observed()
+        //        //        let contentView = Profile()
+        //        let contentView = SignIn()
+        //        //token based rootview
+        //        //        rootView: AppRootView()
+        //
+        //        // Use a UIHostingController as window root view controller.
+        //
+        //        if let windowScene = scene as? UIWindowScene {
+        //            let window = UIWindow(windowScene: windowScene)
+        //            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(obj))
+        //            self.window = window
+        //            window.makeKeyAndVisible()
+        //        }
         
-        // Use a UIHostingController as window root view controller.
+        // MARK: Testing for MVVM
+        guard let windowscene = scene as? UIWindowScene else {return}
+        let model = APINetworking()
+        let viewModel = LoginViewModel(dataFetcher: model)
+        let view = SignIn(viewModel: viewModel)
+        
+        
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(obj))
+            window.rootViewController = UIHostingController(rootView: view)
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -79,27 +95,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
 }
-
-struct AppRootView: View {
-    let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-    
-    var body: some View {
-        Group {
-            if accessToken != nil {
-                //take user to rootviewController
-//                print("something in accessToken")
-                RootViewController()
-            }
-            else {
-                
-//                print("nothing in accessToken")
-                LogInViewController()
-            }
-        }
-        
-        
-    }
-}
+// MARK: - This is used for token authentication
+//struct AppRootView: View {
+//    let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+//
+//    var body: some View {
+//        Group {
+//            if accessToken != nil {
+//                //take user to rootviewController
+//                //                print("something in accessToken")
+//                RootViewController()
+//            }
+//            else {
+//
+//                //                print("nothing in accessToken")
+//                SignIn()
+//            }
+//        }
+//
+//
+//    }
+//}
 
 
 

@@ -1,6 +1,12 @@
 import SwiftUI
 
 struct Profile : View {
+//    let viewModel : ProfileDataViewModel //ProfileDataViewModel
+//
+//    init(viewModel: ProfileDataViewModel) {
+//        self.viewModel = viewModel
+//    }
+    
     
     @State var index = 1
     @State var offset : CGFloat = UIScreen.main.bounds.width
@@ -33,7 +39,7 @@ struct Profile : View {
                         }
                         .offset(y:1)
                         //MARK: -Username
-                        Text("olafo0o")
+                        Text("olaf") //viewModel.username
                             .font(.title)//headline
                             .fixedSize()
                             .frame(width:50)
@@ -414,8 +420,8 @@ struct FollowButton : View {
         
     }
 }
-struct Profile_Preview: PreviewProvider {
-    static var previews: some View {
-        Profile()
-    }
-}
+//struct Profile_Preview: PreviewProvider {
+//    static var previews: some View {
+//        Profile()
+//    }
+//}
