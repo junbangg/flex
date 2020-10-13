@@ -25,8 +25,9 @@ class ProfileViewModel: ObservableObject, Identifiable {
     }
     func refresh() {
         let accessToken: String? = "Bearer " + KeychainWrapper.standard.string(forKey: "accessToken")!
+        let userID: Int? = KeychainWrapper.standard.integer(forKey: "userID")!
         dataFetcher
-            .getUserData(userID: 25, token: accessToken!)
+            .getUserData(userID: userID!, token: accessToken!)
             .map(ProfileDataViewModel.init)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: {

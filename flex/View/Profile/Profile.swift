@@ -18,6 +18,7 @@ struct Profile : View {
     @State var isShowingImagePicker = false
     @State var profileImage = UIImage()
     @State var imageSelected = false
+    //Used for hiding the navigation bar
     @State var isNavBarHidden : Bool = false
     //Flag for Follow button or Edit button
     @State var followFlag : Bool = false
@@ -51,6 +52,7 @@ struct Profile : View {
                             FollowButton(selected: self.$selected)
                             //                            .offset(x:30)
                         }else {
+                            //TODO: - Change this part to save button
                             NavigationLink(destination: ProfileEdit(isNavBarHidden: self.$isNavBarHidden)) {
                                 Text("Edit")
                                     .foregroundColor(Color.white)
