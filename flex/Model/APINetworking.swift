@@ -14,7 +14,7 @@ protocol APIRequests {
     //Login
     func login(email: String, password: String)-> AnyPublisher<APIResponse, APIError>
     //Get Data
-    func getUserData(userID: Int)-> AnyPublisher<APIResponse, APIError>
+    func getUserData(userID: Int, token: String)-> AnyPublisher<ProfileResponse, APIError>
     
 }
 // MARK: - Main Class
@@ -30,8 +30,8 @@ extension APINetworking : APIRequests {
     func login(email: String, password: String) -> AnyPublisher<APIResponse, APIError> {
         return fetch(with: prepareForLogin(email: email, password: password))
     }
-    func getUserData(userID: Int) -> AnyPublisher<APIResponse, APIError> {
-        return fetch(with: prepareForUserData(userID: userID))
+    func getUserData(userID: Int, token: String) -> AnyPublisher<ProfileResponse, APIError> {
+        return fetch(with: prepareForUserData(userID: userID, token: token))
     }
     private func fetch<T> (with request : URLRequest) ->AnyPublisher<T, APIError> where T : Decodable{
         
@@ -66,17 +66,18 @@ private extension APINetworking {
         }
         return loginRequest
     }
-    func prepareForUserData(userID: Int) -> URLRequest{
-        let url = URL(string: BaseAPI.baseURL+":id")!
-        let params = ["userID": userID]
-        var loginRequest = URLRequest(url: url)
-        loginRequest.httpMethod = "POST"
-        loginRequest.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        do {
-            loginRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-        } catch let error{
-            print(error.localizedDescription)
-        }
-        return loginRequest
+    func prepareForUserData(userID: Int, token: String) -> URLRequest{
+        let url = URL(string: BaseAPI.baseURL + String(userID))!
+//        let params = ["id" : userID]
+        var dataRequest = URLRequest(url: url)
+        dataRequest.httpMethod = "GET"
+        dataRequest.addValue(token, forHTTPHeaderField: "Authorization")
+        dataRequest.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+//        do {
+//            dataRequest.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+//        } catch let error{
+//            print(error.localizedDescription)
+//        }
+        return dataRequest
     }
 }

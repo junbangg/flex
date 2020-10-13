@@ -10,7 +10,7 @@ import Foundation
 import Combine
 
 class LoginViewModel: ObservableObject {//Identifiable
-    @Published var dataSource : ProfileDataViewModel?
+    @Published var dataSource : LoginDataViewModel?
     private let dataFetcher: APIRequests
     private var disposables = Set<AnyCancellable>()
     
@@ -24,7 +24,7 @@ class LoginViewModel: ObservableObject {//Identifiable
     func loginRequest(email: String, password: String) {
         dataFetcher
             .login(email: email, password: password)
-            .map(ProfileDataViewModel.init)
+            .map(LoginDataViewModel.init)
 //            .subscribe(on: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] value in

@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct Profile : View {
-//    let viewModel : ProfileDataViewModel //ProfileDataViewModel
-//
-//    init(viewModel: ProfileDataViewModel) {
-//        self.viewModel = viewModel
-//    }
+    let viewModel : ProfileViewModel //ProfileDataViewModel
+
+    init(viewModel: ProfileViewModel) {
+        self.viewModel = viewModel
+    }
     
     
     @State var index = 1
@@ -39,7 +39,8 @@ struct Profile : View {
                         }
                         .offset(y:1)
                         //MARK: -Username
-                        Text("olaf") //viewModel.username
+                        
+                        Text((self.viewModel.dataSource?.username ?? "username") as String)//viewModel.username
                             .font(.title)//headline
                             .fixedSize()
                             .frame(width:50)
@@ -230,6 +231,8 @@ struct Profile : View {
                 .onAppear {
                     self.isNavBarHidden = true
             }
+            .onAppear(perform: self.viewModel.refresh)
+            
         }
     }
     func changeView(left : Bool){

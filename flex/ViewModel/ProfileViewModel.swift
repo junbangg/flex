@@ -8,7 +8,9 @@
 import SwiftUI
 import Foundation
 import Combine
-//maybe add Identifiable protocol?
+import SwiftKeychainWrapper
+
+//maybe remove Identifiable protocol?
 class ProfileViewModel: ObservableObject, Identifiable {
     @Published var dataSource : ProfileDataViewModel?
     
@@ -22,27 +24,27 @@ class ProfileViewModel: ObservableObject, Identifiable {
         self.dataFetcher = dataFetcher
     }
     func refresh() {
+        let accessToken: String? = "Bearer " + KeychainWrapper.standard.string(forKey: "accessToken")!
         dataFetcher
-            .getUserData(userID: 25)
+            .getUserData(userID: 25, token: accessToken!)
             .map(ProfileDataViewModel.init)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: {
                 [weak self] value in
                 guard let self = self else { return }
-                //                value in
                 switch value {
                 case .failure:
                     self.dataSource = nil
-//                    print("failed to refresh data")
+                    print("failed to refresh data")
                 case .finished:
                     break
                 }
                 }, receiveValue: {
                     [weak self] result in
                     guard let self = self else { return }
-                    //                    result in
                     print("profile appeared")
                     self.dataSource = result
+                    print(result)
             })
             .store(in: &disposables)
         

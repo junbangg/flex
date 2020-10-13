@@ -17,9 +17,9 @@ enum ViewFactory {
         )
         return RootViewController(viewModel: viewModel)
     }
-//    static func makeProfileView (
-//        dataSource : ProfileDataViewModel
-//    ) -> some View {
-//        return Profile(viewModel: dataSource)
-//    }
+    static func makeProfileView (
+        dataSource : ProfileViewModel
+    ) -> some View {
+        return Profile(viewModel: dataSource)
+    }
 }

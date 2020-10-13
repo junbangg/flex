@@ -9,14 +9,17 @@
 //Might have to change all types to optionals
 import Foundation
 
-struct ProfileDataViewModel: Identifiable {
-    private let response : ProfileResponse
+struct LoginDataViewModel: Identifiable {
+    private let response : APIResponse
     
     var id: Int {
         return response.results!.profile.userId
     }
     var status: Int {
         return response.status
+    }
+    var token: String? {
+        return response.results!.token!
     }
     var username: String {
         return response.results!.profile.username
@@ -28,7 +31,7 @@ struct ProfileDataViewModel: Identifiable {
         return response.results!.profile.profileImage!
     }
     
-    init(response: ProfileResponse) {
+    init(response: APIResponse) {
         self.response = response
     }
     

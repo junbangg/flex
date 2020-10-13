@@ -59,7 +59,7 @@ struct RootViewController: View {
                     
                     GeometryReader{_ in
 //                        NeuromorphicMypage()
-                        Profile()
+                        Profile(viewModel: self.viewModel)
 //                        self.viewModel.goToProfile
                     }
                 
@@ -72,7 +72,7 @@ struct RootViewController: View {
         }
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarHidden(true)
-        .onAppear(perform: self.viewModel.refresh)
+//        .onAppear(perform: self.viewModel.refresh)
     }
     
 }

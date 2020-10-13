@@ -76,7 +76,7 @@ struct SignIn: View {
                             self.viewModel.loginRequest(email: cleanedEmail, password: cleanedPassword)
                             
                             if self.viewModel.dataSource?.status == 200 {
-                                let _: Bool = KeychainWrapper.standard.set(self.viewModel.dataSource!.token, forKey: "accessToken")
+                                let _: Bool = KeychainWrapper.standard.set(self.viewModel.dataSource!.token!, forKey: "accessToken")
                                 let _: Bool = KeychainWrapper.standard.set(self.viewModel.dataSource!.id, forKey: "userID")
                                 self.selection = 1
                                 print("login successful")
