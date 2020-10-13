@@ -14,7 +14,7 @@ protocol APIRequests {
     //Login
     func login(email: String, password: String)-> AnyPublisher<APIResponse, APIError>
     //Get Data
-    func getUserData(userID: Int, token: String)-> AnyPublisher<ProfileResponse, APIError>
+    func getUserData(userID: Int, token: String)-> AnyPublisher<APIResponse, APIError>
     
 }
 // MARK: - Main Class
@@ -30,7 +30,7 @@ extension APINetworking : APIRequests {
     func login(email: String, password: String) -> AnyPublisher<APIResponse, APIError> {
         return fetch(with: prepareForLogin(email: email, password: password))
     }
-    func getUserData(userID: Int, token: String) -> AnyPublisher<ProfileResponse, APIError> {
+    func getUserData(userID: Int, token: String) -> AnyPublisher<APIResponse, APIError> {
         return fetch(with: prepareForUserData(userID: userID, token: token))
     }
     private func fetch<T> (with request : URLRequest) ->AnyPublisher<T, APIError> where T : Decodable{

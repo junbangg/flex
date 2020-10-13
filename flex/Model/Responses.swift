@@ -58,47 +58,47 @@ struct APIResponse : Codable {
     
 }
 
-struct ProfileResponse : Codable {
-    let status : Int
-    let message : String
-    let results : ResultData?
-    
-    struct ResultData : Codable {
-        
-        let profile : UserInfo
-        
-        enum CodingKeys: String, CodingKey {
-            case profile = "profile"
-        }
-        
-        
-    }
-    struct UserInfo : Codable {
-        
-        let email : String
-        let intro : String?
-        let profileImage : String?
-        let userId : Int
-        let username : String
-        
-        enum CodingKeys: String, CodingKey {
-            case email = "email"
-            case intro = "intro"
-            case profileImage = "profile_image"
-            case userId = "user_id"
-            case username = "username"
-        }
-        
-        
-    }
-    
-    enum CodingKeys: String, CodingKey {
-        case message = "message"
-        case results = "results"
-        case status = "status"
-    }
-    
-}
+//struct ProfileResponse : Codable {
+//    let status : Int
+//    let message : String
+//    let results : ResultData?
+//
+//    struct ResultData : Codable {
+//
+//        let profile : UserInfo
+//
+//        enum CodingKeys: String, CodingKey {
+//            case profile = "profile"
+//        }
+//
+//
+//    }
+//    struct UserInfo : Codable {
+//
+//        let email : String
+//        let intro : String?
+//        let profileImage : String?
+//        let userId : Int
+//        let username : String
+//
+//        enum CodingKeys: String, CodingKey {
+//            case email = "email"
+//            case intro = "intro"
+//            case profileImage = "profile_image"
+//            case userId = "user_id"
+//            case username = "username"
+//        }
+//
+//
+//    }
+//
+//    enum CodingKeys: String, CodingKey {
+//        case message = "message"
+//        case results = "results"
+//        case status = "status"
+//    }
+//
+//}
 
 //import Foundation
 //

@@ -7,7 +7,6 @@ struct Profile : View {
         self.viewModel = viewModel
     }
     
-    
     @State var index = 1
     @State var offset : CGFloat = UIScreen.main.bounds.width
     var width = UIScreen.main.bounds.width
