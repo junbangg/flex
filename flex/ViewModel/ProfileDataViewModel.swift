@@ -19,7 +19,7 @@ struct ProfileDataViewModel: Identifiable {
         return response.status
     }
     var token: String {
-        return response.results!.token
+        return response.results!.token!
     }
     var username: String {
         return response.results!.profile.username

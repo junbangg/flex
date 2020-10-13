@@ -8,6 +8,8 @@
 
 
 //Might have to change all types to optionals
+
+//will have to change token variable to optional
 import Foundation
 
 struct APIResponse : Codable {
@@ -18,8 +20,8 @@ struct APIResponse : Codable {
 
     struct ResultData : Codable {
 
-        let profile : UserProfile
-        let token : String
+        let profile : UserInfo
+        let token : String?
 
         enum CodingKeys: String, CodingKey {
             case profile = "profile"
@@ -28,7 +30,7 @@ struct APIResponse : Codable {
 
 
     }
-    struct UserProfile : Codable {
+    struct UserInfo : Codable {
 
         let email : String
         let intro : String?
@@ -46,8 +48,7 @@ struct APIResponse : Codable {
 
 
     }
-
-
+  
     enum CodingKeys: String, CodingKey {
         case message = "message"
         case results = "results"
