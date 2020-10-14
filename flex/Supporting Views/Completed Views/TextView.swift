@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct TextView: UIViewRepresentable {
+    var text : String
     func makeCoordinator() -> Coordinator {
         return TextView.Coordinator(parent1: self)
     }
@@ -18,7 +19,7 @@ struct TextView: UIViewRepresentable {
     func makeUIView(context: UIViewRepresentableContext<TextView>) -> UITextView {
         let view = UITextView()
         view.font = .systemFont(ofSize: 15)
-        view.text = "소개 작성"
+        view.text = self.text
         view.textColor = UIColor.black.withAlphaComponent(0.35)
         view.backgroundColor = .clear
         view.delegate = context.coordinator

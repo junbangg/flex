@@ -27,6 +27,8 @@
 		365E81D524F7A66300D71384 /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E81D424F7A66300D71384 /* Parsing.swift */; };
 		365E81D824F8CFD600D71384 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E81D724F8CFD600D71384 /* ProfileViewModel.swift */; };
 		365E81DA24F8EFCC00D71384 /* ProfileDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E81D924F8EFCC00D71384 /* ProfileDataViewModel.swift */; };
+		365FEC8D25370A380054F157 /* FollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365FEC8C25370A380054F157 /* FollowButton.swift */; };
+		365FEC8F25370AF50054F157 /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365FEC8E25370AF50054F157 /* MyProfile.swift */; };
 		3663FA1A24E537650029BDF1 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663FA1924E537650029BDF1 /* TextView.swift */; };
 		366880D524DBCA9200FF4970 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366880D424DBCA9200FF4970 /* ImagePicker.swift */; };
 		366B2DC124E4FD83000A0011 /* ProfileEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B2DC024E4FD83000A0011 /* ProfileEdit.swift */; };
@@ -103,6 +105,8 @@
 		365E81D424F7A66300D71384 /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
 		365E81D724F8CFD600D71384 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		365E81D924F8EFCC00D71384 /* ProfileDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataViewModel.swift; sourceTree = "<group>"; };
+		365FEC8C25370A380054F157 /* FollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButton.swift; sourceTree = "<group>"; };
+		365FEC8E25370AF50054F157 /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
 		3663FA1924E537650029BDF1 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		366880D424DBCA9200FF4970 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		366B2DC024E4FD83000A0011 /* ProfileEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEdit.swift; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 				36F820E9244C2BA0005A5107 /* Profile.swift */,
 				366B2DC024E4FD83000A0011 /* ProfileEdit.swift */,
 				366C444B23FB82710057267E /* MyPageViewController.swift */,
+				365FEC8E25370AF50054F157 /* MyProfile.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				36840A7924B681560054943E /* NeuromorphicRoundButton.swift */,
 				3632833624CE51CE0017D5CF /* ArrowButton.swift */,
 				3663FA1924E537650029BDF1 /* TextView.swift */,
+				365FEC8C25370A380054F157 /* FollowButton.swift */,
 			);
 			path = "Completed Views";
 			sourceTree = "<group>";
@@ -588,6 +594,7 @@
 				36840A7424B5F3CA0054943E /* ReviewDetails.swift in Sources */,
 				36C9127824D7BDC100175375 /* SignIn.swift in Sources */,
 				366C445A240119D40057267E /* RatingForm_Edit.swift in Sources */,
+				365FEC8D25370A380054F157 /* FollowButton.swift in Sources */,
 				36E3F0D62412869C00E322B7 /* ReviewCardTwo.swift in Sources */,
 				365E81CF24F769D100D71384 /* Responses.swift in Sources */,
 				368EB10A24E12C2E00364056 /* AWSS3Manager.swift in Sources */,
@@ -601,6 +608,7 @@
 				3617240F2417583A00CFC6BC /* UsersItems.swift in Sources */,
 				369A16B623CD916300C0AB15 /* BackgroundImage.swift in Sources */,
 				365E81D124F76E0800D71384 /* APINetworking.swift in Sources */,
+				365FEC8F25370AF50054F157 /* MyProfile.swift in Sources */,
 				369A16B423CD6EE100C0AB15 /* CircleImage.swift in Sources */,
 				36F820EE244C4764005A5107 /* UserInfo.swift in Sources */,
 				3617241124176CA100CFC6BC /* RectangleImage.swift in Sources */,

@@ -58,7 +58,8 @@ struct RootViewController: View {
                 else{
                     
                     GeometryReader{_ in
-                        Profile(viewModel: self.viewModel)
+//                        Profile(viewModel: self.viewModel)
+                        MyProfile(viewModel: self.viewModel)
 //                        ProfileEdit()
 //                        self.viewModel.goToProfile
                     }

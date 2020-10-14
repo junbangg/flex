@@ -1,17 +1,18 @@
 import SwiftUI
 
-struct Profile : View {
+struct MyProfile : View {
     let viewModel : ProfileViewModel //ProfileDataViewModel
-
+    
     init(viewModel: ProfileViewModel) {
         self.viewModel = viewModel
     }
+    
+    @EnvironmentObject var obj : observed
     
     @State var index = 1
     @State var offset : CGFloat = UIScreen.main.bounds.width
     var width = UIScreen.main.bounds.width
     
-    @State var intro : String = "사용자 소개"
     @State var newIntro : String = ""
     @State var selected : Int = 0
     @State var followedPressed : Bool = false
@@ -48,30 +49,26 @@ struct Profile : View {
                             .padding(.leading)
                         Spacer(minLength: 0)
                         //Follow Button
-                        if self.followFlag == true{
-                            FollowButton(selected: self.$selected)
-                            //                            .offset(x:30)
-                        }else {
-                            //TODO: - Change this part to save button
-                            NavigationLink(destination: ProfileEdit(isNavBarHidden: self.$isNavBarHidden)) {
-                                Text("Edit")
-                                    .foregroundColor(Color.white)
-                                    .fixedSize()
-                                    .frame(width:20)
-                                    .padding(.vertical, 10)
-                                    .padding(.horizontal, 25)
-                                    .background(MyColors.ferrariRed)
-                                    .cornerRadius(10)
-                            }
-                            .padding(.top,5)
-                            .padding(15
-                                //                            Button (action: {
-                                //                                print("edit")
-                                //                            }) {
-                                //
-                                //                            }
-                            )
+                        //TODO: - Change this part to save button
+                        NavigationLink(destination: ProfileEdit(isNavBarHidden: self.$isNavBarHidden)) {
+                            Text("Save")
+                                .foregroundColor(Color.white)
+                                .fixedSize()
+                                .frame(width:20)
+                                .padding(.vertical, 10)
+                                .padding(.horizontal, 25)
+                                .background(MyColors.ferrariRed)
+                                .cornerRadius(10)
                         }
+                        .padding(.top,5)
+                        .padding(15
+                            //                            Button (action: {
+                            //                                print("edit")
+                            //                            }) {
+                            //
+                            //                            }
+                        )
+                        
                         
                     }
                     .offset(y:-20)
@@ -187,10 +184,32 @@ struct Profile : View {
                         //                        .padding(.horizontal,20)
                         
                         //MARK: -User Info
-                        //TODO: - Replace TextField for display
-                        TextField(intro, text: self.$newIntro)
+                        //******************Version for multiline textview
+                        //
+                        
+                        //                        VStack {
+                        //                            //Text with regular intro.. but when tapped changes to editable
+                        //                            TextView(text: self.viewModel.dataSource?.intro ?? "소개작성")
+                        //                                .frame(height:self.obj.size)
+                        //                                .padding()
+                        //                                .background(Color.white)
+                        //                                .cornerRadius(10)
+                        //
+                        //                        }
+                        //                        .padding(.top, 6)
+                        //                        .padding(.bottom,4)
+                        //                        .padding(.horizontal, 8)
+                        //                        .background(Color.white)
+                        //                        .cornerRadius(10)
+                        //                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                        //                        .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                        //                        .padding()
+                        
+                        
+                        TextField(self.viewModel.dataSource?.intro ?? "소개작성", text: self.$newIntro)
                             .foregroundColor(Color.black.opacity(0.7))
                             .offset(x: 30,y:10)//y -50
+                        
                     }
                         .offset(y:-50)//-70
                 }
@@ -261,120 +280,120 @@ struct Profile : View {
     }
 }
 //MARK: - App toggle bar
-struct AppBar : View {
-    
-    @Binding var index : Int
-    @Binding var offset : CGFloat
-    
-    var width = UIScreen.main.bounds.width
-    
-    var body: some View{
-        
-        HStack(spacing: 40) {//25
-            Spacer()
-            Button(action: {
-                self.index = 1
-                self.offset = self.width
-            }) {
-                Text("Outfits")
-                    .foregroundColor(self.index==1 ? .white : .gray)
-                    .fixedSize()
-                    .frame(width:35)
-                    .padding(.vertical, 10)
-                    .padding(.horizontal)
-                    .background(self.index==1 ? MyColors.ferrariRed : Color.clear)
-                    .cornerRadius(10)
-            }
-            Button(action: {
-                self.index = 2
-                self.offset = 0
-            }) {
-                Text("Reviews")
-                    .foregroundColor(self.index==2 ? .white : .gray)
-                    .fixedSize()
-                    .frame(width:50)
-                    .padding(.vertical, 10)
-                    .padding(.horizontal)
-                    .background(self.index==2 ? MyColors.ferrariRed : Color.clear)
-                    .cornerRadius(10)
-            }
-            Button(action: {
-                self.index = 3
-                self.offset = -self.width
-            }) {
-                //                        Text("Bookmarks")
-                Image(systemName: "bookmark")
-                    .foregroundColor(self.index==3 ? .white : .gray)
-                    .fixedSize()
-                    .frame(width:10)
-                    .padding(.vertical, 10)
-                    .padding(.horizontal)
-                    .background(self.index==3 ? MyColors.ferrariRed : Color.clear)
-                    .cornerRadius(10)
-            }
-            Spacer()
-        }
-        .padding(.horizontal,10)
-        .padding(.vertical,5)
-        .background(Color.white)
-        .cornerRadius(8)
-        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-        .padding(.horizontal)
-        //            .offset(y:-30)
-        //            .padding(.top,25)
-        
-        //            .padding(.top,30)
-    }
-}
-
-struct First : View {
-    @Binding var isNavBarHidden : Bool
-    var body: some View{
-        GeometryReader{_ in
-            VStack{
-                //                ItemGrid()
-                UserOutfits(isNavBarHidden: self.$isNavBarHidden)
-            }
-        }
-        .background(Color.white)
-        //        .offset(y:-90)
-    }
-}
-
-struct Scnd : View {
-    @Binding var isNavBarHidden : Bool
-    var body: some View{
-        GeometryReader{_ in
-            //            ScrollView {
-            VStack{
-                //                UsersItems()
-                UserReviews(isNavBarHidden: self.$isNavBarHidden)
-            }
-            //                .edgesIgnoringSafeArea(.all)
-            //            }
-            
-        }
-            
-        .background(Color.white)
-        //        .offset(y:-90)
-    }
-}
-
-struct Third : View {
-    @Binding var isNavBarHidden : Bool
-    var body: some View{
-        
-        GeometryReader{_ in
-            
-            VStack{
-                UserOutfits(isNavBarHidden: self.$isNavBarHidden)
-            }
-        }
-        .background(Color.white)
-        //        .offset(y:-90)
-    }
-}
+//struct MyAppBar : View {
+//
+//    @Binding var index : Int
+//    @Binding var offset : CGFloat
+//
+//    var width = UIScreen.main.bounds.width
+//
+//    var body: some View{
+//
+//        HStack(spacing: 40) {//25
+//            Spacer()
+//            Button(action: {
+//                self.index = 1
+//                self.offset = self.width
+//            }) {
+//                Text("Outfits")
+//                    .foregroundColor(self.index==1 ? .white : .gray)
+//                    .fixedSize()
+//                    .frame(width:35)
+//                    .padding(.vertical, 10)
+//                    .padding(.horizontal)
+//                    .background(self.index==1 ? MyColors.ferrariRed : Color.clear)
+//                    .cornerRadius(10)
+//            }
+//            Button(action: {
+//                self.index = 2
+//                self.offset = 0
+//            }) {
+//                Text("Reviews")
+//                    .foregroundColor(self.index==2 ? .white : .gray)
+//                    .fixedSize()
+//                    .frame(width:50)
+//                    .padding(.vertical, 10)
+//                    .padding(.horizontal)
+//                    .background(self.index==2 ? MyColors.ferrariRed : Color.clear)
+//                    .cornerRadius(10)
+//            }
+//            Button(action: {
+//                self.index = 3
+//                self.offset = -self.width
+//            }) {
+//                //                        Text("Bookmarks")
+//                Image(systemName: "bookmark")
+//                    .foregroundColor(self.index==3 ? .white : .gray)
+//                    .fixedSize()
+//                    .frame(width:10)
+//                    .padding(.vertical, 10)
+//                    .padding(.horizontal)
+//                    .background(self.index==3 ? MyColors.ferrariRed : Color.clear)
+//                    .cornerRadius(10)
+//            }
+//            Spacer()
+//        }
+//        .padding(.horizontal,10)
+//        .padding(.vertical,5)
+//        .background(Color.white)
+//        .cornerRadius(8)
+//        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+//        .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+//        .padding(.horizontal)
+//        //            .offset(y:-30)
+//        //            .padding(.top,25)
+//
+//        //            .padding(.top,30)
+//    }
+//}
+//
+//struct MyFirst : View {
+//    @Binding var isNavBarHidden : Bool
+//    var body: some View{
+//        GeometryReader{_ in
+//            VStack{
+//                //                ItemGrid()
+//                UserOutfits(isNavBarHidden: self.$isNavBarHidden)
+//            }
+//        }
+//        .background(Color.white)
+//        //        .offset(y:-90)
+//    }
+//}
+//
+//struct MySecond : View {
+//    @Binding var isNavBarHidden : Bool
+//    var body: some View{
+//        GeometryReader{_ in
+//            //            ScrollView {
+//            VStack{
+//                //                UsersItems()
+//                UserReviews(isNavBarHidden: self.$isNavBarHidden)
+//            }
+//            //                .edgesIgnoringSafeArea(.all)
+//            //            }
+//
+//        }
+//
+//        .background(Color.white)
+//        //        .offset(y:-90)
+//    }
+//}
+//
+//struct MyThird : View {
+//    @Binding var isNavBarHidden : Bool
+//    var body: some View{
+//
+//        GeometryReader{_ in
+//
+//            VStack{
+//                UserOutfits(isNavBarHidden: self.$isNavBarHidden)
+//            }
+//        }
+//        .background(Color.white)
+//        //        .offset(y:-90)
+//    }
+//}
 
 //struct Profile_Preview: PreviewProvider {
 //    static var previews: some View {

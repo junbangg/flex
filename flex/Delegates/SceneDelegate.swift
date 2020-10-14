@@ -51,7 +51,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //        }
         
         // MARK: Testing for MVVM
+        
         guard let windowscene = scene as? UIWindowScene else {return}
+        let obj = observed()
         let model = APINetworking()
         let viewModel = LoginViewModel(dataFetcher: model)
         let view = SignIn(viewModel: viewModel)
@@ -59,7 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: view)
+            window.rootViewController = UIHostingController(rootView: view.environmentObject(obj))
             self.window = window
             window.makeKeyAndVisible()
         }

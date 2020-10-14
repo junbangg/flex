@@ -64,22 +64,22 @@ struct ProfileEdit: View {
                 
             }
             //MARK: - Profile Intro
-            VStack {
-                TextView()
-                    .frame(height:self.obj.size)
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-            }
-            .padding(.top, 6)
-            .padding(.bottom,4)
-            .padding(.horizontal, 8)
-            .background(Color.white)
-            .cornerRadius(10)
-            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
-            .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
-            .padding()
-            Spacer()
+//            VStack {
+//                TextView()
+//                    .frame(height:self.obj.size)
+//                    .padding()
+//                    .background(Color.white)
+//                    .cornerRadius(10)
+//            }
+//            .padding(.top, 6)
+//            .padding(.bottom,4)
+//            .padding(.horizontal, 8)
+//            .background(Color.white)
+//            .cornerRadius(10)
+//            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+//            .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+//            .padding()
+//            Spacer()
             
             
         }
