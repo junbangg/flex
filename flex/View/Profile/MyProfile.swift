@@ -23,6 +23,7 @@ struct MyProfile : View {
     @State var isNavBarHidden : Bool = false
     //Flag for Follow button or Edit button
     @State var followFlag : Bool = true
+    @State var editSuccess: Bool = false
     var body: some View{
         //MARK:- Main View
         NavigationView {
@@ -48,10 +49,11 @@ struct MyProfile : View {
                             .foregroundColor(Color.black.opacity(0.8))
                             .padding(.leading)
                         Spacer(minLength: 0)
-                        //Follow Button
                         //TODO: - Change this part to save button
                         Button(action: {
                             self.viewModel.update(profileImage: self.profileImage, intro: self.newIntro, profileImageChanged: self.imageSelected)
+                            self.editSuccess = true
+//                            self.viewModel.refresh()
                         }){
                             Text("Save")
                                 .foregroundColor(Color.white)
@@ -63,13 +65,11 @@ struct MyProfile : View {
                                 .cornerRadius(10)
                         }
                         .padding(.top,5)
-                        .padding(15
-                            //                            Button (action: {
-                            //                                print("edit")
-                            //                            }) {
-                            //
-                            //                            }
-                        )
+                        .padding(15)
+                        .alert(isPresented: $editSuccess) {
+                            Alert(title: Text("저장 성공"), message: Text("프로필이 성공적으로 수정 되었습니다"))
+                        }.onDisappear(perform: self.viewModel.refresh)
+                    
                         
                         
                     }

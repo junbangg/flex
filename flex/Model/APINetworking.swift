@@ -16,7 +16,8 @@ protocol APIRequests {
     //Get Data
     func getProfileData(userID: Int, token: String)-> AnyPublisher<APIResponse, APIError>
     //Update Data
-    func updateProfileData(userID: Int, token: String, profileImage: String, intro: String) -> AnyPublisher<APIResponse, APIError>
+    func updateProfileData(userID: Int, token: String, profileImage: String, intro: String)
+//        -> AnyPublisher<APIResponse, APIError>
     
 
     
@@ -55,15 +56,21 @@ extension APINetworking : APIRequests {
     ///     - token: authentication token saved in keychain
     ///     - profileImage: UIImage converted to url string
     ///     - intro: User input string from Profile
-    /// - Returns: send(with: preparePATCHProfileData()
-    func updateProfileData(userID: Int, token: String, profileImage: String, intro: String) -> AnyPublisher<APIResponse, APIError>  {
-        return send(with: preparePATCHProfileData(userID: userID, token: token, profileImage: profileImage, intro: intro))
+    func updateProfileData(userID: Int, token: String, profileImage: String, intro: String) {
+        let task = session.dataTask(with: preparePATCHProfileData(userID: userID, token: token, profileImage: profileImage, intro: intro)) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+            if let err = error {
+                print("Failed to update:", err)
+                return
+            }
+        }
+        task.resume()
     }
     //MARK: -function to send request to backend
     ///
     /// - Parameters:
     ///     - request: receives URLRequest prepared by  functions in extension
-    private func send<T> (with request : URLRequest) ->AnyPublisher<T, APIError> where T : Decodable{
+    private func send<T> (with request : URLRequest) -> AnyPublisher<T, APIError> where T : Decodable{
         
         return session.dataTaskPublisher(for: request)
             .mapError { error in

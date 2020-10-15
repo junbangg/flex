@@ -82,6 +82,7 @@ struct SignIn: View {
                                 print("login successful")
                             } else{
                                 print("something went wrong")
+                                self.loginFailed = true
                             }
                             
                             

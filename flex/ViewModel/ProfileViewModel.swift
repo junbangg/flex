@@ -89,23 +89,22 @@ class ProfileViewModel: ObservableObject, Identifiable {
         //MARK: -calls update to database function from APINetworking class
         dataFetcher
             .updateProfileData(userID: userID!, token: accessToken!, profileImage: imageURL!, intro: intro)
-            .map(ProfileDataViewModel.init)
-            //            .subscribe(on: DispatchQueue.global())
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { [weak self] value in
-                guard let self = self else {return}
-                switch value {
-                case .failure:
-                    print(value)
-                    self.dataSource = nil
-                case .finished:
-                    break
-                }
-                }, receiveValue: { [weak self] result in
-                    guard let self = self else {return}
-                    self.dataSource = result
-            })
-            .store(in: &disposables)
+//            .map(ProfileDataViewModel.init)
+//            .receive(on: DispatchQueue.main)
+//            .sink(receiveCompletion: { [weak self] value in
+//                guard let self = self else {return}
+//                switch value {
+//                case .failure:
+//                    print(value)
+//                    self.dataSource = nil
+//                case .finished:
+//                    break
+//                }
+//                }, receiveValue: { [weak self] result in
+//                    guard let self = self else {return}
+//                    self.dataSource = result
+//            })
+//            .store(in: &disposables)
         
     }
     
