@@ -136,7 +136,7 @@ private extension APINetworking {
         let params = [
             "profile_image": profileImage,
             "intro": intro,
-            "userID": userID
+            "user_id": userID
             ] as [String : Any]
         
         var loginRequest = URLRequest(url: url)
