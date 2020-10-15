@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import SwiftUI
+
 
 class Utilities {
     // MARK: - Name Validation
@@ -43,6 +45,5 @@ class Utilities {
     // MARK: - Check if passwords match
     static func matchPasswords(_ first : String?,_ second : String?) -> Bool {
         return first == second
-    }
-    
+    }    
 }

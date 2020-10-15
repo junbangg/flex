@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import AWSS3
+import SwiftKeychainWrapper
 
 typealias progressBlock = (_ progress: Double) -> Void
 typealias completionBlock = (_ response: Any?, _ error: Error?) -> Void
@@ -30,6 +31,8 @@ class AWSS3Manager {
         let fileName : String = ProcessInfo.processInfo.globallyUniqueString + (".jpeg")
         let filePath = tmpPath + "/" + fileName
         let fileURL = URL(fileURLWithPath: filePath)
+        //saved image url to keychain
+        let _: Bool = KeychainWrapper.standard.set(filePath, forKey: "profileImage")
 
         do {
             try imageData.write(to: fileURL)

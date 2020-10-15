@@ -50,7 +50,9 @@ struct MyProfile : View {
                         Spacer(minLength: 0)
                         //Follow Button
                         //TODO: - Change this part to save button
-                        NavigationLink(destination: ProfileEdit(isNavBarHidden: self.$isNavBarHidden)) {
+                        Button(action: {
+                            self.viewModel.update(profileImage: self.profileImage, intro: self.newIntro, profileImageChanged: self.imageSelected)
+                        }){
                             Text("Save")
                                 .foregroundColor(Color.white)
                                 .fixedSize()
