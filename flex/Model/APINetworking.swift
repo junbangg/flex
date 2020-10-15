@@ -14,7 +14,8 @@ protocol APIRequests {
     //Login
     func login(email: String, password: String)-> AnyPublisher<APIResponse, APIError>
     //Get Data
-    func getUserData(userID: Int, token: String)-> AnyPublisher<APIResponse, APIError>
+    func getProfileData(userID: Int, token: String)-> AnyPublisher<APIResponse, APIError>
+
     
 }
 // MARK: - Main Class
@@ -28,12 +29,12 @@ class APINetworking {
 extension APINetworking : APIRequests {
     
     func login(email: String, password: String) -> AnyPublisher<APIResponse, APIError> {
-        return fetch(with: prepareForLogin(email: email, password: password))
+        return send(with: prepareForLogin(email: email, password: password))
     }
-    func getUserData(userID: Int, token: String) -> AnyPublisher<APIResponse, APIError> {
-        return fetch(with: prepareForUserData(userID: userID, token: token))
+    func getProfileData(userID: Int, token: String) -> AnyPublisher<APIResponse, APIError> {
+        return send(with: prepareGetProfileData(userID: userID, token: token))
     }
-    private func fetch<T> (with request : URLRequest) ->AnyPublisher<T, APIError> where T : Decodable{
+    private func send<T> (with request : URLRequest) ->AnyPublisher<T, APIError> where T : Decodable{
         
         return session.dataTaskPublisher(for: request)
             .mapError { error in
@@ -66,7 +67,7 @@ private extension APINetworking {
         }
         return loginRequest
     }
-    func prepareForUserData(userID: Int, token: String) -> URLRequest{
+    func prepareGetProfileData(userID: Int, token: String) -> URLRequest{
         let url = URL(string: BaseAPI.baseURL + String(userID))!
 //        let params = ["id" : userID]
         var dataRequest = URLRequest(url: url)

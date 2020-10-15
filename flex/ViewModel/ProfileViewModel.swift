@@ -27,7 +27,7 @@ class ProfileViewModel: ObservableObject, Identifiable {
         let accessToken: String? = "Bearer " + KeychainWrapper.standard.string(forKey: "accessToken")!
         let userID: Int? = KeychainWrapper.standard.integer(forKey: "userID")!
         dataFetcher
-            .getUserData(userID: userID!, token: accessToken!)
+            .getProfileData(userID: userID!, token: accessToken!)
             .map(ProfileDataViewModel.init)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: {
@@ -50,6 +50,8 @@ class ProfileViewModel: ObservableObject, Identifiable {
             .store(in: &disposables)
         
     }
+
+    
 }
 
 //extension ProfileViewModel {

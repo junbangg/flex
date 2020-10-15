@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MyProfile : View {
-    let viewModel : ProfileViewModel //ProfileDataViewModel
+    @ObservedObject var viewModel : ProfileViewModel //ProfileDataViewModel
     
     init(viewModel: ProfileViewModel) {
         self.viewModel = viewModel
