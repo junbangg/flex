@@ -16,6 +16,7 @@ import SwiftKeychainWrapper
 class ProfileViewModel: ObservableObject, Identifiable {
     @Published var dataSource : ProfileDataViewModel?
     
+    let objectWillChange = ObservableObjectPublisher()
     private let dataFetcher : APIRequests
     private var disposables = Set<AnyCancellable>()
     
@@ -89,6 +90,7 @@ class ProfileViewModel: ObservableObject, Identifiable {
         //MARK: -calls update to database function from APINetworking class
         dataFetcher
             .updateProfileData(userID: userID!, token: accessToken!, profileImage: imageURL!, intro: intro)
+        objectWillChange.send()
 //            .map(ProfileDataViewModel.init)
 //            .receive(on: DispatchQueue.main)
 //            .sink(receiveCompletion: { [weak self] value in

@@ -24,6 +24,7 @@ struct MyProfile : View {
     //Flag for Follow button or Edit button
     @State var followFlag : Bool = true
     @State var editSuccess: Bool = false
+    
     var body: some View{
         //MARK:- Main View
         NavigationView {
@@ -53,7 +54,7 @@ struct MyProfile : View {
                         Button(action: {
                             self.viewModel.update(profileImage: self.profileImage, intro: self.newIntro, profileImageChanged: self.imageSelected)
                             self.editSuccess = true
-//                            self.viewModel.refresh()
+                            self.viewModel.refresh()
                         }){
                             Text("Save")
                                 .foregroundColor(Color.white)
@@ -68,8 +69,8 @@ struct MyProfile : View {
                         .padding(15)
                         .alert(isPresented: $editSuccess) {
                             Alert(title: Text("저장 성공"), message: Text("프로필이 성공적으로 수정 되었습니다"))
-                        }.onDisappear(perform: self.viewModel.refresh)
-                    
+                        }
+                        //                        .onDisappear(perform: self.viewModel.refresh)
                         
                         
                     }
@@ -206,11 +207,14 @@ struct MyProfile : View {
                         //                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
                         //                        .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
                         //                        .padding()
+                        //                        TextField(self.viewModel.dataSource?.intro ?? "소개 작성", text: self.$newIntro)
+                        //                            .foregroundColor(Color.black.opacity(0.7))
+                        //                            .offset(x: 30,y:10)//y -50
                         
-                        
-                        TextField(self.viewModel.dataSource?.intro ?? "소개작성", text: self.$newIntro)
+                        TextField(self.viewModel.dataSource?.intro == "" ? "소개 작성" : self.viewModel.dataSource?.intro ?? "소개 작성", text: self.$newIntro)
                             .foregroundColor(Color.black.opacity(0.7))
                             .offset(x: 30,y:10)//y -50
+                        
                         
                     }
                         .offset(y:-50)//-70
@@ -254,6 +258,9 @@ struct MyProfile : View {
                     self.isNavBarHidden = true
             }
             .onAppear(perform: self.viewModel.refresh)
+            .onReceive(self.viewModel.objectWillChange, perform: { _ in                self.viewModel.refresh()
+            })
+            
             
         }
     }

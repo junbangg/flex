@@ -234,6 +234,7 @@ struct Profile : View {
             }
             .onAppear(perform: self.viewModel.refresh)
             
+
         }
     }
     func changeView(left : Bool){
