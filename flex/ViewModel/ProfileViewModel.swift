@@ -67,7 +67,7 @@ class ProfileViewModel: ObservableObject, Identifiable {
         
         //MARK: -posts new profileImage string to AWS(if there was actually a change in profileImage)
         /// if image is changed(profileImage will not be nil) , upload image to AWS and and save the new url to keychain
-        
+//        var tempImageFile : String = ""
         if profileImageChanged {
             AWSS3Manager.shared.uploadImage(image: profileImage, progress: {[self] ( uploadProgress) in
                 
@@ -77,16 +77,21 @@ class ProfileViewModel: ObservableObject, Identifiable {
                 
                 //                    guard let strongSelf = self else { return }
                 if let finalPath = uploadedFileUrl as? String { // 3
+                    
+//                    tempImageFile = finalPath
                     print(finalPath)
                 } else {
                     print("\(String(describing: error?.localizedDescription))") // 4
                 }
             }
         }
+        ///Problem is that the upload finishes after the code below,,, that is why nil ends up getting put inside of the keychain
+        
         /// if the image wasn't changed,  just access the old image url from keychain which was already updated when data was refreshed
         let accessToken: String? = "Bearer " + KeychainWrapper.standard.string(forKey: "accessToken")!
         let userID: Int? = KeychainWrapper.standard.integer(forKey: "userID")!
         let imageURL: String? = KeychainWrapper.standard.string(forKey: "profileImage")!
+        print("This is the image you uploaded",imageURL!)
         //MARK: -calls update to database function from APINetworking class
         dataFetcher
             .updateProfileData(userID: userID!, token: accessToken!, profileImage: imageURL!, intro: intro)

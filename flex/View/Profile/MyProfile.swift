@@ -84,17 +84,29 @@ struct MyProfile : View {
                                     .fill(MyColors.ferrariRed)
                                     .frame(width:80, height: 3)
                                     .zIndex(1)
+                                Button(action:{
+                                    self.isShowingImagePicker.toggle()
+                                }) {
+                                    //Image should be replaced with one in viewModel
+                                    CircleImage(image: Image("testProfile"))
+                                        //                    .resizable()
+                                        .frame(width:100, height:100)
+                                        .padding(.top, 6)
+                                        .padding(.bottom,4)
+                                        .padding(.horizontal, 8)
+                                        .background(Color.white)
+                                        .cornerRadius(10)
+                                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
+                                        .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                                    
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                                .sheet(isPresented: self.$isShowingImagePicker, content: {
+                                    ImagePicker(isPresented: self.$isShowingImagePicker, selectedImage: self.$profileImage, isSelected: self.$imageSelected)
+                                })
                                 
-                                CircleImage(image: Image("testProfile"))
-                                    //                    .resizable()
-                                    .frame(width:100, height:100)
-                                    .padding(.top, 6)
-                                    .padding(.bottom,4)
-                                    .padding(.horizontal, 8)
-                                    .background(Color.white)
-                                    .cornerRadius(10)
-                                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y:10)
-                                    .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
+                                
+                                
                             }
                                 //                            .padding(.leading,20)
                                 .offset(x:15)

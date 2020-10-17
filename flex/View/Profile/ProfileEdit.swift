@@ -48,7 +48,7 @@ struct ProfileEdit: View {
                     .shadow(color:Color.white.opacity(0.7), radius:10, x:-5, y:-5)
                 }
                 
-                    
+                
                 Button(action: {
                     self.isShowingImagePicker.toggle()
                 }) {
