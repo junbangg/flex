@@ -52,14 +52,14 @@ class AWSS3Manager {
         //Upload progress block
         let expression = AWSS3TransferUtilityUploadExpression()
         expression.progressBlock = {(task, awsprogress) in
-            print(awsprogress.fractionCompleted)
-            if awsprogress.isFinished{
-                print("Upload finished...")
-            }
-            //            guard let uploadProgress = progress else { return }
-            //            DispatchQueue.main.async(execute: {
-            //                uploadProgress(awsprogress.fractionCompleted)
-            //            })
+            //            print(awsprogress.fractionCompleted)
+            //            if awsprogress.isFinished{
+            //                print("Upload finished...")
+            //            }
+            guard let uploadProgress = progress else { return }
+            DispatchQueue.main.async(execute: {
+                uploadProgress(awsprogress.fractionCompleted)
+            })
         }
         //Completion block
         var completionHandler: AWSS3TransferUtilityUploadCompletionHandlerBlock?
@@ -69,8 +69,7 @@ class AWSS3Manager {
                     let url = AWSS3.default().configuration.endpoint.url
                     let publicURL = url?.appendingPathComponent(self.bucketName).appendingPathComponent(fileName)
                     print("Uploaded to \(String(describing: publicURL))")
-                    //save image url to keychain
-                    let _: Bool = KeychainWrapper.standard.set(String(describing: publicURL), forKey: "profileImage")
+                    
                     if let completionBlock = completion {
                         completionBlock(publicURL?.absoluteString, nil)
                     }
@@ -88,6 +87,7 @@ class AWSS3Manager {
                 print("error is:\(error.localizedDescription)")
             }
             if let _ = task.result {
+                //Maybe this is where we need to indicate that the task has ended-> start uploading to DB
                 print("Starting upload...")
             }
             return nil
