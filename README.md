@@ -2,19 +2,19 @@
 
 # 사용 기술
 
-## SwiftUI
+### SwiftUI
 
-## Combine
+### Combine
 
-## MVVM 디자인 패턴
+### MVVM 디자인 패턴
 
-## HTTP, AWSS3 통신
+### HTTP, AWSS3 통신
 
-## Node.JS, MySQL 백엔드
+### Node.JS, MySQL 백엔드
 
-## Token Authentication
+### Token Authentication
 
-## 이미지 캐싱
+### 이미지 캐싱
 
 
 
