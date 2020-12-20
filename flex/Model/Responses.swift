@@ -27,8 +27,6 @@ struct APIResponse : Codable {
             case profile = "profile"
             case token = "token"
         }
-        
-        
     }
     struct UserInfo : Codable {
         
@@ -45,8 +43,6 @@ struct APIResponse : Codable {
             case userId = "user_id"
             case username = "username"
         }
-        
-        
     }
     
     enum CodingKeys: String, CodingKey {
