@@ -18,4 +18,25 @@
 
 # 사용 예
 
+## Login 
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/login?raw=true)
 
+## Profile 
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/profile?raw=true)
+
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/profile_review?raw=true)
+
+## Outfit
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/outfit?raw=true)
+
+## Review
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/review?raw=true)
+
+## Add
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add?raw=true)
+
+## Add Review
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add_review?raw=true)
+
+## Add Outfit
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add_outfit?raw=true)
