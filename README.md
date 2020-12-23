@@ -33,8 +33,5 @@
 ## Add
 ![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add.png?raw=true)
 
-## Add Review
-![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add_review.png?raw=true)
-
-## Add Outfit
-![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add_outfit.png?raw=true)
+## Add Review/Outfit
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add_review.png?raw=true)![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add_outfit.png?raw=true)
