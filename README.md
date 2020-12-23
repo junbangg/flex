@@ -24,11 +24,8 @@
 ## Profile 
 ![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/profile.png?raw=true)![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/profile_review.png?raw=true)
 
-## Outfit
-![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/outfit.png?raw=true)
-
-## Review
-![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/review.png?raw=true)
+## Outfit/Review
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/outfit.png?raw=true)![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/review.png?raw=true)
 
 ## Add
 ![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add.png?raw=true)
