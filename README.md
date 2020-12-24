@@ -22,10 +22,10 @@
 ![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/login.png?raw=true)
 
 ## Profile 
-![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/newprofile.png?raw=true) ![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/newprofile_review2.png?raw=true)
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/newprofile.png?raw=true) ![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/newprofile_review3.png?raw=true)
 
 ## Outfit/Review
-![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/newoutfit.png?raw=true)![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/review.png?raw=true)
+![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/newoutfit.png?raw=true) ![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/review.png?raw=true)
 
 ## Add
 ![alt text](https://github.com/junbangg/flex/blob/master/exampleimg/add.png?raw=true)
