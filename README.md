@@ -14,7 +14,6 @@
 
 #### Token Authentication
 
-#### 이미지 캐싱
 
 # 사용 예
 
