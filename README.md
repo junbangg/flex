@@ -2,7 +2,9 @@
 
 # 사용 기술
 
-#### SwiftUI/Swift5
+#### SwiftUI
+
+#### Swift5
 
 #### Combine
 
