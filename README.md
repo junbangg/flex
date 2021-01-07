@@ -12,7 +12,7 @@
 
 #### HTTP, AWSS3 통신
 
-#### Node.JS, MySQL 백엔드
+#### Node.JS,Express, MySQL 백엔드
 
 #### Token Authentication
 
