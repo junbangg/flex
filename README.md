@@ -10,9 +10,9 @@
 
 #### MVVM 디자인 패턴
 
-#### HTTP, AWSS3 통신
+#### HTTP, AWSS3 
 
-#### Node.JS,Express, MySQL 백엔드
+#### Node.JS,Express, MySQL
 
 #### Token Authentication
 
