@@ -14,7 +14,6 @@
 
 #### Node.JS,Express, MySQL
 
-#### Token Authentication
 
 
 # 사용 예
