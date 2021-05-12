@@ -12,7 +12,7 @@
 
 #### HTTP, AWSS3 
 
-#### Node.JS,Express, MySQL
+#### Node.JS / Express, MySQL
 
 
 
